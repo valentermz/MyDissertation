@@ -1,0 +1,15 @@
+#.gitignore file on My Thesis directory
+
+cornell.cls.backup
+cornell.log
+my_thesis.aux
+my_thesis.bbl
+my_thesis.blg
+my_thesis.lof
+my_thesis.log
+my_thesis.lot
+my_thesis.out
+my_thesis.pdf
+my_thesis.toc
+sampleThesis.bib
+sampleThesis.tex

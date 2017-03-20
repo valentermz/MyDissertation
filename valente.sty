@@ -1,0 +1,86 @@
+%%%.sty FILE FOR ENGLISH DOCUMENTS
+
+%%% MODIFIED FOR THESIS
+
+%PACKAGES
+\usepackage{amsthm,amsmath,amssymb,amsfonts,mathrsfs}
+\usepackage{color,enumitem,tikz,mathtools,lipsum,stmaryrd,pdfpages,fancyhdr}
+\usepackage{hyperref}
+ \hypersetup{colorlinks=true,linktocpage=true,linkcolor=blue,citecolor=red,urlcolor=blue}
+% \hypersetup{pdftitle={},pdfauthor={Valente Ramirez}}
+\usepackage[utf8x]{inputenc}
+\usepackage[all]{xy}
+% \usepackage{titlesec,titiling,lastpage}  %%to edit title format
+
+%%To have bibliography on footnotes use:
+ % \usepackage[style=verbose-inote,backend=bibtex,citetracker=true,isbn=false,doi=false,url=false]{biblatex} 
+ % \renewcommand{\footnotesize}{\fontsize{8pt}{10pt}\selectfont}
+ % \renewcommand{\cite}{\autocite}\bibliography{ref}
+
+%\numberwithin{equation}{section}
+
+
+%THEOREMS 
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{formula}[theorem]{Formula}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{problem}[theorem]{Problem}
+
+\theoremstyle{definition}
+	\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+	\newtheorem{remark}[theorem]{Remark}
+
+
+%NEW_COMMANDS
+\newcommand{\note}[1]{{\color{red}{#1}}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\CP}{\mathbb{C}\mathrm{P}}
+\newcommand{\Diff}{\operatorname{Diff}(\mathbb{C},0)}
+
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\Ft}{\widetilde{\mathcal{F}}}
+\newcommand{\GF}{G_{\mathcal{F}}}
+\newcommand{\GFt}{G_{\widetilde{\mathcal{F}}}}
+\newcommand{\LF}{\mathcal{L}_{\mathcal{F}}}
+\newcommand{\LFt}{\mathcal{L}_{\widetilde{\mathcal{F}}}}
+
+\newcommand{\GL}[2]{\operatorname{GL}({#1},{#2})}
+\newcommand{\SL}[2]{\operatorname{SL}({#1},{#2})}
+\newcommand{\PSL}[2]{\operatorname{PSL}({#1},{#2})}
+\newcommand{\PGL}[2]{\operatorname{PGL}({#1},{#2})}
+\newcommand{\Aff}[2]{\operatorname{Aff}({#1},{#2})}
+\newcommand{\Aut}[1]{\operatorname{Aut}({#1})}
+\newcommand{\Inn}[1]{\operatorname{Inn}({#1})}
+\newcommand{\Out}[1]{\operatorname{Out}({#1})}
+
+\newcommand{\spanset}[1]{\left\langle\,{#1}\,\right\rangle}
+\newcommand{\set}[2]{\left\{{#1}\,\vert\,{#2}\right\}}
+%\newcommand{\dset}[2]{\left\{{#1}\:\bigm\vert\:{#2}\right\}}
+%\newcommand{\presentation}[2]{\langle{#1}\,\vert\,{#2}\rangle}
+%\newcommand{\dpresentation}[2]{\left\langle {#1}\:\bigm\vert\: {#2}\right\rangle}
+
+\renewcommand{\Re}[1]{\operatorname{Re}\,{#1}}
+\renewcommand{\Im}[1]{\operatorname{Im}\,{#1}}
+
+%%%This is to create footnoes with no numbering using the command \blfootnote{}
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+
