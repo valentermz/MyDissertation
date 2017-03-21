@@ -6,7 +6,7 @@
 \usepackage{amsthm,amsmath,amssymb,amsfonts,mathrsfs}
 \usepackage{color,enumitem,tikz,mathtools,lipsum,stmaryrd,pdfpages,fancyhdr}
 \usepackage{hyperref}
- \hypersetup{colorlinks=true,linktocpage=true,linkcolor=blue,citecolor=red,urlcolor=blue}
+ \hypersetup{colorlinks=true,linktocpage=true,linkcolor=red,citecolor=red,urlcolor=red}
 % \hypersetup{pdftitle={},pdfauthor={Valente Ramirez}}
 \usepackage[utf8x]{inputenc}
 \usepackage[all]{xy}
@@ -17,7 +17,7 @@
  % \renewcommand{\footnotesize}{\fontsize{8pt}{10pt}\selectfont}
  % \renewcommand{\cite}{\autocite}\bibliography{ref}
 
-%\numberwithin{equation}{section}
+% \numberwithin{equation}{section}
 
 
 %THEOREMS 
@@ -35,6 +35,11 @@
 
 \theoremstyle{remark}
 	\newtheorem{remark}[theorem]{Remark}
+	
+%Theorem numbered by letters for the preface
+\theoremstyle{theorem}
+\newtheorem{prefthm}{Theorem}
+	\renewcommand*{\theprefthm}{\Alph{prefthm}}
 
 
 %NEW_COMMANDS

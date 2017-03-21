@@ -28,7 +28,7 @@
 %the tolerance to 9999
 %\tolerance=9999
 
-\bibliographystyle{plain}
+\bibliographystyle{alpha} % What is required by the Graduate School?
 % \bibliographystyle{IEEEbib}
 
 \renewcommand{\caption}[1]{\singlespacing\hangcaption{#1}\normalspacing}
@@ -37,7 +37,7 @@
 \renewcommand{\floatpagefraction}{0.75}
 
 % Personal information
-\title {The analytic invariants of generic quadratic vector fields on \texorpdfstring{$\C^2$}{C2}}
+\title {Quadratic vector fields on \texorpdfstring{$\C^2$}{C2}:\\rigidity and their analytic invariants}
 	% Warning: If the title is modified, make sure it matches the \@abstracttitle in cornell.cls
 \author {Valente Ram\'{i}rez Garc\'{i}a Luna}
 \conferraldate {August}{2017}
@@ -48,26 +48,26 @@
 \begin{document}
 
 \maketitle
-\makecopyright
-
-\begin{abstract}
-Your abstract goes here. Make sure it sits inside the brackets. If not,
-your biosketch page may not be roman numeral iii, as required by the
-graduate school.
-\end{abstract}
-
-\begin{biosketch}
-Your biosketch goes here. Make sure it sits inside
-the brackets.
-\end{biosketch}
-
-\begin{dedication}
-Dedication
-\end{dedication}
-
-\begin{acknowledgements}
-Your acknowledgements go here. Make sure it sits inside the brackets.
-\end{acknowledgements}
+% \makecopyright
+% 
+% \begin{abstract}
+% Your abstract goes here. Make sure it sits inside the brackets. If not,
+% your biosketch page may not be roman numeral iii, as required by the
+% graduate school.
+% \end{abstract}
+% 
+% \begin{biosketch}
+% Your biosketch goes here. Make sure it sits inside
+% the brackets.
+% \end{biosketch}
+% 
+% \begin{dedication}
+% Dedication
+% \end{dedication}
+% 
+% \begin{acknowledgements}
+% Your acknowledgements go here. Make sure it sits inside the brackets.
+% \end{acknowledgements}
 
 \contentspage
 % \tablelistpage
@@ -84,11 +84,11 @@ The results presented in this thesis belong to the theory of \textit{holomorphic
 
 The origins of the theory of holomorphic foliations trace back to the beginning of the \textit{qualitative theory} of ordinary differential equations, pioneered by Poincar\'{e} towards the end of the XIX$^{\text{th}}$ century. 
 %
-%cit: H. Poincaré, "Mémoire sur les courbes définiés par une équation différentielle" J. de Math--a series of papers between 1881 and 1886. cf. https://www.encyclopediaofmath.org/index.php/Qualitative_theory_of_differential_equations
+%cit: H. Poincare, "Mémoire sur les courbes définiés par une équation différentielle" J. de Math--a series of papers between 1881 and 1886. cf. https://www.encyclopediaofmath.org/index.php/Qualitative_theory_of_differential_equations
 %
 The brilliant insight of Poincar\'{e} was that differential equations belong not only to the realm of analysis, but also to geometry. For example, providing a non-autonomous differential equation of the form $\displaystyle\frac{dx}{dt}=f(x,t)$ is equivalent to giving a vector field, a much more geometric object, of the form
  \[ v = f(x,t)\frac{\partial}{\partial x} + \frac{\partial}{\partial t}, \qquad (x,t)\in U\subset\R^2, \]
-in some appropriate open set $U$. A solution to the given differetial equation now corresponds to a smooth curve $s\mapsto\varphi(s)$ that is everywhere tangent to the vector field $v$. Under this philosophy, Poincar\'{e} made an exhaustive use of geometric methods to derive geometric properties of the solutions. Particularly, Poincar\'{e} set himself to study differential equations of the form 
+in some appropriate open set $U$. A solution to the given differential equation corresponds to a smooth curve $s\mapsto\varphi(s)$ that is everywhere tangent to the vector field $v$. Under this philosophy, Poincar\'{e} made an exhaustive use of geometric methods to derive geometric properties of the solutions. Particularly, Poincar\'{e} set himself to study differential equations of the form 
 \begin{equation}\label{preface:eq:1}
  \frac{dy}{dx}=\frac{P(x,y)}{Q(x,y)},
 \end{equation}
@@ -96,7 +96,7 @@ where $(x,y)\in\R^2$ and $P,Q$ are real polynomials. To an autonomous equation s
 %
 %citation?
 %
-In 1900 Hilbert included in his famous list of problems the following question:
+In 1900, during the International Congress of Mathematicians, Hilbert included in his famous list of problems the following question:
 
 % \medskip
 \begin{quote}
@@ -105,25 +105,58 @@ In 1900 Hilbert included in his famous list of problems the following question:
 \end{quote}
 
 \vspace{-2\parskip} %yuk!
-\noindent This question, which is the second part of Hilbert's 16$^{\text{th}}$ problem, remains open--even in the simplest non-trivial case: that of quadratic polynomials.
+\noindent This question, which is the second part of Hilbert's $16^{\text{th}}$ problem, remains open--even in the simplest non-trivial case: that of quadratic polynomials.
+
+The study of \textit{complex} vector fields goes back to Poincar\'{e} and Dulac, yet a huge development took place towards the end of the 1950's, when Russian mathematicians Petrovskii and Landis published a paper claiming to have a complete solution to Hilbert's $16^{\text{th}}$ problem \cite{PetrovskiiLandis1957}. The strategy in this paper is to extend equation (\ref{preface:eq:1}) to the complex domain. In such extension the solutions to the equation define, outside the equilibrium points
+ \[ \Sigma = \set{(x,y)\in\C^2}{P(x,y)=Q(x,y)=0}, \]
+complex analytic curves locally parametrized by a complex variable $t\in\C$. In this way, the solutions decompose $\C^2\setminus\Sigma$ into a disjoint union of curves. Moreover, by the flow-box theorem, this partition locally looks like the standard partition of the bidisk $\mathbb{D}\times\mathbb{D}$ by parallel horizontal slices $\mathbb{D}\times\{y\}$. These are precisely the defining properties of what we know as a \textit{singular holomorphic foliation}. The integral curves of the equation are called the \textit{leaves} of the foliation and $\Sigma$ its \textit{singular set}. Many of the concepts in the theory of real differential equations have a straightforward complex analog. In particular, the concept of a limit cycle can be naturally extended to the complex domain. The Petrovskii-Landis strategy consisted of bounding the number of complex limit cycles that may appear in the \textit{complexification} of equation (\ref{preface:eq:1}), thus obtaining a bound on the number of real limit cycles. 
+
+In the middle of the 1960's Ilyashenko and Novikov found a crucial gap in the solution to Hilbert's $16^{\text{th}}$ problem, which completely invalidated the results claimed by Petrovskii and Landis. The history of this still-open problem has certainly been dramatic, yet it has inspired a great development in the geometric theory of differential equations and marked a start point for the study of complex polynomial foliations on $\C^2$.
+
+A crucial further development of the theory was later achieved by Hudai-Verenov and Ilyashenko \cite{HudaiVerenov1962,Ilyashenko1978}, who proved that the \textit{generic} properties of complex polynomial foliations are strikingly different than those of real polynomial foliations. In particular, generic polynomial foliations have the following properties:
+\begin{itemize}
+ \item Rigidity: Topological equivalence is extremely rare and closely related to analytic equivalence.
+ \item Density of solutions: Every leaf on $\C\setminus\Sigma$ is everywhere dense on $\C^2$.
+ \item Infinite amount of limit cycles: There are countably many homologically independent complex limit cycles.
+\end{itemize}
+The meaning of the word ``generic'' above is something that has been refined thanks to many authors throughout the years (eg.~\cite{Shcherbakov1984,Nakai1994,LinsNetoSadScardua1998}) and is now taken to mean that there exists an open and dense set in the space of all polynomial foliations of a fixed degree (defined by either algebraic or analytic conditions) where every foliation from that set satisfies the above properties.
+
+\bigskip
+\noindent There are two main contributions of this thesis to the theory of polynomial vector fields on $\C^2$.
+
+First, improving on previous results, we show that foliations defined by generic quadratic vector fields have the strongest imaginable rigidity property.
+
+\begin{prefthm}
+Two foliations defined by generic quadratic vector fields are topologically equivalent if and only if they are affine equivalent.  
+\end{prefthm}
+
+Second, we provide two completely independent results that provide necessary and sufficient conditions for generic quadratic vector fields to be affine equivalent. Previously, no results of this sort were know. %Double check this claim!! haha..
+
+\begin{prefthm}
+ Two generic quadratic vector fields are orbitally affine equivalent if and only if their holonomy groups at infinity are analytically conjugate.
+\end{prefthm}
+
+\begin{prefthm}
+ Two generic quadratic vector fields are affine equivalent if and only if they have the same spectra of singularities and the same characteristic numbers at infinity.
+\end{prefthm}
+
+These results have been published in \cite{TwinVectorFields,UtmostRigidity} and will be discussed carefully in the present work.
 
 
 
 
 
-
-
-\chapter{Introduction}
-
-\chapter{The holonomy group at infinity}
-
-\chapter{The spectra of singularities}
-
+% \chapter{Introduction}
+% 
+% \chapter{The holonomy group at infinity}
+% 
+% \chapter{The spectra of singularities}
+% 
 % \appendix
 % \chapter{Chapter 1 of appendix}
 % Appendix chapter 1 text goes here
 
-\nocite{StrongTopoInvariance,UtmostRigidity,TwinVectorFields,WoodsHole}
+% \nocite{StrongTopoInvariance,UtmostRigidity,TwinVectorFields,WoodsHole}
 \bibliography{ref-valente}
 
 \end{document}
