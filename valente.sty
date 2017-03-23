@@ -11,6 +11,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[all]{xy}
 % \usepackage{titlesec,titiling,lastpage}  %%to edit title format
+% \usepackage{etoolbox}
 
 %%To have bibliography on footnotes use:
  % \usepackage[style=verbose-inote,backend=bibtex,citetracker=true,isbn=false,doi=false,url=false]{biblatex} 
@@ -35,12 +36,18 @@
 
 \theoremstyle{remark}
 	\newtheorem{remark}[theorem]{Remark}
-	
+
 %Theorem numbered by letters for the preface
 \theoremstyle{theorem}
 \newtheorem{prefthm}{Theorem}
 	\renewcommand*{\theprefthm}{\Alph{prefthm}}
-
+	
+%Keywords and MSC for the abstract
+\newenvironment{metadata}{\bigskip\bigskip\singlespacing
+  \newcommand{\keywords}[1]{\noindent\textbf{Keywords: }\,{##1}.}
+  \newcommand{\MSC}[1]{\noindent\textbf{Mathematics Subject Classification (2010): }\,{##1}.}
+}{
+}
 
 %NEW_COMMANDS
 \newcommand{\note}[1]{{\color{red}{#1}}}

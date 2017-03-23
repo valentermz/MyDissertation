@@ -343,7 +343,7 @@
     \vspace*{\@abhdskip}%
     \ifphd%
       {\def\\{\noexpand\\} \xdef\@abstracttitle{\@abstracttitle}}
-      \expandafter\uppercase\expandafter{\@abstracttitle $\mathbb{C}^2$} \\ %Warning: math mode is forced here after \altabstracttitle
+      \expandafter\uppercase\expandafter{\@abstracttitle $\mathbb{C}^2$\\Rigidity and analytic invariants} \\ %Warning: math mode is forced here after \altabstracttitle
       \@author,\ Ph.D. \\
       Cornell University\ \@conferralyear%
     \else
@@ -359,7 +359,7 @@
 }
 
 % Warning: this has been modified to split text from math mode
-  \newcommand{\altabstracttitle}{{The analytic invariants of generic quadratic vector fields on }}
+  \newcommand{\altabstracttitle}{{Quadratic vector fields on }}
   \newcommand{\@abstracttitle}{\altabstracttitle}
 % \newcommand{\@abstracttitle}{\@title} 
 \newcommand{\abstracttitle}[1]{\renewcommand{\@abstracttitle}{#1}}
