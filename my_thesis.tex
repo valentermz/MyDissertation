@@ -113,7 +113,7 @@ The brilliant insight of Poincar\'{e} was that differential equations belong not
  \[ v = f(x,t)\frac{\partial}{\partial x} + \frac{\partial}{\partial t}, \qquad (x,t)\in U\subset\R^2, \]
 in some appropriate open set $U$. A solution to the given differential equation corresponds to a smooth curve $s\mapsto\varphi(s)$ that is everywhere tangent to the vector field $v$. Under this philosophy, Poincar\'{e} made an exhaustive use of geometric methods to derive geometric properties of the solutions. Particularly, Poincar\'{e} set himself to study of systems of differential equations of the form 
 \begin{equation}\label{preface:eq:1}
- \frac{dx}{dt}=P(x,y), \quad \frac{dy}{dt}=Q(x,y)},
+ \frac{dx}{dt}=P(x,y), \quad \frac{dy}{dt}=Q(x,y),
 \end{equation}
 where $(x,y)\in\R^2$ and $P,Q$ are real polynomials. To an autonomous equation such as (\ref{preface:eq:1}) we can associate a polynomial two-dimensional vector field $\displaystyle v=P(x,y)\frac{\partial}{\partial x} + Q(x,y)\frac{\partial}{\partial y}$. Poincar\'{e} himself introduced the key concept of a \textit{limit cycle}: a closed trajectory (i.e.~periodic solution) isolated from other such trajectories, and proved that a polynomial differential equation in the plane with no saddle connections may only have a finite number of limit cycles. 
 %
@@ -169,10 +169,54 @@ These results have been published in \cite{TwinVectorFields,UtmostRigidity} and 
 \normalspacing \setcounter{page}{1} \pagenumbering{arabic}
 \pagestyle{cornell} \addtolength{\parskip}{0.5\baselineskip}
 
+\numberwithin{equation}{section}
+
 
 
 
 \chapter{Introduction}
+
+\section{The class of generic quadratic vector fields}
+
+The object of study in this work are \textit{quadratic vector fields} on $\C^2$. These are sections of the holomorphic tangent bundle of $\C^2$ of the form 
+ \[ v = P(x,y)\frac{\partial}{\partial x} + Q(x,y)\frac{\partial}{\partial y}, \]
+where $P,Q\in\C[x,y]$ are polynomials of degree two. Let us regard $\C^2$ as an affine chart on $\CP^2$. A vector field $v$ as above does not have a holomorphic extension to $\CP^2$, since it is known that any holomorphic vector field on $\CP^2$ comes from a linear homogeneous vector field on $\C^3$. Nonetheless, the \textit{holomorphic foliation} that the integral curves of $v$ define on $\C^2$ can always be extended to a singular holomorphic foliation $\F_v$ on $\CP^2$. Such extension is possible for any polynomial vector field on $\C^2$. Conversely, any singular holomorphic foliation on $\CP^2$ is induced by a polynomial vector field on any affine chart.
+
+The space of polynomial vector fields of a fixed degree has a natural vector space structure. We seek to understand the \textit{generic properties} of such vector fields. We will say that a property is generic if it is satisfied by every vector field in some open and dense subset of the space of all vector fields of the given degree. The nature of these open and dense sets will be specified when needed. For example, by Bezout's theorem, a generic vector field of degree $n$ has exactly $n^2$ isolated singularities. Also, it is well known that when extending a foliation from $\C^2$ to $\CP^2$ we generically obtain an invariant line at infinity. This means that the line $\mathcal{L}=\CP^2\setminus\C^2$, once a finite number of singularities are removed, is a leaf of the foliation $\F_v$. In the generic case, the number of singularities on $\mathcal{L}$ is exactly $n+1$. These conditions are the most basic generic properties of polynomial vector fields, they are all defined by algebraic conditions and, we will deal exclusively with quadratic vector fields with these properties. 
+
+\begin{definition}\label{def:classesV2A2}
+ We will denote by $\V_2$ the space of all quadratic vector fields $v$ on $\C^2$ having exactly 4 isolated singularities, and such that $\F_v$ has an invariant line at infinity with exactly 3 singular points. Also, we will denote by $\A_2$ the space of all \textit{foliations} that come from a vector field from the class $\V_2$.
+\end{definition}
+
+Note that two quadratic vector fields generate the same foliation if and only if they differ only by a non-zero scaling factor; hence, $\A_2=\V_2/\C^*$.
+
+
+
+
+\section{Equivalence of vector fields and foliations}
+
+The properties we aim to study should not only be generic, but should also be preserved under topological or analytic equivalence. We consider three types of relations: equivalence of vector fields over $\C^2$, orbital equivalence of vector fields over $\C^2$, equivalence of foliations over $\CP^2$.
+
+
+\begin{definition}\label{def:analyticEqVectorFields}
+ We say that two vector fields $v_1$ and $v_2$ are \textit{analytically equivalent} if there exists an analytic diffeomorphism $F$ between the respective ambient spaces that transforms one into the other; that is, if $v_2(p)=DF(F^{-1}(p))\cdot v_1(F^{-1}(p))$. In case the diffeomorphism $F$ above is an affine transformation on $\C^2$ we will say that the vector fields are \textit{affine equivalent}. 
+\end{definition}
+
+\begin{definition}\label{def:analyticEqFoliations}
+ Let $\F_1$ and $\F_2$ be singular holomorphic foliations on a complex manifold $M$. We say that $\F_1$ and $\F_2$ are \textit{topologically equivalent} if there exists a homeomorphism  of $M$ which brings the leaves of $\F_1$ onto the leaves of $\F_2$ while preserving both the orientation of the leaves and of ambient space $M$. If such homeomorphism is in fact an analytic diffeomorphism, we will say that the foliations are \textit{analytically equivalent}.
+\end{definition}
+
+\begin{definition}\label{def:orbitalEq}
+ Two vector fields on $\C^2$ will be said to be \textit{orbitally} equivalent if the foliations they define are equivalent over $\C^2$ in the respective sense (topological or analytic).
+\end{definition}
+
+% \section{The analytic invariants of quadratic vector fields}
+% \subsection{Moduli of analytic classification}
+% \section{Twin vector fields and relations on spectra}
+% \section{The phenomenon of topological rigidity}
+
+
+
 
 \chapter{The spectra of singularities}
 
@@ -193,7 +237,9 @@ These results have been published in \cite{TwinVectorFields,UtmostRigidity} and 
 
 
 
+%%COMMENTS%%
 
+% Do I want to switch CP2 by P2?
 
 
 

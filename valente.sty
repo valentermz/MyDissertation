@@ -22,27 +22,27 @@
 
 
 %THEOREMS 
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{formula}[theorem]{Formula}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{claim}[theorem]{Claim}
-\newtheorem{problem}[theorem]{Problem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{formula}{Formula}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{claim}{Claim}[section]
+\newtheorem{problem}{Problem}[section]
 
 \theoremstyle{definition}
-	\newtheorem{definition}[theorem]{Definition}
+	\newtheorem{definition}{Definition}[section]
 
 \theoremstyle{remark}
-	\newtheorem{remark}[theorem]{Remark}
+	\newtheorem{remark}{Remark}[section]
 
-%Theorem numbered by letters for the preface
+%%Theorem numbered by letters for the preface
 \theoremstyle{theorem}
 \newtheorem{prefthm}{Theorem}
 	\renewcommand*{\theprefthm}{\Alph{prefthm}}
 	
-%Keywords and MSC for the abstract
+%%Keywords and MSC for the abstract
 \newenvironment{metadata}{\bigskip\bigskip\singlespacing
   \newcommand{\keywords}[1]{\noindent\textbf{Keywords: }\,{##1}.}
   \newcommand{\MSC}[1]{\noindent\textbf{Mathematics Subject Classification (2010): }\,{##1}.}
@@ -61,6 +61,7 @@
 \newcommand{\CP}{\mathbb{C}\mathrm{P}}
 \newcommand{\Diff}{\operatorname{Diff}(\mathbb{C},0)}
 
+\newcommand{\V}{\mathcal{V}}
 \newcommand{\A}{\mathcal{A}}
 \newcommand{\F}{\mathcal{F}}
 \newcommand{\Ft}{\widetilde{\mathcal{F}}}
@@ -78,11 +79,14 @@
 \newcommand{\Inn}[1]{\operatorname{Inn}({#1})}
 \newcommand{\Out}[1]{\operatorname{Out}({#1})}
 
+%%To create dashed arrows for rational maps
+\newcommand*{\dashedArrow}{\, \mathbin{\tikz [baseline=-0.25ex,-latex] \draw [->,densely dashed] (0pt,0.5ex) -- (1.3em,0.5ex);}\,}
+
 \newcommand{\spanset}[1]{\left\langle\,{#1}\,\right\rangle}
 \newcommand{\set}[2]{\left\{{#1}\,\vert\,{#2}\right\}}
-%\newcommand{\dset}[2]{\left\{{#1}\:\bigm\vert\:{#2}\right\}}
-%\newcommand{\presentation}[2]{\langle{#1}\,\vert\,{#2}\rangle}
-%\newcommand{\dpresentation}[2]{\left\langle {#1}\:\bigm\vert\: {#2}\right\rangle}
+% \newcommand{\dset}[2]{\left\{{#1}\:\bigm\vert\:{#2}\right\}}
+% \newcommand{\presentation}[2]{\langle{#1}\,\vert\,{#2}\rangle}
+% \newcommand{\dpresentation}[2]{\left\langle {#1}\:\bigm\vert\: {#2}\right\rangle}
 
 \renewcommand{\Re}[1]{\operatorname{Re}\,{#1}}
 \renewcommand{\Im}[1]{\operatorname{Im}\,{#1}}
