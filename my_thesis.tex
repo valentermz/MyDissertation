@@ -111,9 +111,9 @@ The origins of the theory of holomorphic foliations trace back to the beginning 
 %
 The brilliant insight of Poincar\'{e} was that differential equations belong not only to the realm of analysis, but also to geometry. For example, providing a non-autonomous differential equation of the form $\displaystyle\frac{dx}{dt}=f(x,t)$ is equivalent to giving a vector field, a much more geometric object, of the form
  \[ v = f(x,t)\frac{\partial}{\partial x} + \frac{\partial}{\partial t}, \qquad (x,t)\in U\subset\R^2, \]
-in some appropriate open set $U$. A solution to the given differential equation corresponds to a smooth curve $s\mapsto\varphi(s)$ that is everywhere tangent to the vector field $v$. Under this philosophy, Poincar\'{e} made an exhaustive use of geometric methods to derive geometric properties of the solutions. Particularly, Poincar\'{e} set himself to study differential equations of the form 
+in some appropriate open set $U$. A solution to the given differential equation corresponds to a smooth curve $s\mapsto\varphi(s)$ that is everywhere tangent to the vector field $v$. Under this philosophy, Poincar\'{e} made an exhaustive use of geometric methods to derive geometric properties of the solutions. Particularly, Poincar\'{e} set himself to study of systems of differential equations of the form 
 \begin{equation}\label{preface:eq:1}
- \frac{dy}{dx}=\frac{P(x,y)}{Q(x,y)},
+ \frac{dx}{dt}=P(x,y), \quad \frac{dy}{dt}=Q(x,y)},
 \end{equation}
 where $(x,y)\in\R^2$ and $P,Q$ are real polynomials. To an autonomous equation such as (\ref{preface:eq:1}) we can associate a polynomial two-dimensional vector field $\displaystyle v=P(x,y)\frac{\partial}{\partial x} + Q(x,y)\frac{\partial}{\partial y}$. Poincar\'{e} himself introduced the key concept of a \textit{limit cycle}: a closed trajectory (i.e.~periodic solution) isolated from other such trajectories, and proved that a polynomial differential equation in the plane with no saddle connections may only have a finite number of limit cycles. 
 %
@@ -124,7 +124,7 @@ In 1900, during the International Congress of Mathematicians, Hilbert included i
 \bigskip
 \begin{quote}
 \singlespacing
- What can be said about the maximal number and position of Poincar\'{e} boundry cycles (\textit{limit cycles}) for a differential equation of the first order of the form $\frac{dy}{dx}=\frac{P}{Q}$, where $P$ and $Q$ are $n^{\text{th}}$ degree polynomials in $x$ and $y$?
+ What can be said about the maximal number and position of Poincar\'{e} boundry cycles (\textit{cycles limites}) for a differential equation of the first order of the form $\frac{dy}{dx}=\frac{Q}{P}$, where $P$ and $Q$ are $n^{\text{th}}$ degree polynomials in $x$ and $y$?
 \end{quote}
 
 \noindent This question, which is the second part of Hilbert's $16^{\text{th}}$ problem, remains open--even in the simplest non-trivial case: that of quadratic polynomials.
@@ -152,7 +152,7 @@ First, improving on previous results, we show that foliations defined by generic
 Two foliations defined by generic quadratic vector fields are topologically equivalent if and only if they are affine equivalent.  
 \end{prefthm}
 
-Second, we provide two completely independent results that provide necessary and sufficient conditions for generic quadratic vector fields to be affine equivalent. Previously, no results of this sort were know. %Double check this claim!! haha..
+Second, we provide two completely independent results that provide necessary and sufficient conditions for generic quadratic vector fields to be affine equivalent. Previously, no results of this sort were known. %Double check this claim!! haha..
 
 \begin{prefthm}
  Two generic quadratic vector fields are orbitally affine equivalent if and only if their holonomy groups at infinity are analytically conjugate.
