@@ -216,9 +216,9 @@ The properties we aim to study should not only be generic, but should also be pr
 
 \section{Analytic invariants of polynomial vector fields}
 
-By \textit{analytic invariants} of a vector field we mean those \textit{objects} that we can coherently associate to each (say generic) vector field which are preserved under analytic equivalence of vector fields. These objects may be numbers, groups, cohomology classes, sheaves, and so on. Good analytic invariants should give us valuable information about the behavior of our vector field. Moreover, these invariants are fundamental in the understanding of the \textit{analytic classification} of vector fields: in order for two vector fields to be analytically equivalent, it is necessary that their invariants should agree. The question of whether or not coincidence of the invariants is also sufficient is, in most cases, a very delicate question. 
+By \textit{analytic invariants} of a vector field we mean those \textit{objects} that we can coherently associate to each (say generic) vector field which are preserved under analytic equivalence of vector fields. These objects may be numbers, groups, cohomology classes, sheaves, and so on. Good analytic invariants should give us valuable information about the behavior of our vector field. Moreover, these invariants are fundamental in the understanding of the \textit{analytic classification} of vector fields: in order for two vector fields to be analytically equivalent, it is necessary that their invariants should agree. The question of whether or not coincidence of the invariants is also sufficient is, in most cases, a delicate question. 
 
-Analytic invariants can be of a different nature: local, semi-local or global. For example, the \textit{projective degree} of a foliation (the number of tangencies with a generic line) or the set of invariant algebraic curves are global analytic invariants. For the class of generic quadratic vector fields these invariants are not interesting: a quadratic vector field with an invariant line at infinity has always projective degree two, and in the generic case no other invariant curves. The analytic invariants we are interested here are of a local nature: the spectrum of the singularities; and semi-local: the holonomy group at infinity.
+Analytic invariants can be of a different nature: local, semi-local or global. For example, the \textit{projective degree} of a foliation (the number of tangencies with a generic line) or the set of invariant algebraic curves are global analytic invariants. For the class of generic quadratic vector fields these invariants are not interesting: a quadratic vector field with an invariant line at infinity has always projective degree two, and in the generic case no other invariant curves. The analytic invariants we are interested here are of a local nature: the spectra of the singularities; and semi-local: the holonomy group at infinity.
 
 
 \subsection{The spectra of singularities}
@@ -241,11 +241,46 @@ It is well known that analytically equivalent vector fields have conjugate linea
 
 \subsection{Characteristic numbers}
 
+In order to study the extended foliation in a neighborhood of the line at infinity we introduce the following change of coordinates: $z=\displaystyle\frac{1}{x}$, $w=\displaystyle\frac{y}{x}$. A simple computation shows that, in these coordinates, a generic quadratic vector field induces a foliation given by
+ \[ \frac{dz}{dw} = z\sum_{j=1}^3 \frac{\lambda_j}{w-w_j} + O(z^2). \]
+The line at infinity is given by $\mathcal{L}=\{z=0\}$, and the singular point on it correspond to the poles $w_j$. The \textit{characteristic numbers at infinity} are defined to be the residues $\lambda_j$, which are precisely the Camacho-Sad indices $\lambda_j=\operatorname{CS}\,(\F_v,\mathcal{L},w_j)$.%
+% Clearly, each residue is a local analytic invariant%
+% %
+% \footnote{It can be shown that under rigidity of the holonomy group, which is a generic condition, the collection $\{\lambda_1,\lambda_2,\lambda_3\}$ is in fact a global topological invariant of $\F_v$ \cite{Ilyashenko1978,IlyashenkoMoldavskis2011}.}.
+
+\begin{definition}\label{def:extendedSpectra}
+ The \textit{extended spectra of singularities} of a generic quadratic vector field $v$ is the collection of the spectra of singularities over the affine part, together with the characteristic numbers at infinity.
+\end{definition}
+
 
 \subsection{The holonomy group}
 
+Let $\F$ be a foliation from the class $\A_2$ and denote by $\LF$ its leaf at infinity (i.e.~the line punctured at the singularities). Given a base point $b\in\LF$ and the germ of a cross section $(\Gamma,b)$, transversal to the leaves of $\F$, we can perform the following standard construction: for any loop $\gamma$ on $\LF$ based at $b$, we follow the leaves of $\F$ along some small tubular neighborhood of the image of $\gamma$ to obtain the germ of a holomorphic return map $\Delta_\gamma\colon (\Gamma,b)\to(\Gamma,b)$. This germ, the \textit{holonomy} of $\F$ along $\gamma$, depends only on the homotopy class of $\gamma$ in the fundamental group $\pi_1(\LF,b)$. Moreover, the map $\Delta\colon\pi_1(\LF,b)\to \operatorname{Diff}\,(\Gamma,b)$ is a group anti-homomorphism. Fixing an analytic parametrization $\Diff\to \operatorname{Diff}\,(\Gamma,b)$, we will write $\Delta\colon\pi_1(\LF,b)\to\Diff$ and define the \textit{holonomy group at infinity} of $\F$ as $\GF=\operatorname{Im}\,\Delta\subset\Diff$. This group is canonically defined up to conjugacy in $\Diff$.
 
+\begin{definition}
+ We say that two foliations $\F$ and $\Ft$ from the class $\A_2$ have \textit{analytically conjugate holonomy groups} whenever there exist the germ of a conformal map $h$, and a geometric isomorphism $H_{\ast}\colon \pi_1(\LF,b)\to\pi_1(\LFt,\tilde{b})$ that conjugate the holonomy in the following way:
+  \[ \forall\gamma\in\pi_1(\LF,b): \quad %
+     h\circ\Delta_\gamma = \widetilde{\Delta}_{H_{\ast}\gamma}\circ h. \]
+By a \textit{geometric isomorphism} we mean an isomorphism $H_{\ast}\colon \pi_1(\LF,b)\to\pi_1(\LFt,\tilde{b})$ induced by some orientation-preserving homeomorphism $H\colon\LF\to\LFt$.
+\end{definition}
 
+The holonomy group at infinity has been the main tool in the study of generic polynomial foliations. It is known that a generic polynomial foliation on $\C^2$ has a holonomy group at infinity that is \textit{non-solvable}. Under the assumption of non-solvability and a few extra mild restrictions, the geometric properties of the holonomy group determine to a great extent the geometric properties of the foliation on a global level. A finitely generated non-solvable (pseudo) group of conformal germs $\Diff\to\Diff$ satisfies the following properties:
+%
+\begin{itemize}[topsep=0pt,noitemsep]
+ \item The group is \textit{topologically rigid} \cite{Shcherbakov1984, Nakai1994},
+ \item The orbits of the action are \textit{dense in sectors} \cite{Nakai1994},
+ \item The group has a countable number of germs whose representatives have \textit{isolated fixed points} different from zero \cite{BelliartLiousseLoray1997, ShcherbakovRosalesOrtiz1998}.
+\end{itemize}
+%
+In consequence, a generic polynomial foliation satisfies the following:
+%
+\begin{itemize}[topsep=0pt,noitemsep]
+ \item The foliation is \textit{absolutely rigid}  \cite{Ilyashenko1978, Shcherbakov1984, LinsNetoSadScardua1998},
+ \item The leaves of the foliation, except the leaf at infinity, are \textit{everywhere dense} in $\C^2$ \cite{HudaiVerenov1962,Shcherbakov1984},
+ \item There exist a countable number of homologically independent \textit{complex limit cycles} \cite{ShcherbakovRosalesOrtiz1998,GoncharukKudryashov2017}. %SRO prove this only for n>2. Were Yury and Nataliya the first to prove it for n=2?
+\end{itemize}
+
+The concept of topological rigidity of polynomial foliations will be discusses in detail in Chapter \ref{chp:holonomy}, where it will be shown that generic quadratic foliations have the strongest possible form of rigidity.
 
 
 
@@ -259,7 +294,7 @@ It is well known that analytically equivalent vector fields have conjugate linea
 
 % \chapter{The spectra of singularities}
 % 
-% \chapter{The holonomy group at infinity}
+% \chapter{The holonomy group at infinity}\label{chp:holonomy}
 % 
 % \appendix
 % \chapter{Chapter 1 of appendix}
@@ -282,7 +317,7 @@ It is well known that analytically equivalent vector fields have conjugate linea
 % I introduced the definition ``Spec p'' as Spec Dv(p). Make sure it is used in Chapter 2.
 % Excesive amount of space in display math mode can be fixed with \singlespacing.
 % Check the use of ``extended spectra''.
-
+% I'm using \lambda_j for the residues but Twins uses \mu_j.
 
 
 
