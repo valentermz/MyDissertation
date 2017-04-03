@@ -31,16 +31,16 @@
 \newtheorem{claim}{Claim}[section]
 \newtheorem{problem}{Problem}[section]
 
+%%Theorem numbered by letters for the preface
+\theoremstyle{theorem}
+\newtheorem{prefthm}{Theorem}
+	\renewcommand*{\theprefthm}{\Alph{prefthm}}
+
 \theoremstyle{definition}
 	\newtheorem{definition}{Definition}[section]
 
 \theoremstyle{remark}
 	\newtheorem{remark}{Remark}[section]
-
-%%Theorem numbered by letters for the preface
-\theoremstyle{theorem}
-\newtheorem{prefthm}{Theorem}
-	\renewcommand*{\theprefthm}{\Alph{prefthm}}
 	
 %%Keywords and MSC for the abstract
 \newenvironment{metadata}{\bigskip\bigskip\singlespacing

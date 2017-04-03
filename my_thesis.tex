@@ -136,7 +136,7 @@ complex analytic curves locally parametrized by a complex variable $t\in\C$. In 
 In the middle of the 1960's Ilyashenko and Novikov found a crucial gap in the solution to Hilbert's $16^{\text{th}}$ problem, which completely invalidated the results claimed by Petrovskii and Landis. The history of this still-open problem has certainly been dramatic, yet it has inspired a great development in the geometric theory of differential equations and marked a start point for the study of complex polynomial foliations on $\C^2$.
 
 A crucial further development of the theory was later achieved by Hudai-Verenov and Ilyashenko \cite{HudaiVerenov1962,Ilyashenko1978}, who proved that the \textit{generic} properties of complex polynomial foliations are strikingly different than those of real polynomial foliations. In particular, generic polynomial foliations have the following properties:
-\begin{itemize}
+\begin{itemize}[topsep=0pt,noitemsep]
  \item Rigidity: Topological equivalence is extremely rare and closely related to analytic equivalence.
  \item Density of solutions: Every leaf on $\C\setminus\Sigma$ is everywhere dense on $\C^2$.
  \item Infinite amount of limit cycles: There are countably many homologically independent complex limit cycles.
@@ -216,6 +216,7 @@ The properties we aim to study should not only be generic, but should also be pr
 
 
 
+\vspace{-1.5\parskip}
 \section{Analytic invariants of polynomial vector fields}
 
 By \textit{analytic invariants} of a vector field we mean those \textit{objects} that we can coherently associate to each (say generic) vector field which are preserved under analytic equivalence. These objects may be numbers, groups, cohomology classes, sheaves, and so on. Good analytic invariants should give us valuable information about the behavior of the vector field in question. Moreover, these invariants are fundamental in the understanding of the \textit{analytic classification} of vector fields: in order for two vector fields to be analytically equivalent, it is necessary that their invariants should coincide. The question of whether or not coincidence of the invariants is also sufficient is, in most cases, a delicate question. 
@@ -227,7 +228,7 @@ Analytic invariants can be of a different nature: local, semi-local or global. F
 
 Let $p$ be an isolated singular point of some vector field $v = P(x,y)\frac{\partial}{\partial x} + Q(x,y)\frac{\partial}{\partial y}$. Consider the \textit{linearization matrix}
  \[ Dv(p) = 
- \singlespacing
+ \renewcommand*{\arraystretch}{0.65}
   \begin{pmatrix} 
    P'_x & P'_y \\
    Q'_x & Q'_y \\
@@ -237,7 +238,7 @@ It is well known that analytically equivalent vector fields have conjugate linea
 
 \begin{definition}
  Let $p$ be a singular point of $v$. We define the \textit{spectrum} of $v$ at $p$ as the ordered pair $\operatorname{Spec}\,(v,p) = (\tr Dv(p),\det Dv(p))$. The \textit{spectrum of singularities} of $v$ is the set 
-  \[ \singlespacing \operatorname{Spec}\,v = \set{\operatorname{Spec}\,(v,p)}{v(p)=0} . \]
+  \[ \operatorname{Spec}\,v = \set{\operatorname{Spec}\,(v,p)}{v(p)=0} . \]
 \end{definition}
 
 
@@ -328,20 +329,63 @@ We prove here that the ideal paradigm of topological rigidity may be formalized 
 Note that non-solvable holonomy groups are topologically rigid, hence topologically equivalent generic foliations have analytically conjugate holonomy groups. For this reason, the above theorem is a direct consequence of Theorem \ref{thm:moduliHolonomy}. However, the question of rigidity was the motivating question that lead to Theorem \ref{thm:moduliHolonomy}.
 
 
+\subsection{Twin vector fields}
+
+Theorem \ref{thm:moduliSpectra} claims that the \textit{extended} spectra of singularities is a complete set of analytic invariants. A natural question is whether or not the \textit{finite} spectra of singularities (that is, the spectra of the singularities taken only over the affine part) determines completely the vector field (up to affine equivalence). The answer is no --generically, there are two disjoint orbits of the action of the group $\Aff{2}{\C}$ on $\V_2$ consisting of vector fields having the same finite spectra.
+
+\begin{definition}\label{def:twins}
+We will say that two vector fields $v_1$ and $v_2$ are \emph{twin vector fields} if they are not equal yet they have exactly the same singular locus and, for each point $p$ in the common singular set, the matrices $Dv_1(p)$ and $Dv_2(p)$ have the same spectrum.
+\end{definition}
+
+\begin{theorem}[\cite{TwinVectorFields}]\label{thm:twins}
+ A generic quadratic vector field has exactly one twin. Moreover, if two vector fields from the class $\V_2$ have the same finite spectra (no assumption on the position of the singularities) then, after transforming one of them by a suitable affine map, they are either identical or are a pair of twin vector fields.
+\end{theorem}
+
+
+\subsection{Relations on spectra and lack of new index theorems}
+
+The extended spectra of a generic quadratic field consists of 11 complex numbers: 8 coming from the finite spectra and 3 characteristic numbers at infinity. These numbers are not independent, they are constrained by four classical \textit{index theorems}: 
+\begin{align} 
+ \sum_{v(p)=0}\frac{1}{\det Dv(p)} &= 0, \label{eq:EJ1}\\
+ \sum_{v(p)=0}\frac{\tr Dv(p) }{\det Dv(p)} &= 0, \label{eq:EJ2}\\
+ \sum_{p\in\operatorname{Sing }\F_v}\operatorname{BB}(\F_v,p) &= 16, \label{eq:BB}\\
+ \sum_{p\in\mathcal{L}}\,\operatorname{CS}(\F_v,\mathcal{L},p) &= 1. \label{eq:CS}
+\end{align}
+These are, respectively, the Euler-Jacobi equations, the Baum-Bott theorem and the Camacho-Sad theorem. 
+
+Let's do a simple dimension count: on one hand, the space $\V_2$ has dimension 12, and the affine group $\Aff{2}{\C}$ is 6-dimensional. Therefore the quotient (in the sens of Geometric Invariant Theory) $\V_2\sslash\Aff{2}{\C}$ has dimension 6. On the other hand, the extended spectra, which is of dimension 11, modulo the 4 equations above is a space of dimension 7. This gap in the dimensions implies that there must exist at least one more algebraic relation among these numbers. This \textit{hidden relation} was, until very recently, completely unknown. In order to describe this relation, let us introduce some notation.
+
+Let $v\in\V_2$ have singularities $p_1,\ldots,p_4$ on $\C^2$ and singular points at infinity $q_1,q_2,q_3$. Denote by $(t_k,d_k)$ the spectrum of $v$ at $p_k$, and by $\lambda_j$ the characteristic number of $q_j$. Denote by $\Lambda$ the product $\Lambda=\lambda_1\lambda_2\lambda_3$, and define $S$ to be the graded polynomial ring $S=\C[t_1,\ldots,t_4,d_1,\ldots,d_4]$, where the generators $t_k$ are of degree 1, and $d_k$ of degree 2.
+
+\begin{theorem}[\cite{NoIndexTheorems}]\label{thm:hiddenRelation}
+ There exist symmetric polynomials $P_0,P_1,P_2\in S$, homogeneous (with respect to the grading of $S$) of degree 14, such that every generic quadratic vector field satisfies the following equation
+  \begin{equation}\label{eq:hiddenRelation}
+   P_2(t;d)\,\Lambda^2+P_1(t;d)\,\Lambda+P_0(t;d)=0 .
+  \end{equation}
+ Moreover, the above relation is independent from equations (\ref{eq:EJ1})--(\ref{eq:CS}).
+\end{theorem}
+
+In collaboration with Yuri Kudryashov, we obtained this equation using computer algebra software. The polynomial $P_2\Lambda^2+P_1\Lambda+P_0$ is irreducible, but it's expression is very long; it consists of approximately four-thousand monomials. Moreover, we have shown that this relation does not come from an index theorem. In fact, we show that any possible ``index-theorem-like equation'' can be deduced from the classical index theorems, hence concluding the lack of existence of new index theorems for quadratic vector fields.
+
+\begin{theorem}[\cite{NoIndexTheorems}]\label{thm:noIndexTheorem}
+ There exists no pair $(R,r)$ consisting of a rational function $R$ on $\C^8$ and a symmetric rational function $r$ on $\C^3$ with the property that every quadratic vector field with non-degenerate singularities satisfies the relation
+  \[ R(t;d)=r(\lambda), \]
+ except for those that can be derived from the previously known relations: Euler-Jacobi, Baum-Bott and Camacho-Sad.
+\end{theorem}
 
 
 
-% \subsection{Twin vector fields and relations on spectra}
 
-% \chapter{The spectra of singularities}
-% 
-% \chapter{The holonomy group at infinity}\label{chpt:holonomy}
+
+\chapter{The spectra of singularities}
+
+\chapter{The holonomy group at infinity}\label{chpt:holonomy}
 % 
 % \appendix
 % \chapter{Mathematca script?}
 
 
-\nocite{StrongTopoInvariance,UtmostRigidity,TwinVectorFields,WoodsHole}
+\nocite{StrongTopoInvariance,UtmostRigidity,TwinVectorFields,WoodsHole,NoIndexTheorems}
 \bibliography{ref-valente}
 
 \end{document}
