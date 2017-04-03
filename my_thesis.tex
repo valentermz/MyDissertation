@@ -188,7 +188,9 @@ The space of polynomial vector fields of a fixed degree has a natural vector spa
  We will denote by $\V_2$ the space of all quadratic vector fields $v$ on $\C^2$ having exactly 4 isolated singularities, and such that $\F_v$ has an invariant line at infinity with exactly 3 singular points. Also, we will denote by $\A_2$ the space of all \textit{foliations} that come from a vector field from the class $\V_2$.
 \end{definition}
 
-Note that two quadratic vector fields generate the same foliation if and only if they differ only by a non-zero scaling factor; hence, $\A_2=\V_2/\C^*$.
+\begin{remark}\label{rmk:scalingFactor}
+ Two polynomial vector fields of equal degree generate the same foliation if and only if they differ only by a non-zero scaling factor; hence, $\A_2$ is given by the quotient $\V_2/\C^*$.
+\end{remark}
 
 
 
@@ -216,7 +218,7 @@ The properties we aim to study should not only be generic, but should also be pr
 
 \section{Analytic invariants of polynomial vector fields}
 
-By \textit{analytic invariants} of a vector field we mean those \textit{objects} that we can coherently associate to each (say generic) vector field which are preserved under analytic equivalence of vector fields. These objects may be numbers, groups, cohomology classes, sheaves, and so on. Good analytic invariants should give us valuable information about the behavior of our vector field. Moreover, these invariants are fundamental in the understanding of the \textit{analytic classification} of vector fields: in order for two vector fields to be analytically equivalent, it is necessary that their invariants should agree. The question of whether or not coincidence of the invariants is also sufficient is, in most cases, a delicate question. 
+By \textit{analytic invariants} of a vector field we mean those \textit{objects} that we can coherently associate to each (say generic) vector field which are preserved under analytic equivalence. These objects may be numbers, groups, cohomology classes, sheaves, and so on. Good analytic invariants should give us valuable information about the behavior of the vector field in question. Moreover, these invariants are fundamental in the understanding of the \textit{analytic classification} of vector fields: in order for two vector fields to be analytically equivalent, it is necessary that their invariants should coincide. The question of whether or not coincidence of the invariants is also sufficient is, in most cases, a delicate question. 
 
 Analytic invariants can be of a different nature: local, semi-local or global. For example, the \textit{projective degree} of a foliation (the number of tangencies with a generic line) or the set of invariant algebraic curves are global analytic invariants. For the class of generic quadratic vector fields these invariants are not interesting: a quadratic vector field with an invariant line at infinity has always projective degree two, and in the generic case no other invariant curves. The analytic invariants we are interested here are of a local nature: the spectra of the singularities; and semi-local: the holonomy group at infinity.
 
@@ -241,7 +243,7 @@ It is well known that analytically equivalent vector fields have conjugate linea
 
 \subsection{Characteristic numbers}
 
-In order to study the extended foliation in a neighborhood of the line at infinity we introduce the following change of coordinates: $z=\displaystyle\frac{1}{x}$, $w=\displaystyle\frac{y}{x}$. A simple computation shows that, in these coordinates, a generic quadratic vector field induces a foliation given by
+In order to study the extended foliation in a neighborhood of the line at infinity we introduce the following change of coordinates: $z=\displaystyle\frac{1}{x}$, $w=\displaystyle\frac{y}{x}$. A simple computation shows that, in these coordinates, a generic quadratic vector field induces a foliation given by an equation of the form
  \[ \frac{dz}{dw} = z\sum_{j=1}^3 \frac{\lambda_j}{w-w_j} + O(z^2). \]
 The line at infinity is given by $\mathcal{L}=\{z=0\}$, and the singular point on it correspond to the poles $w_j$. The \textit{characteristic numbers at infinity} are defined to be the residues $\lambda_j$, which are precisely the Camacho-Sad indices $\lambda_j=\operatorname{CS}\,(\F_v,\mathcal{L},w_j)$.%
 % Clearly, each residue is a local analytic invariant%
@@ -280,27 +282,66 @@ In consequence, a generic polynomial foliation satisfies the following:
  \item There exist a countable number of homologically independent \textit{complex limit cycles} \cite{ShcherbakovRosalesOrtiz1998,GoncharukKudryashov2017}. %SRO prove this only for n>2. Were Yury and Nataliya the first to prove it for n=2?
 \end{itemize}
 
-The concept of topological rigidity of polynomial foliations will be discusses in detail in Chapter \ref{chp:holonomy}, where it will be shown that generic quadratic foliations have the strongest possible form of rigidity.
+The concept of topological rigidity of polynomial foliations will be discusses in detail in Chapter \ref{chpt:holonomy}, where it will be shown that generic quadratic foliations have the strongest possible form of rigidity.
 
 
 
-% \section{Statement of the results}
-% \subsection{Moduli of analytic classification}
+
+\section{Statement of the results}
+
+There are two main results on this thesis. The first gives necessary and sufficient conditions for two generic quadratic vector fields to be analytically equivalent. This is done in two independent ways: Theorem \ref{thm:moduliSpectra} and Theorem \ref{thm:moduliHolonomy}. Second, we show in Theorem \ref{thm:utmost} that generic quadratic vector fields have the \textit{utmost rigidity property}.
+
+Additionally, we prove a series of results that describe the extended spectra of singularities of generic quadratic vector fields (Theorems \ref{thm:twins}, \ref{thm:hiddenRelation}, \ref{thm:noIndexTheorem}).
+
+
+\subsection{Moduli of analytic classification}
+
+We present two sets of invariants that serve as moduli of analytic classification. It follows from Remark \ref{rmk:scalingFactor} that the passage from affine equivalence to orbital affine equivalence of polynomial vector fields of the same degree is straightforward: two vector fields $v_1$ and $v_2$ are orbitally affine equivalent if and only if there exists $\lambda\in\C^*$ such that $v_1$ and $\lambda v_2$ are affine equivalent.
+
+\begin{theorem}[\cite{TwinVectorFields}]\label{thm:moduliSpectra}
+ Two generic quadratic vector fields are affine equivalent if and only if their extended spectra of singularities coincide.
+\end{theorem}
+
+\begin{theorem}[\cite{UtmostRigidity}]\label{thm:moduliHolonomy}
+ Two generic quadratic vector fields are orbitally affine equivalent if and only if their holonomy groups are infinity are analytically conjugate.
+\end{theorem}
+
+Genericity in the former theorem is defined by a (complex algebraic) Zariski open dense set in $\V_2$ whose existence is proved but not further described. The genericity assumptions on the latter theorem (as well as those for Theorem \ref{thm:utmost}) are discussed in detail in Chapter \ref{chpt:holonomy}
+
+
+\subsection{The phenomenon of topological rigidity}
+
+It was discovered in \cite{Ilyashenko1978} that polynomial foliations exhibit a phenomenon known as \textit{topological rigidity}. The idea of topological rigidity is that topological equivalence of foliations is extremely rare, and almost only happens when the foliations are, in fact, analytically equivalent. The main result in the paper cited is that a generic polynomial foliation is \textit{absolutely rigid}.
+
+\begin{definition}
+We say that a foliation $\F\in\A_n$ is \emph{absolutely rigid} if there exist a neighborhood $U$ of $\F$ in $\A_n$ and a neighborhood $V$ of the identity map in the space of self homeomorphisms of $\CP^2$ such that any foliation from $U$ which is conjugate to $\F$ by a homeomorphism in $V$ is necessarily affine equivalent to $\F$.
+\end{definition}
+
+The genericity assumptions in \cite{Ilyashenko1978} excluded a dense subset of $\A_n$. These assumptions have been substantially weakened over the years, and it is known now that every foliation in some open and dense subset of $\A_n$ is absolutely rigid ~\cite{Shcherbakov1984,Nakai1994,LinsNetoSadScardua1998}. The key assumption in the latest works is the non-solvability of the holonomy group at infinity. However, the necessity to restrict ourselves to a small neighborhood $U\subset\A_n$ and to assume proximity of the conjugating homeomorphism to the identity map were not dropped.
+
+We prove here that the ideal paradigm of topological rigidity may be formalized for quadratic foliations: two generic foliations from the class $\A_2$ are topologically equivalent if and only if they are affine equivalent --no additional hypotheses are needed.
+
+\begin{theorem}[\cite{UtmostRigidity}]\label{thm:utmost}
+ Two generic foliations from the class $\A_2$ are topologically equivalent if and only if they are affine equivalent.
+\end{theorem}
+
+Note that non-solvable holonomy groups are topologically rigid, hence topologically equivalent generic foliations have analytically conjugate holonomy groups. For this reason, the above theorem is a direct consequence of Theorem \ref{thm:moduliHolonomy}. However, the question of rigidity was the motivating question that lead to Theorem \ref{thm:moduliHolonomy}.
+
+
+
+
+
 % \subsection{Twin vector fields and relations on spectra}
-% \subsection{The phenomenon of topological rigidity}
-
-
-
 
 % \chapter{The spectra of singularities}
 % 
-% \chapter{The holonomy group at infinity}\label{chp:holonomy}
+% \chapter{The holonomy group at infinity}\label{chpt:holonomy}
 % 
 % \appendix
-% \chapter{Chapter 1 of appendix}
-% Appendix chapter 1 text goes here
+% \chapter{Mathematca script?}
 
-% \nocite{StrongTopoInvariance,UtmostRigidity,TwinVectorFields,WoodsHole}
+
+\nocite{StrongTopoInvariance,UtmostRigidity,TwinVectorFields,WoodsHole}
 \bibliography{ref-valente}
 
 \end{document}
