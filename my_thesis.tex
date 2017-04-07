@@ -469,12 +469,11 @@ where $\gamma\subset C$ is the boundary of a small disk centered at $p$.
 
 
 
+\section{Twin vector fields}
 
-\section{The spectra as moduli of analytic classification}
+In this section we prove Theorem \ref{thm:twins}, which claims that a generic quadratic vector field has a unique twin (cf. Definition \ref{def:twins}).
 
-The aim of this section is to prove Theorem \ref{thm:moduliSpectra}. The strategy is straightforward: define a \textit{moduli map} from the quotient $\V_2\sslash\Aff{2}{\C}$ to the space of possible values for the spectra and show that the generic fiber of this map consists of a single point.
-
-\subsection{A few normalizations}
+\subsection{The spectra of the fourth singularity}
 
 The first thing we need to observe is the following fact.
 
@@ -490,80 +489,8 @@ determines completely the position of $p_4$.
 
 Note that the above lemma implies in particular that two quadratic vector fields are twins if and only if three out of their four singularities agree in position and spectra.
 
-\begin{remark}
-It is straightforward to show that if a polynomial vector field on $\C^2$ of degree $n$ has $n+1$ collinear singularities then the whole line through these points is singular itself. In particular, a vector field from the class $\V_2$ cannot have three collinear singularities, and hence we have the following lemma.
-\end{remark}
 
-
-\begin{lemma}\label{lemma:normalizeSingularities}
- Every quadratic vector field with four isolated singularities is affine equivalent to a vector field with singularities at $p_1=(0,0)$, $p_2=(1,0)$, $p_3=(0,1)$. Any such vector field $v=P\frac{\partial}{\partial x}+Q\frac{\partial}{\partial y}$ is defined by polynomials
-\begin{equation}\label{eq:coefficients}
-\begin{array}{l} 
-P(x,y) = a_1x^2+a_2xy+a_3y^2-a_1x-a_3y,  \\ 
-Q(x,y) = a_4x^2+a_5xy+a_6y^2-a_4x-a_6y, \\
-\end{array}
-\end{equation}
-for some complex numbers $a_1,\ldots,a_6$.
-\end{lemma}
-
-In order to prove Theorem \ref{thm:moduliHolonomy} we are going to the following: instead of defining a vector field by the coefficients $a_k$ above, we are going to use the position and characteristic numbers of the singularities at infinity. The following proposition is a well-known fact and its proof is immediate.
-
-\begin{proposition}
-In the generic case there is a one to one correspondence between quadratic homogeneous vector fields 
-\[ \xi(x,y)=P_2\frac{\partial}{\partial x}+Q_2\frac{\partial}{\partial y}, \]
-modulo multiplication by a non-zero complex number and foliations with linear monodromy 
-\[ \frac{dz}{dw}=z\sum_{j=1}^3\frac{\lambda_j}{w-w_j}, \qquad \lambda_1+\lambda_2+\lambda_3=1, \]
-defined in a neighborhood of the line at infinity $z=0$ (where $z,w$ are the coordinates $z=1/x$, $w=y/x$).
-\end{proposition}
-
-In virtue of the above proposition we can uniquely define a quadratic homogeneous vector field by specifying three points $w_1,w_2,w_3\in\P^1$, three numbers $\lambda_1,\lambda_2,\lambda_3\in\C$ satisfying $\lambda_1+\lambda_2+\lambda_3=1$, and a rescaling factor $\kappa\in\C^*$. Once such homogeneous vector field is given we use formula (\ref{eq:coefficients}) to define uniquely a quadratic vector field having singularities at $p_1=(0,0)$, $p_2=(1,0)$, $p_3=(0,1)$. 
-
-A straightforward computation provides the following explicit formulae:
-\begin{align*}
-a_1 &=  \kappa\left(\lambda_1 w_2 w_3+\lambda_2 w_1 w_3+\lambda_3 w_1 w_2\right),\\
-a_2 &= -\kappa(\lambda_1(w_2+w_3)+\lambda_2(w_1+w_3)+\lambda_3(w_1+w_2)),\\
-a_3 &=  \kappa,\\
-a_4 &=  \kappa w_1w_2w_3,
-\end{align*} % yuk! necessary brake but make sure it is well used in the end!
-
-\begin{align*}
-a_5 &= -\kappa(\lambda_1w_1(w_2+w_3)+\lambda_2w_2(w_1+w_3)+\lambda_3w_3(w_1+w_2)),\\
-a_6 &=  \kappa(\lambda_1w_1+\lambda_2w_2+\lambda_3w_3).
-\end{align*}
-
-
-\subsection{The moduli map}
-
-In order to prove that a generic vector field is completely determined by the spectra of its finite singularities and the characteristic numbers at infinity we will define a \emph{moduli map} $\mathcal{M}$ that assigns to each vector field its set of spectra and characteristic numbers. By Lemma \ref{lemma:3outOf4}, the spectra of $v$ is completely determined by the spectra at $p_1,p_2,p_3$. Let us define a map $\operatorname{Spec}\colon\C^6\to\C^6$ that assigns to each vector field as above its spectra of singularities at $p_1,p_2,p_3$. Namely,
-\begin{equation}\label{eq:modulimap1}
-\operatorname{Spec}(a_1,\ldots,a_6)=(\operatorname{Spec}(v,{p_1}),\operatorname{Spec}(v,{p_2}),\operatorname{Spec}(v,{p_3})).
-\end{equation}
-Note that the map $\operatorname{Spec}$ is polynomial and its components are either linear (for the traces) or quadratic (for the determinants).
-
-We now define the moduli map $\mathcal{M}\colon\C^6\to\C^2\times\C^6$ by the formula
-\[\mathcal{M}(\lambda_1,\lambda_2,w_1,w_2,w_3,\kappa)=((\lambda_1,\lambda_2),\operatorname{Spec}{(a_1,\ldots,a_6)}). \]
-In order to prove Theorem \ref{thm:moduliSpectra} we need to show that the generic fiber of the moduli map $\mathcal{M}$ consists of a single point. In order to do this it is enough to find a non-empty open set $W\subset\operatorname{Im }\mathcal{M}$ and $U\subset\C^6$ such that $U=\mathcal{M}^{-1}(W)$ and $\mathcal{M}\vert_{U}\colon U\to W$ is one-to-one.
-
-\begin{proof}[Proof of Theorem \ref*{thm:moduliSpectra}]
-Consider the following vector field
-\[ v = (x^2+2xy-x)\frac{\partial}{\partial x}+(-xy+3y^2-3y)\frac{\partial}{\partial y}. \]
-A simple computation shows that the unique twin vector field of $v$ is
-\[ \tilde{v} = (3x^2+6xy-3x)\frac{\partial}{\partial x}+\left(-\frac{7}{3}x^2-5xy+y^2+\frac{7}{3}x-y\right)\frac{\partial}{\partial y}, \]
-and that the derivative of the map $\operatorname{Spec}$ is invertible both at $v$ and at $\tilde{v}$. Let $\Lambda=\operatorname{Spec}\,v$. We can deduce from the inverse function theorem %and from \hyperlink{thm:bis}{Theorem 1.3'} 
-the existence of neighborhoods $W_1,U,\widetilde{U}$ of $\Lambda,v,\tilde{v}$ respectively such that $\operatorname{Spec}^{-1}(W_1)=U\cup\widetilde{U}$ and $\operatorname{Spec}$ maps both $U$ and $\widetilde{U}$ diffeomorphically onto $W_1$. On the other hand, it is not hard to check that the characteristic numbers at infinity of $v$ and $\tilde{v}$ are different (the characteristic numbers of $v$ are all rational whereas the characteristic numbers of $\tilde{v}$ are not). By shrinking $U$ and $\widetilde{U}$ if necessary we can assume that vector fields in $U$ have different characteristic numbers from any vector field in $\widetilde{U}$. This means that if $(\lambda_1,\lambda_2)$ are the characteristic numbers of $v$ we can find a small neighborhood $W_0$ of $(\lambda_1,\lambda_2)$ such that no vector field from $\widetilde{U}$ has characteristic numbers in $W_0$. Define $W=W_0\times W_1\subset\C^2\times\C^6$. Since $\mathcal{M}=(\lambda_1,\lambda_2,\operatorname{Spec})$ and $\operatorname{Spec}^{-1}(W_1)=U\cup\widetilde{U}$, we must have $\mathcal{M}^{-1}(W)\subset U\cup\widetilde{U}$. However we also know that $\mathcal{M}^{-1}(W)$ is disjoint from $\widetilde{U}$, by construction of $W_0$, and so $\mathcal{M}^{-1}(W)=U$. We conclude that $\mathcal{M}$ is one-to-one over $W$ and so the generic fiber consists of a single point.
-\end{proof}
-
-
-\subsection{A remark about the Baum-Bott indices}
-
-We want to point out that Theorem \ref{thm:moduliSpectra} is very similar in spirit to results in \cite{LinsNeto2012} (for foliations on $\CP^2$ of degree two) and \cite{IlyashenkoMoldavskis2011} (for foliations on $\CP^2$ coming from a generic quadratic vector field on $\C^2$), where it is proved that in the generic case the Baum-Bott indices completely determine a foliation \textit{up to finite ambiguity} (modulo the natural action of $\PGL{2}{\C}$ and $\Aff{2}{\C}$, respectively). In fact, Lins Neto proves that the generic fiber of the Baum-Bott map, which associates to a foliation the Baum-Bott indices of its singularities, contains exactly 240 orbits of the natural action of $\PGL{2}{\C}$.
-
-
-
-
-\section{Twin vector fields}
-
-In this section we prove Theorem \ref{thm:twins}, which claims that a generic quadratic vector field has a unique twin (cf. Definition \ref{def:twins}).
+\subsection{Proof of the existence and uniqueness of twins}
 
 \begin{proof}[Proof of Theorem \ref*{thm:twins}]
 Let us prove the second claim in the theorem first. Suppose that two quadratic vector fields $v,\tilde{v}$ with non-degenerate singularities have the same spectra. After transforming $\tilde{v}$ by a suitable affine map on $\C^2$ we may assume that $v$ and $\tilde{v}$ have three singularities that agree in position and spectra. By Lemma \ref{lemma:3outOf4} the same holds for the fourth singularity. We conclude that either $\tilde{v}=v$ or $\tilde{v}$ is a twin vector field of $v$.
@@ -591,12 +518,101 @@ This proves that for a generic vector field system (\ref{eq:system}) has two sol
 
 
 
+\section{The spectra as moduli of analytic classification}
+
+The aim of this section is to prove Theorem \ref{thm:moduliSpectra}. The spirit of the strategy is straightforward: define a \textit{moduli map} from the space $\V_2$ to the space of possible values for the extended spectra and show that the generic fiber of this map consists of a single point. Since affine equivalent vector fields have the same spectra, we make use of the affine group to normalize the vector fields beforehand.
+
+
+\subsection{Explicit expressions for the spectra}
+
+\begin{remark}
+It is straightforward to show that if a polynomial vector field on $\C^2$ of degree $n$ has $n+1$ collinear singularities then the whole line through these points is singular itself. In particular, a vector field from the class $\V_2$ cannot have three collinear singularities, and hence we have the following lemma.
+\end{remark}
+
+
+\begin{lemma}\label{lemma:normalizeSingularities}
+ Every quadratic vector field with four isolated singularities is affine equivalent to a vector field with singularities at $p_1=(0,0)$, $p_2=(1,0)$, $p_3=(0,1)$. Any such vector field $v=P\frac{\partial}{\partial x}+Q\frac{\partial}{\partial y}$ is defined by polynomials
+\begin{equation}\label{eq:coefficients}
+\begin{array}{l} 
+ P(x,y) = a_0x^2+a_1xy+a_2y^2-a_0x-a_2y,  \\ 
+ Q(x,y) = a_3x^2+a_4xy+a_5y^2-a_3x-a_5y, \\
+\end{array}
+\end{equation}
+for some complex numbers $a_0,\ldots,a_5$.
+\end{lemma}
+
+Under this ``normal form'' we can immediately compute the explicit expressions for the traces $t_k$ and determinants $d_k$ at each singular point $p_1,p_2,p_3$.
+
+\begin{lemma}\label{lemma:expressionsSpectra}
+ The spectra $(t_k,d_k)$ of a vector field $v$ as in Lemma \ref{lemma:normalizeSingularities} at the singular point $p_k$ is given as follows.
+ \begin{align*}
+  t_1 &= -a_0-a_5  	& d_1 &= -a_2a_3+a_0a_5 \\
+  t_2 &= a_0+a_4-a_5  	& d_2 &= -a_1a_3+a_2a_3+a_0a_4-a_0a_5 \\
+  t_3 &= -a_0+a_1+a_5  	& d_3 &= a_2a_3-a_2a_4-a_0a_5+a_1a_5 
+ \end{align*}
+\end{lemma}
+
+\begin{lemma}\label{lemma:expressionLambda}
+ Let $\Lambda=\lambda_1\lambda_2\lambda_3$ denote the product of all characteristic numbers at infinity of some vector field $v$ as in Lemma \ref{lemma:normalizeSingularities}. In the generic case, $\Lambda$ can be computed as follows:
+ \begin{equation}\label{eq:expressionLambda}
+  \Lambda = -27\,\frac{d_1d_2+d_2d_3+d_3d_1}{g(a)},
+ \end{equation}
+ where $g(a)$ is given by
+ \begin{align*}
+  g(a) &= 4a_0^3a_2-a_0^2a_1^2+2a_0^2a_1a_5-12a_0^2a_2a_4-a_0^2a_5^2+2a_0a_1^2a_4+18a_0a_1a_2a_3 \\
+  & -4a_0a_1a_4a_5-18a_0a_2a_3a_5+12a_0a_2a_4^2+2a_0a_4a_5^2-4a_1^3a_3+12a_1^2a_3a_5 \\
+  & -a_1^2a_4^2-18a_1a_2a_3a_4-12a_1a_3a_5^2+2a_1a_4^2a_5+27a_2^2a_3^2+18a_2a_3a_4a_5 \\
+  & -4a_2a_4^3+4a_3a_5^3-a_4^2a_5^2.
+ \end{align*}
+\end{lemma}
+
+\begin{proof}
+ In coordinates $z=\displaystyle\frac{1}{x}$, $w=\displaystyle\frac{y}{x}$ the foliation is given by 
+  \[ \frac{dz}{dw} = z\,\frac{s(w)}{r(w)} + O(z^2), \]
+ where the roots $w_k$ of $r(w)$ are the singular points at infinity, and  $\lambda_k=\displaystyle\frac{s(w_k)}{r'(w_k)}$. We obtain the formula
+  \[ \Lambda = \frac{s(w_1)s(w_2)s(w_3)}{r'(w_1)r'(w_2)r'(w_3)}. \]
+  
+ The numerator in the above expression is the product of $s(w)$ at each of the roots of $r$, hence is given by the resultant $\Res(s,r)$.  This is true since $r$ and $s$ are both monic polynomials. Taking into account that $r'$ has leading coefficient equal to $3$ and that $r$ is cubic, we obtain that the denominator equals $\frac{1}{27}\Res(r',r)$. A simple computation now shows that 
+  \[ \Res(s,r)=-a_2\cdot f(a), \qquad \Res(r',r)=a_2\cdot g(a), \]
+ where $f(a)$ is a polynomial in $a$ that can be verified to satisfy $f(a)=d_1d_2+d_2d_3+d_3d_1$ (where the expressions for $d_k$ are those in Lemma \ref{lemma:expressionsSpectra}) and $g(a)$ is given in the statement of the current lemma. We conclude that $\Lambda=-27\frac{f(a)}{g(a)}$ as claimed.
+\end{proof}
+
+\begin{remark}\label{rmk:determineLambdas}
+ Note that if $v$ is a vector field as in Lemma \ref{lemma:normalizeSingularities} and we know the value of $g(a)$ and $\{(t_k,d_k)\}$, we can always recover the value of $\Lambda$. Moreover, using the Baum-Bott equation (\ref{eq:BB}) and the Camacho-Sad relation, we can recover the exact value of $\lambda_1,\lambda_2,\lambda_3$ from $\{(t_k,d_k)\}$ and $\Lambda$.
+\end{remark}
+
+
+\subsection{The moduli map} 
+
+\begin{definition}\label{def:moduliMap}
+We will call \textit{moduli map} regular map $\mathcal{M}\colon\C^6\to\C^7$ that takes 
+\[ (a_0,\ldots,a_5)\longmapsto (t_1,\ldots,t_3,d_1,\ldots,d_3,g(a)).  \]
+The explicit expression of $g(a)$ is given in Lemma \ref{lemma:expressionLambda}.
+\end{definition}
+
+Note that in virtue of Lemma \ref{lemma:3outOf4} and Remark \ref{rmk:determineLambdas}, the value of $\mathcal{M}(a)$ is enough to determine the precise value of the extended spectra of the vector field $v$ defined by the coefficients $a_0,\ldots,a_5$.
+
+In order to prove Theorem \ref{thm:moduliSpectra} we need to show that the generic fiber of the moduli map $\mathcal{M}$ consists of a single point. In order to do this it is enough to find a non-empty open set $W\subset\operatorname{Im }\mathcal{M}$ and $U\subset\C^6$ such that $U=\mathcal{M}^{-1}(W)$ and $\mathcal{M}\vert_{U}\colon U\to W$ is one-to-one.
+
+\begin{proof}[Proof of Theorem \ref*{thm:moduliSpectra}]
+Consider the following vector field
+\[ v_0 = (x^2+2xy-x)\frac{\partial}{\partial x}+(-xy+3y^2-3y)\frac{\partial}{\partial y}. \]
+Let us denote by $\operatorname{Spec}$ the function $\operatorname{Spec}(a)=(t_1,\ldots,d_3)$, and let $S_0=\operatorname{Spec}(v_0)$. A simple computation shows that the unique twin vector field of $v_0$ is
+\[ v_1 = (3x^2+6xy-3x)\frac{\partial}{\partial x}+\left(-\frac{7}{3}x^2-5xy+y^2+\frac{7}{3}x-y\right)\frac{\partial}{\partial y}, \]
+and that the derivative of the map $\operatorname{Spec}$ is invertible both at $v_0$ and at $v_1$. We can deduce from the inverse function theorem the existence of neighborhoods $\widetilde{W}, U_0, U_1$ of $S_0,v_0,v_1$ respectively such that $\operatorname{Spec}^{-1}(\widetilde{W})= U_0\cup U_1$ and $\operatorname{Spec}$ maps both $ U_0$ and $ U_1$ diffeomorphically onto $\widetilde{W}$. On the other hand, it is not hard to check that the product of the characteristic numbers at infinity of $v_0$ and $v_1$ are different. By shrinking $ U_0$ and $ U_1$ if necessary we can assume that vector fields in $ U_0$ have different product of characteristic numbers from any vector field in $ U_1$. This means that if $\Lambda_0$ is the product of characteristic numbers of $v_0$, we can find a small neighborhood $V_0$ of $\Lambda_0$ such that no vector field from $ U_1$ has product of characteristic numbers in $V_0$. Define $W=\widetilde{W}\times V_0\subset\C^6\times\C$. Since $\mathcal{M}=(\operatorname{Spec},\Lambda)$ and $\operatorname{Spec}^{-1}(\widetilde{W})= U_0\cup U_1$, we must have $\mathcal{M}^{-1}(W)\subset  U_0\cup U_1$. However we also know that $\mathcal{M}^{-1}(W)$ is disjoint from $ U_1$, by construction of $V_0$, and so $\mathcal{M}^{-1}(W)\subset U_0$. If we let $U=\mathcal{M}^{-1}(W)$ we have that $\mathcal{M}\vert_{U}\colon U\to W$ is one-to-one, and so the generic fiber of $\mathcal{M}$ consists of a single point.
+\end{proof}
+
+
+\subsection{A remark about the Baum-Bott indices}
+
+We want to point out that Theorem \ref{thm:moduliSpectra} is very similar in spirit to results in \cite{LinsNeto2012} (for foliations on $\CP^2$ of degree two) and \cite{IlyashenkoMoldavskis2011} (for foliations on $\CP^2$ coming from a generic quadratic vector field on $\C^2$), where it is proved that in the generic case the Baum-Bott indices completely determine a foliation \textit{up to finite ambiguity} (modulo the natural action of $\PGL{2}{\C}$ and $\Aff{2}{\C}$, respectively). In fact, Lins Neto proves that the generic fiber of the Baum-Bott map, which associates to a foliation the Baum-Bott indices of its singularities, contains exactly 240 orbits of the natural action of $\PGL{2}{\C}$.
+
+
+
 \section{The hidden relation and lack of new index theorems}
 
-The results on the previous section imply that the image of the moduli map, which assigns to each quadratic vector field its extended spectra, has dimension 6. This is the expected dimension, since the space $\V_2\sslash\Aff{2}{\C}$ is precisely 6-dimensional. The extended spectra consists of 11 complex numbers: 8 coming from the spectra of singularities $\{(t_k,d_k)\}$ on the affine part, and 3 coming from the characteristic numbers at infinity $\{\lambda_j\}$. These 11 numbers are subject to 4 relations: two Euler-Jacobi relations, the Baum-Bott formula and the Camacho-Sad theorem. This implies that there must exist one more algebraic relation, independent from the previous ones, that constrain these numbers. This so-called \textit{hidden relation} is described by Theorem \ref{thm:hiddenRelation}.
 
 
-\subsection{The moduli map} % there's already a section with this name...
 
 
 
