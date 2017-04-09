@@ -371,7 +371,9 @@ Despite the length of the equation, we have used its explicit expression to show
 
 \begin{theorem}[\cite{NoIndexTheorems}]\label{thm:noIndexTheorem}
  There exists no pair $(R,r)$ consisting of a rational function $R$ on $\C^8$ and a symmetric rational function $r$ on $\C^3$ with the property that every quadratic vector field with non-degenerate singularities satisfies the relation
-  \[ R(t;d)=r(\lambda), \]
+  \begin{equation}
+   R(t;d)=r(\lambda), 
+  \end{equation}
  except for those that can be derived from the previously known relations: Euler-Jacobi, Baum-Bott and Camacho-Sad.
 \end{theorem}
 
@@ -670,14 +672,14 @@ Propositions \ref{prop:descriptionF} and \ref{prop:independence} conclude the pr
 
 The study of indices and index theorems has been fundamental in the development of and geometry and topology. Theorems like the Poincar\'{e}-Hopf index theorem, the Gauss-Bonnet theorem or the Lefschetz fixed-point theorem are a few important examples. These \textit{local-to-global} theorems, which relate the local behavior of some geometric object around ``special'' points to some global invariant (usually measured in some cohomology space) are indeed powerful and fascinating.
 
-The theorems we previously knew that relate the extended spectra of a polynomial vector field are of this type, where a sum of local contributions (an index) taken over all singular points equals a fixed number that depends only on the degree of the vector field. The indices in question can be computed as \textit{residues} of meromorphic forms, or as \textit{localizations} of certain characteristic classes (for example, see \cite{Suwa1998}).
+The theorems we previously knew that relate the extended spectra of a polynomial vector field are of all this type, where a sum of local contributions (an index) taken over all singular points equals a fixed number that depends only on the degree of the vector field. The indices in question can be computed as \textit{residues} of meromorphic forms, or as \textit{localizations} of certain characteristic classes (see for example \cite{Suwa1998}).
 
 It was proved in \cite{WoodsHole} that all four classical relations can be realized as particular cases of the so-called \textit{Woods Hole trace formula}, also known as the \textit{Atiyah-Bott fixed point theorem} (a generalization of the Lefschetz fixed point theorem due to Atiyah and Bott in the complex analytic case, and to Verdier in the algebraic case), and it was expected that the missing hidden relation would also be of this type. This is not the case. As it will be shown in this section, there are no more index theorems that relate the extended spectra other than those which can derived from the classical ones.
 
-An index should be a number we assign to an isolated singularity of a vector field, foliation, space or map. This index should only depend on the local behavior around such point. Moreover, this index should be invariant under analytic equivalence.
+An index ought to be a number we assign to an isolated singularity of a vector field, foliation, space or map. This index should only depend on the local behavior of our geometric object around such singular point. Moreover, this index should be invariant under analytic equivalence.
 
 \begin{remark}
- An index theorem for meromorphic vector fields on $\CP^2$ should be such that the index at a generic singularity is \textit{a rational function on the spectra}. In fact, non-degeneracy of the singularity guarantees that the determinant $d$ of the linearization does not vanish but we may assume no other algebraic condition on the pair $(t,d)$. This suggest that the index would in fact belong to the ring $\C[t,d,d^{-1}]$.
+ An index theorem for meromorphic vector fields on $\CP^2$ should be such that the index at a generic singularity is \textit{a rational function on the spectra}. Non-degeneracy of the singularity guarantees that the determinant $d$ of the linearization does not vanish, but we may assume no other algebraic condition on the pair $(t,d)$. This suggest that the index would in fact belong to the ring $\C[t,d,d^{-1}]$.
 \end{remark}
  
 Indeed, we know from Poincar\'{e} that a \textit{hyperbolic} singularity of a planar vector field is analytically linearizable. Analytic invariance of the index means that the index cannot depend on anything but the spectra. 
@@ -689,15 +691,78 @@ Indeed, we know from Poincar\'{e} that a \textit{hyperbolic} singularity of a pl
 \end{proposition}
 
 Note that in particular the above equation may be rewritten as 
- \[ R(t;d) = r(\lambda), \]
-where $R$ is a rational function on the finite spectra $\{(t_k,d_k)\}$, and $r$ is a rational function on the characteristic numbers at infinity $\{\lambda_j\}$. Moreover, $r$ is symmetric function.
+ \begin{equation}\label{eq:R=r} 
+  R(t;d) = r(\lambda), 
+ \end{equation}
+where $R$ is a rational function on the finite spectra $\{(t_k,d_k)\}$, and $r$ is a rational \textit{symmetric} function on the characteristic numbers at infinity $\{\lambda_j\}$. Moreover, all classical relations (\ref{eq:firstEJ1})--(\ref{eq:CS}) are all of this form.
 
 
 \subsection{Lack of new index theorems}
 
-foo
+We prove here Theorem \ref{thm:noIndexTheorem}, which claims that there are no rational functions $R$ and $r$ that come from an index theorem as in Proposition \ref{prop:expectedIndex}, other than the ones that can be derived from the classical identities.
 
+We are going to show first that the finite spectra $(t_1,d_1),\ldots,(t_4,d_4)$ may only satisfy those relations that can be derived from the two Euler-Jacobi relations. In this way, if the function $r$ in (\ref{eq:R=r}) is constant, then the equation $R(t;d)=r$ follows from Euler-Jacobi. It is straight forward to see that, conversely, if $R$ is constant then (\ref{eq:R=r}) follows from Camacho-Sad. Once this is done, we prove that if neither $R$ nor $r$ are constant, then equation (\ref{eq:R=r}) can be derived from the Baum-Bott relation (using the Euler-Jacobi and Camacho-Sad relations).
 
+\begin{lemma}\label{lemma:finiteSpectra}
+ Any identity of the form $R(t;d)=0$ which holds for every quadratic vector field with non-degenerate singularities follows from the Euler-Jacobi relations (\ref{eq:EJ1}), (\ref{eq:EJ2}).
+\end{lemma}
+
+\begin{proof}
+ As pointed out in Lemma \ref{lemma:3outOf4}, the first Euler-Jacobi relation (\ref{eq:EJ1}) can be used to solve for $d_4$ in terms of $d_1,d_2,d_3$, and then the second relation (\ref{eq:EJ2}) used to solve for $t_4$ in terms of $t_1,d_1,\ldots,t_3,d_3$. Therefore we may write $R(t;d)=\tilde{R}(t_1,\ldots,d_3)$, for some rational function $\tilde{R}$ on $\C^6$.
+ 
+ It can be easily shown that the projection of the image of the moduli map $\operatorname{Im}\,\mathcal{M}\subset\C^6\times\C$ on the first component $\C^6$ is everywhere dense. This implies that the map $\operatorname{Spec}\colon\V_2\to\C^6$ that assigns to each generic vector field $v$ the spectra $(t_1,d_1,\ldots,t_3,d_3)$ is a dominant map (this is also proved in \cite{TwinVectorFields}). This means that there are no non-trivial polynomials that vanish on every tuple $(t_1,d_1,\ldots,t_3,d_3)$. In particular, $\tilde{R}=0$ for every generic vector field $v$ implies $\tilde{R}\equiv 0$. 
+\end{proof}
+
+Let $X$ be the variety defined as the affine closure of the set of triples $(\lambda,\lambda')\in\C^6$ such that there exist twin vector fields $v,v'$ realizing the characteristic numbers at infinity $\lambda$ and $\lambda'$, respectively. Understanding this space will be fundamental in the proof of Theorem \ref{thm:noIndexTheorem}.
+
+Note that any pair $(\lambda,\lambda')$ coming from twin vector fields must satisfy the equation imposed by the Camacho-Sad theorem: $\sigma_1(\lambda)=\sigma_1(\lambda')=1$. Moreover, because $v$ and $v'$ are twins, the contribution of the Baum-Bott indices of the singularities of $v$ and $v'$ over the affine part is the same. Hence, also the contribution of the singular points at infinity must agree. From (\ref{eq:sigma2BySigma3}) it follows that
+ \begin{equation}\label{eq:equalBB}
+  \frac{\sigma_2(\lambda)}{\sigma_3(\lambda)} = \frac{\sigma_2(\lambda')}{\sigma_3(\lambda')} .
+ \end{equation}
+The next lemma shows that $X$ is characterized by these three equations.
+
+\begin{lemma}\label{lemma:Xis3D}
+ The variety $X$ defined above is the irreducible three-dimensional affine variety defined by the prime ideal
+  \[ I = \big( \sigma_1(\lambda)-1,\, \sigma_1(\lambda')-1,\,  \sigma_2(\lambda)\sigma_3(\lambda')-\sigma_2(\lambda')\sigma_3(\lambda) \big) \subset \C[\lambda,\lambda']. \]
+\end{lemma}
+
+Let us postpone the proof of the above lemma and carry on with Theorem \ref{thm:noIndexTheorem}.
+
+\begin{proof}[Proof of Theorem \ref*{thm:noIndexTheorem}]
+Suppose we are given a pair of rational functions $(R,r)$ satisfying the hypotheses of Theorem \ref{thm:noIndexTheorem}. By definition of $X$, there exists a Zariski dense subset $\mathcal{U}$ of $X$ where every pair $(\lambda,\lambda')$ actually comes from the characteristic numbers at infinity of a pair of twin vector fields $v$ and $v'$. For any such pair, we must have that $r(\lambda)=r(\lambda')$ since, $v$ and $v'$ being twins, we have $R(t;d)=R(t';d')$. Since the set $\mathcal{U}$ is dense in $X$, we conclude that $r(\lambda)=r(\lambda')$ for every $(\lambda,\lambda')\in X$.
+
+Using the fact that $r$ is a symmetric function, we can rewrite it as a rational function on the elementary symmetric polynomials $\sigma_1,\sigma_2,\sigma_3$. Since $\sigma_1\equiv 1$, we may further write it as a function on $\sigma_2$ and $\sigma_3$ alone. For convenience, let us introduce the variables $s=\sigma_2$, $q=\frac{\sigma_2}{\sigma_3}$. In this way we have a function $\tilde{r}(s,q)$ defined by
+ \[ r(\lambda)=\tilde{r}(s,q), \qquad s=\sigma_2,\; q=\frac{\sigma_2}{\sigma_3}. \]
+
+Finally, note that, by Lemma \ref{lemma:Xis3D}, those tuples $(s,q,s',q')$ that satisfy $q=q'$ correspond to pairs $(\lambda,\lambda')\in X$, and we know that any point in $X$ satisfies $\tilde{r}(s,q)=\tilde{r}(s',q')$. In this way, we have produced a rational function $\tilde{r}$ on two variables that satisfies 
+ \[ \tilde{r}(s,q)=\tilde{r}(s',q') \quad \text{whenever} \quad q=q'. \]
+This implies that $\tilde{r}$ does not depend on $s$ and thus we conclude that $r(\lambda)=f(\frac{\sigma_2}{\sigma_3})$, for some rational function $f$.
+
+If $f$ is a constant function, then $R(t;d)=f$ imposes a relation among the finite spectra $(t;d)$, which must reduce to the Euler-Jacobi relations. But even if $f$ is not constant, substituting $\sigma_2/\sigma_3$ by the right hand side of (\ref{eq:sigma2BySigma3}) we obtain a relation
+ \[ R(t;d) - f \left(-\sum_{j=1}^4\frac{t_j^2}{d_j} +9 \right) = 0. \]
+ 
+By Lemma \ref{lemma:finiteSpectra} the above relation follows from the Euler-Jacobi relations.
+\end{proof}
+
+\begin{proof}[Proof of Lemma \ref*{lemma:Xis3D}]
+ Let $Y$ be the affine subvariety of $\C^6$ defined by the ideal $I=( \sigma_1(\lambda)-1,\, \sigma_1(\lambda')-1,\,  \sigma_2(\lambda)\sigma_3(\lambda')-\sigma_2(\lambda')\sigma_3(\lambda) )$. Clearly we have that $X\subset Y$. It is straightforward to verify that the variety $Y$ is irreducible and 3-dimensional. The main claim of this lemma is that $X$ has also dimension 3 (and then, by irreducibility of $Y$ we obtain $X=Y$).
+ 
+ Recall that we have found in Theorem \ref{thm:hiddenRelation} that the product of characteristic numbers $\Lambda=\sigma_3(\lambda)$ satisfies a quadratic equation
+  \[ P_2(t;d)\,\Lambda^2+P_1(t;d)\,\Lambda+P_0(t;d)=0 . \]
+ Given a pair $(\lambda,\lambda')$ coming from twin vector fields, we have that $\sigma_3(\lambda)$ and $\sigma_3(\lambda')$ are the two roots of the above equation. In virtue of this, we can recover the coefficients of the hidden relation from $\sigma_3(\lambda)$ and $\sigma_3(\lambda')$ as follows:
+ \begin{align*}
+  \frac{P_0}{P_2} &= \sigma_3(\lambda)\sigma_3(\lambda'), \\
+  \frac{P_1}{P_2} &= -\sigma_3(\lambda)-\sigma_3(\lambda').
+ \end{align*}
+
+ Consider the rational map $\Phi\colon\C^6\dashedArrow\C^3$ given as follows: 
+  \[ \Phi(a_0,\ldots,a_5)=\left( \frac{P_0}{P_2}, \frac{P_1}{P_2}, -\sum_{j=1}^4\frac{t_j^2}{d_j} +9 \right), \]
+ where the expressions for $t_k,d_k$ in terms of the $a_i$ are the ones given in Lemma \ref{lemma:expressionsSpectra}. It can be easily checked by a computer that the generic rank of the map $\Phi$ is equal to 3.
+ 
+ Finally, note that $\Phi$ factors through $X$, since it can be rewritten
+  \[ \Phi(a_0,\ldots,a_5)=\left( \sigma_3(\lambda)\sigma_3(\lambda'), -\sigma_3(\lambda)-\sigma_3(\lambda'), \frac{\sigma_2(\lambda)}{\sigma_3(\lambda)} \right). \]
+ The value of the third component is unambiguous since we have the equality (\ref{eq:equalBB}). Since the generic rank of $\Phi$ is 3 and $\Phi$ factors through $X$, we conclude that $X$ is at least 3-dimensional, in particular $X=Y$.  
+\end{proof}
 
 
 
@@ -728,6 +793,8 @@ foo
 % Careful: we don't want \qed commands
 % Check the degrees of the P_k in hidden relation.
 % Add explicit expression of F in the appendix.
+% Restate theorems to make it easier to read?
+% Check that the proof of Theorem \ref{thm:moduliSpectra} given here is correct: check that the example of v and its twin provided do satisfy the claimed properties (recall you rewrote the proof using Yuri's ideas!)
 
 
 
