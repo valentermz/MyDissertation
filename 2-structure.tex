@@ -1,0 +1,153 @@
+%%%Utmost rigidity - version 13 (April 20, 2015)  
+%STRUCTURE OF THE PROOF
+
+
+
+\subsection{Ideas behind the proof of Theorem \ref*{thm:main}}\label{subsec:ideas}
+Any foliation $\F\in\A_2$ is induced, in a neighborhood of the line at infinity $\{z=0\}$, by a rational differential equation
+\begin{equation}\label{eq:ratdifeq0}
+\frac{dz}{dw}=\frac{z\,P(z,w)}{Q(z,w)},
+\end{equation}
+such that $Q\vert_{z=0}$ is not identically zero. In fact, the roots of $r(w)=Q(0,w)$ determine the position of the singular points at infinity which from now on will be assumed, without loss of generality, to be given by $w_1=-1$, $w_2=1$ and $w_3=\infty$. Under this assumption the polynomial $r(w):=Q(0,w)$ may be chosen to be $r(w)=w^2-1$. 
+
+In Section \ref{sec:normalizations} we will normalize the above equation using the action of the group $\Aff{2}{\C}$. This normalization was originally introduced in \cite{Pyartli2000}. Any normalized foliation is uniquely defined by five complex parameters: the characteristic numbers $\lambda_1,\lambda_2$ and three more parameters $\alpha_0,\alpha_1,\alpha_2\in\C$. We will write $\F=\F(\lambda,\alpha)$ whenever we wish to emphasize that $\F$ is defined by the parameters $\lambda=(\lambda_1,\lambda_2)$ and $\alpha=(\alpha_0,\alpha_1,\alpha_2)$. 
+
+Let us also consider the solution $\Phi(z,w)$ of  equation (\ref{eq:ratdifeq0}) with initial condition $\Phi(z,0)=z$ and expand it as a power series in $z$ using the variations $\varphi_d$ of the solution $z=0$ in the following way:
+\[ \Phi(z,w)=\sum_{d=1}^{\infty} \varphi_d (w)\,z^d. \]
+The variations $\varphi_d(w)$ are defined in a neighborhood of the origin and can be analytically continued along any path on $\LF$. Moreover, the holonomy map $\Delta_{\gamma}(z)$ with respect to a given loop $\gamma\in\pi_1(\LF,0)$ is given by the power series
+\begin{equation}\label{eq:powerseriesDelta}
+\Delta_{\gamma}(z)=\var{1}{}\,z + \var{2}{}\,z^ 2 + \ldots,
+\end{equation}
+where $\varphi_{d\{\gamma\}}$ denotes the analytic continuation of $\varphi_d$ along the curve $\gamma$.
+
+Note that the fundamental group of the leaf $\LF\cong\C\setminus\{-1,1\}$ is a free group on two generators.
+\begin{definition}\label{def:geometricgenerators}
+ Let $\mu_1$ and $\mu_2$ be loops in $\LF$ based at the origin which go around the singular points $w=-1$ and $w=1$ respectively, once in the positive direction. We call these loops the \emph{standard geometric generators} of $\pi_1(\LF,0)$. 
+\end{definition}
+
+Now, consider the commutators
+\begin{equation}\label{def:gamma_i}
+ \gamma_1=\mu_2\mu_1\mu_2^{-1}\mu_1^{-1} \quad\text{and}\quad \gamma_2=\mu_2\mu_1^2\mu_2^{-1}\mu_1^{-2}, 
+\end{equation}
+and let $f_1,f_2$ be the holonomy maps corresponding to the above loops, this is, $f_j=\Delta_{\gamma_j}$, $j=1,2$. We call this germs \emph{distinguished parabolic germs}; they play a key role in this paper.
+
+\begin{remark}\label{rmk:genericity(iii)}
+Genericity assumption (iii) in Subsection \ref{subsec:genericity} can be translated to requiring that the distinguished parabolic germ 
+\[f_1=[\Delta_{\mu_1},\Delta_{\mu_2}]\]
+has a non-zero quadratic term. 
+\end{remark}
+
+Suppose $\Ft\in\A_2$ is topologically equivalent to $\F(\lambda,\alpha)$. The genericity assumptions imposed on these foliations imply that both $\F$ and $\Ft$ have the same characteristic numbers at infinity and so we may write $\Ft=\F(\lambda,\beta)$, where $\beta$ is some triple of complex numbers $\beta=(\beta_0,\beta_1,\beta_3)$. Define $\tilde{f}_j$ to be the holonomy map of $\Ft$ along $\gamma_j$. The topological conjugacy gives raise to a conformal germ $h\in\Diff$ and a geometric automorphism $H_\ast$ of $\pi_1(\LF,0)$ which conjugate the holonomy groups as in Definition \ref{def:conjugateholonomy}. 
+
+\begin{remark}\label{rmk:strongae}
+It follows from \cite{StrongTopoInvariance} that the geometric automorphism $H_\ast$ may always be assumed to be the identity map. We therefore conclude the existence of a germ $h\in\Diff$ such that
+\begin{equation}\label{eq:conjugatef-structure}
+ h\circ f_j-\tilde{f}_j\circ h=0, \qquad j=1,2.
+\end{equation}
+Because of the above, from now on we will always assume that any given analytic conjugacy between holonomy groups is given by some germ $h\in\Diff$ and the identity automorphism of the fundamental group of $\LF$. In \cite{StrongTopoInvariance} such a conjugacy is called \emph{strong analytic equivalence}. However, since we will always assume $H_\ast=id$, we shall not use this term.
+\end{remark}
+
+The essence of the proof of Theorem \ref{thm:main} may be summarized as follows: If the holonomy groups of $\F$ and $\Ft$ are analytically conjugate then there exits $h\in\Diff$ such that (\ref{eq:conjugatef-structure}) holds. We can compute the first terms in the power series expansions of the distinguished parabolic germs in terms of the parameters $\lambda$, $\alpha$ and $\beta$ as explicit iterated integrals using the variation equations of the differential equation (\ref{eq:ratdifeq0}) with respect to the solution $z=0$. We also expand $h$ as a power series with unknown coefficients and substitute all these series into equation (\ref{eq:conjugatef-structure}) to obtain an expression of the form
+\[ h\circ f_j-\tilde{f}_j\circ h=\sum_{d=1}^{\infty}\kappa_{d,j}\,z^d, \]
+for $j=1$ and $j=2$. Equating each $\kappa_{d,j}$ to zero should impose some conditions on the parameter $\beta$. However, since we do not know the coefficients in the power series expansion of $h$, we must consider, for each $d$, the system of equations
+\begin{equation}\label{eq:systPsi}
+ \kappa_{d,1}=0, \qquad \kappa_{d,2}=0.
+\end{equation} 
+A careful analysis of such a system will allow us to compute the coefficient of degree $d-1$ in the power series of $h$ and at the same time obtain a concrete condition imposed on the parameter $\beta$ by (\ref{eq:systPsi}). We do this for $d=3,4,5,6$. We will first obtain  conditions imposed on $\beta$ expressed in terms of the vanishing of certain integrals. Even though these conditions are polynomial in $\beta$, the coefficient of such polynomials are transcendental functions on $\lambda$ and $\alpha$. A crucial step in the proof of Theorem \ref{thm:main} is that we are actually able to translate these conditions into algebraic ones. This is done using a Lemma \ref{lemma:Pyartli}, which is proved in \cite{Pyartli2000}. We lastly prove that for generic $\lambda$ and $\alpha$ the polynomial system of equations we obtain has a unique solution given by $\beta=\alpha$. This proves that these normalized foliations having conjugate holonomy groups are in fact one and the same. This shows in particular that two foliations, not necessarily normalized, with conjugate holonomy groups must be affine equivalent. Moreover, in order to obtain such affine map taking one foliation into the other we consider first the affine maps taking each foliation to its normal form and compose one of these maps with the inverse of the other.
+
+The proof outlined above is carried out in a series of lemmas whose formal statements are given below.
+
+
+
+
+
+\subsection{Three fundamental lemmas}\label{subsec:mainlemmas}
+
+The most elaborate part of the proof of Theorem \ref{thm:main} is to obtain explicit conditions imposed on $\beta$ by the conjugacy of the holonomy groups of $\F(\lambda,\alpha)$ and $\F(\lambda,\beta)$. We do this following closely the constructions presented in \cite{Pyartli2006}.
+
+\begin{key}\label{lemma:key}
+For $d=3,4,5,6$ there exists a polynomial $P_d(w)$, whose coefficients are polynomials in $\beta$, such that the existence of a germ $h\in\Diff$ that conjugates the holonomy groups of $\F(\lambda,\alpha)$ and $\F(\lambda,\beta)$ up to jets of order $d$ implies
+\begin{equation}\label{eq:keylemma}
+ \int_{\gamma_1}\frac{P_d(w)}{r(w)^{d}}\,\varphi_1(w)^{d-1}\,dw=0. 
+\end{equation}
+\end{key} 
+In the lemma above $\varphi_1(w)$ is the first variation of the solution $z=0$ of equation (\ref{eq:ratdifeq0}) and $r(w)=w^2-1$. Before proving this lemma it is necessary to obtain explicit expressions for the coefficients in the power series expansions of the distinguished parabolic germs. These computations are carried out in Section \ref{sec:analysis}.
+
+\begin{remark}\label{rmk:dependence}
+Note that the vanishing of the integral in the \hyperref[lemma:key]{Key lemma} imposes one linear condition on the coefficients of the polynomial $P_d(w)$. The polynomials $P_d(w)$ \emph{do} depend on the foliation $\F(\lambda,\alpha)$. In fact, the coefficients of these polynomials depend polynomially on $\alpha$ and rationally on $\lambda$. The main content of the next lemma is that, in virtue of Lemma \ref{lemma:Pyartli}, the linear condition imposed on the coefficients of $P_d$ by the vanishing of the integral is not trivial. This implies rightaway that such condition is a \emph{polynomial} condition on the parameters $\beta$. This is discussed in detail in Subsection \ref{subsec:keytomain}.
+\end{remark}
+
+\begin{main}\label{lemma:main}
+For $d=3,4,5,6$ there exists a non-zero polynomial $F_d\in\C[\beta]$ such that the existence of a germ $h\in\Diff$ that conjugates the holonomy groups of $\F(\lambda,\alpha)$ and $\F(\lambda,\beta)$ up to jets of order $d$ implies $F_d(\beta)=0$.
+\end{main}
+
+Suppose now that $\F(\lambda,\alpha)$ and $\F(\lambda,\beta)$ have conjugate holonomy groups. The above lemma implies that $\beta\in\C^3$ satisfies the polynomial system of equations
+\begin{equation}\label{eq:polysyst}
+ F_3(\beta)=0,\;\ldots ,\;F_6(\beta)=0.
+\end{equation}
+This is a system of four equations on three variables. Generically such a system will have no solutions at all. However, because of the defining property of $F_d$ we see that $\beta=\alpha$ will always be a solution. The proof of Theorem \ref{thm:main} is completed by the following lemma.
+
+\begin{elimination}\label{lemma:elimination}
+There exists a non-empty Zariski open set $U\subset\C^5$ such that if $(\lambda,\alpha)\in U$ then the polynomial system \textnormal{(\ref{eq:polysyst})} has a unique solution given by $\beta=\alpha$.
+\end{elimination}
+
+
+
+
+
+
+\subsection{Two lemmas about integrals}\label{subsec:lemmasintegrals}
+
+The following lemmas were proved and used by Pyartli in \cite{Pyartli2000} and \cite{Pyartli2006}. They play a major role in our proof and will be used frequently.
+
+Recall that $\gamma_1$ and $\gamma_2$ have been defined to be the commutators $\gamma_1=\mu_2\mu_1\mu_2^{-1}\mu_1^{-1}$ and $\gamma_2=\mu_2\mu_1^2\mu_2^{-1}\mu_1^{-2}$ where $\mu_1$, $\mu_2$ are standard geometric generators of the fundamental group of the punctured line $\C\setminus\{1,-1\}$.
+
+\begin{lemma}\label{lemma:integrals1}
+Let $P(w)$ be a polynomial and let $\zeta(w)=(1+w)^{u_1}(1-w)^{u_2}$ where $u_1,u_2$ are complex numbers and $\zeta(0)=1$. Then
+\[ \int_{\gamma_2}P(w)\zeta(w)\,dw = (1+\exp{(2\pi i\,u_1)})\int_{\gamma_1}P(w)\zeta(w)\,dw. \]
+\end{lemma}
+
+The proof of this lemma is straightforward: we decompose the loops $\gamma_1,\gamma_2$ into pieces and write down each integral as a sum of integrals along these pieces to verify that the equality holds. 
+
+The next lemma is the fundamental step for deducing the \hyperref[lemma:main]{Main lemma} from the \hyperref[lemma:key]{Key lemma}.
+
+\begin{lemma}\label{lemma:Pyartli}
+Let $\zeta(w)=(1+w)^{u_1}(1-w)^{u_2}$, $\zeta(0)=1$, $u_1,u_2\notin\Z$, $r(w)=w^2-1$ and $P(w)$ a polynomial of degree at most $m$. The equality $\int_{\gamma_1}P(w)\zeta(w)\,dw=0$ holds if and only if there exists a constant $C\in\C$ and a polynomial $R(w)$ of degree at most $\max{(m-1,-2-\operatorname{Re}{(u_1+u_2)})}$ such that
+\[ \int_0^w P(t)\zeta(t)\,dt=R(w)r(w)\zeta(w)+C. \]
+\end{lemma}
+
+In this paper we will only use the above lemma in situations where the inequality $m-1>-2-\operatorname{Re}{(u_1+u_2)}$ holds; so that, if it exists, $R_d(w)$ will have degree at most $m-1$. Note that both the vanishing of the integral and the existence of $R(w)$ impose one non-trivial linear condition on the coefficients of the polynomial $P(w)$. Clearly the existence of such an $R$ implies the vanishing of the integral since we are integrating along the commutator loop $\gamma_1$ and so $\zeta_{\{\gamma_1\}}(0)=\zeta(0)=1$. This implies that both linear conditions are equivalent. A detailed proof can be found in \cite{Pyartli2000} and the escence of the proof is discussed in Section \ref{subsec:keytomain}.
+
+Recall that we have numbered the singular points at infinity of $\F$ in such a way that $\Re{\lambda_1}\geq\Re{\lambda_2}\geq\Re{\lambda_3}$. It follows from the fact that $\lambda_1+\lambda_2+\lambda_3=1$ that
+\begin{equation}\label{eq:inequalityRelambda}
+\Re{\lambda_1}+\Re{\lambda_2}\geq 2/3,
+\end{equation}
+This remark will be frequently used as a complement to Lemma \ref{lemma:Pyartli}. In Section \ref{sec:keylemma} we will apply Lemma \ref{lemma:Pyartli} to integrals of the form (\ref{eq:keylemma}) taking $u_i=(d-1)\lambda_i-d$, for $d=3,4,5,6$. In order to use Lemma \ref{lemma:Pyartli} we require $u_i\notin\Z$. This is one of the instances where it is important that genericity assumption $\lambda_i\notin\frac{1}{3}\Z\cup\frac{1}{4}\Z\cup\frac{1}{5}\Z$ holds.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

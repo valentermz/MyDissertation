@@ -1,0 +1,125 @@
+%%%Utmost rigidity - version 13 (April 20, 2015)  
+%DEFINITIONS AND NORMALIZATIONS
+
+
+
+A foliation $\F\in\A_2$ has three singular points at infinity. These can be brought to any other three different points on the infinite line by the action of the affine group of $\C^2$. We wish to normalize a foliation in such a way that the singular points are given by $w_1=-1$, $w_2=1$ and $w_3=\infty$ in coordinates $(z,w)=(1/x,\,y/x)$. If the characteristic numbers are pairwise different we can do this unambiguously by numbering the singular points in such a way that $\Re{\lambda_1}\geq\Re{\lambda_2}\geq\Re{\lambda_3}$ and if $\Re{\lambda_i}=\Re{\lambda_j}$ then $\Im{\lambda_i}>\Im{\lambda_j}$ provided $i<j$. 
+
+Since the characteristic numbers are not integer numbers it follows from \cite{Pyartli2000} that we can find an affine change of coordinates such that in the chart $(z,w)$ the foliation is induced by 
+\[ \frac{dz}{dw}=z\,\frac{s(w)(1+\alpha_0 z)+\kappa z+\eta z^2}{r(w)(1+\alpha_0\sigma z)+p(w)z^2}, \]
+where $r(w)=w^2-1$, $s(w)=\lambda_1(w-1)+\lambda_2(w+1)$, $p(w)=\alpha_1(w-1)+\alpha_2(w+1)$, $\sigma=\lambda_1+\lambda_2$ and $\eta=\alpha_1+\alpha_2$.
+
+It follows from \cite{Pyartli2006} that if $\lambda_1,\lambda_2\notin\Z$ then the parameter $\kappa$ above is non-zero, provided that the germ $f_1$ constructed in Definition \ref{def:geometricgenerators} as the commutator of the holonomy maps along the standard geometric generators has non-zero quadratic part. Moreover, if $\kappa\neq 0$ we can further normalize the above equation in such a way that $\kappa=1$. By one of our genericity hypotheses, $f_1$ has a non-trivial quadratic part and moreover this property also holds for any foliation whose holonomy group is analytically conjugate to that of $\F$. Therefore all foliations considered in this work may be normalized in such a way that $\kappa=1$. We arrive to the following normal form:
+\begin{equation}\label{eq:normalform}
+ \frac{dz}{dw}=z\,\frac{s(w)(1+\alpha_0 z)+z+\eta z^2}{r(w)(1+\alpha_0\sigma z)+p(w)z^2}
+\end{equation}
+In this way any generic foliation $\F\in\A_2$ is uniquely defined by five complex parameters: $\lambda_1$, $\lambda_2$, $\alpha_0$, $\alpha_1$, $\alpha_2$. We write $\F=\F(\lambda,\alpha)$ to emphasize this fact. In what follows $\Ft$ will denote a foliation from $\A_2$ whose holonomy group at infinity is analytically equivalent to that of $\F$. We deduce from such conjugacy and from the non-solvability of the holonomy groups that $\Ft$ has the same characteristic numbers at infinity. Therefore we may write $\Ft=\F(\lambda,\beta)$ where $\beta\in\C^3$.
+
+Let us denote the right hand side of (\ref{eq:normalform}) by $\Psi(z,w)$. The rational function $\Psi$ has a power series expansion with respect to $z$ of the form
+\begin{equation}\label{eq:expansionF}
+\Psi(z,w)=\sum_{d=1}^{\infty}K_d(w)\,z^d,
+\end{equation}
+where $K_d$ is a rational function in $w$. Since $\Psi(0,w)$ has denominator $r(w)$ we can expect that the rational functions $K_d(w)$ to have $r(w)$ to some power as denominator. We will see in Proposition \ref{prop:c_dS_d} that this is in fact the case and that moreover such power can always be taken to be equal to $d$.
+
+In particular the first coefficient $K_1(w)$ is the rational function
+\[ K_1(w)=\frac{s(w)}{r(w)}=\frac{\lambda_1}{w+1}+\frac{\lambda_2}{w-1}. \]
+The first variation of the solution $z=0$ to equation (\ref{eq:normalform}) satisfies the linear equation
+\begin{equation}\label{eq:vareq1}
+ \frac{d\varphi_1}{dw}=K_1(w)\,\varphi_1, \quad \varphi_1(0)=1,
+\end{equation}
+and so 
+\begin{equation}\label{eq:expforvar1}
+ \varphi_1(w)=(1+w)^{\lambda_1}(1-w)^{\lambda_2}, \quad \varphi_1(0)=1.
+\end{equation}
+The higher variations $\varphi_d$, $d\geq 2$, satisfy an inhomogeneous linear equation whose associate homogeneous equation is \textnormal{(\ref{eq:vareq1})}:
+\[ \frac{d\varphi_d}{dw}=K_1(w)\,\varphi_d+b_d(w), \quad \varphi_d(0)=0. \]
+Let us write $B_d(t)=\varphi_1(t)^{-1}\,b_d(t)$ so that the solution to the above equation is given by
+\[ \varphi_d(w)=\varphi_1(w)\int_{0}^{w}B_d(t)\,dt. \]
+Let us define $\phi_d(w)=\int_{0}^{w}B_d(t)\,dt$ and call these functions the \emph{reduced variations}. In this way $\varphi_d=\varphi_1\phi_d$. The non-linear terms $b_d(w)$ are well known for an equation of the form (\ref{eq:ratdifeq0}). The following proposition gives an explicit expression for $B_d=\varphi_1^{-1}\,b_d$.
+
+\begin{proposition}\label{prop:formulasB_d}
+The functions $B_d$ defined above are given by the following formulas:
+\begin{align*}
+B_2 & = K_2\varphi_1, \\
+B_3 & = 2K_2\phi_2\varphi_1 + K_3\varphi_1^2, \\
+B_4 & = K_2(2\phi_3\varphi_1+\phi_2^2\varphi_1) + 3K_3\phi_2\varphi_1^2 + K_4\varphi_1^3, \\
+B_5 & = 2K_2(\phi_4\varphi_1+\phi_3\phi_2\varphi_1) + 3K_3(\phi_3\varphi_1^2+\phi_2^2\varphi_1^2) + 4K_4\phi_2\varphi_1^3 + K_5\varphi_1^4, \\
+B_6 & = K_2(2\phi_5\varphi_1+2\phi_4\phi_2\varphi_1+\phi_3^2\varphi_1) + K_3(3\phi_4\varphi_1^2+6\phi_3\phi_2\varphi_1^2+\phi_2^3\varphi_1^2)\\ 
+    &\phantom{=}+K_4(4\phi_3\varphi_1^3+6\phi_2^2\varphi_1^3) + 5K_5\phi_2\varphi_1^4 + K_6\varphi_1^5.
+\end{align*}
+\end{proposition}
+
+In order to compute the reduced variations $\phi_d(w)=\int_0^wB_d\,dt$ it will be convenient to split each of the rational functions $K_d(w)$ into two pieces, one of these a scalar multiple of $K_1(w)$. Computations are simplified since, in virtue of (\ref{eq:vareq1}), we can compute explicitly an integral of the form $\int_{0}^{w}K_1\varphi_1^m\,dt$.
+
+\begin{definition}\label{def:splittingF}
+Given a rational differential equation $\displaystyle\frac{dz}{dw}=\Psi(z,w)$ normalized as in \textnormal{(\ref{eq:normalform})} we define the rational function
+\[ C(z,w)=z\frac{s(w)(1+\alpha_0 z)}{r(w)(1+\alpha_0\sigma z)}, \]
+where $s(w),r(w),\sigma$ are as in \textnormal{(\ref{eq:normalform})}. We also define $S(z,w)$ by the formula 
+\begin{equation}\label{eq:splittingF}
+\Psi(z,w)=C(z,w)+S(z,w). 
+\end{equation}
+\end{definition}
+
+\begin{remark}
+It is proved in \cite{Pyartli2000} that a foliation given by 
+\[ \frac{dz}{dw}=C(z,w), \]
+with $C(z,w)$ as above has a commutative holonomy group. This holonomy group is in fact linearizable but it is not linear unless $\alpha_0=0$.
+\end{remark}
+
+Note that
+\[ C(z,w)=K_1(w)\vartheta(z), \]
+where $\vartheta(z)$ is the rational function $\vartheta(z)=z(1+\alpha_0 z)(1+\alpha_0\sigma z)^{-1}$. 
+
+\begin{proposition}\label{prop:c_dS_d}
+The splitting of $\Psi(z,w)$ given in equation \textnormal{(\ref{eq:splittingF})} implies that for each $d\geq1$,
+\begin{equation}\label{eq:c_dS_d}
+K_d(w)=c_d\,K_1(w)+\frac{S_d(w)}{r(w)^d},
+\end{equation}
+where the polynomials $S_d(w)$ are given by the formula
+\[ S(z,w)=\sum_{d=2}^{\infty}\frac{S_d(w)}{r(w)^{d}}\,z^d, \]
+and the constants $c_d$ are given by $\vartheta(z)=\sum_{d=1}^\infty c_dz^d.$
+\end{proposition}
+
+Explicit expressions for $c_d$ and $S_d$ in terms of the parameters $\lambda$ and $\alpha$ are given at the beginning of Section \ref{sec:elimination}.
+
+\begin{remark}\label{rmk:a_dj=phi_d} 
+We have expanded the distinguished parabolic germs in power series
+\[ f_j(z)=z+a_{2j}z^2+a_{3j}z^3+\ldots. \]
+According to (\ref{eq:powerseriesDelta}) we have $a_{dj}=\var{d}{j}$, and we also know that $\var{1}{j}=1$ since the loops $\gamma_1$, $\gamma_2$ are commutators. The equality $\varphi_d=\varphi_1\phi_d$ implies that in fact
+\[ a_{dj}=\phi_{d\{\gamma_j\}}(0). \]
+This fact will be used in the next section when computing the coefficients $a_{dj}$.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

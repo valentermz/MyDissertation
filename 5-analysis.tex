@@ -1,0 +1,441 @@
+%%%Utmost rigidity - version 13 (March 19, 2015)  
+%ANALYSIS OF TERMS IN POWER SERIES OF DISTINGUISHED PARABOLIC GERMS
+
+
+
+In this section we compute the coefficients $a_{dj}$ in the power series expansion of the distinguished parabolic germ $f_j$. These computations follow very closely computations carried out in \cite{Pyartli2006}. However, in \cite{Pyartli2006} it is assumed that the holonomy group at infinity of the foliation in question is solvable, and thus several simplifications take place. The computations provided here are completely general.
+
+
+
+\subsection{Analysis of the terms of low degree}
+
+
+\begin{proposition}\label{prop:secondvar}
+The reduced second variation is given by
+\[ \phi_2(w)=c_2(\varphi_1(w)-1)+\psi_2(w), \]
+where 
+\[ \psi_2(w)=\int_{0}^{w}\frac{S_2(t)}{r(t)^2}\,\varphi_1(t)\,dt, \]
+and $c_2$, $S_2$ are as in Proposition \textnormal{\ref{prop:c_dS_d}}. In particular we have
+\[ a_{2j}=\psi_{2j} \quad\text{with}\quad \psi_{2j}=\int_{\gamma_j}\frac{S_2(w)}{r(w)^2}\,\varphi_1(w)\,dw, \quad j=1,2. \]
+\end{proposition}
+
+\begin{proof}
+The reduced variation is given by $\phi_2(w)=\int_0^wB_2\,dt$. It follows from Proposition \ref{prop:formulasB_d} and equation (\ref{eq:c_dS_d}) that
+\[ \phi_2(w)=\int_{0}^{w} K_2(t)\varphi_1(t)\,dt=\int_{0}^{w} \left(c_2K_1(t)+\frac{S_2(t)}{r(t)^2}\right)\varphi_1(t)\,dt. \]
+Note that
+\[ \int_{0}^{w}K_1(t)\varphi_1(t)\,dt=\int_0^w\frac{d\varphi_1}{dt}\,dt=\varphi_1(w)-1, \]
+and so
+\[ \phi_2(w)=c_2(\varphi_1(w)-1)+\int_{0}^{w}\frac{S_2(t)}{r(t)^2}\,\varphi_1(t)\,dt, \]
+as claimed. \qed
+\end{proof}
+
+\begin{proposition}\label{prop:thirdvar}
+The reduced third variation is given by
+\[ \phi_3(w)=\phi_2(w)^2\varphi_1(w)+c_3\frac{\varphi_1(w)^2-1}{2}+\psi_3(w), \]
+where 
+\[ \psi_3(w)=\int_0^w\frac{S_3(t)}{r(t)^3}\varphi_1(t)^2\,dt, \]
+and $c_3$, $S_3$ are as in Proposition \textnormal{\ref{prop:c_dS_d}}. In particular 
+\[ a_{3j}=a_{2j}^2+\psi_{3j} \quad\text{with}\quad \psi_{3j}=\int_{\gamma_j}\frac{S_3(w)}{r(w)^3}\varphi_1(w)^2\,dw, \quad j=1,2. \]
+\end{proposition}
+
+\begin{proof}
+By Proposition \ref{prop:formulasB_d} we have that $\phi_3$ is given by
+\[ \int_0^w B_3\,dt=2\int_0^w K_2\phi_2\varphi_1\,dt+\int_0^w K_3\varphi_1^2\,dt. \]
+The first integral on the right-hand side can be easily computed:
+\[ \int_0^w K_2\phi_2\varphi_1\,dt=\int_0^w B_2\phi_2\,dt=\int_0^w\frac{d\phi_2}{dt}\phi_2\,dt=\frac{1}{2}\phi_2^2. \]
+For the second integral we split $K_3$ according to (\ref{eq:c_dS_d}):
+\[ \int_0^w K_3\varphi_1^2\,dt=c_3\int_0^wK_1\varphi_1^2\,dt+\int_0^w\frac{S_3}{r^3}\varphi_1^2\,dt=c_3\frac{\varphi_1^2-1}{2}+\psi_3. \]
+Adding up both integrals gives the desired result. \qed
+\end{proof}
+
+
+
+
+
+\subsection{Analysis of the terms of higher degree}
+
+
+For degrees higher than the third we shall not need an explicit expression for the reduced variation $\phi_d(w)$, so we focus only on the coefficient $a_{dj}=\phi_{d\{\gamma_j\}}(0)$. 
+
+We stress that for any given exponent $n$ we have
+\[ \int_{\gamma_j}K_1\varphi_1^n\,dw=0, \quad j=1,2, \]
+since $\frac{d\varphi_1}{dw}=K_1\varphi_1$ and $\varphi_{1\{\gamma_j\}}(0)=\varphi_1(0)=1$.
+
+
+\begin{proposition}\label{prop:fourthvar}
+The coefficient of degree $4$ in the power series expansion of $f_j$ is given by
+\[ a_{4j}=2a_{3j}a_{2j}-a_{2j}^3+\frac{c_3}{2}a_{2j}-c_2\psi_{3j}+\Delta_{1j}+\psi_{4j}, \]
+where
+\[ \Delta_{1j}=\int_{\gamma_j}\frac{S_3(w)}{r(w)^3}\,\psi_2(w)\varphi_1(w)^2\,dw, \quad \psi_{4j}=\int_{\gamma_j}\frac{q_4(w)}{r(w)^4}\,\varphi_1(w)^3\,dw,   \]
+and the polynomial $q_4(w)$ is defined to be
+\[ q_4(w)=S_4(w)+c_2S_3(w)r(w)-\frac{c_3}{2}S_2(w)r(w)^2, \]
+with the terms $c_d$, $S_d$ as in Proposition \textnormal{\ref{prop:c_dS_d}}.
+\end{proposition}
+
+\begin{proof}
+By Proposition \ref{prop:formulasB_d} we know that $a_{4j}$ is given by
+\begin{equation}\label{eq:phi_4-v1}
+ a_{4j}=\int_{\gamma_j} B_4\,dw = 2H_{1j}+H_{2j}+3H_{3j}+H_{4j}, 
+\end{equation}
+where 
+\begin{align*}
+H_{1j}&=\int_{\gamma_j} K_2\phi_3\varphi_1\,dw, &	H_{2j}&=\int_{\gamma_j} K_2\phi_2^2\varphi_1\,dw,\\ H_{3j}&=\int_{\gamma_j} K_3\phi_2\varphi_1^2\,dw, &	H_{4j}&=\int_{\gamma_j} K_4\varphi_1^3\,dw. 
+\end{align*}
+
+We now proceed to compute these integrals. It is straight forward that $H_{2j}=\int_{\gamma_j} B_2\phi_2^2\,dw$, hence
+\[ H_{2j}=\int_{\gamma_j}\left(\frac{1}{3}\phi_2^3\right)^{\prime}\,dw=\frac{1}{3}a_{2j}^3. \] 
+Note that  $H_{1j}=\int_{\gamma_j} B_2\phi_3\,dw$, so integration by parts yields
+\[ \int_{\gamma_j}\frac{d\phi_2}{dt}\phi_3\,dw = a_{3j}a_{2j}-\int_{\gamma_j} B_3\phi_2\,dw. \]
+Using the expression for $B_3$ provided in Proposition \ref{prop:formulasB_d} we see that
+\[ H_{1j}=a_{3j}a_{2j}-2\int_{\gamma_j}K_2\varphi_1\phi_2^2\,dw-\int_{\gamma_j}K_3\phi_2\varphi_1^2\,dw=a_{3j}a_{2j}-\frac{2}{3}a_2^3-H_{3j}. \]
+Equation (\ref{eq:phi_4-v1}) becomes 
+\begin{equation}\label{eq:phi_4-v2}
+a_{4j}=2a_{3j}a_{2j}-a_{2j}^3+H_{3j}+H_{4j}. 
+\end{equation}
+
+We split $K_3$ using equation (\ref{eq:c_dS_d}), thus
+\begin{equation}\label{eq:I3-v0}
+ H_{3j}=\int_{\gamma_j}c_3K_1\phi_2\varphi_1^2\,dw + \int_{\gamma_j}\frac{S_3}{r^3}\phi_2\varphi_1^2\,dw. 
+\end{equation}
+By Proposition \ref{prop:secondvar} we have $\phi_2=c_2(\varphi_1-1)+\psi_2$ therefore the first of the integrals above is given by
+\[ \int_{\gamma_j}c_3K_1( c_2(\varphi_1-1)+\psi_2)\varphi_1^2\,dw=\int_{\gamma_j}c_3K_1\psi_2\varphi_1^2\,dw, \]
+since 
+\[ \int_{\gamma_j}K_1(\varphi_1-1)\varphi_1^2\,dw=0. \]
+Note that integration by parts yields
+\[ c_3\int_{\gamma_j}K_1\psi_2\varphi_1^2\,dw=c_3\int_{\gamma_j}\left(\frac{1}{2}\varphi_1^2\right)^{\prime} \psi_2\,dw=\frac{c_3}{2}a_{2j}-\int_{\gamma_j}\frac{\frac{c_3}{2}S_2}{r^2}\varphi_1^3\,dw. \]
+On the other hand, the last integral in (\ref{eq:I3-v0}) is given by
+\begin{align*} 
+ \int_{\gamma_j}\frac{S_3}{r^3}( c_2(\varphi_1-1)+\psi_2)\varphi_1^2\,dw &= \int_{\gamma_j}\frac{c_2S_3}{r^3}\varphi_1^3\,dw-c_2\int_{\gamma_j}\frac{S_3}{r^3}\varphi_1^2\,dw+\int_{\gamma_j}\frac{S_3}{r^3}\psi_2\varphi_1^2\,dw. \\
+								  &= \int_{\gamma_j}\frac{c_2S_3}{r^3}\varphi_1^3\,dw-c_2\psi_3+\Delta_{1j}.
+\end{align*}
+Therefore
+\[ H_{3j}= \frac{c_3}{2}a_{2j}-\int_{\gamma_j}\frac{\frac{c_3}{2}S_2}{r^2}\varphi_1^3\,dw+\int_{\gamma_j}\frac{c_2S_3}{r^3}\varphi_1^3\,dw-c_2\psi_3+\Delta_{1j}. \]
+
+Lastly, splitting $K_4$ according to equation (\ref{eq:c_dS_d}) we get
+\[ H_{4j}=\int_{\gamma_j}\left(c_4K_1+\frac{S_4}{r^4}\right)\varphi_1^3\,dw=\int_{\gamma_j}\frac{S_4}{r^4}\varphi_1^3\,dw. \]
+
+Substituting the above expressions for $H_{3j}$ and $H_{4j}$ in (\ref{eq:phi_4-v2}) and taking into account that we have defined $q_4=S_4+c_2S_3r-\frac{c_3}{2}S_2r^2$ we obtain the desired expression for $a_{4j}$. \qed
+\end{proof}
+
+
+
+
+
+\begin{proposition}\label{prop:fifthvar}
+The coefficient of degree $5$ in the power series expansion of $f_j$ is given by
+\begin{align*}
+a_{5j}	&= 2a_{4j}a_{2j}+\frac{3}{2}a_{3j}^2-4a_{3j}a_{2j}^2+\frac{3}{2}a_{2j}^4+ \frac{c_3}{2}a_{2j}^2+\frac{2c_4-c_3c_2}{3}a_{2j} \\
+	&\phantom{=} +\,c_2^2\psi_{3j}-2c_2\psi_{4j}-2c_2\Delta_{1j}+\Delta_{2j}+2\Gamma_{1j}+\psi_{5j}, 
+\end{align*}
+where 
+\[ \Delta_{2j} = \int_{\gamma_j}\frac{S_3(w)}{r(w)^3}\,\psi_2(w)^2\varphi_1(w)^2\,dw, \qquad \Gamma_{1j} = \int_{\gamma_j}\frac{q_4(w)}{r(w)^4}\,\psi_2(w)\varphi_1(w)^3\,dw, \]
+\[\psi_{5j} = \int_{\gamma_j}\frac{q_5(w)}{r(w)^5}\,\varphi_1(w)^4\,dw, \]
+and the polynomial $q_5(w)$ is defined to be
+\[ q_5=S_5+2c_2S_4r+c_2^2S_3r^2-\frac{2}{3}(c_4+c_3c_2)S_2r^3  \]
+with the terms $c_d$, $S_d$ as in Proposition \textnormal{\ref{prop:c_dS_d}}.
+\end{proposition}
+
+\begin{proof}
+According to Proposition \ref{prop:formulasB_d} we know that $a_{5j}$ is given by
+\begin{equation}\label{eq:a5-pt0} 
+\phi_{5\{\gamma_j\}}(0)=\int_{\gamma_j}B_5\,dw = 2I_{1j}+2I_{2j}+3I_{3j}+3I_{4j}+4I_{5j}+I_{6j}, 
+\end{equation}
+where 
+\begin{align*}
+ I_{1j}&=\int_{\gamma_j}K_2\phi_4\varphi_1\,dw, 	& I_{2j}&=\int_{\gamma_j}K_2\phi_3\phi_2\varphi_1\,dw, 	& I_{3j}&=\int_{\gamma_j}K_3\phi_3\varphi_1^2\,dw, \\
+ I_{4j}&=\int_{\gamma_j}K_3\phi_2^2\varphi_1^2\,dw, 	& I_{5j}&=\int_{\gamma_j}K_4\phi_2\varphi_1^3\,dw, 	& I_{6j}&=\int_{\gamma_j}K_5\varphi_1^4\,dw.
+\end{align*}
+The first integrals are computed as follows:
+\begin{align*}
+I_{2j}	&= \int_{\gamma_j}\left(\frac{1}{2}\phi_2^2\right)^\prime\phi_3\,dw=\frac{1}{2}a_{2j}^2a_{3j}-\frac{1}{2}\int_{\gamma_j}B_3\phi_2^2\,dw \\
+	&= \frac{1}{2}a_{3j}a_{2j}^2-\frac{1}{2}\int_{\gamma_j}2K_2\phi_2^3\varphi_1\,dw-\frac{1}{2}\int_{\gamma_j}K_3\phi_2^2\varphi_1^2\,dw \\
+	&= \frac{1}{2}a_{3j}a_{2j}^2-\frac{1}{4}a_{2j}^4-\frac{1}{2}I_{4j}.
+\end{align*}
+\begin{align*}
+I_{3j}	&= \int_{\gamma_j}(K_3\varphi_1^2)\phi_3\,dw=\int_{\gamma_j}(B_3-2K_2\phi_2\varphi_1)\phi_3\,dw=\frac{1}{2}a_{3j}^2-2I_{2j} \\
+	&= \frac{1}{2}a_{3j}^2-a_{3j}a_{2j}^2+\frac{1}{2}a_{2j}^4+I_{4j}.
+\end{align*}
+\begin{align*}
+I_{1j}	&= \int_{\gamma_j}\frac{d\phi_2}{dw}\phi_4\,dw=a_{4j}a_{2j}-\int_{\gamma_j}B_4\phi_2\,dw \\
+	&= a_{4j}a_{2j}-\int_{\gamma_j}\left(2K_2\phi_3\phi_2\varphi_1+K_2\phi_2^3\varphi_1+3K_3\phi_2^2\varphi_1^2+K_4\phi_2\varphi_1^3\right)\,dw \\
+	&= a_{4j}a_{2j}-2I_{2j}-\frac{1}{4}a_{2j}^4-3I_{4j}-I_{5j}\\
+	&= a_{4j}a_{2j}-a_{3j}a_{2j}^2+\frac{1}{4}a_{2j}^4-2I_{4j}-I_{5j}.
+\end{align*}
+Therefore equation (\ref{eq:a5-pt0}) becomes
+\begin{equation}\label{eq:a5-pt1}
+a_{5j} = 2a_{4j}a_{2j}+\frac{3}{2}a_{3j}^2-4a_{3j}a_{2j}^2+\frac{3}{2}a_{2j}^4+I_{4j}+2I_{5j}+I_{6j}.
+\end{equation}
+
+Next we break $K_3$ according to (\ref{eq:c_dS_d}), so $I_{4j}=\int_{\gamma_j}\left(\frac{S_3}{r^3}+c_3K_1\right)\phi_2^2\varphi_1^2\,dw$. Now, using Proposition \ref{prop:secondvar} we get
+%and replace $\phi_2$ by the formula found in Proposition \ref{prop:secondvar}. Thus
+\begin{align*} 
+\int_{\gamma_j}\frac{S_3}{r^3}\phi_2^2\varphi_1^2\,dw	&= \int_{\gamma_j}\frac{S_3}{r^3}(c_2(\varphi_1-1)+\psi_2)^2\varphi_1^2\,dw \\
+							&= \int_{\gamma_j}\frac{S_3}{r^3}(c_2^2(\varphi_1^4-2\varphi_1^3+\varphi_1^2)+2c_2(\varphi_1^3-\varphi_2^2)\psi_2+\psi_2^2\varphi_1^2)\,dw.
+\end{align*}
+Let us group under a same integral those terms having the same exponent on $\varphi_1$,
+\begin{align}\label{eq:a5-I4-pt1}
+\int_{\gamma_j}\frac{S_3}{r^3}\phi_2^2\varphi_1^2\,dw	&= \int_{\gamma_j}\frac{c_2^2S_3}{r^3}\varphi_1^4\,dw + \int_{\gamma_j}\frac{-2c_2^2S_3+2c_2S_3\psi_2}{r^3}\varphi_1^3\,dw \nonumber \\
+							&\phantom{=} + \int_{\gamma_j}\frac{c_2^2S_3-2c_2S_3\psi_2+S_3\psi_2^2}{r^3}\varphi_1^2\,dw.
+\end{align}
+On the other hand,
+\[ \int_{\gamma_j}c_3K_1\phi_2^2\varphi_1^2\,dw=c_3\int_{\gamma_j}\left(\frac{1}{2}\varphi_1^2\right)^{\prime}\phi_2^2\,dw=\frac{c_3}{2}a_{2j}^2-c_3\int_{\gamma_j}B_2\phi_2\varphi_1^2\,dw. \]
+The last integral above is given by $\int_{\gamma_j}K_2\phi_2\varphi_1^3\,dw=\int_{\gamma_j}\left(\frac{S_2}{r^2}+c_2K_1\right)\phi_2\varphi_1^3\,dw$.
+\begin{align*}
+\int_{\gamma_j}\frac{S_2}{r^2}\phi_2\varphi_1^3\,dw &= \int_{\gamma_j}\frac{S_2}{r^2}(c_2(\varphi_1-1)+\psi_2)\varphi_1^3\,dw\\
+  &= \int_{\gamma_j}\frac{c_2S_2}{r^2}\varphi_1^4\,dw+\int_{\gamma_j}\frac{-c_2S_2+S_2\psi_2}{r^2}\varphi_1^3\,dw,
+\end{align*}
+and
+\[ \int_{\gamma_j}c_2K_1\phi_2\varphi_1^3\,dw = \int_{\gamma_j}c_2K_1(c_2(\varphi_1-1)+\psi_2)\varphi_1^3\,dw = c_2\int_{\gamma_j}K_1\psi_2\varphi_1^3\,dw. \]
+The last equality follows from the fact that $\int_{\gamma_j}K_1(\varphi_1^4-\varphi_1^3)\,dw=0$. The integral on the right-hand side above can be integrated by parts to obtain
+\[ \int_{\gamma_j}\left(\frac{1}{3}\varphi_1^3\right)^{\prime}\psi_2\,dw=\frac{1}{3}a_{2j}-\frac{1}{3}\int_{\gamma_j}\frac{S_2}{r^2}\varphi_1^4\,dw. \]
+We conclude that
+\begin{align}
+\int_{\gamma_j}c_3K_1\phi_2^2\varphi_1^2\,dw &= \frac{c_3}{2}a_{2j}^2-\frac{c_3c_2}{3}a_{2j}+\int_{\gamma_j}\frac{c_3c_2S_2-c_3S_2\psi_2}{r^2}\varphi_1^3\,dw\nonumber \\
+  &\phantom{=} + \int_{\gamma_j}\frac{-\frac{2}{3}c_3c_2S_2}{r^2}\varphi_1^4\,dw.\label{eq:a5-I4-pt2}
+\end{align}
+
+We proceed in a similar way to compute $2I_{5j}=2\int_{\gamma_j}\left(\frac{S_4}{r^4}+c_4K_1\right)\phi_2\varphi_1^3\,dw$. By Proposition \ref{prop:secondvar}, $\phi_2=c_2(\varphi_1-1)+\psi_2$, so
+\begin{equation}\label{eq:a5-I5-pt1}
+2\int_{\gamma_j}\frac{S_4}{r^4}\phi_2\varphi_1^3\,dw=2\int_{\gamma_j}\frac{c_2S_4}{r^4}\varphi_1^4\,dw+2\int_{\gamma_j}\frac{-c_2S_4+S_4\psi_2}{r^4}\varphi_1^3\,dw. 
+\end{equation}
+On the other hand, 
+\begin{align}\label{eq:a5-I5-pt2}
+2\int_{\gamma_j}c_4K_1\phi_2\varphi_1^3\,dw	&= 2c_4\int_{\gamma_j}\left(\frac{1}{3}\varphi_1^3\right)^{\prime}\phi_2\,dw=\frac{2c_4}{3}a_{2j}-\frac{2c_4}{3}\int_{\gamma_j}B_2\varphi_1^3\,dw \nonumber \\
+						&= \frac{2c_4}{3}a_{2j}+\int_{\gamma_j}\frac{-\frac{2}{3}c_4S_2}{r^2}\varphi_1^4\,dw, 
+\end{align}
+since $B_2=\left(\frac{S_2}{r^2}+c_2K_1\right)\varphi_1$ and $\int_{\gamma_j}K_1\varphi_1^4\,dw=0$.
+
+Lastly, note that writing $K_5=\frac{S_5}{r^5}+c_5K_1$ immediately yields
+\begin{equation}\label{eq:a5-I6}
+I_{6j}=\int_{\gamma_j}\frac{S_5}{r^5}\varphi_1^4\,dw.
+\end{equation}
+
+The formula claimed for $a_{5j}$ is obtained by combining equations (\ref{eq:a5-pt1}) to (\ref{eq:a5-I6}). Indeed, substituting in (\ref{eq:a5-pt1}) the expressions found in (\ref{eq:a5-I4-pt1}) - (\ref{eq:a5-I6}) yields
+\[ a_{5j}=2a_{4j}a_{2j}+\frac{3}{2}a_{3j}^2-4a_{3j}a_{2j}^2+\frac{3}{2}a_{2j}^4+ \frac{c_3}{2}a_{2j}^2+\frac{2c_4-c_3c_2}{3}a_{2j}+E_{2j}+E_{3j}+E_{4j}, \]
+where we have grouped all integrals containing $\varphi_1$ to the $k$-th power in a single integral $E_{kj}$ given by the following expressions:
+\begin{align*}
+E_{2j}	&= \int_{\gamma_j}\frac{c_2^2S_3-2c_2S_3\psi_2+S_3\psi_2^2}{r^3}\varphi_1^2\,dw = c_2^2\psi_{3j}-2c_2\Delta_{1j}+\Delta_{2j}, \\[4pt]
+E_{3j}	&= \int_{\gamma_j}\frac{-2c_2^2S_3r+c_3c_2S_2r^2-2c_2S_4+(2c_2S_3r-c_3S_2r^2+2S_4)\psi_2}{r^4}\varphi_1^3\,dw\\[4pt]
+	&= \int_{\gamma_j}\frac{-c_2q_4+2q_4\psi_2}{r^4}\varphi_1^3\,dw = -2c_2\psi_{4j}+2\Gamma_{1j}, \\[4pt]
+E_{4j}	&= \int_{\gamma_j}\frac{c_2^2S_3r^2-\frac{2}{3}c_3c_2S_2r^3+2c_2S_4r-\frac{2}{3}c_4S_2r^3+S_5}{r^5}\varphi_1^4\,dw\\[4pt]
+	&= \int_{\gamma_j}\frac{q_5}{r^5}\varphi_1^4\,dw = \psi_{5j}.
+\end{align*}
+This is exactly the expression claimed by Proposition \ref{prop:fifthvar}. \qed
+\end{proof}
+
+
+
+
+
+
+
+
+\begin{proposition}\label{prop:sixthvar}
+The coefficient of degree $6$ in the power series expansion of $f_j$ is given by
+\begin{align*}
+a_{6j} 	&=	2a_{5j}a_{2j}+3a_{4j}a_{3j}-4a_{4j}a_{2j}^2-5a_{3j}^2a_{2j}+7a_{3j}a_{2j}^3-2a_{2j}^5 \\
+&\phantom{=}	+\frac{c_3}{2}a_{2j}^3+\left(c_4-\frac{c_3c_2}{2}\right)a_{2j}^2+\left(\frac{3c_5}{4}-\frac{c_4c_2}{2}-\frac{c_3^2}{8}+\frac{c_3c_2^2}{4}+\frac{c_3}{2}\psi_{3j}\right)a_{2j} \\
+&\phantom{=}	-\frac{c_2}{2}\psi_{3j}^2+\left(\frac{c_4}{3}+\frac{c_3c_2}{3}-c_2^3\right)\psi_{3j}+\left(-\frac{c_3}{2}+3c_2^2\right)\Delta_{1j}-3c_2\Delta_{2j}+\Delta_{3j}+\Delta_{(1,1)j} \\
+&\phantom{=}	+\left(-\frac{c_3}{2}+3c_2^2\right)\psi_{4j}-6c_2\Gamma_{1j}+3\Gamma_{2j}+\Gamma_{(0,1)j}-3c_2\psi_{5j}+3\mathrm{B}_{1j}+\psi_{6j}.
+\end{align*}
+where
+\begin{align*}
+ \Delta_{3j} &= \int_{\gamma_j}\frac{S_3}{r^3}\,\psi_2^3\varphi_1^2\,dw, & 
+ \Delta_{(1,1)j} &= \int_{\gamma_j}\frac{S_3}{r^3}\,\psi_2\psi_3\varphi_1^2\,dw, \\
+ \Gamma_{2j} &= \int_{\gamma_j}\frac{q_4}{r^4}\,\psi_2^2\varphi_1^3\,dw, & 
+ \Gamma_{(0,1)j} &= \int_{\gamma_j}\frac{q_4}{r^4}\,\psi_3\varphi_1^3\,dw, \\
+ \mathrm{B}_{1j} &= \int_{\gamma_j}\frac{q_5}{r^5}\,\psi_2\varphi_1^4\,dw, &
+ \psi_{6j} &= \int_{\gamma_j}\frac{q_6}{r^6}\,\varphi_1^5\,dw, 
+\end{align*}
+and the polynomial $q_6(w)$ is defined to be
+\begin{align*}
+q_6 	&= 	S_6+3c_2S_5r+\left(\frac{c_3}{2}+3c_2^2\right)S_4r^2+\left(-\frac{c_4}{3}+\frac{c_3c_2}{6}+c_2^3\right)S_3r^3 \\
+&\phantom{=}	+\left(-\frac{3c_5}{4}-\frac{3c_4c_2}{2}-\frac{c_3^2}{8}-\frac{3c_3c_2^2}{4}\right)S_2r^4,
+\end{align*}
+with the terms $c_d$, $S_d$ as in Proposition \textnormal{\ref{prop:c_dS_d}}.
+\end{proposition}
+
+\begin{proof}
+According to Proposition \ref{prop:formulasB_d}, $a_{6j}$ is given by
+\begin{align*}
+\phi_{6\{\gamma_j\}}(0) &= \int_{\gamma_j}B_6\,dw\\
+  &= 2J_{1j}+2J_{2j}+J_{3j}+3J_{4j}+6J_{5j}+J_{6j}+4J_{7j}+6J_{8j}+5J_{9j}+J_{10j}, 
+\end{align*}
+where
+\begin{align*}
+J_{1j}&=\int_{\gamma_j}K_2\phi_5\varphi_1\,dw, &
+J_{2j}&=\int_{\gamma_j}K_2\phi_4\phi_2\varphi_1\,dw, & 
+J_{3j}&=\int_{\gamma_j}K_2\phi_3^2\varphi_1\,dw, \\
+J_{4j}&=\int_{\gamma_j}K_3\phi_4\varphi_1^2\,dw, &
+J_{5j}&=\int_{\gamma_j}K_3\phi_3\phi_2\varphi_1^2\,dw, &
+J_{6j}&=\int_{\gamma_j}K_3\phi_2^3\varphi_1^2\,dw, \\
+J_{7j}&=\int_{\gamma_j}K_4\phi_3\varphi_1^3\,dw, &
+J_{8j}&=\int_{\gamma_j}K_4\phi_2^2\varphi_1^3\,dw, &
+J_{9j}&=\int_{\gamma_j}K_5\phi_2\varphi_1^4\,dw, \\
+J_{10j}&=\int_{\gamma_j}K_6\varphi_1^5\,dw. & & 
+\end{align*}
+
+Let us compute some of these integrals. First, define $J_{0j}=\int_{\gamma_j}K_2\phi_3\phi_2^2\varphi_1\,dw$. Taking into account the expression for $B_4$ presented in Proposition \ref{prop:formulasB_d}, we have
+\begin{align*}
+J_{2j}	&= \int_{\gamma_j}\left(\frac{1}{2}\phi_2^2\right)^{\prime}\phi_4\,dw=\frac{1}{2}a_{4j}a_{2j}^2-\frac{1}{2}\int_{\gamma_j}B_4\phi_2^2\,dw \\
+	&= \frac{1}{2}a_{4j}a_{2j}^2-J_{0j}-\frac{1}{10}a_{2j}^5-\frac{3}{2}J_{6j}-\frac{1}{2}J_{8j}.
+\end{align*}
+Similarly, taking into account the expression found for $B_5$ we obtain
+\begin{align*}
+J_{1j} 	&= \int_{\gamma_j}B_2\phi_5\,dw=a_{5j}a_{2j}-\int_{\gamma_j}B_5\phi_2\,dw \\
+	&= a_{5j}a_{2j}-2J_{2j}-2J_{0j}-3J_{5j}-3J_{6j}-4I_{8j}-J_{9j} \\
+	&= a_{5j}a_{2j}-a_{4j}a_{2j}^2+\frac{1}{5}a_{2j}^5-3J_{5j}-3J_{8j}-J_{9j}.
+\end{align*}
+We also have
+\[ J_{3j}=\int_{\gamma_j}B_2\phi_3^2\,dw=a_{3j}^2a_{2j}-2\int_{\gamma_j}B_3\phi_3\phi_2\,dw=a_{3j}^2a_{2j}-4J_{0j}-2J_{5j}, \]
+and
+\begin{align*}
+J_{4j}	&= \int_{\gamma_j}(B_3-2K_2\phi_2\varphi_1)\phi_4\,dw=a_{4j}a_{3j}-\int_{\gamma_j}B_4\phi_3\,dw-2J_{2j} \\
+	&= a_{4j}a_{3j}-2J_{3j}-J_{0j}-3J_{5j}-J_{7j}-2J_{2j}.
+\end{align*}
+Taking into account the expressions for $J_{3j}$ and $J_{2j}$ above we obtain
+\[ J_{4j}=a_{4j}a_{3j}-a_{4j}a_{2j}^2-2a_{3j}^2a_{2j}+\frac{1}{5}a_{2j}^5+9J_{0j}+J_{5j}+3J_{6j}-J_{7j}+J_{8j}. \]
+
+We conclude that 
+\begin{align*} 
+a_{6j} &=	2a_{5j}a_{2j}+3a_{4j}a_{3j}-4a_{4j}a_{2j}^2-5a_{3j}^2a_{2j}+\frac{4}{5}a_{2j}^5 \\
+&\phantom{=}	+21J_{0j}+J_{5j}+7J_{6j}+J_{7j}+2J_{8j}+3J_{9j}+J_{10j}.
+\end{align*}
+Note that $J_{0j}=\int_{\gamma_j}\left(\frac{1}{3}\phi_2^3\right)^{\prime}\phi_3\,dw=\frac{1}{3}a_{3j}a_{2j}^3-\frac{1}{3}\int_{\gamma_j}B_3\phi_2^3\,dw$ and $\int_{\gamma_j}B_3\phi_2^3\,dw=\frac{2}{5}a_{2j}^5+J_{6j}$. This shows that
+\[ J_{0j}=\frac{1}{3}a_{3j}a_{2j}^3-\frac{2}{15}a_{2j}^5-\frac{1}{3}J_{6j}. \]
+We arrive to the following formula for $a_{6j}$,
+\begin{align}\label{eq:a6-v1}
+a_{6j}	&= 2a_{5j}a_{2j}+3a_{4j}a_{3j}-4a_{4j}a_{2j}^2-5a_{3j}^2a_{2j}+7a_{3j}a_{2j}^3-2a_{2j}^5\nonumber \\
+&\phantom{=}	+J_{5j}+J_{7j}+2J_{8j}+3J_{9j}+J_{10j}.
+\end{align}
+
+Let us now compute $J_{5j}=\int_{\gamma_j}K_3\phi_3\phi_2\varphi_1^2\,dw$. We split $K_3$ according to (\ref{eq:c_dS_d}) and write $J_{5j}=J_{5j}^{(1)}+J_{5j}^{(2)}$, where
+\[ J_{5j}^{(1)}=\int_{\gamma_j}\frac{S_3}{r^3}\phi_3\phi_2\varphi_1^2\,dw, \quad J_{5j}^{(2)}=\int_{\gamma_j}c_3K_1\phi_3\phi_2\varphi_1^2\,dw. \]
+Note first that using Proposition \ref{prop:secondvar} and Proposition \ref{prop:thirdvar} we can write $\phi_3\phi_2\varphi_1^2$ as
+\[ \big( c_2^2(\varphi_1^2-2\varphi_1+1)+\frac{1}{2}c_3(\varphi_1^2-1)+2c_2(\varphi_1-1)\psi_2+ \psi_2^2+\psi_3\big)\big( c_2(\varphi_1-1)+\psi_2\big)\varphi_1^2, \]
+therefore we obtain
+\begin{align}
+\phi_3\phi_2\varphi_1^2 &= c_2^3(\varphi_1^5-3\varphi_1^4+3\varphi_1^3-\varphi_1^2)+\frac{1}{2}c_3c_2(\varphi_1^5-\varphi_1^4-\varphi_1^3+\varphi_1^2) \nonumber \\
+&\phantom{=} +3c_2^2(\varphi_1^4-2\varphi_1^3+\varphi_1^2)\psi_2+\frac{1}{2}c_3(\varphi_1^4-\varphi_1^2)\psi_2 +3c_2(\varphi_1^3-\varphi_1^2)\psi_2^2 \label{eq:J5v0} \\
+&\phantom{=} +\psi_2^3\varphi_1^2 +c_2(\varphi_1^3-\varphi_1^2)\psi_3 +\psi_3\psi_2\varphi_1^2. \nonumber 
+\end{align}
+We substitute the above expression for $\phi_3\phi_2\varphi_1^2$ in $J_{5j}^{(1)}$ and regroup under the same integral those terms having the same power of $\varphi_1$ to obtain
+\begin{align}
+J_{5j}^{(1)} &= \int_{\gamma_j}\frac{(c_2^3+\frac{1}{2}c_3c_2)S_3}{r^3}\varphi_1^5\,dw\nonumber \\
+&\phantom{=} + \int_{\gamma_j}\frac{(-3c_2^3-\frac{1}{2}c_3c_2)S_3+(3c_2^2+\frac{1}{2}c_3)S_3\psi_2}{r^3}\,\varphi_1^4\,dw \nonumber \\
+&\phantom{=} +\int_{\gamma_j}\frac{(3c_2^3-\frac{1}{2}c_3c_2)S_3-6c_2^2S_3\psi_2+3c_2S_3\psi_2^2+c_2S_3\psi_3}{r^3}\varphi_1^3\,dw \label{eq:J5(1)v0} \\
+&\phantom{=} +\int_{\gamma_j}\frac{(-c_2^3+\frac{1}{2}c_3c_2)S_3+(3c_2^2-\frac{1}{2}c_3)S_3\psi_2}{r^3}\nonumber \\
+&\phantom{=\int_{\gamma_j}} + \frac{-3c_2S_3\psi_2^2+S_3\psi_2^3-c_2S_3\psi_3+S_3\psi_3\psi_2}{r^3}\varphi_1^2\,dw. \nonumber
+\end{align}
+We shall simplify only one of the above terms: Note that 
+\[ \int_{\gamma_j}\frac{-c_2S_3\psi_3}{r^3}\varphi_1^2\,dw =-c_2\int_{\gamma_j}\frac{d\psi_3}{dw}\psi_3\,dw=-\frac{1}{2}c_2\psi_{3j}^2.\]
+We thus obtain
+\begin{align}
+ J_{5j}^{(1)} &= -\frac{1}{2}c_2\psi_{3j}^2 + \int_{\gamma_j}\frac{(c_2^3+\frac{1}{2}c_3c_2)S_3}{r^3}\varphi_1^5\,dw \nonumber \\
+&\phantom{=} +\int_{\gamma_j}\frac{(-3c_2^3-\frac{1}{2}c_3c_2)S_3+(3c_2^2+\frac{1}{2}c_3)S_3\psi_2}{r^3}\,\varphi_1^4\,dw \label{eq:J5(1)} \\
+&\phantom{=} +\int_{\gamma_j}\frac{(3c_2^3-\frac{1}{2}c_3c_2)S_3-6c_2^2S_3\psi_2+3c_2S_3\psi_2^2+c_2S_3\psi_3}{r^3}\varphi_1^3\,dw \nonumber \\
+&\phantom{=} +\int_{\gamma_j}\frac{(-c_2^3+\frac{1}{2}c_3c_2)S_3+(3c_2^2-\frac{1}{2}c_3)S_3\psi_2}{r^3}\nonumber \\
+&\phantom{=\int_{\gamma_j}} + \frac{-3c_2S_3\psi_2^2+S_3\psi_2^3-c_2S_3\psi_3+S_3\psi_3\psi_2}{r^3}\varphi_1^2\,dw. \nonumber
+\end{align}
+
+
+For computing $J_{5j}^{(2)}=\int_{\gamma_j}c_3K_1\phi_3\phi_2\varphi_1^2\,dw$ we also substitute the expression for $\phi_3\phi_2\varphi_1^2$ found in (\ref{eq:J5v0}). Splitting the integral into individual terms, we get expressions of the form $\int_{\gamma_j}K_1\psi_3^s\psi_2^t\varphi_1^k\,dw$. For each of these terms we use one of the following integration by parts formulas:
+\begin{align}
+\int_{\gamma_j}K_1\psi_2^s\varphi_1^k\,dw &= \frac{1}{k}a_{2j}^s-\frac{s}{k}\int_{\gamma_j} \frac{S_2}{r^2}\psi_2^{s-1}\varphi_1^{k+1}\,dw, \nonumber \\
+\int_{\gamma_j}K_1\psi_3^s\varphi_1^k\,dw &= \frac{1}{k}\psi_{3j}^s-\frac{s}{k}\int_{\gamma_j} \frac{S_3}{r^3}\psi_3^{s-1}\varphi_1^{k+2}\,dw, \label{eq:intbypartsformulas} \\
+\int_{\gamma_j}K_1\psi_3\psi_2\varphi_1^2\,dw &= \frac{1}{2}\psi_{3j}a_{2j}-\frac{1}{2}\int_{\gamma_j}\frac{S_3}{r^3}\psi_2\varphi_1^4\,dw -\frac{1}{2}\int_{\gamma_j}\frac{S_2}{r^2}\psi_3\varphi_1^3\,dw, \nonumber
+\end{align}
+or the fact that $\int_{\gamma_j}K_1\varphi_1^k\,dw=0$. After regrouping we obtain an expression
+\begin{align}
+ J_{5j}^{(2)} &= \frac{1}{2}c_3a_{2j}^3-\frac{1}{2}c_3c_2a_{2j}^2 +(-\frac{1}{8}c_3^2+\frac{1}{4}c_3c_2^2)a_{2j} +\frac{1}{2}c_3\psi_{3j}a_{2j}-\frac{1}{6}c_3c_2\psi_{3j} \nonumber \\
+&\phantom{=} +\int_{\gamma_j}\frac{(-\frac{1}{8}c_3^2-\frac{3}{4}c_3c_2^2)S_2r-\frac{1}{3}c_3c_2S_3}{r^3}\,\varphi_1^5\,dw, \nonumber \\
+&\phantom{=} +\int_{\gamma_j}\frac{2c_3c_2^2S_2r+\frac{1}{2}c_3c_2S_3-2c_3c_2S_2\psi_2r-\frac{1}{2}c_3S_3\psi_2}{r^3}\,\varphi_1^4\,dw, \label{eq:J5(2)} \\
+&\phantom{=} +\int_{\gamma_j}\frac{(\frac{1}{4}c_3^2-\frac{3}{2}c_3c_2^2)S_2+3c_3c_2S_2\psi_2-\frac{3}{2}c_3S_2\psi_2^2-\frac{1}{2}c_3S_2\psi_3}{r^2}\,\varphi_1^3\,dw. \nonumber
+\end{align}
+
+Note that by Proposition \ref{prop:thirdvar}, $J_{7j}=\int_{\gamma_j}K_4(\phi_2^2+\frac{1}{2}c_3(\varphi_1^2-1)+\psi_3)\varphi_1^3\,dw $. Regrouping we get $J_{7j}=\int_{\gamma_j}K_4(\phi_2^2\varphi_1^3-\frac{1}{2}c_3\varphi_1^3+\psi_3\varphi_1^3+\frac{1}{2}c_3\varphi_1^5)\,dw$. Since the integral $J_{8j}$ is defined to be $\int_{\gamma_j}K_4\phi_2^2\varphi_1^3\,dw$ we see that 
+\[ J_{7j}=J_{8j}+\int_{\gamma_j}\left(\frac{S_4}{r^4}+c_4K_1\right)\left(-\frac{1}{2}c_3\varphi_1^3+\psi_3\varphi_1^3+\frac{1}{2}c_3\varphi_1^5\right)\,dw. \]
+Expanding the above product and using the integration by parts formula (\ref{eq:intbypartsformulas}) we obtain
+\begin{equation}\label{eq:J7}
+ J_{7j}=J_{8j}+\frac{1}{3}c_4\psi_{3j}+\int_{\gamma_j}\frac{\frac{1}{2}c_3S_4-\frac{1}{3}c_4S_3r}{r^4}\,\varphi_1^5\,dw + \int_{\gamma_j}\frac{-\frac{1}{2}c_3S_4+S_4\psi_3}{r^4}\,\varphi_1^3\,dw.
+\end{equation}
+
+Now, let us also split $J_{8j}=\int_{\gamma_j}K_4\phi_2^2\varphi_1^3\,dw$ as $J_{8j}=J_{8j}^{(1)}+J_{8j}^{(2)}$ with
+\[ J_{8j}^{(1)}=\int_{\gamma_j}\frac{S_4}{r^4}\phi_2^2\varphi_1^3\,dw, \quad 
+   J_{8j}^{(2)}=\int_{\gamma_j}c_4K_1\phi_2^2\varphi_1^3\,dw. \]
+Expanding and substituting $\phi_2^2=\big(c_2(\varphi_1-1)+\psi_2\big)^2$ into the above expressions we obtain
+\begin{align}
+ J_{8j}^{(1)} &= 
+\int_{\gamma_j}\frac{c_2^2S_4}{r^4}\,\varphi_1^5\,dw + \int_{\gamma_j}\frac{-2c_2^2S_4+2c_2S_4\psi_2}{r^4}\,\varphi_1^4\,dw \nonumber \\
+&\phantom{=} + \int_{\gamma_j}\frac{c_2^2S_4-2c_2S_4\psi_2+S_4\psi_2^2}{r^4}\,\varphi_1^3\,dw, \label{eq:J8(1)} \\
+ J_{8j}^{(2)} &= 
+\frac{1}{3}c_4a_{2j}^2-\frac{1}{6}c_4c_2a_{2j}+\int_{\gamma_j}\frac{-\frac{1}{2}c_4c_2S_2}{r^2}\,\varphi_1^5\,dw \nonumber \\
+&\phantom{=} +\int_{\gamma_j}\frac{\frac{2}{3}c_4c_2S_2-\frac{2}{3}c_4S_2\psi_2}{r^2}\,\varphi_1^4\,dw. \label{eq:J8(2)}
+\end{align}
+
+For the last integrals $J_{9j}$ and $J_{10j}$ we proceed in an analogous way. We obtain
+\begin{align}
+ J_{9j}&=\frac{1}{4}c_5a_{2j}+\int_{\gamma_j}\frac{c_2S_5-\frac{1}{4}c_5S_2r^3}{r^5}\,\varphi_1^5\,dw+\int_{\gamma_j}\frac{-c_2S_5+S_5\psi_2}{r^5}\,\varphi_1^4\,dw, \label{eq:J9} \\
+ J_{10j}&=\int_{\gamma_j}\frac{S_6}{r^6}\,\varphi_1^5\,dw. \label{eq:J10}
+\end{align}
+
+If we now substitute in (\ref{eq:a6-v1}) the expressions we have found for $J_{5j},\ldots,J_{10j}$ given by equations (\ref{eq:J5(1)}) to (\ref{eq:J10}), we obtain
+\begin{align*}
+ a_{6j} &= 
+2a_{5j}a_{2j}+3a_{4j}a_{3j}-4a_{4j}a_{2j}^2-5a_{3j}^2a_{2j}+7a_{3j}a_{2j}^3-2a_{2j}^5 \\
+&\phantom{=}+\frac{c_3}{2}a_{2j}^3+\left(c_4-\frac{c_3c_2}{2}\right)a_{2j}^2+\left(\frac{3c_5}{4}-\frac{c_4c_2}{2}-\frac{c_3^2}{8}+\frac{c_3c_2^2}{4}+\frac{c_3}{2}\psi_{3j}\right)a_{2j} \\
+&\phantom{=}-\frac{1}{2}c_2\psi_{3j}^2+\left(\frac{c_4}{3}-\frac{c_3c_2}{6}\right)\psi_{3j} +D_{2j}+D_{3j}+D_{4j}+D_{5j},
+\end{align*}
+where we have grouped all integrals containing $\varphi_1^k$ into a single expression $D_{kj}$. This expressions are given explicitly below.
+\begin{align*}
+ D_{2j} &= \int_{\gamma_j}\frac{(-c_2^3+\frac{1}{2}c_3c_2)S_3+(3c_2^2-\frac{1}{2}c_3)S_3\psi_2-3c_2S_3\psi_2^2+S_3\psi_2^3+S_3\psi_3\psi_2}{r^3}\,\varphi_1^2\,dw  \\
+	&=  (-c_2^3+\frac{1}{2}c_3c_2)\psi_{3j} +(3c_2^2-\frac{1}{2}c_3)\Delta_{1j}-3c_2\Delta_{2j} +\Delta_{3j} +\Delta_{(1,1)j}.
+\end{align*}
+
+Recall that $q_4=S_4+c_2S_3r-\frac{1}{2}c_3S_2r^2$. We have:
+\begin{align*}
+ D_{3j} &= \int_{\gamma_j}\frac{(3c_2^2-\frac{1}{2}c_3)(S_4+c_2S_3r-\frac{1}{2}c_3S_2r^2)-6c_2(S_4+c_2S_3r-\frac{1}{2}c_3S_2r^2)\psi_2}{r^4}\,\varphi_1^3\,dw  \\
+&\phantom{=} +\int_{\gamma_j}\frac{3(S_4+c_2S_3r-\frac{1}{2}c_3S_2r^2)\psi_2^2+(S_4+c_2S_3r-\frac{1}{2}c_3S_2r^2)\psi_3}{r^4}\,\varphi_1^3\,dw  \\
+	&= (3c_2^2-\frac{1}{2}c_3)\psi_{4j}-6c_2\Gamma_{1j}+3\Gamma_{2j}+\Gamma_{(0,1)j}.
+\end{align*}
+
+Recall also that $q_5=S_5+2c_2S_4r+c_2^2S_3r^2-\frac{2}{3}(c_4+c_3c_2)S_2r^3$. Thus,
+\begin{align*}
+ D_{4j} &= \int_{\gamma_j}\frac{-3c_2\left(S_5+2c_2S_4r+c_2^2S_3r^2-\frac{2}{3}(c_4+c_3c_2)S_2r^3\right)}{r^5}\,\varphi_1^4\,dw \\
+&\phantom{=} +\int_{\gamma_j}\frac{3\left(S_5+2c_2S_4r+c_2^2S_3r^2-\frac{2}{3}(c_4+c_3c_2)S_2r^3\right)\psi_2}{r^5}\,\varphi_1^4\,dw  \\
+	&= -3c_2\psi_{5j}+3\mathrm{B}_{1j}.
+\end{align*}
+
+Lastly, we obtain
+\begin{align*}
+ D_{5j} &= \int_{\gamma_j}\frac{S_6+3c_2S_5r+\left(\frac{1}{2}c_3+3c_2^2\right)S_4r^2+\left(-\frac{1}{3}c_4+\frac{1}{6}c_3c_2+c_2^3\right)S_3r^3}{r^6}\,\varphi_1^5\,dw \\
+&\phantom{=} +\int_{\gamma_j}\frac{\left(-\frac{3}{4}c_5-\frac{3}{2}c_4c_2-\frac{1}{8}c_3^2-\frac{3}{4}c_3c_2^2\right)S_2r^4}{r^6}\,\varphi_1^5\,dw,  \\
+\end{align*}
+which is exactly $\psi_{6j}$, by definition of $q_6(w)$.
+
+In this way we obtain exactly the expression claimed by Proposition \ref{prop:sixthvar}, hence concluding its proof. \qed
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

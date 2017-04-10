@@ -1,0 +1,169 @@
+%%%Utmost rigidity - version 13 (April 20, 2015)  
+%THE ELIMINATION LEMMA
+
+
+We have completed the proof of the \hyperref[lemma:main]{Main lemma}, which claims the existence of polynomials $F_d$, $d=3,\ldots,6$, such that if $\F(\lambda,\alpha)$ and $\F(\lambda,\beta)$ have conjugate holonomy groups at infinity then 
+\begin{equation}\label{eq:polysystbis}
+ F_3(\beta)=0,\,\ldots,\,F_6(\beta)=0.
+\end{equation}
+The \hyperref[lemma:elimination]{Elimination lemma} claims that for generic $(\lambda,\alpha)\in\C^5$ the above polynomial system of equations has a unique solution given by $\beta=\alpha$. In order to prove such lemma we need to compute explicit expressions for the polynomials $F_d$ in terms of the parameters $\alpha$ and $\lambda$. We can explicitely construct such polynomials $F_d$ following the proof of the \hyperref[lemma:key]{Key lemma} (which is split into  Propositions \ref{prop:key3}, \ref{prop:key4}, \ref{prop:key5}, \ref{prop:key6}) and the ideas presented in Subsection \ref{subsec:keytomain} (Deducing Main lemma from Key lemma). All computations in this section have been carried out using computer assistance.
+
+Recall that we have defined $F(z,w)$ to be the right hand side of the equation
+\begin{equation}\label{eq:ratdifeqbis}
+ \frac{dz}{dw}=\frac{z\,P(z,w)}{Q(z,w)},
+\end{equation}
+and that we have defined the rational functions $K_d(w)$ to be the coefficients
+\[ F(z,w)=\sum_{d=1}^{\infty}K_d(w)\,z^d. \]
+We replace $F(z,w)$ by its explicit expression (\ref{eq:normalform}) and expand it into a power series with respect to $z$ around $z=0$. After this, we split each coefficient $K_d(w)$ into
+\[ K_d(w)=c_d\,K_1(w)+\frac{S_d(w)}{r(w)^d}, \]
+according to Proposition \ref{prop:c_dS_d}. We obtain the following expressions for the numbers $c_d$,
+\begin{align*}
+ c_2&=\alpha_0(1-\sigma), & c_3&=-\alpha_0^{2}\sigma(1-\sigma), & c_4&=\alpha_0^{3}\sigma^{2}(1-\sigma),\\
+ c_5&=-\alpha_0^{4}\sigma^{3}(1-\sigma), & c_6&=\alpha_0^{5}\sigma^{4}(1-\sigma),
+\end{align*}
+and for the polynomials $S_d(w)$,
+\begin{align*}
+S_2(w) &= r(w) \\
+S_3(w) &= -s(w)p(w)r(w) + (\eta-\alpha_0\sigma)r(w)^2 \\
+S_4(w) &= -p(w)r(w)^2+\alpha_0(2\sigma-1)s(w)p(w)r(w)^2+\alpha_0\sigma(\alpha_0\sigma-\eta)r(w)^3 \\
+S_5(w) &= s(w)p(w)^2r(w)^2+(2\alpha_0\sigma-\eta)p(w)r(w)^3+\alpha_0^2\sigma(2-3\sigma)s(w)p(w)r(w)^3\\
+  &\phantom{=} +\alpha_0^2\sigma^2(\eta-\alpha_0\sigma)r(w)^4 \\
+S_6(w) &= p(w)^2r(w)^3+\alpha_0(1-3\sigma)s(w)p(w)^2r(w)^3+(2\alpha_0\sigma\eta-3\alpha_0^2\sigma^2)p(w)r(w)^4\\
+  &\phantom{=} -\alpha_0^3\sigma^2(3-4\sigma)s(w)p(w)r(w)^4+\alpha_0^3\sigma^3(\alpha_0\sigma-\eta)r(w)^5.
+\end{align*}
+
+\begin{remark}
+ These computations agree with those presented in \cite{Pyartli2006}. We remark that it is a consequence of the normal form (\ref{eq:normalform}) we have adopted, that all the above polynomials are divisible by $r(w)$ to some positive power and that $S_2(w)$ does not depend on the parameter $\alpha$ (cf.~Proposition \ref{prop:S2=r}).
+\end{remark}
+
+
+\subsection{Main lemma revisited}\label{subsec:mainlemmarevisited}
+
+In Subsection \ref{subsec:keytomain} we have proved the \hyperref[lemma:main]{Main lemma} modulo the auxiliary facts that
+\[ \deg{P_d(w)}=2(d-1), \qquad \mbox{and} \qquad \deg{R_d(w)}\leq\deg{P_d(w)}-1. \] 
+
+It follows from a direct inspection of the expressions found for the polynomials $P_d(w)$ in Propositions \ref{prop:key3}, \ref{prop:key4}, \ref{prop:key5} and \ref{prop:key6} that for each $d=3,\ldots,6$, and the expressions for $S_d(w)$ above, that the polynomial $P_d(w)$ has degree $2(d-1)$. We now show that $\deg{R_d(w)}\leq\deg{P_d(w)}-1$ using Lemma \ref{lemma:Pyartli}.
+
+\begin{proposition}\label{prop:degRd} 
+ For $d=3,4,5,6$, the degree of the polynomials $R_d(w)$ satisfy 
+\[ \deg{R_d(w)}\leq\deg{P_d(w)}-1. \]
+\end{proposition}
+
+\begin{proof}
+We know that
+\[ \int_{\gamma_1}\frac{P_d(w)}{r(w)^d}\,\varphi_1(w)^{d-1}\,dw = 0, \]
+and we have defined the polynomials $R_d(w)$ by applying Lemma \ref{lemma:Pyartli} with $P(w)=P_d(w)$ and $u_j=(d-1)\lambda_j-d$. Lemma \ref{lemma:Pyartli} also implies that
+\[ \deg{R_d}(w)\leq \max{\big(\deg{P_d}(w)-1,\,-2-\operatorname{Re}{(u_1+u_2)}\big)}. \]
+Since $\Re\lambda_1+\Re\lambda_2\geq 2/3$, we conclude that 
+\[ \operatorname{Re}(u_1+u_2)\geq\frac{2}{3}(d-1)-2d, \]
+and thus 
+\[ -2-\operatorname{Re}{(u_1+u_2)}\big)\leq\frac{4d-4}{3}. \]
+
+On the other hand $\deg{P_d(w)}=2(d-1)$ and 
+\[ 2(d-1)-1\geq\frac{4d-4}{3} \]
+for any $d\geq3$.
+\qed\end{proof}
+
+
+\subsection{Computing the polynomials \texorpdfstring{$F_d$}{Fd}}\label{subsec:computingFd}
+
+Now that the \hyperref[lemma:main]{Main Lemma} has been fully proved we shall explain how to get explicit expressions for the polynomials $F_d(w)$. In the next subsection we use these explicit expressions to prove the \hyperref[lemma:elimination]{Elimination Lemma}.
+
+Suppose $P_d(w)$ has degree $m$, and so $R_d(w)$ has degree at most $m-1$. Let $V_m$, $V_{m-1}$ denote the vector spaces of polynomials in $w$ of degree at most $m$ and $m-1$, respectively. We have seen in Subsection \ref{subsec:keytomain}, equation (\ref{eq:P_dR_d}), that 
+\[ P_d=R'_dr+(d-1)(s-r')R_d. \]
+Consider now the linear map
+\[ L_d\colon V_{m-1}\longrightarrow V_m, \qquad f(w)\longmapsto f'(w)r(w)+(d-1)(s(w)-r'(w))f(w), \]
+where $s(w)$ and $r(w)$ are the polynomials defined in Section \ref{sec:normalizations}. We prove below that the map $L_d$ has maximal rank and so its image $L_d(V_{m-1})$ is a hyperplane in $V_m$. Any hyperplane is given by the kernel of some (fixed) linear functional $T_d$. We have that $\int_{\gamma_1}\frac{P_d}{r^d}\varphi_1^{d-1}\,dt=0$ if and only if $P_d$ belongs to the image of $L_d$, if and only if $T_d(P_d)=0$. Since the coefficients of $P_d$ are polynomials on $\beta$ the expression $T_d(P_d)$ is also a polynomial on $\beta$. In this way we have that $F_d:=T_d(P_d)$ vanishes if $\int_{\gamma_1}\frac{P_d}{r^d}\varphi_1^{d-1}\,dt=0$.
+
+\begin{proposition}\label{prop:rankLd}
+The linear map
+\[ L_d\colon V_{2d-3}\longrightarrow V_{2d-2}, \qquad f\longmapsto f'r+(d-1)(s-r')f\]
+has, with respect to the standard bases $\{1,w,\ldots,w^{2d-3}\}$ and $\{1,w,\ldots,w^{2d-2}\}$, the following matrix representation
+
+\[ M_d=\begin{pmatrix}
+A_d & -1 & 0 & \cdots & 0 & 0 & 0\\
+B_d-2d+2 & A_d & -2 & \cdots & 0 & 0 & 0\\
+0 & B_d-2d+3 & A_d & \cdots & 0 & 0 & 0\\
+\vdots & \vdots & \vdots & ~ & \vdots & \vdots & \vdots\\
+0 & 0 & 0 & \cdots & B_d-3 & A_d & -2d+3\\
+0 & 0 & 0 & \cdots & 0 & B_d-2 & A_d\\
+0 & 0 & 0 & \cdots & 0 & 0 & B_d-1\\
+   \end{pmatrix},\]
+where
+\[ A_d=(d-1)(-\lambda_1+\lambda_2), \qquad B_d=(d-1)(\lambda_1+\lambda_2). \]
+
+In particular, if $\lambda_3\notin\frac{1}{3}\Z\cup\frac{1}{4}\Z\cup\frac{1}{5}\Z$ then the linear map $L_d$ has maximal rank for each $d=3,\ldots,6$.
+\end{proposition}
+
+\begin{proof}
+Obtaining the expression for the above matrix is a straightforward computation. Note that if we drop the first row in the above matrix we obtain an upper-triangular $2(d-1)\times2(d-1)$ matrix whose diagonal entries are of the form $B_d-k=(d-1)(\lambda_1+\lambda_2)-k$ with $k=1,\ldots,2d-2$. Note moreover that such an expression may vanish only if
+\[ \lambda_3=1-\lambda_1-\lambda_2\in\frac{1}{d-1}\Z. \]
+This shows that under our genericity assumptions the matrix $M_d$, $d=3,\dots,6$, has maximal rank.
+\qed\end{proof}
+
+\begin{remark}\label{rmk:Mtilde}
+Let $\tilde{M}_d$ be the $2(d-1)\times2(d-1)$ matrix obtained by dropping the first row of $M_d$. Also, let us denote by $\tilde{V}_{2d-2}\subset V_{2d-2}$ the subspace of polynomials without constant term. If we compose the map $L_d$ with the natural projection $V_{2d-2}\to \tilde{V}_{2d-2}$ we obtain a linear map $\tilde{L}_d\colon V_{2d-3}\to\tilde{V}_{2d-2}$ whose matrix representation is precisely $\tilde{M}_d$. Since $\tilde{M}_d$ is invertible we conclude that $\tilde{L}_d$ is an isomorphism.
+\end{remark}
+
+In order to compute the polynomials $R_d$ and $F_d$ we input the expressions for $c_k$, $\tilde{c}_k$, $S_k(w)$, $\widetilde{S}_k(w)$ and $R_k(w)$ for each $k<d$. We compute an explicit expression for the polynomial $P_d(w)$ in terms of $\lambda$, $\alpha$, $\beta$ according to the formulas found throughout Section \ref{sec:keylemma}. The polynomial $R_d(w)$ is the unique preimage of $P_d(w)$ under the linear map $L_d$. We can compute this preimage by inverting the isomorphism $\tilde{L}_d$ defined in Remark \ref{rmk:Mtilde}. Indeed, the projection of $P_d(w)$ onto $\tilde{V}_{2d-2}$ is given by $P_d(w)-P_d(0)$ and thus we can find $R_d(w)$ by solving the linear equation
+\[ \tilde{L}_d(R_d)(w)=P_d(w)-P_d(0)\in\tilde{V}_{2d-2}. \]
+Once an expression for $R_d(w)$ has been found we have that $L_d(R_d)(w)$ and $P_d(w)$ agree on every monomial of positive degree (i.e.~they have the same projections onto $\tilde{V}_{2d-2}$). The condition $L_d(R_d)(w)=P_d(w)$ is thus reduced to the equation
+\[ L_d(R_d)(0)=P_d(0). \]
+The equation $F_d=L_d(R_d)(0)-P_d(0)$ gives us therefore an explicit expression for $F_d$. Such expressions are quite complicated and so we do not include them here.
+
+
+\subsection{Concluding the Elimination lemma}\label{subsec:concludingelimination}
+
+Recall that we have defined the series of resultants
+\begin{align*}
+ \operatorname{Res}^1_j(\beta_0,\beta_1) &= \Res_{\beta_2}\big(F_3(\beta_0,\beta_1,\beta_2),F_j(\beta_0,\beta_1,\beta_2)\big), & j &= 4,5,6, \\
+ \operatorname{Res}^2_j(\beta_0) &= \Res_{\beta_1}\big(\operatorname{Res}^1_4(\beta_0,\beta_1),\operatorname{Res}^1_j(\beta_0,\beta_1)\big), & j &= 5,6, \\
+ \operatorname{Res}^3_6   &= \Res_{\beta_0}\big(\operatorname{Res}^2_5(\beta_0)/(\beta_0-\alpha_0),\operatorname{Res}^2_6(\beta_0)\big), & &
+\end{align*}
+and proved in Proposition \ref{prop:elimination1} that if $\operatorname{Res}_6^3\not\equiv0$ as a function of $\lambda$ and $\alpha$ then any solution $(\beta_0,\beta_1,\beta_2)$ to system (\ref{eq:polysystbis}) satisfies $\beta_0=\alpha_0$. 
+
+After finding explicit expressions for the polynomials $F_d$ we have computed the above resultants and verified that $\operatorname{Res}_6^3\not\equiv0$ zero by evaluating it at the values
+\begin{equation}\label{values}
+  \lambda_1=2-i,\quad \lambda_2=2i,\quad \alpha_0=1,\quad \alpha_1=0,\quad \alpha_2=0,
+\end{equation}
+and obtaining a non-zero complex number.
+
+The final step in the proof is proving Proposition \ref{prop:elimination2}. The determinant of the linear system 
+\[ F_3(\alpha_0,\beta_1,\beta_2)=0,\qquad F_4(\alpha_0,\beta_1,\beta_2)=0 \] 
+is also obtained with computer assistance and verified to be non-zero at the values of $\lambda$ and $\alpha$ given in (\ref{values}). All these computations can be found in the appendix of \cite{arXivVersion}. This completes the proof of the \hyperref[lemma:elimination]{Elimination lemma} and thus complete also the proof of Theorem \ref{thm:main}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,165 @@
+%%%Utmost rigidity - version 13 (April 20, 2015)  
+%PROOF OF THE KEY LEMMA
+
+
+
+\subsection{Key lemma: the strategy}\label{subsec:keylemma}
+
+
+Suppose there exists a germ $h\in\Diff$ that conjugates the holonomy groups of $\F=\F(\lambda,\alpha)$ and $\Ft=\F(\lambda,\beta)$. We expand the distinguished parabolic germs in power series
+\begin{equation}
+  f_j(z)=z+a_{2j}z^2+a_{3j}z^3+\ldots, \quad \tilde{f}_j(z)=z+\tilde{a}_{2j}z^2+\tilde{a}_{3j}z^3+\ldots, \quad j=1,2,
+\end{equation}
+as well as the germ $h$,
+\[ h(z)=h_1z+h_2z^2+h_3z^3+\ldots. \]
+Note that the first variations satisfy $\varphi_1=\tilde{\varphi}_1$, since these functions are completely determined by $\lambda$. Throughout this work we will omit the tilde on $\tilde{\varphi}_1$.
+
+The coefficients $a_{dj}$ are computed in Section \ref{sec:analysis} in terms of the parameters $\lambda$ and $\alpha$. In particular, it will be shown that
+\begin{equation}\label{eq:a_2-v0}
+ a_{2j}=\tilde{a}_{2j}=\int_{\gamma_j}\frac{1}{r(t)}\,\varphi_1(t)\,dt, \quad j=1,2.
+\end{equation}
+
+The \hyperref[lemma:key]{Key lemma} for degree $d=3$ will be easily deduced from the fact that equation (\ref{eq:a_2-v0}) holds, which in turn is a direct consequence of the particular normal form (\ref{eq:normalform}) that we shall be using. Furthermore, it will be shown that the equality $a_{2j}=\tilde{a}_{2j}$ forces the germ $h$ to be parabolic; that is, $h_1=1$. The \hyperref[lemma:key]{Key lemma} for all higher degrees is proved following a strategy which we now present.
+
+Suppose we have computed all the coefficients $h_2,...,h_{d-2}$ in terms of $\lambda,\alpha,\beta$. Since the germs $f_j$, $\tilde{f}_j$ and $h$ are parabolic, the coefficient of degree $d$ in the power series expansion of $h\circ f_j-\tilde{f}_j\circ h$ is of the form 
+\begin{equation}\label{eq:sketchKL1}
+\frac{1}{d!}(h\circ f_j-\tilde{f}_j\circ h)^{(d)}(0)=(h_d+a_{dj})-(\tilde{a}_{dj}+h_d)+\ldots =a_{dj}-\tilde{a}_{dj}+\ldots, 
+\end{equation}
+where the multiple dots denote those terms that depend only on $a_{kj}$, $\tilde{a}_{kj}$ and $h_k$ with $k<d$. Since $h\circ f_j-\tilde{f}_j\circ h=0$, the above equation yields an expression for $\tilde{a}_{dj}-a_{dj}$ in terms of $a_{kj}$, $\tilde{a}_{kj}$ and $h_k$ with $k=2,...,d-1$. On the other hand, we have explicit formulas for the coefficients $a_{dj}$, and thus for $\tilde{a}_{dj}-a_{dj}$, from Section \ref{sec:analysis} (cf.~Propositions \ref{prop:secondvar} to \ref{prop:sixthvar}). We equate this formula for $\tilde{a}_{dj}-a_{dj}$ to the formula we deduced from (\ref{eq:sketchKL1}). This method yields an equation involving the index $j$ and thus by making $j=1$ and $j=2$ we obtain a system of two equations. A priori, it is not at all clear what conditions this system of equations imposes on the parameter $\beta$. The fundamental fact about this system, proved in Section \ref{sec:keylemma}, is that it can be simplified to take the form
+\[ a_{2j}\,\mathcal{C}_d+\mathcal{I}_{dj}=0, \quad j=1,2, \]
+where $a_{2j}$ is as in (\ref{eq:a_2-v0}), $\mathcal{C}_d$ is an expression involving the coefficients $h_2,\ldots,h_{d-1}$ that does not depend on the index $j$, $\mathcal{I}_{dj}=\int_{\gamma_j}\frac{P_d}{r^d}\,\varphi_1^{d-1}\,dw$, and $P_d$ is a polynomial which will be computed explicitly. The \hyperref[lemma:key]{Key lemma} for degree $d$ is completed by the following proposition.
+
+\begin{proposition}\label{prop:key}
+ Let $d\geq3$. If $\lambda_1\notin\frac{1}{d-2}\Z$ and the polynomial $P_d(w)$ satisfies a system of equations of the form 
+\begin{align}
+ a_{21}\,\mathcal{C}_d+\mathcal{I}_{d1} &= 0 \nonumber \\
+ a_{22}\,\mathcal{C}_d+\mathcal{I}_{d2} &= 0  \label{eq:sketchKL2}
+\end{align}
+where $\mathcal{C}_d$ is a complex number,
+\begin{equation}\label{eq:defId}
+ \mathcal{I}_{dj}=\int_{\gamma_j}\frac{P_d(w)}{r(w)^d}\,\varphi_1(w)^{d-1}\,dw, 
+\end{equation}
+and $a_{2j}$ is as in \textnormal{(\ref{eq:a_2-v0})} then 
+\[ \mathcal{C}_d=\mathcal{I}_{dj}=0. \]
+\end{proposition}
+
+\begin{proof}
+We can regard (\ref{eq:sketchKL2}) as a linear system on three unknowns: $\mathcal{C}_d$, $\mathcal{I}_{d1}$ and $\mathcal{I}_{d2}$. Note that the integrand that appears in (\ref{eq:defId}) can be rewritten as $P_d(w)\zeta_d(w)$, where
+\[\zeta_d(w)=\frac{1}{r(w)^d}\varphi_1(w)^{d-1}=(1+w)^{(d-1)\lambda_1-d}(1-w)^{(d-1)\lambda_2-d}, \]
+since $\varphi_1(w)=(1+w)^{\lambda_1}(1-w)^{\lambda_2}$ (cf.~expression (\ref{eq:expforvar1}) and the variation equation (\ref{eq:vareq1})). Applying Lemma \ref{lemma:integrals1} we can express $\mathcal{I}_{d2}$ as a scalar multiple of $\mathcal{I}_{d1}$,
+\[ \mathcal{I}_{d2}=(1+\nu_1^{d-1})\,\mathcal{I}_{d1}, \quad \nu_1=\exp{(2\pi i\,\lambda_1)}. \]
+Since $a_{2j}$ is given in terms of the integral in (\ref{eq:a_2-v0}), Lemma \ref{lemma:integrals1} also implies that
+\[  a_{22}=(1+\nu_1)\,a_{21}. \]
+In this way system (\ref{eq:sketchKL2}) becomes
+\begin{align}\label{eq:sketchKL3}
+ a_{21}\,\mathcal{C}_d+\mathcal{I}_{d1} &= 0, \nonumber \\
+ (1+\nu_1)\,a_{21}\,\mathcal{C}_d+(1+\nu_1^{d-1})\,\mathcal{I}_{d1} &= 0,
+\end{align}
+whose unknowns are $\mathcal{C}_d$ and $\mathcal{I}_{d1}$. The determinant of this linear system is
+\[\begin{vmatrix}
+    a_{21} & 1\\
+    (1+\nu_1)\,a_{21} & 1+\nu_1^{d-1}
+  \end{vmatrix} = a_{21}\nu_1(\nu_1^{d-2}-1), \]
+which is not zero. Indeed, $\nu_1^{d-2}\neq 1$ since $\nu_1=\exp{(2\pi i\,\lambda_1)}$ and $\lambda_1\notin\frac{1}{d-2}\Z$, and by our genericity assumptions $a_{21}\neq 0$. This implies that $\mathcal{I}_{d1}=0$ and $\mathcal{C}_d=0$. \qed
+\end{proof}
+
+Note that the fact that $\mathcal{I}_{d1}=0$ proves the \hyperref[lemma:key]{Key lemma} for degree $d$ since the expression for $\mathcal{I}_d$ given in (\ref{eq:defId}) coincides with the lefthand side of (\ref{eq:keylemma}) in the \hyperref[lemma:key]{Key lemma}. On the other hand, $\mathcal{C}_d$ is given in terms of $h_2,\ldots h_{d-1}$ and so the fact that $\mathcal{C}_d=0$ allows us to find an expression for the coefficient $h_{d-1}$. In this way we are able to repeat the process now for degree $d+1$. That is, at every step $d$ we will prove the \hyperref[lemma:key]{Key lemma} for degree $d$ and compute $h_{d-1}$.
+
+
+\subsection{Deducing Main lemma from Key lemma}\label{subsec:keytomain}
+
+As pointed out in Remark \ref{rmk:dependence}, the equation
+\begin{equation}\label{eq:keylemmabis}
+\int_{\gamma_1}\frac{P_d}{r^d}\varphi_1^{d-1}\,dw=0
+\end{equation}
+imposes one linear condition on the coefficients of the polynomial $P_d(w)$. Since these coefficients are polynomials on $\beta$, we need only prove that this linear condition is non-trivial to conclude the \hyperref[lemma:main]{Main Lemma}. We prove this fact using Lemma \ref{lemma:Pyartli}. Indeed, Lemma \ref{lemma:Pyartli} claims that equation (\ref{eq:keylemmabis}) is equivalent to the existence of a polynomial $R_d(w)$ such that
+\[ \int_0^w \frac{P_d}{r^d}\varphi_1^{d-1}\,dt=\frac{R_d(w)}{r(w)^{d-1}}\,\varphi_1(w)^{d-1}+C. \]
+This means that
+\[ \left(\frac{R_d(w)}{r(w)^{d-1}}\,\varphi_1(w)^{d-1}\right)^{\prime}=\frac{P_d(w)}{r(w)^d}\,\varphi_1(w)^{d-1}, \]
+on the other hand a short computation shows that 
+\[ \left(\frac{R_d(w)}{r(w)^{d-1}}\,\varphi_1(w)^{d-1}\right)^{\prime}=\frac{R'_d(w)r(w)+(d-1)(s(w)-r'(w))R_d(w)}{r(w)^{d}}\,\varphi_1(w)^{d-1}, \]
+where $s(w)=\lambda_1(w-1)+\lambda_2(w+1)$ and we have taken into account the fact that $\varphi_1$ satisfies the variation equation (\ref{eq:vareq1}). This implies that
+\begin{equation}\label{eq:P_dR_d}
+ P_d=R'_dr+(d-1)(s-r')R_d. 
+\end{equation}
+We will see in Subsection \ref{subsec:mainlemmarevisited} that the polynomials $P_d$ have degree $2(d-1)$ and that $
+\deg{R_d}\leq\deg{P_d}-1$. This fact, together with equation (\ref{eq:P_dR_d}), implies that the linear condition imposed on the coefficients of $P_d(w)$ by equation (\ref{eq:keylemmabis}) is non-trivial. The \hyperref[lemma:main]{Main Lemma} now follows immediately.
+
+\begin{remark}
+In Subsection \ref{subsec:computingFd} we will explain how to obtain explicit expressions for the polynomials $R_d(w)$ and $F_d(\beta)$ in terms of the coefficients of the polynomials $P_d(w)$. These will be later needed in order to prove the \hyperref[lemma:elimination]{Elimination Lemma}.
+\end{remark}
+
+
+\subsection{The Elimination lemma}\label{subsec:eliminationlemma}
+
+
+The last step in the proof of Theorem \ref{thm:main} is to prove that the system
+\[F_3(\beta)=0,\,\ldots\, ,F_6(\beta)=0, \]
+has no solutions other than $\beta=\alpha$. This is done taking resultants of the polynomials $F_d$ with respect to successive variables $\beta_2,\beta_1,\beta_0$. Consider for the time being the parameters $\lambda$, $\alpha$ to be fixed, thus the coefficients of of the polynomials $F_d$ are also fixed complex numbers. 
+
+Recall that if $f(x)=a_0x^n+\ldots+a_n$ and $g(x)=b_0x^m+\ldots+b_m$ are polynomials in $x$ with coefficients in some field $\mathbb{F}$, the resultant of $f$ and $g$ is defined to be
+\[\Res_x(f(x),g(x))=a_0^m b_0^n \prod_{i,j}(u_i-v_j), \]
+where $u_i$ and $v_j$ are the roots of $f(x)$ and $g(x)$, respectively, in $\overline{\mathbb{F}}$. The resultant can be defined for polynomials over any commutative ring. Over an integral domain it has the fundamental property that $\Res_x(f(x),g(x))=0$ if and only if $f(x)$ and $g(x)$ have a common factor of positive degree.
+
+We will first take several resultants of the polynomials $F_d$ with respect to $\beta_2$. Second, we take resultants of these previously obtained resultants with respect to $\beta_1$. The final step has a twist; if we take now a last resultant with respect to $\beta_0$ we are guaranteed to get 0, since $\beta=\alpha$ is a solution to system (\ref{eq:polysyst}). We avoid this by dividing one of these resultants by the linear polynomial $\beta_0-\alpha_0$. More precisely, let us define
+\begin{align*}
+ \operatorname{Res}^1_j(\beta_0,\beta_1) &= \Res_{\beta_2}\big(F_3(\beta_0,\beta_1,\beta_2),F_j(\beta_0,\beta_1,\beta_2)\big), & j &= 4,5,6, \\
+ \operatorname{Res}^2_j(\beta_0) &= \Res_{\beta_1}\big(\operatorname{Res}^1_4(\beta_0,\beta_1),\operatorname{Res}^1_j(\beta_0,\beta_1)\big), & j &= 5,6, \\
+ \operatorname{Res}^3_6   &= \Res_{\beta_0}\big(\operatorname{Res}^2_5(\beta_0)/(\beta_0-\alpha_0),\operatorname{Res}^2_6(\beta_0)\big). & &
+\end{align*}
+Note that as long as we fix $\alpha$ and $\lambda$ we have that
+\[ \operatorname{Res}^1_j\in\C[\beta_0,\beta_1],\quad \operatorname{Res}_j^2\in\C[\beta_0],\quad \operatorname{Res}^3_6\in\C. \]
+
+\begin{proposition}\label{prop:elimination1}
+ If $\operatorname{Res}^3_6\neq0$ then any solution $(u_0,u_1,u_2)$ of the polynomial system \textnormal{(\ref{eq:polysyst})} satisfies $u_0=\alpha_0$.
+\end{proposition}
+
+\begin{proof}
+ Suppose on the contrary that $\operatorname{Res}^3_6\neq 0$ but $(u_0,u_1,u_2)$ is a solution of (\ref{eq:polysyst}) such that $u_0\neq\alpha_0$. Note that $F_3(u_0,u_1,\beta_2)$ and $F_j(u_0,u_1,\beta_2)$ have a common root $\beta_2=u_2$ for any $j=4,5,6$ and so
+\[0=\Res_{\beta_2}\big(F_3(u_0,u_1,\beta_2),F_j(u_0,u_1,\beta_2)\big)=\operatorname{Res}^1_j(u_0,u_1), \qquad j=4,5,6. \]
+In particular $\operatorname{Res}^1_4(u_0,\beta_1)$ has a common root, $\beta_1=u_1$, with both $\operatorname{Res}_5^1(u_0,\beta_1)$ and $\operatorname{Res}_6^1(u_0,\beta_1)$. We deduce that $\operatorname{Res}_5^2(u_0)=0$ and $\operatorname{Res}_6^2(u_0)=0$. Now, since $u_0\neq \alpha_0$ it is still true that $\operatorname{Res}_5^2(\beta_0)/(\beta_0-\alpha_0)$ and $\operatorname{Res}_6^2(\beta_0)$ have $\beta_0=u_0$ as a common root; in particular, $\operatorname{Res}^3_6=0$, a contradiction. \qed
+\end{proof}
+
+
+We would like to be able to guarantee that $\operatorname{Res}^3_6$ is never zero, no matter the choice of $\lambda$ and $\alpha$. This need not be true. However, we can guarantee that for \emph{almost every} choice of $\lambda$ and $\alpha$ the resultant $\operatorname{Res}^3_6$ is not zero. Indeed, as mentioned in Remark \ref{rmk:dependence}, the coefficients of the polynomials $F_d$ depend polynomially on $\alpha$ and rationally on $\lambda$. In this way, if we allow $\alpha$ and $\lambda$ to vary, the coefficients of $F_d$ belong to the ring $\C(\lambda)[\alpha]$, in particular $\operatorname{Res}^3_6\in\C(\lambda)[\alpha]$. Let us thus introduce the notation $\operatorname{Res}^3_6(\lambda,\alpha)$. If $\operatorname{Res}^3_6(\lambda,\alpha)$ is not identically zero then the union of its divisors of zeroes and poles defines a proper algebraic subset of affine space $\C^5$. The complement $U$ of this algebraic set is a Zariski-open subset of $\C^5$ with the property that for any $(\lambda,\alpha)\in U$ we have $\operatorname{Res}^3_6(\lambda,\alpha)\neq 0$. Finally we will prove that $\operatorname{Res}^3_6(\lambda,\alpha)\not\equiv 0$ by exhibiting an explicit point $(\lambda,\alpha)\in\C^5$, given in (\ref{values}), for which $\operatorname{Res}^3_6$ does not vanish. 
+
+The above argument shows that if $\F=\F(\lambda,\alpha)$ and $\Ft=\F(\lambda,\beta)$ have conjugate monodromy groups, then we must have $\alpha_0=\beta_0$. The polynomial $F_3(\beta)$ is linear and $F_4(\beta)$ is linear on $\beta_1,\beta_2$ yet quadratic on $\beta_0$. However, if we replace $\beta_0$ by $\alpha_0$ we obtain a linear system on $\beta_1,\beta_2$ (this is verified by direct inspection of the polynomials $F_3$ and $F_4$ whose explicit expression can be found in the the appendix of \cite{arXivVersion}). The proof of the \hyperref[lemma:elimination]{Elimination lemma} is completed by the following proposition.
+
+\begin{proposition}\label{prop:elimination2}
+The pair of equations
+\begin{equation}\label{eq:elimination2}
+F_3(\alpha_0,\beta_1,\beta_2)=0,\qquad F_4(\alpha_0,\beta_1,\beta_2)=0,
+\end{equation}
+forms a linear inhomogeneous system on $\beta_1$ and $\beta_2$. Its determinant is a non-zero element of $\C(\lambda)[\alpha]$ and therefore for almost every $(\lambda,\alpha)\in\C^5$ the system has a unique solution which is necessarily given by 
+\[ \beta_1=\alpha_1, \qquad \beta_2=\alpha_2. \]
+\end{proposition}
+
+The proof of this proposition is discussed in Subsection \ref{subsec:concludingelimination}. Propositions \ref{prop:elimination1} and \ref{prop:elimination2} together imply the \hyperref[lemma:elimination]{Elimination lemma}.
+
+\begin{remark}
+In the proof of the \hyperref[lemma:main]{Main lemma} and \hyperref[lemma:key]{Key lemma} all computations are carried out in terms of the rational functions $K_d(w)$ defined by the formula
+\[ \frac{dz}{dw}=\frac{z\,P(z,w)}{Q(z,w)}=\sum_{d=1}^{\infty}K_d(w)\,z^d, \]
+whose explicit dependence on $(\lambda,\alpha)$ is not provided until Section \ref{sec:elimination}. This has been done to avoid excessively large expressions and make the proof more transparent. However, in order to prove the \hyperref[lemma:elimination]{Elimination lemma} (more precisely, that the final resultant $\operatorname{Res}^3_6$ and the determinant of (\ref{eq:elimination2}) do not vanish identically) we do need to compute expressions for the polynomials $F_d$ in terms of the parameters $\lambda,\alpha,\beta$ explicitly. Obtaining these expressions and evaluating the resultant $\operatorname{Res}^3_6$ and the determinant of (\ref{eq:elimination2}) at a particular point has been done with computer assistance. This procedure is discussed in Section \ref{sec:elimination} and the program script can be found in the appendix of \cite{arXivVersion}.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

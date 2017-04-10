@@ -257,7 +257,7 @@ The line at infinity is given by $\mathcal{L}=\{z=0\}$, and the singular point o
 
 Let $\F$ be a foliation from the class $\A_2$ and denote by $\LF$ its leaf at infinity (i.e.~the line punctured at the singularities). Given a base point $b\in\LF$ and the germ of a cross section $(\Gamma,b)$, transversal to the leaves of $\F$, we can perform the following standard construction: for any loop $\gamma$ on $\LF$ based at $b$, we follow the leaves of $\F$ along some small tubular neighborhood of the image of $\gamma$ to obtain the germ of a holomorphic return map $\Delta_\gamma\colon (\Gamma,b)\to(\Gamma,b)$. This germ, the \textit{holonomy} of $\F$ along $\gamma$, depends only on the homotopy class of $\gamma$ in the fundamental group $\pi_1(\LF,b)$. Moreover, the map $\Delta\colon\pi_1(\LF,b)\to \operatorname{Diff}\,(\Gamma,b)$ is a group anti-homomorphism. Fixing an analytic parametrization $\Diff\to \operatorname{Diff}\,(\Gamma,b)$, we will write $\Delta\colon\pi_1(\LF,b)\to\Diff$ and define the \textit{holonomy group at infinity} as $\GF=\operatorname{Im}\,\Delta\subset\Diff$. This group is canonically defined up to conjugacy in $\Diff$.
 
-\begin{definition}
+\begin{definition}\label{def:conjugateholonomy}
  We say that two foliations $\F$ and $\Ft$ from the class $\A_2$ have \textit{analytically conjugate holonomy groups} whenever there exist the germ of a conformal map $h$, and a geometric isomorphism $H_{\ast}\colon \pi_1(\LF,b)\to\pi_1(\LFt,\tilde{b})$ that conjugate the holonomy in the following way:
   \[ \forall\gamma\in\pi_1(\LF,b): \quad %
      h\circ\Delta_\gamma = \widetilde{\Delta}_{H_{\ast}\gamma}\circ h. \]
@@ -764,8 +764,78 @@ By Lemma \ref{lemma:finiteSpectra} the above relation follows from the Euler-Jac
 
 
 
+
+
+
+
+
+
+
 \chapter{The holonomy group at infinity}\label{chpt:holonomy}
+
+\section{Introduction}\label{sec:intro}
+
+This whole chapter is devoted to proving the following theorem:
+
+\begin{theorem}\label{thm:main}
+Let $\F\in\A_2$ be a generic foliation and suppose its holonomy group at infinity is analytically conjugate to the holonomy group of $\Ft\in\A_2$. There exists an affine map on $\C^2$ that conjugates $\F$ to $\Ft$. 
+\end{theorem}
+
+This is just a rephrasing of Theorem \ref{thm:moduliHolonomy}, since analytically equivalent foliations necessarily have analytically conjugate holonomy groups. In virtue of the topological rigidity of non-solvable holonomy groups, the above theorem also implies Theorem \ref{thm:utmost}, which claims that foliations that are topologically equivalent over $\P^2$ are in fact affine equivalent over $\C^2$.
+
+We may say even more. Note that if two quadratic vector fields on $\C^2$ are orbitally topologically equivalent, it need not be true that the induced foliations on $\P^2$ are topologically equivalent, since the linking homeomorphism need not extend to the line at infinity. However, if the singularities at infinity are hyperbolic, it can be proved that such linking homeomorphism takes the separatrix set of the former foliation onto the separatrix set of the latter one (cf.~\cite{TeymuriMafraScardua2013}). Once this has been established we may carry out with no problem an argument by Mar\'{i}n which guarantees that, even though the homeomorphism need not extend to the infinite line, the holonomy groups at infinity are still conjugated (see Theorem A in \cite{Marin2003}). We obtain the following result.
+
+\begin{corollary}\label{coro:qvfs}
+Two generic quadratic vector fields on $\C^2$ are orbitally topologically equivalent if and only if they are orbitally affine equivalent.
+\end{corollary}
+
+\subsection{Genericity assumptions}\label{subsec:genericity}
+
+In order to prove Theorem \ref{thm:main} we shall consider exclusively foliations from the class $\A_2$ that satisfy the generic properties listed below. 
+\begin{enumerate}[topsep=0pt,noitemsep,label=(\roman*)]
+ \item The holonomy group at infinity is non-solvable,
+ \item The characteristic numbers $\lambda_1$, $\lambda_2$, $\lambda_3$ of the singular points at infinity are pairwise different and do not belong to the set $\frac{1}{3}\Z\cup\frac{1}{4}\Z\cup\frac{1}{5}\Z$,
+ \item The commutator of the two holonomy maps corresponding to the 
+ % \emph{standard geometric generators}\footnote{The standard geometric generators $\mu_i$ are described in Definition \ref{def:geometricgenerators}.} 
+ % 
+ standard generators
+ % 
+ of the fundamental group of the infinite leaf belongs to the class of parabolic germs with non-zero quadratic term (see Remark \ref{rmk:genericity(iii)} in Subsection \ref{subsec:ideas}).
+\end{enumerate}
+Moreover, there is an additional technical requirement needed to prove Theorem \ref{thm:main}. In Section \ref{subsec:eliminationlemma} we shall construct a dense Zariski open set $\mathcal{U}\subset\A_2$ and assume
+\begin{enumerate}[topsep=0pt,noitemsep,label=(\roman*)]\setcounter{enumi}{3}
+ \item Foliation $\F$ belongs to the set $\mathcal{U}$.
+\end{enumerate}
+In order to prove Corollary \ref{coro:qvfs} we must further assume that the characteristic numbers $\lambda_1$, $\lambda_2$, $\lambda_3$ are non-real (i.e.~the singularities on the line at infinity are hyperbolic). However, this last condition is not needed to prove Theorem \ref{thm:main}.
+
+The genericity of conditions (ii) and (iv) is obvious. Condition (iii) also defines a complex Zariski open set in $\A_2$ (cf.~\cite{Shcherbakov1984}). Genericity of (i) is proved in \cite{Shcherbakov1984} for polynomial foliations of arbitrary degree. For quadratic vector fields we know an even stronger result:
+
+\begin{theorem}[\cite{Pyartli2006}]
+Let $\Lambda=(\lambda_1,\lambda_2,\lambda_3)$ be such that $\lambda_1+\lambda_2+\lambda_3=1$. Denote by $\mathcal{B}_\Lambda$ the set of foliations in $\A_2$ with characteristic numbers at infinity $\lambda_1,\lambda_2,\lambda_3$. Assume that $\Re{\lambda_1}\geq\Re{\lambda_2}\geq\Re{\lambda_3}$. Then, if $\lambda_1,\lambda_2\notin\frac{1}{3}\Z\cup\frac{1}{4}\Z$, there exist at least one and at most ten orbits of the group $\Aff{2}{\C}$ in $\mathcal{B}_\Lambda$ whose points correspond to equations with non-commutative solvable holonomy group at infinity.
+\end{theorem}
+
+Moreover, for any $\Lambda$, foliations in $\mathcal{B}_\Lambda$ with commutative holonomy group at infinity fall into seven families which are explicitly described in \cite{Pyartli2006}. In particular, it follows from such description (see also Theorem 1 in \cite{Pyartli2000}) that for $\Lambda=(\lambda_1,\lambda_2,\lambda_3)$ satisfying assumption (ii) above there exist exactly two orbits of the group $\Aff{2}{\C}$ in $\mathcal{B}_\Lambda$ corresponding to equations with a commutative holonomy group.
+
+Throughout this text we will also assume that we have once and for all numbered the singular points at infinity of any given foliation in such a way that $\Re{\lambda_1}\geq\Re{\lambda_2}\geq\Re{\lambda_3}$.
+
+
+
+
+\section{Structure of the chapter}\label{sec:structure}\input{2-structure}
+
+% \section{Sketch of the proofs}\label{sec:sketch}\input{3-sketch}
 % 
+% \section{Definitions and normalizations}\label{sec:normalizations}\input{4-normalizations}
+% 
+% \section[Analysis of the power series]{Analysis of the power series expansion of the distinguished parabolic germs \texorpdfstring{$f_j$}{}}\label{sec:analysis}\input{5-analysis}
+% 
+% \section{Proof of the Key lemma}\label{sec:keylemma}\input{6-keylemma}
+% 
+% \section{Proof of Elimination lemma}\label{sec:elimination}\input{7-elimination}
+
+
+
+
 % \appendix
 % \chapter{Mathematca script?}
 
@@ -793,13 +863,5 @@ By Lemma \ref{lemma:finiteSpectra} the above relation follows from the Euler-Jac
 % Add explicit expression of F in the appendix.
 % Restate theorems to make it easier to read?
 % Check that the proof of Theorem \ref{thm:moduliSpectra} given here is correct: check that the example of v and its twin provided do satisfy the claimed properties (recall you rewrote the proof using Yuri's ideas!)
-
-
-
-
-
-
-
-
 
 

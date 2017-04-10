@@ -1,0 +1,550 @@
+%%%Utmost rigidity - version 13 (April 11, 2015)  
+%PROOF OF THE KEY LEMMA
+
+
+
+We now proceed to prove the \hyperref[lemma:key]{Key lemma}. Let us consider now a normalized foliation $\Ft$ whose holonomy group at infinity is analytically conjugate to the holonomy group of $\F$. The genericity assumptions imposed on $\F$ and the way we have normalized imply that both foliations have the same characteristic numbers at infinity at the same singular points. Therefore if $\F=\F(\lambda,\alpha)$, we may write $\Ft=\F(\lambda,\beta)$. For every object we have defined for foliation $\F$ we define the analogous object for $\Ft$ and denote it by the same symbol with a tilde on top. In particular $\tilde{f}_1$ and $\tilde{f}_2$ denote the corresponding distinguished parabolic germs which are defined as the holonomy maps along the same loops $\gamma_1$ and $\gamma_2$ from Definition \ref{def:geometricgenerators}. By the conjugacy of the holonomy groups, and in virtue of Remark \ref{rmk:strongae}, there exists a conformal germ $h\in\Diff$ such that
+\begin{equation}\label{eq:conjugatef}
+h\circ f_j-\tilde{f}_j\circ h=0,\quad j=1,2. 
+\end{equation}
+
+We reemphasize that the idea of the \hyperref[lemma:key]{Key lemma} is to show that the above equation imposes certain conditions on the parameter $\beta$. We do this by proving the existence of polynomials $P_d(w)$, whose coefficients depend on $\lambda$, $\alpha$ and $\beta$, with the property that if equation (\ref{eq:conjugatef}) holds up to jets of order $d$ then 
+\[ \int_{\gamma_1}\frac{P_d(w)}{r(w)^d}\,\varphi_1(w)^{d-1}\,dw = 0. \]
+
+We will first compare the terms of degree 2 in equation (\ref{eq:conjugatef}) and prove that the normal form (\ref{eq:normalform}) that we have chosen forces the germ $h$ to be parabolic. The \hyperref[lemma:key]{Key lemma} for degree $d=3$ will be a corollary of this fact. Once we have done this we will prove the \hyperref[lemma:key]{Key lemma} for higher degrees, one degree at the time, following the strategy explained in Subsection \ref{subsec:keylemma}.
+
+
+
+
+
+\subsection{Comparison of the terms of low degree}
+
+We start with an important observation about the normal form (\ref{eq:normalform}).
+
+\begin{proposition}\label{prop:S2=r}
+ The polynomial $S_2(w)$ defined in Proposition \textnormal{\ref{prop:c_dS_d}} by the property $K_2=c_2K_1+\frac{S_2}{r^2}$ is exactly $S_2(w)=r(w)$. In particular the function  
+\[ \psi_2(w)=\int_0^w\frac{S_2}{r^2}\varphi_1\,dt=\int_0^w\frac{1}{r}\varphi_1\,dt \]
+depends only on the characteristic numbers $\lambda_1,\lambda_2$ and not on the parameter $\alpha$, and so we have $\tilde{\psi}_2(w)=\psi_2(w)$.
+\end{proposition}
+
+This proposition is proved by just expanding $F(z,w)$ in a power series and computing the quadratic coefficient $K_2$. We omit the proof here since we shall give explicit expression for all the terms $S_d$ and $c_d$ at the begining of Section \ref{sec:elimination}.
+
+\begin{proposition}\label{prop:h2}
+If $h\in\Diff$ conjugates the holonomy groups of $\F$ and $\Ft$ then $h$ is necessarily a parabolic germ and its quadratic coefficient $h_2=\frac{1}{2}h''(0)$ is given by $h_2=\tilde{c}_2-c_2$, with $c_2,\tilde{c}_2$ as in Proposition \textnormal{\ref{prop:c_dS_d}}
+\end{proposition}
+
+\begin{proof}
+If the germ $h$ conjugates the holonomy groups it conjugates the distinguished parabolic germs, which by genericity hypothesis have non-zero quadratic part. By Proposition \ref{prop:secondvar} the quadratic coefficient in the power series of $f_j$ is $a_{2j}=\psi_{2j}$, and by Proposition \ref{prop:S2=r} $\psi_2(w)$ depends only on the characteristic numbers $\lambda_1$, $\lambda_2$. This implies that $a_{2j}=\tilde{a}_{2j}$. Any germ that conjugates two parabolic germs with equal non-zero quadratic part must be parabolic itself, hence $h$ is parabolic.
+
+We now prove the second claim. This is the only instance in this paper where we will consider holonomy maps other than the distinguished parabolic germs. Choose any holonomy map $\Delta_\gamma$ that is not parabolic (for example, choose $\gamma=\mu_1$, a standard geometric generator) and consider its power series expansion: $\Delta_\gamma=\var{1}{}\,z+\var{2}{}\,z^2+O(z^3)$. We also consider the corresponding power series expansion for $\widetilde{\Delta}_\gamma$. Taking into account that $\widetilde{\varphi}_1=\varphi_1$, an easy computation shows that $h\circ\Delta_\gamma-\widetilde{\Delta}_\gamma\circ h$ has a power series expansion of the form
+\[ \left(\var{2}{}-\vart{2}{}+h_2\var{1}{}(\var{1}{}-1)\right)\,z^2+O(z^3), \]
+which implies
+\[ h_2=\frac{\vart{2}{}-\var{2}{}}{\var{1}{}(\var{1}{}-1)} \]
+since $h\circ\Delta_\gamma-\widetilde{\Delta}_\gamma\circ h\equiv 0$. Now, we use the relation $\varphi_2=\varphi_1\phi_2$ and Proposition \ref{prop:secondvar} to simplify the numerator. Taking into account that $\psi_2(w)=\tilde{\psi}_2(w)$, we get that $h_2=\tilde{c}_2-c_2$.
+\qed\end{proof}
+
+We remark that the fact that $h$ is forced to be parabolic depends strongly on the fact that both $\F$ and $\Ft$ have been normalized as in (\ref{eq:normalform}). Without this normalization the above proposition need not hold.
+
+In virtue of the above proposition we may write
+\[ h(z)=z+\sum_{d=2}^{\infty}h_dz^d. \]
+
+
+\begin{proposition}\label{prop:key3}
+Define $P_3(w)=\widetilde{S}_3(w)-S_3(w)$. If a germ $h\in\Diff$ conjugates corresponding pairs of distinguished parabolic germs up to $3$-jets then
+\[ \int_{\gamma_1}\frac{P_3(w)}{r(w)^3}\,\varphi_1(w)^2\,dw=0. \]
+\end{proposition}
+
+\begin{proof}
+It is easy to check that the commutator of any two parabolic germs is of the form $z+O(z^4)$. This implies that the group of 3-jets of parabolic germs is commutative, in particular $f_j$ and $\tilde{f}_j$ have the same 3-jet since $h\circ f_j=\tilde{f}_j\circ h$ and all these germs are parabolic. This tells us that $a_{3j}=\tilde{a}_{3j}$ and moreover $\psi_{3j}=\widetilde{\psi}_{3j}$ since, by Proposition \ref{prop:thirdvar},  $a_{3j}=a_{2j}^2+\psi_{3j}$, and $\tilde{a}_{2j}=a_{2j}$. Recall that we have defined $\psi_{3j}=\int_{\gamma_j}\frac{S_3}{r^3}\,\varphi_1^2\,dw$. Hence,
+\[0=\widetilde{\psi}_{31}-\psi_{31}=\int_{\gamma_1}\frac{\widetilde{S}_3-S_3}{r^3}\,\varphi_1^2\,dw=\int_{\gamma_1}\frac{P_3}{r^3}\,\varphi_1^2\,dw. \]
+\qed\end{proof}
+
+Before moving on to the \hyperref[lemma:key]{Key Lemma} for degree four, we will use Lemma \ref{lemma:Pyartli} to introduce a polynomial $R_3(w)$ needed in the next subsection (see Subsection \ref{subsec:keytomain} for the general description of the polynomials $R_d(w)$).
+
+\begin{proposition}\label{prop:R3}
+If $\lambda_1,\lambda_2\notin\frac{1}{2}\Z$ there exists a polynomial $R_3(w)$ such that 
+\[ \int_0^w\frac{P_3(t)}{r(t)^3}\,\varphi_1(t)^2\,dt=\frac{R_3(w)}{r(w)^2}\,\varphi_1(w)^2-R_3(0). \]
+\end{proposition}
+
+\begin{proof}
+The above proposition is exactly Lemma \ref{lemma:Pyartli} with $P(w)=P_3(w)$ and $u_j=2\lambda_j-3$.
+\qed\end{proof}
+
+
+
+
+
+
+
+
+
+\subsection{Key lemma for degree four}
+
+
+
+In Subsection \ref{subsec:keylemma} we have reduced the proof of the \hyperref[lemma:key]{Key lemma} on degree 4 to the proof of existence of a polynomial $P_4(w)$ and a complex number $\mathcal{C}_4$ such that
+\[ a_{2j}\,\mathcal{C}_4+\mathcal{I}_{4j}=0, \quad j=1,2, \]
+where $\mathcal{I}_{4j}=\int_{\gamma_j}\frac{P_4}{r^4}\,\varphi_1^{3}\,dw$. Thus, in order to prove the next proposition we shall prove the existence of a polynomial $P_4$ and a number $\mathcal{C}_4$ satisfying the above conditions and cite Proposition \ref{prop:key}.
+
+\begin{proposition}\label{prop:key4}
+Let $P_4(w)=\tilde{q}_4(w)-q_4(w)-S_2(w)R_3(w)$ with $q_4(w)$ as in Proposition \textnormal{\ref{prop:fourthvar}} and $R_3(w)$ as in Proposition \textnormal{\ref{prop:R3}}. If a germ $h\in\Diff$ conjugates corresponding pairs of distinguished parabolic germs up to $4$-jets then
+\[ \int_{\gamma_1}\frac{P_4(w)}{r(w)^4}\,\varphi_1(w)^3\,dw=0. \]
+
+Moreover the cubic coefficient in the power series of $h$ is given by
+\begin{equation}\label{eq:h3}
+ h_3=h_2^2+\frac{\tilde{c}_3-c_3}{2}+R_3(0). 
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Taking into account that we know $\tilde{a}_{2j}=a_{2j}$ and $\tilde{a}_{3j}=a_{3j}$, a short computation shows that the coefficient of degree 4 in the power series expansion of $h\circ f_j-\tilde{f}_j\circ h$ is given by $(h_3-h_2^2)a_{2j}-h_2(a_{3j}-a_{2j}^2)-\tilde{a}_{4j}+a_{4j}$. This implies
+\begin{equation}\label{eq:a4t-a4_v1}
+ \tilde{a}_{4j}-a_{4j}=(h_3-h_2^2)a_{2j}-h_2(a_{3j}-a_{2j}^2), \quad j=1,2. 
+\end{equation}
+
+On the other hand, it follows from Proposition \ref{prop:fourthvar} that
+\[ \tilde{a}_{4j}-a_{4j}=\frac{\tilde{c_3}-c_3}{2}a_{2j}-(\tilde{c}_2-c_2)\psi_{3j}+\widetilde{\Delta}_{1j}-\Delta_{1j}+\widetilde{\psi}_{4j}-\psi_{4j}. \]
+In the above expression we are using the fact that $\tilde{a}_{2j}=a_{2j}$, $\tilde{a}_{3j}=a_{3j}$ and also that $\widetilde{\psi}_{3j}=\psi_{3j}$. Now, using the fact that $\widetilde{\psi}_2(w)=\psi_2(w)$ we see that
+\[ \widetilde{\Delta}_{1j}-\Delta_{1j}=\int_{\gamma_j}\frac{\widetilde{S}_3-S_3}{r^3}\psi_2\varphi_1^2\,dw=\int_{\gamma_j}\frac{P_3}{r^3}\psi_2\varphi_1^2\,dw. \]
+Using Proposition \ref{prop:R3} we can integrate by parts the last integral above to obtain
+\begin{equation}\label{formula:Delta1t-Delta1} \widetilde{\Delta}_{1j}-\Delta_{1j}=\int_{\gamma_j}\left(\frac{R_3}{r^2}\varphi_1^2\right)^\prime\psi_2\,dw= R_3(0)a_{2j}-\int_{\gamma_j}\frac{R_3S_2}{r^4}\varphi_1^3\,dw, 
+\end{equation}
+Taking into account that we have defined $P_4=\tilde{q}_4-q_4-S_2R_3$ we see that
+\begin{equation}\label{eq:a4t-a4_v2}
+\tilde{a}_{4j}-a_{4j}=\frac{\tilde{c_3}-c_3}{2}a_{2j}-(\tilde{c}_2-c_2)\psi_{3j}+R_3(0)a_{2j}+\int_{\gamma_j}\frac{P_4}{r^4}\varphi_1^3\,dw, \quad j=1,2.
+\end{equation}
+
+We now substitute the right hand side of (\ref{eq:a4t-a4_v1}) into (\ref{eq:a4t-a4_v2}) to obtain an expression
+\[ (h_3-h_2^2)a_{2j}-h_2(a_{3j}-a_{2j}^2)=\frac{\tilde{c_3}-c_3}{2}a_{2j}-(\tilde{c}_2-c_2)\psi_{3j}+R_3(0)a_{2j}+\int_{\gamma_j}\frac{P_4}{r^4}\varphi_1^3\,dw. \]
+Recall that $h_2=\tilde{c}_2-c_2$ by Proposition \ref{prop:h2}, and recall also that $a_{3j}=a_{2j}^2+\psi_{3j}$ by Proposition \ref{prop:thirdvar}, therefore $(\tilde{c}_2-c_2)\psi_{3j}=h_2(a_{3j}-a_{2j}^2)$. The equation above is thus simplified to
+\[ (h_3-h_2^2)a_{2j}=\left(\frac{\tilde{c_3}-c_3}{2}+R_3(0)\right)a_{2j}+\int_{\gamma_j}\frac{P_4}{r^4}\varphi_1^3\,dw, \]
+which can be rewritten in the form
+\[ a_{2j}\,\mathcal{C}_4+\mathcal{I}_{4j}=0, \]
+where
+\[ \mathcal{C}_4=\frac{\tilde{c_3}-c_3}{2}+R_3(0)+h_2^2-h_3, \]
+and
+\[ \mathcal{I}_{4j}=\int_{\gamma_j}\frac{P_4}{r^4}\,\varphi_1^3\,dw. \]
+By Proposition \ref{prop:key} we have 
+\[ \mathcal{I}_{41}=\int_{\gamma_1}\frac{P_4}{r^4}\varphi_1^3\,dw=0, \qquad \mathcal{C}_4=0. \]
+This proves the \hyperref[lemma:key]{Key lemma} for degree four. Note that $\mathcal{C}_4=0$ implies
+\[ h_3=h_2^2+\frac{\tilde{c}_3-c_3}{2}+R_3(0). \]
+\qed\end{proof}
+
+We conclude this subsection by introducing the polynomial $R_4(w)$.
+\begin{proposition}\label{prop:R4}
+If $\lambda_1,\lambda_2\notin\frac{1}{3}\Z$ there exists a polynomial $R_4(w)$ such that 
+\[ \int_0^w\frac{P_4(t)}{r(t)^4}\,\varphi_1(t)^3\,dt=\frac{R_4(w)}{r(w)^3}\,\varphi_1(w)^3+R_4(0). \]
+\end{proposition}
+
+\begin{proof}
+Apply Lemma \ref{lemma:Pyartli} with $P(w)=P_4(w)$ and $u_j=3\lambda_j-4$. 
+\qed\end{proof}
+
+
+
+
+
+\subsection{Key lemma for degree five}
+
+
+We proceed in exactly the same way as we did in the previous subsection.
+
+\begin{proposition}\label{prop:key5}
+Let $P_5(w)=\tilde{q}_5(w)-q_5(w)-2S_2(w)R_4(w)$ with the polynomials $q_5(w)$ as in Proposition \textnormal{\ref{prop:fifthvar}} and $R_4(w)$ as in Proposition \textnormal{\ref{prop:R4}}. If a germ $h\in\Diff$ conjugates corresponding pairs of distinguished parabolic germs up to $5$-jets then
+\[ \int_{\gamma_1}\frac{P_5(w)}{r(w)^5}\,\varphi_1(w)^4\,dw=0. \]
+Moreover, the coefficient of degree four in the power series expansion of $h$ is given by
+\begin{equation}\label{eq:h4}
+ h_4=\frac{\tilde{c}_4-c_4}{3}-\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{6}-R_4(0)-\tilde{c}_2R_3(0)+3h_3h_2-2h_2^3+\frac{c_3}{2}h_2. 
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Taking into account that $\tilde{a}_{2j}=a_{2j}$ and $\tilde{a}_{3j}=a_{3j}=a_{2j}^2+\psi_{3j}$, a straightforward computation shows that the coefficient of degree 5 in the power series expansion of $h\circ f_j-\tilde{f}_j\circ h$ is given by
+\begin{align}\label{eq:a5t-a5-v0}
+&- \tilde{a}_{5j}+a_{5j}-4h_2(\tilde{a}_{4j}-a_{4j})-2h_2a_{4j}+2h_2a_{2j}^3+3(h_3-h_2^2)a_{2j}^2 \nonumber \\
+&\phantom{-}+(2h_4-2h_3h_2+2h_2\psi_{3j})a_{2j}-3h_2^2\psi_{3j}. 
+\end{align}
+By Proposition \ref{prop:fourthvar}, 
+\[ a_{4j}=2(a_{2j}^2+\psi_{3j})a_{2j}-a_{2j}^3+\frac{c_3}{2}a_{2j}-c_2\psi_{3j}+\Delta_{1j}+\psi_{4j}, \] 
+and equation (\ref{eq:a4t-a4_v1}) implies 
+\[ \tilde{a}_{4j}-a_{4j}=(h_3-h_2^2)a_{2j}-h_2\psi_{3j}. \] 
+Using the above identities and equating (\ref{eq:a5t-a5-v0}) to zero we obtain
+\begin{align}\label{eq:a5t-a5-v1}
+\tilde{a}_{5j}-a_{5j} &= 3(h_3-h_2^2)a_{2j}^2+(2h_4-4(h_3-h_2^2)h_2-2h_3h_2-2h_2\psi_{3j}-c_3h_2)a_{2j} \nonumber \\
+		      &\phantom{=} +(h_2^2+2c_2h_2)\psi_{3j}-2h_2\Delta_{1j}-2h_2\psi_{4j}.
+\end{align}
+
+On the other hand, we can use Proposition \ref{prop:fifthvar} to compute $\tilde{a}_{5j}-a_{5j}$. We use once more the facts $\tilde{a}_{2j}=a_{2j}$, $\tilde{a}_{3j}=a_{3j}$ and $\tilde{\psi}_{3j}=\psi_{3j}$, thus
+\begin{align}
+ \tilde{a}_{5j}-a_{5j} 
+&=		2(\tilde{a}_{4j}-a_{4j})a_{2j}+\frac{\tilde{c}_3-c_3}{2}a_{2j}^2+\left(2\frac{\tilde{c}_4-c_4}{3}-\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{3}\right)a_{2j} \label{eq:a5t-a5-v2-pt1} \\
+&\phantom{=}	+(\tilde{c}_2^2-c_2^2)\psi_{3j}-2\tilde{c}_2\tilde{\psi}_{4j}+2c_2\psi_{4j}-2\tilde{c}_2\widetilde{\Delta}_{1j}+2c_2\Delta_{1j} \label{eq:a5t-a5-v2-pt2} \\
+&\phantom{=}	+\widetilde{\Delta}_{2j}-\Delta_{2j}+2\widetilde{\Gamma}_{1j}-2\Gamma_{1j}+\tilde{\psi}_{5j}-\psi_{5j}. \label{eq:a5t-a5-v2-pt3}
+\end{align}
+First, note that using the expression found for $\tilde{a}_{4j}-a_{4j}$ in (\ref{eq:a4t-a4_v1}) we can rewrite the right-hand side of (\ref{eq:a5t-a5-v2-pt1}) as
+\begin{equation}\label{eq:a5t-a5-PQ}
+ \left(2(h_3-h_2^2)+\frac{\tilde{c}_3-c_3}{2}\right)a_{2j}^2+\left(-2h_2\psi_{3j}+2\frac{\tilde{c}_4-c_4}{3}-\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{3}\right)a_{2j}.
+\end{equation}
+Now, note that $\widetilde{\Delta}_{2j}-\Delta_{2j}=\int_{\gamma_j}\frac{P_3}{r^3}\psi_2^2\varphi_1^2\,dw$, and so integration by parts yields
+\begin{equation}\label{formula:Delta2t-Delta2}
+ \widetilde{\Delta}_{2j}-\Delta_{2j}=R_3(0)a_{2j}^2-\int_{\gamma_j}\frac{2R_3S_2}{r^4}\psi_2\varphi_1^3\,dw. 
+\end{equation}
+Recall that $P_4=\tilde{q}_4-q_4-2S_2R_3$, therefore
+\begin{align*}
+\widetilde{\Delta}_{2j}-\Delta_{2j}+2\widetilde{\Gamma}_{1j}-2\Gamma_{1j}
+&= R_3(0)a_{2j}^2-2\int_{\gamma_j}\frac{S_2R_3}{r^4}\psi_2\varphi_1^3\,dw+2\int_{\gamma_j}\frac{\tilde{q}_4-q_4}{r^4}\psi_2\varphi_1^3\,dw \\
+&= R_3(0)a_{2j}^2+2\int_{\gamma_j}\frac{P_4}{r^4}\psi_2\varphi_1^3\,dw.
+\end{align*}
+Integrating by parts the last integral we obtain
+\[ \int_{\gamma_j}\frac{P_4}{r^4}\psi_2\varphi_1^3\,dw=-R_4(0)a_{2j}-\int_{\gamma_j}\frac{R_4S_2}{r^5}\varphi_1^4\,dw. \]
+We conclude that
+\[ \widetilde{\Delta}_{2j}-\Delta_{2j}+2\widetilde{\Gamma}_{1j}-2\Gamma_{1j} = R_3(0)a_{2j}^2-2R_4(0)a_{2j}-\int_{\gamma_j}\frac{2S_2R_4}{r^5}\varphi_1^4\,dw. \]
+Since we defined $P_5=\tilde{q}_5-q_5-2S_2R_4$ and $\psi_{5j}=\int_{\gamma_j}\frac{q_5}{r^5}\,\varphi_1^4\,dw$ we see that expression (\ref{eq:a5t-a5-v2-pt3}) is given by
+\begin{equation}\label{eq:a5t-a5-D2G1P5}
+ R_3(0)a_{2j}^2-2R_4(0)a_{2j}+\int_{\gamma_j}\frac{P_5}{r^5}\varphi_1^4\,dw.
+\end{equation}
+Let us now analyse expression (\ref{eq:a5t-a5-v2-pt2}). Note that $\tilde{c}_2^2-c_2^2=h_2^2+2c_2h_2$, since $h_2=\tilde{c_2}-c_2$, therefore the first term in (\ref{eq:a5t-a5-v2-pt2}) can be rewritten as $(h_2^2+2c_2h_2)\psi_{3j}$. Next,
+\[ -2\tilde{c}_2\tilde{\psi}_{4j}+2c_2\psi_{4j}=-2h_2\psi_{4j}-2\tilde{c}_2(\tilde{\psi}_{4j}-\psi_{4j}), \]
+and
+\[ -2\tilde{c}_2\widetilde{\Delta}_{1j}+2c_2\Delta_{1j}=-2h_2\Delta_{1j}-2\tilde{c}_2(\widetilde{\Delta}_{1j}-\Delta_{1j}). \]
+We've seen already that $\widetilde{\Delta}_{1j}-\Delta_{1j}=R_3(0)a_{2j}-\int_{\gamma_j}\frac{S_2R_3}{r^4}\varphi_1^3\,dw$, so taking into account that $\psi_{4j}=\int_{\gamma_j}\frac{q_4}{r^4}\varphi_1^3\,dw$ and $P_4=\tilde{q}_4-q_4-S_2R_3$ we get that expression (\ref{eq:a5t-a5-v2-pt2}) is given by
+\begin{align}\label{eq:a5t-a5-otros}
+&  (h_2^2+2c_2h_2)\psi_{3j}-2h_2\psi_{4j}-2h_2\Delta_{1j}-2\tilde{c}_2R_3(0)a_{2j}-2\tilde{c}_2\int_{\gamma_j}\frac{P_4}{r^4}\varphi_1^3\,dw, \nonumber \\
+&= (h_2^2+2c_2h_2)\psi_{3j}-2h_2\psi_{4j}-2h_2\Delta_{1j}-2\tilde{c}_2R_3(0)a_{2j},
+\end{align}
+since, according to Proposition \ref{prop:key4}, $\int_{\gamma_j}\frac{P_4}{r^4}\varphi_1^3\,dw=0$. Adding up all three expressions (\ref{eq:a5t-a5-PQ}), (\ref{eq:a5t-a5-D2G1P5}) and (\ref{eq:a5t-a5-otros}), and taking into account that 
+\[ h_3-h_2^2=\frac{\tilde{c}_3-c_3}{2}+R_3(0), \]
+(which also follows from Proposition \ref{prop:key4}) we finally obtain
+\begin{align}\label{eq:a5t-a5-v2}
+\tilde{a}_{5j}-a_{5j} &= 3(h_3-h_2^2)a_{2j}^2 \nonumber\\
+&\phantom{=} + \left(-2h_2\psi_{3j}+2\frac{\tilde{c}_4-c_4}{3}-\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{3}-2R_4(0)-2\tilde{c}_2R_3(0)\right)a_{2j} \\
+&\phantom{=} +(h_2^2+2c_2h_2)\psi_{3j}-2h_2\Delta_{1j}-2h_2\psi_{4j}+\int_{\gamma_j}\frac{P_5}{r^5}\varphi_1^4\,dw.  \nonumber
+\end{align}
+	  
+We now equate the right hand sides of (\ref{eq:a5t-a5-v1}) and (\ref{eq:a5t-a5-v2}). Note that we can cancel those terms with $a_{2j}^2$ as well as those terms where $a_{2j}$ does not appear, with the exception of $\int_{\gamma_j}\frac{P_5}{r^5}\varphi_1^4\,dw$. We thus obtain an equation
+\[ a_{2j}\,\mathcal{C}_5+\mathcal{I}_{5j}=0, \]
+where 
+\[ \mathcal{C}_5=2\frac{\tilde{c}_4-c_4}{3}-\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{3}-2R_4(0)-2\tilde{c}_2R_3(0)+6h_3h_2-4h_2^3+c_3h_2-2h_4, \]
+and
+\[ \mathcal{I}_{5j}=\int_{\gamma_j}\frac{P_5}{r^5}\,\varphi_1^{4}\,dw. \]
+By Proposition \ref{prop:key},
+\[ \mathcal{I}_{51}=\int_{\gamma_1}\frac{P_5}{r^5}\,\varphi_1^4\,dw=0, \qquad \mathcal{C}_5=0. \]
+This proves the \hyperref[lemma:key]{Key lemma} for degree five. Moreover, it follows from $\mathcal{C}_5=0$ that
+\[ h_4=\frac{\tilde{c}_4-c_4}{3}-\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{6}-R_4(0)-\tilde{c}_2R_3(0)+3h_3h_2-2h_2^3+\frac{c_3}{2}h_2. \]
+Proposition \ref{prop:key5} is now proved.
+\qed\end{proof}
+
+We now introduce the polynomial $R_5(w)$.
+
+\begin{proposition}\label{prop:R5} 
+If $\lambda_1,\lambda_2\notin\frac{1}{4}\Z$ there exists a polynomial $R_5(w)$ such that
+\[ \int_0^w\frac{P_5(t)}{r(t)^5}\,\varphi_1(t)^4\,dt=\frac{R_5(w)}{r(w)^4}\,\varphi_1^4-R_5(0). \]
+\end{proposition}
+
+\begin{proof}
+Apply Lemma \ref{lemma:Pyartli} with $P(w)=P_5(w)$ and $u_j=4\lambda_j-5$. 
+\qed\end{proof}
+
+
+
+
+
+\subsection{Key lemma for degree six}
+
+
+\begin{proposition}\label{prop:key6}
+Let us define
+\[ P_6=\tilde{q}_6-q_6+\tilde{q}_4R_3-\frac{1}{2}S_2R_3^2-S_3R_4-3S_2R_5, \]
+with the polynomials $q_6$ as in Proposition \textnormal{\ref{prop:sixthvar}} and $R_5$ as in Proposition \textnormal{\ref{prop:R5}}. If a germ $h\in\Diff$ conjugates corresponding pairs of distinguished parabolic germs up to $6$-jets then
+\[ \int_{\gamma_1}\frac{P_6(w)}{r(w)^6}\,\varphi_1(w)^5\,dw=0. \]
+\end{proposition}
+
+\begin{proof}
+Let us start by using Proposition \ref{prop:sixthvar} to obtain an expression for $\tilde{a}_{6j}-a_{6j}$. Using that  $\tilde{a}_{2j}=a_{2j}$ and $\tilde{a}_{3j}=a_{3j}$ we obtain the following formula for $\tilde{a}_{6j}-a_{6j}$,
+\begin{align}
+&  2(\tilde{a}_{5j}-a_{5j})a_{2j}+3(\tilde{a}_{4j}-a_{4j})a_{3j}-4(\tilde{a}_{4j}-a_{4j})a_{2j}^2 \label{a6t-a6_v2_1} \\
+& +\frac{\tilde{c}_3-c_3}{2}a_{2j}^3+\left(\tilde{c}_4-c_4-\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{2}\right)a_{2j}^2 \label{a6t-a6_v2_2} \\
+& +\left(\frac{3\tilde{c}_5-3c_5}{4}-\frac{\tilde{c}_4\tilde{c}_2-c_4c_2}{2}-\frac{\tilde{c}_3^2-c_3^2}{8}+\frac{\tilde{c}_3\tilde{c}_2^2-c_3c_2^2}{4}+\frac{\tilde{c}_3-c_3}{2}\psi_{3j}\right)a_{2j} \label{a6t-a6_v2_3} \\
+& -\frac{\tilde{c}_2-c_2}{2}\psi_{3j}^2+\left(\frac{\tilde{c}_4-c_4}{3}+\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{3}-\tilde{c}_2^3+c_2^3\right)\psi_{3j} \label{a6t-a6_v2_4} \\
+& +\left(-\frac{\tilde{c}_3}{2}+3\tilde{c}_2^2\right)\widetilde{\Delta}_{1j}-\left(-\frac{c_3}{2}+3c_2^2\right)\Delta_{1j} \label{a6t-a6_v2_5} \\
+& -3\tilde{c}_2\widetilde{\Delta}_{2j}+3c_2\Delta_{2j} +\widetilde{\Delta}_{3j}-\Delta_{3j} +\widetilde{\Delta}_{(1,1)j}-\Delta_{(1,1)j} \label{a6t-a6_v2_6} \\
+& +\left(-\frac{\tilde{c}_3}{2}+3\tilde{c}_2^2\right)\tilde{\psi}_{4j}-\left(-\frac{c_3}{2}+3c_2^2\right)\psi_{4j} -6\tilde{c}_2\widetilde{\Gamma}_{1j}+6c_2\Gamma_{1j} +3\widetilde{\Gamma}_{2j}-3\Gamma_{2j} \label{a6t-a6_v2_7} \\
+& +\widetilde{\Gamma}_{(0,1)j}-\Gamma_{(0,1)j} -3\tilde{c}_2\tilde{\psi}_{5j}+3c_2\psi_{5j} +3\widetilde{\mathrm{B}}_{1j}-3\mathrm{B}_{1j} +\tilde{\psi}_{6j}-\psi_{6j}. \label{a6t-a6_v2_8}
+\end{align}
+
+We now shall rewrite several of the terms in the above expression for $\tilde{a}_{6j}-a_{6j}$. For (\ref{a6t-a6_v2_1}) we can use the expression for $\tilde{a}_{5j}-a_{5j}$ found in (\ref{eq:a5t-a5-v1}) and that for $\tilde{a}_{4j}-a_{4j}$ from (\ref{eq:a4t-a4_v1}), and write $a_{3j}=a_{2j}^2+\psi_{3j}$. We obtain the following expression after these substitutions:
+\begin{align}
+& 5(h_3-h_2^2)a_{2j}^3+\big(4h_4-12h_3h_2^2+8h_2^3-2c_3h_2-3h_2\psi_{3j}\big)a_{2j}^2 \nonumber \\
+& +\big(3h_3\psi_{3j}-h_2^2\psi_{3j}+4c_2h_2\psi_{3j}-4h_2\Delta_{1j}-4h_2\psi_{4j}\big)a_{2j} -3h_2\psi_{3j}^2. \label{eq:Pt-P}
+\end{align}
+
+Next, equation (\ref{a6t-a6_v2_5}) can be rewritten as
+\[ \left(-\frac{\tilde{c}_3-c_3}{2}+3(\tilde{c}_2^2-c_2^2)\right)\Delta_{1j}+\left(-\frac{\tilde{c}_3}{2}+3\tilde{c}_2^2\right)(\widetilde{\Delta}_{1j}-\Delta_{1j}). \]
+We have an expression for $\widetilde{\Delta}_{1j}-\Delta_{1j}$ from equation (\ref{formula:Delta1t-Delta1}). Using this, (\ref{a6t-a6_v2_5}) becomes
+\begin{align}
+& \left(-\frac{\tilde{c}_3-c_3}{2}+3(\tilde{c}_2^2-c_2^2)\right)\Delta_{1j} +\left(-\frac{\tilde{c}_3}{2}+3\tilde{c}_2^2\right)R_3(0)a_{2j} \nonumber \\ 
+& -\left(-\frac{\tilde{c}_3}{2}+3\tilde{c}_2^2\right)\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\varphi_1^3\,dw. \label{eq:Delta1t-Delta1}
+\end{align}
+
+We also have an expression for $\widetilde{\Delta}_{2j}-\Delta_{2j}$ from (\ref{formula:Delta2t-Delta2}), so the first two terms in (\ref{a6t-a6_v2_6}) can be rewritten as
+\begin{align}
+ -3\tilde{c}_2\widetilde{\Delta}_{2j}+3c_2\Delta_{2j} &= -3(\tilde{c}_2-c_2)\Delta_{2j}-3\tilde{c}_2(\widetilde{\Delta}_{2j}-\Delta_{2j}) \nonumber \\
+ &= -3(\tilde{c}_2-c_2)\Delta_{2j}-3\tilde{c}_2R_3(0)a_{2j}^2+6\tilde{c}_2\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\psi_{2j}\varphi_1^3\,dw. \label{eq:Delta2t-Delta2}
+\end{align}
+
+In the same way as we deduced the formulas for $\widetilde{\Delta}_{1j}-\Delta_{1j}$ and $\widetilde{\Delta}_{2j}-\Delta_{2j}$, we integrate $\widetilde{\Delta}_{3j}-\Delta_{3j}=\int_{\gamma_j}\frac{P_3}{r^3}\,\psi_2^3\varphi_1^2\,dw$ by parts to obtain
+\begin{equation}\label{eq:Delta3t-Delta3}
+ \widetilde{\Delta}_{3j}-\Delta_{3j}=R_3(0)a_{2j}^3-3\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\psi_2^2\varphi_1^3\,dw.
+\end{equation}
+
+We now wish to express $\widetilde{\Delta}_{(1,1)j}-\Delta_{(1,1)j}$ in terms of simpler objects. We proceed as follows. By definition,
+\[ \widetilde{\Delta}_{(1,1)j}-\Delta_{(1,1)j} = \int_{\gamma_j}\frac{\widetilde{S}_3}{r^3}\,\tilde{\psi}_2\tilde{\psi}_3\varphi_1^2\,dw-\int_{\gamma_j}\frac{S_3}{r^3}\,\psi_2\psi_3\varphi_1^2\,dw,\]
+which, taking into account that $\tilde{\psi}_2=\psi_2$, may be rewritten as
+\begin{equation}\label{eq:Delta1,1t-Delta1,1_1}
+\int_{\gamma_j}\frac{\widetilde{S}_3-S_3}{r^3}\,\psi_2\psi_3\varphi_1^2\,dw +\int_{\gamma_j}\frac{\widetilde{S}_3}{r^3}\,\psi_2(\tilde{\psi}_3-\psi_3)\varphi_1^2\,dw.
+\end{equation}
+The first integral in the above equation is given by $\int_{\gamma_j}\frac{P_3}{r^3}\,\psi_2\psi_3\varphi_1^2\,dw$, and so integration by parts yields
+\begin{equation}\label{eq:Delta1,1t-Delta1,1_2}
+R_3(0)a_{2j}\psi_{3j}-\int_{\gamma_j}\frac{S_2R_3}{r^4}\psi_3\varphi_1^3\,dw -\int_{\gamma_j}\frac{S_3R_3}{r^5}\,\psi_2\varphi_1^4\,dw.
+\end{equation}
+On the other hand, note that 
+\begin{equation}\label{formula:psi3t-psi3}
+ \tilde{\psi}_3(w)-\psi_3(w)=\int_0^w\frac{P_3}{r^3}\,\varphi_1^2\,dt=\frac{R_3(w)}{r(w)^2}\varphi_1(w)^2-R_3(0).
+\end{equation}
+Thus, the second integral in (\ref{eq:Delta1,1t-Delta1,1_1}) can be rewritten as
+\[ \int_{\gamma_j}\frac{\widetilde{S}_3R_3}{r^5}\,\psi_2\varphi_1^4\,dw-R_3(0)\widetilde{\Delta}_{1j}, \]
+since, by definition, $\widetilde{\Delta}_{1j}=\int_{\gamma_j}\frac{\widetilde{S}_3}{r^3}\,\tilde{\psi}_2\varphi_1^2\,dw$. In fact, taking into account (\ref{eq:Delta1,1t-Delta1,1}) and writing $\widetilde{\Delta}_{1j}=\Delta_{1j}+R_3(0)a_{2j}-\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\varphi_1^3\,dw$ we obtain that the second integral in (\ref{eq:Delta1,1t-Delta1,1_1}) is given by
+\begin{equation}\label{eq:Delta1,1t-Delta1,1_3}
+\int_{\gamma_j}\frac{\widetilde{S}_3R_3}{r^5}\,\psi_2\varphi_1^4\,dw -R_3(0)\Delta_{1j}-R_3(0)^2a_{2j}+R_3(0)\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\varphi_1^3\,dw.
+\end{equation}
+We claim that the following equality holds:
+\begin{equation}\label{formula:psi4t-psi4}
+ \int_{\gamma_j}\frac{S_2R_3}{r^4}\,\varphi_1^3\,dw=\tilde{\psi}_{4j}-\psi_{4j}. 
+\end{equation}
+Indeed, by definition, $\psi_{4j}=\int_{\gamma_j}\frac{q_4}{r^4}\,\varphi_1^3\,dw$ and so
+\[ \tilde{\psi}_{4j}-\psi_{4j}=\int_{\gamma_j}\frac{\tilde{q}_4-q_4}{r^4}\,\varphi_1^3\,dw= \int_{\gamma_j}\frac{P_4}{r^4}\,\varphi_1^3\,dw+\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\varphi_1^3\,dw, \]
+since we have defined $P_4$ to be exacly $P_4=\tilde{q}_4-q_4-S_2R_3$. But acording to Proposition \ref{prop:key4} $\int_{\gamma_j}\frac{P_4}{r^4}\,\varphi_1^3\,dw=0$. This proves our claim and so we deduce that expression (\ref{eq:Delta1,1t-Delta1,1_3}), which is the second integral in (\ref{eq:Delta1,1t-Delta1,1_1}), equals
+\begin{equation}\label{eq:Delta1,1t-Delta1,1_3.5}
+\int_{\gamma_j}\frac{\widetilde{S}_3R_3}{r^5}\,\psi_2\varphi_1^4\,dw -R_3(0)\Delta_{1j}-R_3(0)^2a_{2j}+R_3(0)(\tilde{\psi}_{4j}-\psi_{4j}).
+\end{equation}
+Combining the last integral from (\ref{eq:Delta1,1t-Delta1,1_2}) and the first one from (\ref{eq:Delta1,1t-Delta1,1_3.5}) into a single integral we get
+\begin{align}
+\int_{\gamma_j}\frac{(\widetilde{S}_3-S_3)R_3}{r^5}\,\psi_2\varphi_1^4\,dw &= \int_{\gamma_j}\frac{P_3R_3}{r^5}\,\psi_2\varphi_1^4\,dw \nonumber \\
+&= \frac{1}{2}\int_{\gamma_j}\left(\left(\frac{R_3}{r^2}\,\varphi_1^2\right)^2\right)^{\prime}\psi_2\,dw \nonumber \\
+&= \frac{1}{2}R_3(0)^2a_{2j}-\int_{\gamma_j}\frac{\frac{1}{2}S_2R_3^2}{r^6}\,\varphi_1^5\,dw. \label{eq:Delta1,1t-Delta1,1_4}
+\end{align}
+Combining (\ref{eq:Delta1,1t-Delta1,1_2}) and (\ref{eq:Delta1,1t-Delta1,1_3.5}), and taking into account (\ref{eq:Delta1,1t-Delta1,1_4}) we obtain the following final expression:
+\begin{align}
+\widetilde{\Delta}_{(1,1)j}-\Delta_{(1,1)j} &= \left(-R_3(0)\psi_{3j}-\frac{1}{2}R_3(0)^2\right)a_{2j}-R_3(0)\Delta_{1j} +R_3(0)\tilde{\psi}_{4j}-R_3(0)\psi_{4j} \nonumber \\
+&\phantom{=} -\int_{\gamma_j}\frac{S_2R_3}{r^4}\psi_3\varphi_1^3\,dw -\int_{\gamma_j}\frac{\frac{1}{2}S_2R_3^2}{r^6}\,\varphi_1^5\,dw. \label{eq:Delta1,1t-Delta1,1}
+\end{align}
+
+Next, we rewrite the first two terms of (\ref{a6t-a6_v2_7}) as
+\[ \left(-\frac{\tilde{c}_3-c_3}{2}+3(\tilde{c}_2^2-c_2^2)\right)\psi_{4j} +\left(-\frac{\tilde{c}_3}{2}+3\tilde{c}_2^2\right)(\tilde{\psi}_{4j}-\psi_{4j}), \]
+and use equation (\ref{formula:psi4t-psi4}) to obtain
+\begin{equation}\label{eq:psi4t-psi4}
+ \left(-\frac{\tilde{c}_3-c_3}{2}+3(\tilde{c}_2^2-c_2^2)\right)\psi_{4j}+\left(-\frac{\tilde{c}_3}{2}+3\tilde{c}_2^2\right)\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\varphi_1^3\,dw.
+\end{equation}
+
+Similarly,
+\[ -6\tilde{c}_2\widetilde{\Gamma}_{1j}+6c_2\Gamma_{1j}=-6(\tilde{c}_2-c_2)\Gamma_{1j}-6\tilde{c}_2(\widetilde{\Gamma}_{1j}-\Gamma_{1j}). \]
+This time we claim
+\begin{equation}\label{formula:Gamma1t-Gamma1}
+ \widetilde{\Gamma}_{1j}-\Gamma_{1j}=-R_4(0)a_{2j}-\int_{\gamma_j}\frac{S_2R_4}{r^5}\,\varphi_1^4\,dw+\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\psi_2\varphi_1^3\,dw.
+\end{equation}
+Indeed, since $P_4=\tilde{q}_4-q_4-S_2R_3$ and $\Gamma_{1j}=\int_{\gamma_j}\frac{q_4}{r^4}\,\psi_2\varphi_1^3\,dw$, we have
+\[ \widetilde{\Gamma}_{1j}-\Gamma_{1j}=\int_{\gamma_j}\frac{P_4}{r^4}\,\psi_2\varphi_1^3\,dw+\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\psi_2\varphi_1^3\,dw. \]
+The claimed formula is simply obtained by integrating by parts the first integral on the right-hand side of the above equation. We conclude that
+\begin{align}
+-6\tilde{c}_2\widetilde{\Gamma}_{1j}+6c_2\Gamma_{1j} &= -6(\tilde{c}_2-c_2)\Gamma_{1j}+6\tilde{c}_2R_4(0)a_{2j} \nonumber \\
+&\phantom{=} + 6\tilde{c}_2\int_{\gamma_j}\frac{S_2R_4}{r^5}\,\varphi_1^4\,dw-6\tilde{c}_2\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\psi_2\varphi_1^3\,dw. \label{eq:Gamma1t-Gamma1}
+\end{align}
+
+The analysis for $3\widetilde{\Gamma}_{2j}-3\Gamma_{2j}$ is analogous:
+\[ 3(\widetilde{\Gamma}_{2j}-\Gamma_{2j})=3\int_{\gamma_j}\frac{P_4}{r^4}\,\psi_2^2\varphi_1^3\,dw+3\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\psi_2^2\varphi_1^3\,dw,\]
+which, after integration by parts of the first integral, becomes
+\begin{equation}\label{eq:Gamma2t-Gamma2}
+ 3\widetilde{\Gamma}_{2j}-3\Gamma_{2j}=-3R_4(0)a_{2j}^2 -6\int_{\gamma_j}\frac{S_2R_4}{r^5}\,\psi_2\varphi_1^4\,dw +3\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\psi_2^2\varphi_1^3\,dw.
+\end{equation}
+
+We now focus on $\widetilde{\Gamma}_{(0,1)j}-\Gamma_{(0,1)j}$. Let us rewite this expression:
+\begin{align*} 
+ \widetilde{\Gamma}_{(0,1)j}-\Gamma_{(0,1)j} &= \int_{\gamma_j}\frac{\tilde{q}_4}{r^4}\,\tilde{\psi}_3\varphi_1^3\,dw-\int_{\gamma_j}\frac{q_4}{r^4}\,\psi_3\varphi_1^3\,dw\\
+&= \int_{\gamma_j}\frac{\tilde{q}_4-q_4}{r^4}\,\psi_3\varphi_1^3\,dw+\int_{\gamma_j}\frac{\tilde{q}_4}{r^4}\,(\tilde{\psi}_3-\psi_3)\varphi_1^3\,dw.
+\end{align*}
+The first integral in the last expression above is equal to
+\[ \int_{\gamma_j}\frac{P_4}{r^4}\,\psi_3\varphi_1^3\,dw+\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\psi_3\varphi_1^3\,dw,\]
+and integrating by parts the first term gives us
+\[ -R_4(0)\psi_{3j} -\int_{\gamma_j}\frac{S_3R_4}{r^6}\,\varphi_1^5\,dw +\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\psi_3\varphi_1^3\,dw. \]
+Taking into account formula (\ref{formula:psi3t-psi3}) we get
+\[ \int_{\gamma_j}\frac{\tilde{q}_4}{r^4}\,(\tilde{\psi}_3-\psi_3)\varphi_1^3\,dw=\int_{\gamma_j}\frac{\tilde{q}_4R_3}{r^6}\,\varphi_1^5\,dw-R_3(0)\tilde{\psi}_{4j}. \]
+We conclude that
+\begin{align}
+ \widetilde{\Gamma}_{(0,1)j}-\Gamma_{(0,1)j} &= -R_4(0)\psi_{3j} -\int_{\gamma_j}\frac{S_3R_4}{r^6}\,\varphi_1^5\,dw +\int_{\gamma_j}\frac{S_2R_3}{r^4}\,\psi_3\varphi_1^3\,dw \nonumber \\
+&\phantom{=} +\int_{\gamma_j}\frac{\tilde{q}_4R_3}{r^6}\,\varphi_1^5\,dw-R_3(0)\tilde{\psi}_{4j}. \label{eq:Gamma0,1t-Gamma0,1}
+\end{align}
+
+The last terms in (\ref{a6t-a6_v2_8}) are as follows: first,
+\begin{align}
+ -3\tilde{c}_2\tilde{\psi}_{5j}+3c_2\psi_{5j} &= -3(\tilde{c}_2-c_2)\psi_{5j}-3\tilde{c}_2(\tilde{\psi}_{5j}-\psi_{5j}) \nonumber \\
+&= -3(\tilde{c}_2-c_2)\psi_{5j}-3\tilde{c}_2\int_{\gamma_j}\frac{\tilde{q}_5-q_5}{r^5}\,\varphi_1^4\,dw \nonumber \\
+&= -3(\tilde{c}_2-c_2)\psi_{5j}-6\tilde{c}_2\int_{\gamma_j}\frac{S_2R_4}{r^5}\,\varphi_1^4\,dw, \label{eq:psi5t-psi5}
+\end{align}
+since $P_5=\tilde{q}_5-q_5-2S_2R_4$ and $\int_{\gamma_j}\frac{P_5}{r^5}\,\varphi_1^4\,dw=0$. Second,
+\begin{align}
+ 3\widetilde{\mathrm{B}}_{1j}-3\mathrm{B}_{1j} &= 3\int_{\gamma_j}\frac{P_5}{r^5}\,\psi_2\varphi_1^4\,dw+6\int_{\gamma_j}\frac{S_2R_4}{r^5}\,\psi_2\varphi_1^4\,dw \nonumber \\
+&= 3R_5(0)a_{2j}-3\int_{\gamma_j}\frac{S_2R_5}{r^6}\,\varphi_1^5\,dw+6\int_{\gamma_j}\frac{S_2R_4}{r^5}\,\psi_2\varphi_1^4\,dw, \label{eq:Beta1t-Beta1}
+\end{align}
+by a simple integration by parts argument.
+
+
+Under all these modifications we obtain a new expression for $\tilde{a}_{6j}-a_{6j}$. Moreover, a closer look at the newly found expressions shows that all integrals that appear in such expressions will cancel each other out \emph{except} those in which $\varphi_1$ appears raised to the sixth power. Indeed, the integral in (\ref{eq:Delta1t-Delta1}) is canceled out by the integral in (\ref{eq:psi4t-psi4}). Similarly the one in (\ref{eq:Delta2t-Delta2}) and the last integral in (\ref{eq:Gamma1t-Gamma1}), that in (\ref{eq:Delta3t-Delta3}) and the last integral in (\ref{eq:Gamma2t-Gamma2}), the first integral in (\ref{eq:Delta1,1t-Delta1,1}) and the second one in (\ref{eq:Gamma0,1t-Gamma0,1}), the first integral in (\ref{eq:Gamma1t-Gamma1}) and the one in (\ref{eq:psi5t-psi5}) and the first integral on (\ref{eq:Gamma2t-Gamma2}) and the last one in (\ref{eq:Beta1t-Beta1}) cancel each other out. We now group all remaining integrals into a single one. We obtain
+\[ \int_{\gamma_j}\frac{\tilde{q}_4R_3-\frac{1}{2}S_2R_3^2-S_3R_4-3S_2R_5}{r^6}\,\varphi_1^5\,dw. \]
+But recall that we have defined $P_6=\tilde{q}_6-q_6+\tilde{q}_4R_3-\frac{1}{2}S_2R_3^2-S_3R_4-3S_2R_5$ and $\psi_{6}=\int_{\gamma_j}\frac{q_6}{r^6}\,\varphi_1^5\,dw$. Since the expression $\tilde{\psi}_{6j}-\psi_{6j}$ appears at the end of (\ref{a6t-a6_v2_8}), we can group it with the above integral to obtain a term
+\[ \int_{\gamma_j}\frac{P_6}{r^6}\,\varphi_1^5\,dw. \]
+Note also that the term $R_3(0)\tilde{\psi}_{4j}$ appears in (\ref{eq:Delta1,1t-Delta1,1}) and (\ref{eq:Gamma0,1t-Gamma0,1}) with opposite signs, so we cancel out these as well. 
+
+We finally obtain a new expression for $\tilde{a}_{6j}-a_{6j}$ from equations (\ref{eq:Pt-P}), (\ref{a6t-a6_v2_2}), (\ref{a6t-a6_v2_3}), (\ref{a6t-a6_v2_4}), (\ref{eq:Delta1t-Delta1}), (\ref{eq:Delta2t-Delta2}), (\ref{eq:Delta3t-Delta3}), (\ref{eq:Delta1,1t-Delta1,1}), (\ref{eq:psi4t-psi4}), (\ref{eq:Gamma1t-Gamma1}), (\ref{eq:Gamma2t-Gamma2}), (\ref{eq:Gamma0,1t-Gamma0,1}), (\ref{eq:psi5t-psi5}) and (\ref{eq:Beta1t-Beta1}) and taking into account the above considerations. 
+
+\begin{formula}\label{formula1}
+The difference $\tilde{a}_{6j}-a_{6j}$ is given by the following expression:
+\begin{align}
+& 5(h_3-h_2^2)a_{2j}^3+\big(4h_4-12h_3h_2^2+8h_2^3-2c_3h_2-3h_2\psi_{3j}\big)a_{2j}^2 \label{a6t-a6_v3_1} \\
+& +\big(3h_3\psi_{3j}-h_2^2\psi_{3j}+4c_2h_2\psi_{3j}-4h_2\Delta_{1j}-4h_2\psi_{4j}\big)a_{2j} -3h_2\psi_{3j}^2 \label{a6t-a6_v3_2} \\
+& +\frac{\tilde{c}_3-c_3}{2}a_{2j}^3+\left(\tilde{c}_4-c_4-\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{2}\right)a_{2j}^2 \label{a6t-a6_v3_3} \\
+& +\left(\frac{3\tilde{c}_5-3c_5}{4}-\frac{\tilde{c}_4\tilde{c}_2-c_4c_2}{2}-\frac{\tilde{c}_3^2-c_3^2}{8}+\frac{\tilde{c}_3\tilde{c}_2^2-c_3c_2^2}{4}+\frac{\tilde{c}_3-c_3}{2}\psi_{3j}\right)a_{2j} \label{a6t-a6_v3_4} \\
+& -\frac{\tilde{c}_2-c_2}{2}\psi_{3j}^2+\left(\frac{\tilde{c}_4-c_4}{3}+\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{3}-\tilde{c}_2^3+c_2^3\right)\psi_{3j} \label{a6t-a6_v3_5} \\
+& \left(-\frac{\tilde{c}_3-c_3}{2}+3(\tilde{c}_2^2-c_2^2)\right)\Delta_{1j} +\left(-\frac{\tilde{c}_3}{2}+3\tilde{c}_2^2\right)R_3(0)a_{2j} \label{a6t-a6_v3_6} \\& -3(\tilde{c}_2-c_2)\Delta_{2j}-3\tilde{c}_2R_3(0)a_{2j}^2+R_3(0)a_{2j}^3 \label{a6t-a6_v3_7} \\
+& \left(-R_3(0)\psi_{3j}-\frac{1}{2}R_3(0)^2\right)a_{2j}-R_3(0)\Delta_{1j}-R_3(0)\psi_{4j} \label{a6t-a6_v3_8} \\
+& \left(-\frac{\tilde{c}_3-c_3}{2}+3(\tilde{c}_2^2-c_2^2)\right)\psi_{4j} -6(\tilde{c}_2-c_2)\Gamma_{1j}+6\tilde{c}_2R_4(0)a_{2j} \label{a6t-a6_v3_9} \\
+& -3R_4(0)a_{2j}^2 -R_4(0)\psi_{3j} -3(\tilde{c}_2-c_2)\psi_{5j} +3R_5(0)a_{2j} \label{a6t-a6_v3_10} \\
+& +\int_{\gamma_j}\frac{P_6}{r^6}\,\varphi_1^5\,dw. \label{a6t-a6_v3_11}
+\end{align}
+\end{formula}
+
+We now deduce a second expression for $\tilde{a}_{6j}-a_{6j}$. The coefficient of degree 6 in the power series expansion of $h\circ f_j-\tilde{f}_j\circ h$ is of the form $a_{6j}-\tilde{a}_{6j}+\ldots$. Let us take into account the formulas for $a_{3j}$, $a_{4j}$ and $a_{5j}$ found in Proposition \ref{prop:thirdvar}, Proposition \ref{prop:fourthvar} and Proposition \ref{prop:fifthvar} respectively. Let us also take into account that $\tilde{a}_{2j}=a_{2j}$, $\tilde{a}_{3j}=a_{3j}$ and let us substitute $\tilde{a}_{4j}$ and $\tilde{a}_{5j}$ by their formulas implied by equations (\ref{eq:a4t-a4_v1}) and (\ref{eq:a5t-a5-v1}), respectively. Under these considerations the explicit expression for the coefficient of degree six in $h\circ f_j-\tilde{f}_j\circ h$ may be easily obtained by a simple computed assisted computation. 
+
+\begin{formula}\label{formula2}
+ The difference $\tilde{a}_{6j}-a_{6j}$ is also given by the following expression:
+\begin{align}
+& -3h_2\psi_{5j}+(-h_3+4h_2^2+6c_2h_2)\psi_{4j}-\frac{7}{2}h_2\psi_{3j}^2 \label{a6t-a6_v1_1} \\
+& +(h_4-2h_3h_2+c_2h_3-4c_2h_2^2-3c_2^2h_2)\psi_{3j} \label{a6t-a6_v1_2} \\
+& -6h_2\Gamma_{1j}-3h_2\Delta_{2j}+(-h_3+4h_2^2+6c_2h_2)\Delta_{1j} \label{a6t-a6_v1_3} \\
+& +\big(-4h_2\psi_{4j}+(4h_3-2h_2^2+4c_2h_2)\psi_{3j}-4h_2\Delta_{1j}\big)a_{2j} \label{a6t-a6_v1_4} \\
+\end{align}
+%this to allow page break
+\begin{align}
+& +\big(3h_5-12h_4h_2-5h_3^2-\frac{1}{2}c_3h_3+28h_3h_2^2 \nonumber \\
+&\phantom{+\big(} -14h_2^4+2c_3h_2^2-2c_4h_2+c_3c_2h_2\big)a_{2j} \label{a6t-a6_v1_5} \\
+& +\big(-3h_2\psi_{3j}+7h_4-21h_3h_2+14h_2^3-\frac{7}{2}c_3h_2\big)a_{2j}^2 \label{a6t-a6_v1_6} \\
+& +6\big(h_3-h_2^2\big)a_{2j}^3. \label{a6t-a6_v1_7} 
+\end{align}
+\end{formula}
+
+We now proceed to compare the two formulas above. We shall see once again that everything that depends non-trivially on the index $j$ will be canceled out except for those terms which are a scalar multiple of $a_{2j}$, and the integral (\ref{a6t-a6_v3_11}).
+
+Let us start with those terms having $a_{2j}^3$. For our first formula we have such terms on expressions (\ref{a6t-a6_v3_1}), (\ref{a6t-a6_v3_3}) and (\ref{a6t-a6_v3_7}), which add up to
+\[ \left(5(h_3-h_2^2)+\frac{\tilde{c}_3-c_3}{2}+R_3(0)\right)a_{2j}^3. \]
+It follows from (\ref{eq:h3}) that $h_3-h_2^2=\frac{\tilde{c}_3-c_3}{2}+R_3(0)$, and so the above expression equals $6(h_3-h_2^2)$ which is exactly (\ref{a6t-a6_v1_7}); the unique term in Formula \ref{formula2} having $a_{2j}^3$.
+
+Consider now those terms with $a_{2j}^2$. Gathering those in Formula \ref{formula1} from (\ref{a6t-a6_v3_1}), (\ref{a6t-a6_v3_3}), (\ref{a6t-a6_v3_7}) and (\ref{a6t-a6_v3_10}) we get
+\[ 4h_4-12h_3h_2^2+8h_2^3-3h_2\psi_{3j}-2c_3h_2 +\tilde{c}_4-c_4-\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{2}-3\tilde{c}_2R_3(0)-3R_4(0). \]
+Using the formula for $h_4$ from (\ref{eq:h4}) we may transform the above expression into
+\[ \left(7h_4-21h_3h_2+14h_2^3-\frac{7}{2}c_3h_2-3h_2\psi_{3j}\right)a_{2j}^2, \]
+which is exactly (\ref{a6t-a6_v1_6}).
+
+Let us consider now those terms that have simultaneously $a_{2j}$ \emph{and} something else that depends on the index $j$. Such terms in Formula \ref{formula1} appear in (\ref{a6t-a6_v3_2}), (\ref{a6t-a6_v3_4}) and (\ref{a6t-a6_v3_8}). They add up to the following expression:
+\[ \left( 3h_3\psi_{3j}-h_2^2\psi_{3j}+4c_2h_2\psi_{3j}-4h_2\Delta_{1j}-4h_2\psi_{4j} +\frac{\tilde{c}_3-c_3}{2}\psi_{3j}-R_3(0)\psi_{3j} \right)a_{2j}. \]
+Substituting $h_3-h_2^2$ instead of $\frac{\tilde{c}_3-c_3}{2}-R_3(0)$, the above turns into
+\[ \left( 4h_3\psi_{3j}-2h_2^2\psi_{3j}+4c_2h_2\psi_{3j}-4h_2\Delta_{1j}-4h_2\psi_{4j} \right)a_{2j}, \]
+which agrees with (\ref{a6t-a6_v1_4}).
+
+Recall that $h_2=\tilde{c}_2-c_2$. Those terms having $\psi_{3j}^2$ are easily seen to cancel each other out; they are the last term in (\ref{a6t-a6_v3_2}) and the first one in (\ref{a6t-a6_v3_5}) for Formula \ref{formula1}, and the last term in (\ref{a6t-a6_v1_1}) for Formula \ref{formula2}.
+
+Now, let us consider those terms with a single $\psi_{3j}$. In Formula \ref{formula1} they appear only in (\ref{a6t-a6_v3_5}) and (\ref{a6t-a6_v3_10}), and in Formula \ref{formula2} they are exactly those terms in (\ref{a6t-a6_v1_2}). Let us substitute the $h_4$ term in (\ref{a6t-a6_v1_2}) by the expression given in (\ref{eq:h4}). Under this substitution (\ref{a6t-a6_v1_2}) becomes
+\begin{align}
+& \bigg(\frac{\tilde{c}_4-c_4}{3}-\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{6}-R_4(0)-\tilde{c}_2R_3(0) \nonumber \\
+&\phantom{\bigg(} +h_3h_2-2h_2^3+\frac{c_3}{2}h_2+c_2h_3-4c_2h_2^2-3c_2^2h_2\bigg)\psi_{3j}. \label{F1vsF2_psi3}
+\end{align}
+According to Proposition \ref{prop:h2} and equation (\ref{eq:h3}) we have
+\begin{align*}
+ h_2&=\tilde{c}_2-c_2 & h_3&=\tilde{c}_2^2-2\tilde{c}_2c_2+c_2^2+\frac{\tilde{c}_3-c_3}{2}+R_3(0).
+\end{align*}
+Substituting the above expressions into (\ref{F1vsF2_psi3}) yields, after simplification,
+\[ \left(\frac{\tilde{c}_4-c_4}{3}+\frac{\tilde{c}_3\tilde{c}_2-c_3c_2}{3}-R_4(0)-\tilde{c}_2^3+c_2^3 \right)\psi_{3j}, \]
+which matches exactly those terms in Formula \ref{formula1} having $\psi_{3j}$.
+
+The term $(-h_3+4h_2^2+6c_2h_2)\Delta_{1j}$ in (\ref{a6t-a6_v1_3}) may be rewritten, after replacing $h_3$ by its formula in (\ref{eq:h3}), as
+\[ \left( 3h_2^2-\frac{\tilde{c}_3-c_3}{2}-R_3(0)+6c_2h_2\right)\Delta_{1j}, \]
+which is easily seen to match those terms with $\Delta_{1j}$ in (\ref{a6t-a6_v3_6}) and (\ref{a6t-a6_v3_8}), once we replace $h_2$ by $\tilde{c}_2-c_2$.
+
+Note that the terms having $\psi_{4j}$ in (\ref{a6t-a6_v1_1}) are $(-h_3+4h_2^2+6c_2h_2)\psi_{4j}$. The coefficient is the same than the coefficient for the $\Delta_{1j}$ term we just analysed, so the same argument shows that this term cancels out those terms in (\ref{a6t-a6_v3_8}) and (\ref{a6t-a6_v3_9}) having $\psi_{4j}$.
+
+Taking into account that $h_2=\tilde{c}_2-c_2$ it is straight forward that those terms having $\Delta_{2j}$, $\Gamma_{1j}$ or $\psi_{5j}$ in Formula \ref{formula1} will cancel out the corresponding ones in Formula \ref{formula2}.
+
+We conclude that equating Formula \ref{formula1} to Formula \ref{formula2} yields, after simplification, an equation of the form
+\[ a_{2j}\,\mathcal{C}_6+\mathcal{I}_{6j}=0, \]
+where
+\begin{align*}
+\mathcal{C}_6 &= \frac{3\tilde{c}_5-3c_5}{4}-\frac{\tilde{c}_4\tilde{c}_2-c_4c_2}{2}-\frac{\tilde{c}_3^2-c_3^2}{8}+\frac{\tilde{c}_3\tilde{c}_2^2-c_3c_2^2}{4} \\
+&\phantom{=} +\left(-\frac{\tilde{c}_3}{2}+3\tilde{c}_2^2\right)R_3(0)-\frac{1}{2}R_3(0)^2+6\tilde{c}_2R_4(0)+3R_5(0)\\
+&\phantom{=} -3h_5+12h_4h_2+5h_3^2+\frac{1}{2}c_3h_3-28h_3h_2^2+14h_2^4-2c_3h_2^2+2c_4h_2-c_3c_2h_2,
+\end{align*}
+and
+\[ \mathcal{I}_{6j}=\int_{\gamma_j}\frac{P_6}{r^6}\,\varphi_1^5\,dw. \]
+By Proposition \ref{prop:key},
+\[ \mathcal{I}_{6j}=\int_{\gamma_j}\frac{P_6}{r^6}\,\varphi_1^5\,dw=0, \qquad \mathcal{C}_6=0. \]
+This proves the Key lamma for degree six, and completes the proof of Lemma \ref{lemma:key}.
+\qed\end{proof}
+
+\begin{proposition}\label{prop:R6}
+If $\lambda_1,\lambda_2\notin\frac{1}{5}\Z$ there exists a polynomial $R_6(w)$ such that 
+\[ \int_{0}^{w}\frac{P_6(t)}{r(t)^6}\,\varphi_1(t)^5\,dt=\frac{R_6(w)}{r(w)^5}\,\varphi_1(w)^5+R_6(0). \]
+\end{proposition}
+
+\begin{proof}
+ Apply Lemma \ref{lemma:Pyartli} with $P(w)=P_6(w)$ and $u_j=5\lambda_j-6$.
+\qed\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

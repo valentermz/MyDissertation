@@ -26,13 +26,13 @@
 \newtheorem{corollary}{Corollary}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{proposition}{Proposition}[section]
-\newtheorem{formula}{Formula}[section]
+% \newtheorem{formula}{Formula}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{claim}{Claim}[section]
 \newtheorem{problem}{Problem}[section]
 
 %%Theorem numbered by letters for the preface
-\theoremstyle{theorem}
+\theoremstyle{plain}
 \newtheorem{prefthm}{Theorem}
 	\renewcommand*{\theprefthm}{\Alph{prefthm}}
 
@@ -57,7 +57,7 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\C}{\mathbb{C}}
-\renewcommand{\P}{\mathbb{P}}
+\renewcommand{\P}{\mathbb{C}\mathrm{P}} %note that this forces CP instead of P
 \newcommand{\CP}{\mathbb{C}\mathrm{P}}
 \newcommand{\Diff}{\operatorname{Diff}(\mathbb{C},0)}
 \newcommand{\tr}{\operatorname{tr}}
@@ -103,4 +103,13 @@
   \endgroup
 }
 
+%%Commands used in UTMOST paper
+\newcommand{\var}[2]{\varphi_{{#1}\{\gamma_{{#2}}\}}(0)}
+\newcommand{\vart}[2]{\widetilde{\varphi}_{{#1}\{\gamma_{{#2}}\}}(0)}
 
+%%Theorem environments used in UTMOST
+  \theoremstyle{plain}
+\newtheorem*{key}{Key Lemma}
+\newtheorem*{main}{Main Lemma}
+\newtheorem*{elimination}{Elimination Lemma}
+\newtheorem{formula}{Formula}
