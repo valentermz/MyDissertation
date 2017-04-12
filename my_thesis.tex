@@ -358,7 +358,7 @@ Let's do a simple dimension count: on one hand, the space $\V_2$ has dimension 1
 Let $v\in\V_2$ have singularities $p_1,\ldots,p_4$ on $\C^2$ and singular points at infinity $q_1,q_2,q_3$. Denote by $(t_k,d_k)$ the spectrum of $v$ at $p_k$, and by $\lambda_j$ the characteristic number of $q_j$. Denote by $\Lambda$ the product $\Lambda=\lambda_1\lambda_2\lambda_3$, and define $S$ to be the graded polynomial ring $S=\C[t_1,\ldots,t_4,d_1,\ldots,d_4]$, where the generators $t_k$ are of degree 1, and $d_k$ of degree 2.
 
 \begin{theorem}[\cite{NoIndexTheorems}]\label{thm:hiddenRelation}
- There exist symmetric polynomials $P_0,P_1,P_2\in S$, homogeneous (with respect to the grading of $S$), such that every generic quadratic vector field satisfies the following equation
+ There exist symmetric polynomials $P_0,P_1,P_2\in S$, homogeneous (with respect to the grading of $S$) of degree 14, such that every generic quadratic vector field satisfies the following equation
   \begin{equation}\label{eq:hiddenRelation}
    P_2(t;d)\,\Lambda^2+P_1(t;d)\,\Lambda+P_0(t;d)=0 .
   \end{equation}
@@ -504,16 +504,22 @@ for complex numbers $a,b,c,d$. Let us denote by $A$ the matrix $A=\left(\begin{s
 \tr{A\cdot Dv(p_k)}&=&\tr{Dv(p_k)},\quad \mbox{for } k=1,2,3, \\
 \det{A} &=& 1. \\
 \end{array} \end{equation}
-The above is a system of three linear equations and one quadratic equation on $a,b,c,d$. If the system is independent, we can always eliminate three of these variables using the linear equations and then substitute into the quadratic one. This gives a quadratic equation in one variable which generically would have two different solutions. 
+The above is a system of three linear equations and one quadratic equation on $a,b,c,d$. If the system is independent, we can always eliminate three of these variables, say $b,d,c$, using the linear equations and then substitute into the quadratic one. This gives a quadratic equation in the single variable $a$ which generically would have two different solutions. 
 
-In order to check that for a generic quadratic vector field the linear system is independent and the discriminant of the quadratic equation is not zero it is enough to find a single example with these properties. A simple example is given by the Hamiltonian vector field 
-\begin{equation}\label{eq:Hamiltonianvf}
-v=x(x+2y-1)\frac{\partial}{\partial x}+y(-2x-y+1)\frac{\partial}{\partial y}.
-\end{equation}
- The computations are straightforward and we will omit them here.
+These computations can be carried out easily. Direct inspection shows that, outside an algebraic hypersurface of $\V_2$, the linear system is indeed independent and the discriminant of the quadratic equation non-zero. 
 
-This proves that for a generic vector field system (\ref{eq:system}) has two solutions; one corresponds to the original vector field $v$ and the other to a different vector field $\tilde{v}$, thus establishing existence and uniqueness of a twin vector field for a generic vector field $v$.
+% In order to check that for a generic quadratic vector field the linear system is independent and the discriminant of the quadratic equation is not zero it is enough to find a single example with these properties. A simple example is given by the Hamiltonian vector field 
+% \begin{equation}\label{eq:Hamiltonianvf}
+% v=x(x+2y-1)\frac{\partial}{\partial x}+y(-2x-y+1)\frac{\partial}{\partial y}.
+% \end{equation}
+% The computations are straightforward and we will omit them here.
+
+This proves that for a generic vector field system (\ref{eq:system}) has two solutions; one corresponds to the original vector field $v$ and the other to a different vector field $\tilde{v}$, thus establishing existence and uniqueness of a twin vector field for a generic vector field $v$. The explicit formulas to recover the twin $\tilde{v}$ out of the coefficients of $v$ can be found in the Appendix. %%APPENDIX%%
 \end{proof}
+
+\begin{remark}
+ The discriminant of the final quadratic equation on $a$ always factors as a perfect square. This has the consequence that the coefficients that define $\tilde{v}$ belong to the subfield of $\C$ spanned by the coefficients of $v$ (cf.~Appendix). %%APPENDIX%%
+\end{remark}
 
 
 
@@ -585,7 +591,7 @@ Under this ``normal form'' we can immediately compute the explicit expressions f
 \subsection{The moduli map} 
 
 \begin{definition}\label{def:moduliMap}
-We will call \textit{moduli map} regular map $\mathcal{M}\colon\C^6\to\C^7$ that takes 
+We will call \textit{moduli map} the polynomial map $\mathcal{M}\colon\C^6\to\C^7$ that takes 
 \[ (a_0,\ldots,a_5)\longmapsto (t_1,\ldots,t_3,d_1,\ldots,d_3,g(a)).  \]
 The explicit expression of $g(a)$ is given in Lemma \ref{lemma:expressionLambda}.
 \end{definition}
@@ -597,9 +603,9 @@ In order to prove Theorem \ref{thm:moduliSpectra} we need to show that the gener
 \begin{proof}[Proof of Theorem \ref*{thm:moduliSpectra}]
 Consider the following vector field
 \[ v_0 = (x^2+2xy-x)\frac{\partial}{\partial x}+(-xy+3y^2-3y)\frac{\partial}{\partial y}. \]
-Let us denote by $\operatorname{Spec}$ the function $\operatorname{Spec}(a)=(t_1,\ldots,d_3)$, and let $S_0=\operatorname{Spec}(v_0)$. A simple computation shows that the unique twin vector field of $v_0$ is
+Let us denote by $\operatorname{Spec}$ the function $\operatorname{Spec}(a)=(t_1,\ldots,d_3)$, so that $\mathcal{M}=(\operatorname{Spec},g)$. Let $S_0=\operatorname{Spec}(v_0)$. A simple computation shows that the unique twin vector field of $v_0$ is
 \[ v_1 = (3x^2+6xy-3x)\frac{\partial}{\partial x}+\left(-\frac{7}{3}x^2-5xy+y^2+\frac{7}{3}x-y\right)\frac{\partial}{\partial y}, \]
-and that the derivative of the map $\operatorname{Spec}$ is invertible both at $v_0$ and at $v_1$. We can deduce from the inverse function theorem the existence of neighborhoods $\widetilde{W}, U_0, U_1$ of $S_0,v_0,v_1$ respectively such that $\operatorname{Spec}^{-1}(\widetilde{W})= U_0\cup U_1$ and $\operatorname{Spec}$ maps both $ U_0$ and $ U_1$ diffeomorphically onto $\widetilde{W}$. On the other hand, it is not hard to check that the product of the characteristic numbers at infinity of $v_0$ and $v_1$ are different. By shrinking $ U_0$ and $ U_1$ if necessary we can assume that vector fields in $ U_0$ have different product of characteristic numbers from any vector field in $ U_1$. This means that if $\Lambda_0$ is the product of characteristic numbers of $v_0$, we can find a small neighborhood $V_0$ of $\Lambda_0$ such that no vector field from $ U_1$ has product of characteristic numbers in $V_0$. Define $W=\widetilde{W}\times V_0\subset\C^6\times\C$. Since $\mathcal{M}=(\operatorname{Spec},\Lambda)$ and $\operatorname{Spec}^{-1}(\widetilde{W})= U_0\cup U_1$, we must have $\mathcal{M}^{-1}(W)\subset  U_0\cup U_1$. However we also know that $\mathcal{M}^{-1}(W)$ is disjoint from $ U_1$, by construction of $V_0$, and so $\mathcal{M}^{-1}(W)\subset U_0$. If we let $U=\mathcal{M}^{-1}(W)$ we have that $\mathcal{M}\vert_{U}\colon U\to W$ is one-to-one, and so the generic fiber of $\mathcal{M}$ consists of a single point.
+and that the derivative of the map $\operatorname{Spec}$ is invertible both at $v_0$ and at $v_1$. We can deduce from the inverse function theorem the existence of neighborhoods $\widetilde{W}, U_0, U_1$ of $S_0,v_0,v_1$ respectively such that $\operatorname{Spec}^{-1}(\widetilde{W})= U_0\cup U_1$ and $\operatorname{Spec}$ maps both $ U_0$ and $ U_1$ diffeomorphically onto $\widetilde{W}$. On the other hand, it is not hard to check that the values that the polynomial $g$ takes on $v_0$ and $v_1$ are different. By shrinking $ U_0$ and $ U_1$ if necessary we can assume that vector fields in $ U_0$ have different $g$ value from any vector field in $ U_1$. This means that if $g_0=g(v_0)$, we can find a small neighborhood $V_0$ of $g_0$ such that no vector field from $ U_1$ has $g$ value in $V_0$. Define $W=\widetilde{W}\times V_0\subset\C^6\times\C$. Since $\mathcal{M}=(\operatorname{Spec},g)$ and $\operatorname{Spec}^{-1}(\widetilde{W})= U_0\cup U_1$, we must have $\mathcal{M}^{-1}(W)\subset  U_0\cup U_1$. However we also know that $\mathcal{M}^{-1}(W)$ is disjoint from $ U_1$, by construction of $V_0$, and so $\mathcal{M}^{-1}(W)\subset U_0$. If we let $U=\mathcal{M}^{-1}(W)$ we have that $\mathcal{M}\vert_{U}\colon U\to W$ is one-to-one, and so the generic fiber of $\mathcal{M}$ consists of a single point.
 \end{proof}
 
 
@@ -613,16 +619,21 @@ We want to point out that Theorem \ref{thm:moduliSpectra} is very similar in spi
 
 Theorem \ref{thm:moduliHolonomy} has the consequence that the space of possible extended spectra of generic quadratic vector fields is 6-dimensional. This is of course the expected dimension, since the quotient $V_2\sslash\Aff{2}{\C}$ is 6-dimensional itself. The extended spectra consists of 11 numbers: 8 coming from the finite spectra $\{(t_k,d_k)\}$, and 3 coming from the singular points at infinity $\{\lambda_j\}$. These 11 numbers are related by 4 classical index theorems: the Euler-Jacobi relations, the Baum-Bott equation and the Camacho-Sad formula. However, there must exist one more algebraic relation, independent of the previous ones, that constrains these numbers.
 
+\begin{remark}
+ The question of the what are the hidden relations on the extended spectra was inspired by a very similar question on the hidden relations between the spectra of the derivatives at the fixed points of a regular endomorphism $f\colon\P^n\to\P^n$ posed by Adolfo Guillot in \cite{Guillot2004}. See \cite{WoodsHole} for a discussion on how these two problems relate to each other.
+\end{remark}
+
+
 
 \subsection{Description of the hidden relation}
 
 The moduli map is a regular map between affine spaces. This map induces a ring map on the corresponding coordinate rings. These rings are $R=\C[a_0,\ldots,a_5]$ and $S=\C[t_1,\ldots,t_3,d_1,\ldots,d_3,g]$ respectively. We grade $S$ by declaring that the $t_k$ are of degree 1, $d_k$ of degree 2, and $g$ of degree 4. 
 
 \begin{remark}
- The regular map $\mathcal{M}\colon\mathbb{A}^6\to\mathbb{A}^7$ induces a ring map $\mathcal{M}^*\colon S\to R$. The closure of the image of $\mathcal{M}$ is the subvariety of $V\subset\mathbb{A}^7$ defined by the ideal $I=\operatorname{Ker}\,\mathcal{M}^*$. Moreover, since $V$ is a hypersurface on $\mathbb{A}^7$, $I$ is the principal ideal generated by some polynomial $F\in \C[t_1,\ldots,t_3,d_1,\ldots,d_3,g]$.
+ The regular map $\mathcal{M}\colon\mathbb{A}^6\to\mathbb{A}^7$ induces a ring map $\mathcal{M}^*\colon S\to R$. The closure of the image of $\mathcal{M}$ is the subvariety of $V\subset\mathbb{A}^7$ defined by the ideal $I=\operatorname{Ker}\,\mathcal{M}^*$. Moreover, since $V$ is a hypersurface in $\mathbb{A}^7$, $I$ is an ideal generated by a single polynomial $F\in \C[t_1,\ldots,t_3,d_1,\ldots,d_3,g]$.
 \end{remark}
 
-In order to find the polynomial $F$, we need only ask a computer algebra software to compute a basis for the ideal $I$. This can easily be done by any software that handles Gr\"{o}bner bases. We have done this using both \textit{Macaulay2} and \textit{CoCoA}, the resulting generator is the same. The explicit expression of this polynomial may be found in the appendix.
+In order to find the polynomial $F$, we need only ask a computer algebra software to compute a basis for the ideal $I$. This can easily be done by any software that handles Gr\"{o}bner bases. We have done this using both \textit{Macaulay2} and \textit{CoCoA}, the resulting generator is the same. The explicit expression of this polynomial may be found in the Appendix. %%APPENDIX%%
 
 \begin{proposition}\label{prop:descriptionF}
  The ideal $I=\operatorname{Ker}\,\mathcal{M}^*$ is generated by a single polynomial $F=A(t;d)\,g^2+B(t;d)\,g+C(t;d)$. This polynomial has the following properties:
@@ -658,7 +669,7 @@ This gives the equation claimed in Theorem \ref{thm:hiddenRelation}
   \end{equation}
  Note that this information is not enough to determine the value of $\lambda$. In fact, there is a one dimensional family of numbers $\lambda$ that satisfy $\sigma_1(\lambda)=1$ and $\frac{\sigma_2(\lambda)}{\sigma_3(\lambda)}$ equals the right hand side of (\ref{eq:sigma2BySigma3}).
  
- Let us now take into account the hidden identity (\ref{eq:hiddenRelationBis}). This equation allows us to solve for $\Lambda=\sigma_3(\lambda)$, up to a finite ambiguity coming from the two possible roots of the equation. For each possible value of $\sigma_3(\lambda)$, we can recover the value of $\sigma_2(\lambda)$ from (\ref{eq:sigma2BySigma3}). Having specified the values of $\sigma_1(\lambda),\sigma_2(\lambda),\sigma_3(\lambda)$, we can recover the exact value of $\lambda_1,\lambda_2,\lambda_3$, up to permutation of the numberings. 
+ Let us now take into account the hidden identity (\ref{eq:hiddenRelationBis}). This equation allows us to solve for $\Lambda=\sigma_3(\lambda)$, up to a finite ambiguity coming from the two possible roots of the equation. For each possible value of $\sigma_3(\lambda)$, we can recover the value of $\sigma_2(\lambda)$ from (\ref{eq:sigma2BySigma3}). Having specified the values of $\sigma_1(\lambda),\sigma_2(\lambda),\sigma_3(\lambda)$, we can recover the exact value of $\lambda_1,\lambda_2,\lambda_3$, up to permutations of the numbering. 
  
  Taking into account the hidden relation allows us to recover the whole extended spectra of $v$, up to finite ambiguity. In fact, we don't know if we recovered the spectra of $v$ or of its twin, but this would have been impossible without the new relation. We conclude that (\ref{eq:hiddenRelationBis}) is independent from (\ref{eq:firstEJ1})--(\ref{eq:CS}).
 \end{proof}
@@ -677,7 +688,7 @@ It was proved in \cite{WoodsHole} that all four classical relations can be reali
 An index ought to be a number we assign to an isolated singularity of a vector field, foliation, space or map. This index should only depend on the local behavior of our geometric object around such singular point. Moreover, this index should be invariant under analytic equivalence.
 
 \begin{remark}
- An index theorem for meromorphic vector fields on $\CP^2$ should be such that the index at a generic singularity is \textit{a rational function on the spectra}. Non-degeneracy of the singularity guarantees that the determinant $d$ of the linearization does not vanish, but we may assume no other algebraic condition on the pair $(t,d)$. This suggest that the index would in fact belong to the ring $\C[t,d,d^{-1}]$.
+ An index theorem for meromorphic vector fields on $\CP^2$ should be such that the index at a generic singularity is \textit{a rational function on the spectrum}. Non-degeneracy of the singularity guarantees that the determinant $d$ of the linearization does not vanish, but we may assume no other algebraic condition on the pair $(t,d)$. This suggest that the index would in fact belong to the ring $\C[t,d,d^{-1}]$.
 \end{remark}
  
 Indeed, we know from Poincar\'{e} that a \textit{hyperbolic} singularity of a planar vector field is analytically linearizable. Analytic invariance of the index means that the index cannot depend on anything but the spectra. 
@@ -685,7 +696,7 @@ Indeed, we know from Poincar\'{e} that a \textit{hyperbolic} singularity of a pl
 \begin{proposition}\label{prop:expectedIndex}
  An index theorem for generic polynomial vector fields of degree $n$ on $\C^2$ should be of the following form:
   \[ \sum_{k=1}^{n^2} \operatorname{ind}_{\C^2}(v,p_k) + \sum_{j=1}^{n+1} \operatorname{ind}_{\mathcal{L}}(\F_v,q_j) = L(n), \]
- where $\operatorname{ind}_{\C^2}(v,p_k) $ is a rational function on the spectra of $Dv(p_k)$, $\operatorname{ind}_{\mathcal{L}}$ is a rational function on the characteristic number of $q_k$ and $L(n)$ is a number that depends only on the degree $n$.
+ where $\operatorname{ind}_{\C^2}(v,p_k) $ is a rational function on the spectrum of $Dv(p_k)$, $\operatorname{ind}_{\mathcal{L}}$ is a rational function on the characteristic number of $q_k$ and $L(n)$ is a number that depends only on the degree $n$.
 \end{proposition}
 
 Note that in particular the above equation may be rewritten as 
@@ -699,7 +710,11 @@ where $R$ is a rational function on the finite spectra $\{(t_k,d_k)\}$, and $r$ 
 
 We prove here Theorem \ref{thm:noIndexTheorem}, which claims that there are no rational functions $R$ and $r$ that come from an index theorem as in Proposition \ref{prop:expectedIndex}, other than the ones that can be derived from the classical identities.
 
-We are going to show first that the finite spectra $(t_1,d_1),\ldots,(t_4,d_4)$ may only satisfy those relations that can be derived from the two Euler-Jacobi relations. In this way, if the function $r$ in (\ref{eq:R=r}) is constant, then the equation $R(t;d)=r$ follows from Euler-Jacobi. It is straight forward to see that, conversely, if $R$ is constant then (\ref{eq:R=r}) follows from Camacho-Sad. Once this is done, we prove that if neither $R$ nor $r$ are constant, then equation (\ref{eq:R=r}) can be derived from the Baum-Bott relation (using the Euler-Jacobi and Camacho-Sad relations).
+The strategy is the following: we are going to show first that the finite spectra $(t_1,d_1),\ldots,(t_4,d_4)$ may only satisfy those relations that can be derived from the two Euler-Jacobi relations. In this way, if the function $r$ in (\ref{eq:R=r}) is constant, then the equation $R(t;d)=r$ follows from Euler-Jacobi. It is straight forward to see that, conversely, if $R$ is constant then (\ref{eq:R=r}) follows from Camacho-Sad. Assume neither $R$ nor $r$ are constant. Every pair of twin vector fields $v$ and $v'$ define the same spectra $\{(t_k,d_k)\}$ yet different triple of characteristic numbers $\lambda$ and $\lambda'$. An identity such as (\ref{eq:R=r}) thus imposes a non-trivial equation $r(\lambda)=r(\lambda')$. The proof will be completed by studying the space $X$ defined as the affine closure of the set
+ \[ \set{(\lambda,\lambda')\in\C^6}{\exists\mbox{ twins }v,v'\mbox{ with characteristic numbers }\lambda,\lambda'}. \]
+We shall prove that any equation on $X$ of the form $r(\lambda)=r(\lambda')$ can be deduced from the Baum-Bott theorem.
+ 
+% Once this is done, we prove that if neither $R$ nor $r$ are constant, then equation (\ref{eq:R=r}) can be derived from the Baum-Bott relation (using the Euler-Jacobi and Camacho-Sad relations).
 
 \begin{lemma}\label{lemma:finiteSpectra}
  Any identity of the form $R(t;d)=0$ which holds for every quadratic vector field with non-degenerate singularities follows from the Euler-Jacobi relations (\ref{eq:EJ1}), (\ref{eq:EJ2}).
@@ -708,10 +723,10 @@ We are going to show first that the finite spectra $(t_1,d_1),\ldots,(t_4,d_4)$ 
 \begin{proof}
  As pointed out in Lemma \ref{lemma:3outOf4}, the first Euler-Jacobi relation (\ref{eq:EJ1}) can be used to solve for $d_4$ in terms of $d_1,d_2,d_3$, and then the second relation (\ref{eq:EJ2}) used to solve for $t_4$ in terms of $t_1,d_1,\ldots,t_3,d_3$. Therefore we may write $R(t;d)=\tilde{R}(t_1,\ldots,d_3)$, for some rational function $\tilde{R}$ on $\C^6$.
  
- It can be easily shown that the projection of the image of the moduli map $\operatorname{Im}\,\mathcal{M}\subset\C^6\times\C$ on the first component $\C^6$ is everywhere dense. This implies that the map $\operatorname{Spec}\colon\V_2\to\C^6$ that assigns to each generic vector field $v$ the spectra $(t_1,d_1,\ldots,t_3,d_3)$ is a dominant map (this is also proved in \cite{TwinVectorFields}). This means that there are no non-trivial polynomials that vanish on every tuple $(t_1,d_1,\ldots,t_3,d_3)$. In particular, $\tilde{R}=0$ for every generic vector field $v$ implies $\tilde{R}\equiv 0$. 
+ It can be easily shown that the projection of the image of the moduli map $\operatorname{Im}\,\mathcal{M}\subset\C^6\times\C$ on the first component $\C^6$ is dense. This implies that the map $\operatorname{Spec}\colon\V_2\to\C^6$ that assigns to a generic vector field the spectra $(t_1,d_1,\ldots,t_3,d_3)$ is a dominant map (this is also proved in \cite{TwinVectorFields}). This implies that there are no non-trivial polynomials that vanish on every tuple $(t_1,d_1,\ldots,t_3,d_3)$. In particular, $\tilde{R}=0$ for every generic vector field $v$ implies $\tilde{R}\equiv 0$. 
 \end{proof}
 
-Let $X$ be the variety defined as the affine closure of the set of triples $(\lambda,\lambda')\in\C^6$ such that there exist twin vector fields $v,v'$ realizing the characteristic numbers at infinity $\lambda$ and $\lambda'$, respectively. Understanding this space will be fundamental in the proof of Theorem \ref{thm:noIndexTheorem}.
+Let $X$ be the variety defined as the affine closure of the set $\mathcal{U}$ of triples $(\lambda,\lambda')\in\C^6$ such that there exist twin vector fields $v,v'$ realizing the characteristic numbers at infinity $\lambda$ and $\lambda'$, respectively.
 
 Note that any pair $(\lambda,\lambda')$ coming from twin vector fields must satisfy the equation imposed by the Camacho-Sad theorem: $\sigma_1(\lambda)=\sigma_1(\lambda')=1$. Moreover, because $v$ and $v'$ are twins, the contribution of the Baum-Bott indices of the singularities of $v$ and $v'$ over the affine part is the same. Hence, also the contribution of the singular points at infinity must agree. From (\ref{eq:sigma2BySigma3}) it follows that
  \begin{equation}\label{eq:equalBB}
@@ -743,7 +758,7 @@ By Lemma \ref{lemma:finiteSpectra} the above relation follows from the Euler-Jac
 \end{proof}
 
 \begin{proof}[Proof of Lemma \ref*{lemma:Xis3D}]
- Let $Y$ be the affine subvariety of $\C^6$ defined by the ideal $I=( \sigma_1(\lambda)-1,\, \sigma_1(\lambda')-1,\,  \sigma_2(\lambda)\sigma_3(\lambda')-\sigma_2(\lambda')\sigma_3(\lambda) )$. Clearly we have that $X\subset Y$. It is straightforward to verify that the variety $Y$ is irreducible and 3-dimensional. The main claim of this lemma is that $X$ has also dimension 3 (and then, by irreducibility of $Y$ we obtain $X=Y$).
+ Let $Y$ be the affine subvariety of $\C^6$ defined by the ideal $I=( \sigma_1(\lambda)-1,\, \sigma_1(\lambda')-1,\,  \sigma_2(\lambda)\sigma_3(\lambda')-\sigma_2(\lambda')\sigma_3(\lambda) )$. Clearly we have that $X\subset Y$. It is straightforward to verify that the variety $Y$ is irreducible and 3-dimensional. The main content of this lemma is that $X$ has also dimension 3. This is a non-trivial fact and it is proved below. Once it has been established, irreducibility of $Y$ implies that $X=Y$.
  
  Recall that we have found in Theorem \ref{thm:hiddenRelation} that the product of characteristic numbers $\Lambda=\sigma_3(\lambda)$ satisfies a quadratic equation
   \[ P_2(t;d)\,\Lambda^2+P_1(t;d)\,\Lambda+P_0(t;d)=0 . \]
@@ -757,9 +772,9 @@ By Lemma \ref{lemma:finiteSpectra} the above relation follows from the Euler-Jac
   \[ \Phi(a_0,\ldots,a_5)=\left( \frac{P_0}{P_2}, \frac{P_1}{P_2}, -\sum_{j=1}^4\frac{t_j^2}{d_j} +9 \right), \]
  where the expressions for $t_k,d_k$ in terms of the $a_i$ are the ones given in Lemma \ref{lemma:expressionsSpectra}. It can be easily checked by a computer that the generic rank of the map $\Phi$ is equal to 3.
  
- Finally, note that $\Phi$ factors through $X$, since it can be rewritten
+ Finally, note that $\Phi$ factors through $X$, since it can be written as
   \[ \Phi(a_0,\ldots,a_5)=\left( \sigma_3(\lambda)\sigma_3(\lambda'), -\sigma_3(\lambda)-\sigma_3(\lambda'), \frac{\sigma_2(\lambda)}{\sigma_3(\lambda)} \right). \]
- The value of the third component is unambiguous since we have the equality (\ref{eq:equalBB}). Since the generic rank of $\Phi$ is 3 and $\Phi$ factors through $X$, we conclude that $X$ is at least 3-dimensional, in particular $X=Y$.  
+ The value of the third component is unambiguous since we have equality (\ref{eq:equalBB}). Since the generic rank of $\Phi$ is 3 and $\Phi$ factors through $X$, we conclude that $X$ is at least 3-dimensional, in particular $X=Y$.  
 \end{proof}
 
 
@@ -837,6 +852,9 @@ Throughout this text we will also assume that we have once and for all numbered 
 
 
 \appendix
+\chapter{The spectra of quadratic Hamiltonian {vector fields}}
+% 
+
 \chapter{Macaulay2 script}
 % 
 
@@ -875,7 +893,8 @@ Throughout this text we will also assume that we have once and for all numbered 
 % Add explicit expression of F in the appendix.
 % Restate theorems to make it easier to read?
 % Check that the proof of Theorem \ref{thm:moduliSpectra} given here is correct: check that the example of v and its twin provided do satisfy the claimed properties (recall you rewrote the proof using Yuri's ideas!)
-% Cite arXiv version vs adding appendix here??
+% Review reference to appendices (label:%%APPENDIX%%) and citation of arXivVersion
 % Thank Frank and cite Example in acknowledgements??
+% Cite Gillot's paper
 
 
