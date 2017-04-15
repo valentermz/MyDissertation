@@ -1,0 +1,39 @@
+% M2 code to compute g
+% 
+\begin{lstlisting}
+--These are the rings we work with:
+R = QQ[a_0..a_5]
+S = QQ[t_0..t_2,d_0..d_2,g,Degrees=>{1,1,1,2,2,2,4}]
+
+--Formulas for the traces, determinants and the polynomial g:
+T_1 = -a_0-a_5
+T_2 = a_0+a_4-a_5
+T_3 = -a_0+a_1+a_5
+D_1 = -a_2*a_3+a_0*a_5
+D_2 = -a_1*a_3+a_2*a_3+a_0*a_4-a_0*a_5
+D_3 = a_2*a_3-a_2*a_4-a_0*a_5+a_1*a_5
+G = 4*a_0^3*a_2-a_0^2*a_1^2+2*a_0^2*a_1*a_5-12*a_0^2*a_2*a_4
+  -a_0^2*a_5^2+2*a_0*a_1^2*a_4+18*a_0*a_1*a_2*a_3
+  -4*a_0*a_1*a_4*a_5-18*a_0*a_2*a_3*a_5+12*a_0*a_2*a_4^2
+  +2*a_0*a_4*a_5^2-4*a_1^3*a_3+12*a_1^2*a_3*a_5
+  -a_1^2*a_4^2-18*a_1*a_2*a_3*a_4-12*a_1*a_3*a_5^2
+  +2*a_1*a_4^2*a_5+27*a_2^2*a_3^2+18*a_2*a_3*a_4*a_5
+  -4*a_2*a_4^3+4*a_3*a_5^3-a_4^2*a_5^2 
+  
+--The list L defines a function F : R <-- S
+L = {T_1,T_2,T_3,D_1,D_2,D_3,G} 
+F = map(R,S,L)
+
+gens kernel F
+F = oo_(0,0)
+
+--The coefficients of F in F=Ag^2+Bg+C are:
+A = substitute(diff(g,diff(g,p)),{g=>0})
+B = substitute(diff(g,p),{g=>0})
+C = substitute(p,{g=>0})
+
+--Finally, P_2,P_1,P_0 are defined as follows:
+P_2 = C
+P_1 = -27*(d_1*d_2+d_2*d_3+d_3*d_1)*B
+P_0 = 729*(d_1*d_2+d_2*d_3+d_3*d_1)^2*A
+\end{lstlisting}

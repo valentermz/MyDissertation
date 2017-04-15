@@ -20,7 +20,7 @@
 % \usepackage{hangcaption}
 % \usepackage{txfonts}
 % \usepackage{palatino}
-
+\usepackage{listings}
 \usepackage{valente}
  \hypersetup{pdftitle={My Thesis},pdfauthor={Valente Ramirez}}
 
@@ -625,7 +625,7 @@ Theorem \ref{thm:moduliHolonomy} has the consequence that the space of possible 
 
 
 
-\subsection{Description of the hidden relation}
+\subsection{Description of the hidden relation}\label{sec:descriptionHiddenRelation}
 
 The moduli map is a regular map between affine spaces. This map induces a ring map on the corresponding coordinate rings. These rings are $R=\C[a_0,\ldots,a_5]$ and $S=\C[t_1,\ldots,t_3,d_1,\ldots,d_3,g]$ respectively. We grade $S$ by declaring that the $t_k$ are of degree 1, $d_k$ of degree 2, and $g$ of degree 4. 
 
@@ -855,10 +855,30 @@ Throughout this text we will also assume that we have once and for all numbered 
 \chapter{The spectra of quadratic Hamiltonian {vector fields}}
 % 
 
-\chapter{Macaulay2 script}
+\chapter{Computation of Twin vector fields}
 % 
 
-\chapter{Mathematca script}
+
+\chapter{Computing the hidden relation}
+
+\section*{Input code}
+
+The following is the \textit{Macaulay2} code used to compute the generator $F$ of the ideal $I$ described in Proposition \ref{prop:descriptionF}. Passage from the polynomial $F=A\,g^2+B\,g+C$ to $P_2\,\Lambda^2+P_1\,\Lambda+P_0$ is done as described in Section \ref{sec:descriptionHiddenRelation}. 
+
+\bigskip
+\input{Appendices/M2code.tex}
+
+
+\section*{The explicit expressions}
+
+\input{Appendices/hidden_relation.tex}
+
+
+
+
+
+
+\chapter{Computations in Utmost Rigidity}
 
 % \fancyhead[LE,RO]{}\fancyhead[LO,RE]{\slshape APPENDIX: MATHEMATICA SCRIPT}
 %   \addcontentsline{toc}{section}{Appendix: \emph{Mathematica} script}
