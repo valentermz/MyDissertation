@@ -852,47 +852,169 @@ Throughout this text we will also assume that we have once and for all numbered 
 
 
 \appendix
-\chapter{The spectra of quadratic Hamiltonian {vector fields}}
+\chapter{Spectra of quadratic Hamiltonian vector fields}
+
+\section{Introduction}
+
+The extended spectra of singularities of quadratic Hamiltonian vector fields can be fully understood. First of all, a Hamiltonian vector field has vanishing trace at each singularity on $\C^2$. Secondly, each singular point at infinity has characteristic number $\lambda_j=\frac{1}{3}$. In this chapter we will look discuss twin vector fields in the Hamiltonian case and we will describe exactly what collections of numbers $\{d_1,\ldots,d_4\}$ may be realized as the spectra of a quadratic Hamiltonian vector field.
+
+
+
+
+\section{Twins in the Hamiltonian case}
+
+Let $\mathcal{H}_2$ denote the space of quadratic Hamiltonian vector fields. It is straightforward that this space has dimension 9, since the space of polynomials in $\C[x,y]$ of degree three is ten dimensional. Moreover, a vector field on $\C^2$ is Hamiltonian if and only if the trace $\tr{Dv(x,y)}=P'_x+Q'_y$ vanishes identically. This imposes three linear conditions on the coefficients of $P$ and $Q$, and so $\mathcal{H}_2$ is in fact a linear subspace of $\V_2$.
+
+% \begin{remark}
+% Note that $\tr Dv(x,y)$, which is a linear polynomial on $(x,y)$, will vanish identically as soon as it vanishes on three non-collinear points. This implies that a vector field on $\V_2$ is Hamiltonian if and only if it has vanishing trace at each of its singularities. This implies moreover that any vector field that is affine equivalent to a Hamiltonian vector field with isolated singularities is itself Hamiltonian.
+% \end{remark}
+
+The quotient $\mathcal{H}_2\sslash\Aff{2}{\C}$ has dimension three. On the other hand, each singularity of a Hamiltonian vector field carries only one analytic invariant: the determinant of its linearization matrix. These invariants are subject to the Euler-Jacobi relation (\ref{eq:EJ1}) and so the space of possible spectra is three dimensional. We see that the dimension of the space of parameters matches the dimension of the space of invariants. The space of quadratic Hamiltonian vector fields $\mathcal{H}_2$ is a linear (and hence irreducible) subspace of $\V_2$, and it is straightforward to verify that the system (\ref{eq:system}) does not degenerate in the Hamiltonian case. We conclude that a ``generic'' quadratic Hamiltonian vector field has a unique twin.
+
+However, in the case of quadratic Hamiltonian vector fields we can prove the existence and uniqueness of twin vector fields in a different way, and in this way we can express the genericity assumptions explicitly in terms of the spectra (and not the coefficients defining the vector field).
+
+\begin{definition}
+Let $v$ be a quadratic Hamiltonian vector field whose singularities are all non-degenerate. We say that the spectrum of $v$ is \emph{exceptional} if there exist singular points $p_j,p_k$ such that
+\[ \det{Dv(p_j)}+\det{Dv(p_k)}=0. \]
+A quadratic Hamiltonian vector field is a \emph{generic quadratic Hamiltonian vector field} if it has non-degenerate singularities and its spectrum is not exceptional.
+\end{definition}
+
+Note that if $\det{Dv(p_j)}+\det{Dv(p_k)}=0$ then the eigenvalues of $Dv(p_j)$ differ from the eigenvalues of $Dv(p_k)$ only by multiplication of a common factor of $\sqrt{-1}$. We now have the following theorem.
+
+\begin{theorem}\label{thm:twinHam}
+A generic quadratic Hamiltonian vector field has a unique twin vector field. In fact, the twin vector field of a generic quadratic Hamiltonian vector field $v$ is precisely its negative $-v$.
+\end{theorem}
+
+% Before proving the above theorem, let us point out that besides making the genericity assumptions explicit in the Hamiltonian case we will also able to solve the realization problem.
+
+
+
+
+\section{Realization theorem for the spectra of quadratic\\Hamiltonian vector fields}
+
+\begin{definition}
+A collection of four non-zero complex numbers $\mathcal{C}=\{d_1,\ldots,d_4\}$ is called \emph{admissible} for quadratic Hamiltonian vector fields if it satisfies
+\[ \sum_{k=1}^4 \frac{1}{d_k} = 0. \]
+An admissible collection is \emph{exceptional} if there exist $d_j,d_k$ such that $d_j+d_k=0$.
+\end{definition}
+
+\begin{theorem}\label{thm:realization}
+A collection $\mathcal{C}$, admissible for quadratic Hamiltonian vector fields, is realizable as the spectrum of a quadratic Hamiltonian vector field if and only if one of the following two conditions holds:
+\begin{enumerate}
+ \item $\mathcal{C}$ is a non-exceptional collection,
+ \item $\mathcal{C}$ is exceptional of the form $\{d,-d,d,-d\}$, for some $d\in\C^{\ast}$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof of Theorems \ref*{thm:twinHam} and \ref*{thm:realization}]
+Consider a quadratic vector field $v=P\frac{\partial}{\partial x}+Q\frac{\partial}{\partial y}$ having singularities at $p_1=(0,0)$, $p_2=(1,0)$, $p_3=(0,1)$. According to Lemma \ref{lemma:normalizeSingularities}, any such vector field is given by 
+\begin{equation*}
+\begin{array}{l}
+ P(x,y) = a_0x^2+a_1xy+a_2y^2-a_0x-a_2y,  \\ 
+ Q(x,y) = a_3x^2+a_4xy+a_5y^2-a_3x-a_5y. \\
+\end{array}
+\end{equation*}
+In the particular case in which the vector field in question is Hamiltonian we further obtain the following:
+\begin{align*}
+a_2 &= 2a_1, \\
+a_5 &= -2a_1, \\
+a_6 &= -a_1.
+\end{align*}
+A short computation shows that the determinant of $d_k:=Dv(p_k)$ is given by
+\begin{equation}\label{eq:detsHam}
+\begin{array}{l} 
+d_1 = -a_1^2-a_3a_4, \\
+d_2 = -a_1^2-2a_1a_4+a_3a_4, \\
+d_3 = -a_1^2+2a_1a_3+a_3a_4. \\
+\end{array}
+\end{equation}
+If the spectrum of $v$ is non-exceptional we can always solve the above system of equations for $a_1,a_3,a_4$ in terms of $d_1,d_2,d_3$ to obtain:
+\begin{equation*}
+  \arraycolsep=1pt\def\arraystretch{1.8}
+\begin{array}{l} 
+a_1^2 = \displaystyle\frac{-(d_1+d_2)(d_1+d_3)}{2(d_2+d_3)}, \\
+a_3   = a_1+\displaystyle\frac{d_1+d_3}{2a_1}, \\
+a_4   = -a_1-\displaystyle\frac{d_1+d_2}{2a_1}. \\
+\end{array}
+\end{equation*}
+This proves that non-exceptional admissible collections are realizable. Note that these expressions yield two solutions (depending on the branch of the square root chosen for $a_1^2$) and one solution differs from the other by a sign, hence proving Theorem \ref*{thm:twinHam}.
+
+\medskip
+Now, assume $v$ is a Hamiltonian vector field with exceptional spectrum; without loss of generality we can assume $d_1+d_2=0$. Note that the Euler-Jacobi relation (\ref{eq:EJ1}) implies that $d_3+d_4=0$. From equations (\ref{eq:detsHam}) we deduce that either $a_1=0$ or $a_1+a_4=0$. If $a_1=0$ then we conclude that $d_3=d_2$ (and thus $d_4=d_1$) and if $a_1+a_4=0$ we conclude that $d_3=d_1$ (and thus $d_4=d_2$). In either case we see that exceptional spectra of quadratic Hamiltonian vector fields are always of the form $\mathcal{C}=\{d,-d,d,-d\}$, for some $d\in\C^{\ast}$. On the other hand any such collection $\mathcal{C}$ can be realized (choosing $d_3=d_2$) by setting $a_1=0$ and $a_3,a_4$ any complex numbers that satisfy $a_3a_4=d$, since equations (\ref{eq:detsHam}) become
+\begin{equation*}
+\begin{array}{l} 
+d_1 = -a_3a_4, \\
+d_2 = a_3a_4, \\
+d_3 = a_3a_4. \\
+\end{array}
+\end{equation*}
+\end{proof}
+
+Note that the last argument in the above proof shows that, given an exceptional collection $\mathcal{C}=\{d,-d,d,-d\}$, there exits a one-dimensional family of quadratic Hamiltonian vector fields which are pairwise not affine equivalent and realize $\mathcal{C}$ as their spectra of singularities. This implies that a quadratic Hamiltonian vector field with non-degenerate singularities and exceptional spectrum has a one-dimensional family of twin vector fields.
+
+
+
+
+
+
+
+
+
+
+% \chapter{Computation of Twin vector fields}
 % 
-
-\chapter{Computation of Twin vector fields}
 % 
-
-
-\chapter{Computing the hidden relation}
-
-\section*{Input code}
-
-The following is the \textit{Macaulay2} code used to compute the generator $F$ of the ideal $I$ described in Proposition \ref{prop:descriptionF}. Passage from the polynomial $F=A\,g^2+B\,g+C$ to $P_2\,\Lambda^2+P_1\,\Lambda+P_0$ is done as described in Section \ref{sec:descriptionHiddenRelation}. 
-
-\bigskip
-\input{Appendices/M2code.tex}
-
-
-\section*{The explicit expressions}
-
-\input{Appendices/hidden_relation.tex}
-
-
-
-
-
-
-\chapter{Computations in Utmost Rigidity}
-
+% 
+% 
+% 
+% 
+% 
+% 
+% 
+% 
+% 
+% \chapter{Computing the hidden relation}
+% 
+% \section*{Input code}
+% 
+% The following is the \textit{Macaulay2} code used to compute the generator $F$ of the ideal $I$ described in Proposition \ref{prop:descriptionF}. Passage from the polynomial $F=A\,g^2+B\,g+C$ to $P_2\,\Lambda^2+P_1\,\Lambda+P_0$ is done as described in Section \ref{sec:descriptionHiddenRelation}. 
+% 
+% \bigskip
+% \input{Appendices/M2code.tex}
+% 
+% 
+% \section*{The explicit expressions}
+% 
+% \input{Appendices/hidden_relation.tex}
+% 
+% 
+% 
+% 
+% 
+% 
+% 
+% 
+% 
+% 
+% \chapter{Computations in Utmost Rigidity}
+% 
 % \fancyhead[LE,RO]{}\fancyhead[LO,RE]{\slshape APPENDIX: MATHEMATICA SCRIPT}
 %   \addcontentsline{toc}{section}{Appendix: \emph{Mathematica} script}
+% 
+% 
+% \begin{changemargin}{-.6in}{-.6in}
+% \begin{center}
+% \includegraphics[scale=0.75]{Appendices/appendix1.pdf}\newpage
+% \includegraphics[scale=0.75]{Appendices/appendix2.pdf}\newpage
+% \includegraphics[scale=0.75]{Appendices/appendix3.pdf}\newpage
+% \includegraphics[scale=0.75]{Appendices/appendix4.pdf}\newpage
+% \includegraphics[scale=0.75]{Appendices/appendix5.pdf}\newpage
+% \end{center}
+% \end{changemargin}
 
 
-\begin{changemargin}{-.6in}{-.6in}
-\begin{center}
-\includegraphics[scale=0.75]{Appendices/appendix1.pdf}\newpage
-\includegraphics[scale=0.75]{Appendices/appendix2.pdf}\newpage
-\includegraphics[scale=0.75]{Appendices/appendix3.pdf}\newpage
-\includegraphics[scale=0.75]{Appendices/appendix4.pdf}\newpage
-\includegraphics[scale=0.75]{Appendices/appendix5.pdf}\newpage
-\end{center}
-\end{changemargin}
+
+
 
 \nocite{StrongTopoInvariance,UtmostRigidity,TwinVectorFields,WoodsHole,NoIndexTheorems}
 \bibliography{ref-valente}
@@ -902,19 +1024,8 @@ The following is the \textit{Macaulay2} code used to compute the generator $F$ o
 
 
 
-
-
-
 %%COMMENTS%%
 
-% Excesive amount of space in display math mode can be fixed with \singlespacing.
-% Check the use of ``extended spectra''.
-% Check the degrees of the P_k in hidden relation.
-% Add explicit expression of F in the appendix.
 % Restate theorems to make it easier to read?
-% Check that the proof of Theorem \ref{thm:moduliSpectra} given here is correct: check that the example of v and its twin provided do satisfy the claimed properties (recall you rewrote the proof using Yuri's ideas!)
 % Review reference to appendices (label:%%APPENDIX%%) and citation of arXivVersion
 % Thank Frank and cite Example in acknowledgements??
-% Cite Gillot's paper
-
-
