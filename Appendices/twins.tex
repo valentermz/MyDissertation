@@ -1,0 +1,123 @@
+\lstset{language=Mathematica,mathescape}
+\lstset{basicstyle={\sffamily\footnotesize},
+%   numbers=left,
+%   numberstyle=\tiny\color{gray},
+  numbersep=5pt,
+  breaklines=true,
+  captionpos={t},
+%   frame={lines},
+%   rulecolor=\color{black},
+%   framerule=0.5pt,
+  columns=flexible,
+  tabsize=2
+}
+
+\section{Existence and uniqueness}
+
+The following is a \textit{Mathematica} script containing explicitly the computations performed in Section \ref{subsec:twins} to prove the existence and uniqueness of twin vector fields.
+
+\bigskip
+\bigskip
+
+\begin{lstlisting}
+<< Notation`
+Symbolize[ParsedBoxWrapper[SubscriptBox["a", "_"]]]
+
+p$_1$={0,0};
+p$_2$={1,0};
+p$_3$={0,1};
+
+P[{x_,y_}]=a$_0$*x^2+a$_1$*x*y+a$_2$*y^2-a$_0$*x-a$_2$*y;
+Q[{x_,y_}]=a$_3$*x^2+a$_4$*x*y+a$_5$*y^2-a$_3$*x-a$_5$*y;
+
+Dv[{x_,y_}]={{D[P[{x,y}],x],D[P[{x,y}],y]},{D[Q[{x,y}],x],D[Q[{x,y}],y]}};
+
+t$_1$=Tr[Dv[p$_1$]];
+d$_1$=Det[Dv[p$_1$]];
+t$_2$=Tr[Dv[p$_2$]];
+d$_2$=Det[Dv[p$_2$]];
+t$_3$=Tr[Dv[p$_3$]];
+d$_3$=Det[Dv[p$_3$]];
+
+M = {{$\alpha$, $\beta$}, {$\gamma$, $\delta$}};
+
+eq$_1$ = Tr[M.Dv[p$_1$]] - t$_1$;
+eq$_2$ = Tr[M.Dv[p$_2$]] - t$_2$;
+eq$_3$ = Tr[M.Dv[p$_3$]] - t$_3$;
+\end{lstlisting}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+\begin{lstlisting}
+Solve[eq$_1$ == 0 && eq$_2$ == 0 && eq$_3$ == 0, {$\beta$, $\gamma$, $\delta$}]
+values = %[[1]]
+\end{lstlisting}
+\begin{small}
+ \begin{align*}
+  \big\{\big\{ \beta &\to -\frac{-2a_0+a_1+2a_0\alpha-a_1\alpha}{2a_3-a_4} \\
+  \gamma &\to - \big(-a_1 a_3 a_4+a_0 a_4^2+2 a_1 a_3 a_5-2 a_0 a_4 a_5+a_1 a_3 a_4 \alpha-a_0 a_4^2 \alpha-2 a_1 a_3 a_5 \alpha \\
+  &\phantom{\gamma\to} +2 a_0 a_4 a_5 \alpha\big) / \big((2a_3-a_4)(a_2a_4-a_1a_5)\big) \\
+  \delta &\to \big(-a_1^2 a_3+2 a_1 a_2 a_3+a_0 a_1 a_4-2 a_0 a_2 a_4+2 a_2 a_3 a_4-a_2 a_4^2-2 a_1 a_3 a_5+a_1 a_4 a_5 \\
+  &\phantom{\delta\to} +a_1^2 a_3 \alpha-2 a_1 a_2 a_3 \alpha-a_0 a_1 a_4 \alpha+2 a_0 a_2 a_4 \alpha\big) / \big((2a_3-a_4)(a_2a_4-a_1a_5)\big) \big\}\big\}
+ \end{align*}
+\end{small}
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+\begin{lstlisting}
+Solve[detM == 1, {$\alpha$}]
+\end{lstlisting}
+\begin{small}
+ \begin{align*}
+  \big\{\{ \alpha &\to 1 \} \\
+  \{\alpha &\to \big(-2 a_0 a_1 a_3 a_4+a_1^2 a_3 a_4 -4 a_2 a_3^2 a_4+2 a_0^2 a_4^2-a_0 a_1 a_4^2+4 a_2 a_3 a_4^2-a_2 a_4^3 \\
+  & +4 a_0 a_1 a_3 a_5-2 a_1^2 a_3 a_5+4 a_1 a_3^2 a_5-4 a_0^2 a_4 a_5+2 a_0 a_1 a_4 a_5 -4 a_1 a_3 a_4 a_5 \\
+  &+a_1 a_4^2 a_5\big) / \big(2 (a_1 a_3-a_0 a_4) (a_1 a_3-2 a_2 a_3-a_0 a_4+a_2 a_4+2 a_0 a_5-a_1 a_5)\big) \}\big\} \phantom{\alpha}
+ \end{align*}
+\end{small}
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+\section{The discriminant}
+
+The expression found for $\alpha$ above is a rational function on $a_0,\ldots,a_5$, even though we knew that the equation $\det M = 1$ is quadratic. Below we verify that the discriminant $\Delta$ of the equation $\det M = 1$ factors as a perfect square and so the numbers $\alpha,\ldots,\delta$ belong indeed to the field of fractions of the coefficients $a_0,\ldots,a_5$.
+
+\bigskip
+\bigskip
+
+\begin{lstlisting}
+a=SeriesCoefficient[detM-1,{$\alpha$,0,2}];
+b=SeriesCoefficient[detM-1,{$\alpha$,0,1}];
+c=SeriesCoefficient[detM-1,{$\alpha$,0,0}];
+\end{lstlisting}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+\begin{lstlisting}
+$\Delta$=Factor[b^2-4*a*c]
+\end{lstlisting}
+\begin{small}
+ \begin{equation*}
+  \Delta = \frac{\left(a_1^2 a_3 +a_2 (2 a_0+2 a_3-a_4) a_4-a_1 (2 a_2 a_3+a_0 a_4+2 a_3 a_5-a_4 a_5)\right)^2}{(2a_3-a_4)^2 (a_2a_4-a_1a_5)^2}
+ \end{equation*}
+\end{small}
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

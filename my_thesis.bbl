@@ -1,0 +1,202 @@
+\begin{thebibliography}{Ram16b}
+
+\bibitem[BB70]{BaumBott1970}
+P.~Baum and R.~Bott.
+\newblock On the zeros of meromorphic vector-fields.
+\newblock In {\em Essays on {T}opology and {R}elated {T}opics ({M}\'emoires
+  d\'edi\'es \`a {G}eorges de {R}ham)}, pages 29--47. Springer, New York, 1970.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=0261635}{MR:0261635}.
+
+\bibitem[BLL97]{BelliartLiousseLoray1997}
+M.~Belliart, I.~Liousse, and F.~Loray.
+\newblock Sur l'existence de points fixes attractifs pour les sous-groupes de
+  {${\rm Aut}({\bf C}_{,0})$}.
+\newblock {\em C. R. Acad. Sci. Paris S\'er. I Math.}, 324(4):443--446, 1997.
+\newblock
+  \href{http://dx.doi.org/10.1016/S0764-4442(97)80083-3}{DOI:10.1016/S0764-4442(97)80083-3}.
+
+\bibitem[Bru04]{Brunella2004b}
+Marco Brunella.
+\newblock {\em Birational geometry of foliations}.
+\newblock Publica\c c\~oes Matem\'aticas do IMPA. Instituto de Matem\'atica
+  Pura e Aplicada (IMPA), Rio de Janeiro, 2004.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=1948251}{MR:1948251}.
+
+\bibitem[CS82]{CamachoSad1982}
+C.~Camacho and P.~Sad.
+\newblock Invariant varieties through singularities of holomorphic vector
+  fields.
+\newblock {\em Ann. of Math. (2)}, 115(3):579--595, 1982.
+\newblock \href{http://dx.doi.org/10.2307/2007013}{DOI:10.2307/2007013}.
+
+\bibitem[GH94]{GriffithsHarris1994}
+Phillip Griffiths and Joseph Harris.
+\newblock {\em Principles of algebraic geometry}.
+\newblock Wiley Classics Library. John Wiley \& Sons, Inc., New York, 1994.
+\newblock
+  \href{http://dx.doi.org/10.1002/9781118032527}{DOI:10.1002/9781118032527}.
+
+\bibitem[GK17]{GoncharukKudryashov2017}
+N.~Goncharuk and Y.~Kudryashov.
+\newblock Bounded limit cycles of polynomial foliations of {$\mathbb{C}^2$}.
+\newblock {\em Bull. Braz. Math. Soc. (N.S.)}, 48(1):63--83, 2017.
+\newblock
+  \href{http://dx.doi.org/10.1007/s00574-016-0005-9}{DOI:10.1007/s00574-016-0005-9}.
+
+\bibitem[GS]{Macaulay2}
+Daniel~R. Grayson and Michael~E. Stillman.
+\newblock Macaulay2, a software system for research in algebraic geometry.
+\newblock Available at
+  \href{http://www.math.uiuc.edu/Macaulay2/}{http://www.math.uiuc.edu/Macaulay2/}.
+
+\bibitem[Gui04]{Guillot2004}
+A.~Guillot.
+\newblock Un th\'eor\`eme de point fixe pour les endomorphismes de l'espace
+  projectif avec des applications aux feuilletages alg\'ebriques.
+\newblock {\em Bull. Braz. Math. Soc. (N.S.)}, 35(3):345--362, 2004.
+\newblock
+  \href{http://dx.doi.org/10.1007/s00574-004-0018-7}{DOI:10.1007/s00574-004-0018-7}.
+
+\bibitem[HV62]{HudaiVerenov1962}
+M.~G. Huda\u\i~Verenov.
+\newblock A property of the solutions of a differential equation.
+\newblock {\em Mat. Sb. (N.S.)}, 56 (98):301--308, 1962.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=0147699}{MR:0147699}.
+
+\bibitem[Ily78]{Ilyashenko1978}
+Yu.~S. Ilyashenko.
+\newblock Topology of phase portraits of analytic differential equations on a
+  complex projective plane.
+\newblock {\em Trudy Sem. Petrovsk.}, (4):83--136, 1978.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=524528}{MR:524528}.
+
+\bibitem[IM11]{IlyashenkoMoldavskis2011}
+Yu.~S. Ilyashenko and V.~Moldavskis.
+\newblock Total rigidity of generic quadratic vector fields.
+\newblock {\em Mosc. Math. J.}, 11(3):521--530, 630, 2011.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=2894428}{MR:2894428}.
+
+\bibitem[KR]{NoIndexTheorems}
+Y.~Kudryashov and V.~Ram\'{i}rez.
+\newblock There are no new index theorems for generic quadratic vector fields
+  on $\mathbb{C}^2$.
+\newblock {\em In preparation}.
+
+\bibitem[L{in}12]{LinsNeto2012}
+A.~L{ins Neto}.
+\newblock Fibers of the {B}aum-{B}ott map for foliations of degree two on
+  {${\mathbb{P}}^2$}.
+\newblock {\em Bull. Braz. Math. Soc. (N.S.)}, 43(1):129--169, 2012.
+\newblock
+  \href{http://dx.doi.org/10.1007/s00574-012-0008-0}{DOI:10.1007/s00574-012-0008-0}.
+
+\bibitem[LP57]{PetrovskiiLandis1957}
+E.~M. Landis and I.~G. Petrovski{\u\i}.
+\newblock On the number of limit cycles of the equation
+  {$dy/dx=P(x,y)/Q(x,y)$}, where {$P$} and {$Q$} are polynomials.
+\newblock {\em Mat. Sb. N.S.}, 43(85):149--168, 1957.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=0089968}{MR:0089968}.
+
+\bibitem[LSS98]{LinsNetoSadScardua1998}
+A.~L{ins Neto}, P.~Sad, and B.~Sc{\'a}rdua.
+\newblock On topological rigidity of projective foliations.
+\newblock {\em Bull. Soc. Math. France}, 126(3):381--406, 1998.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=1682801}{MR:1682801}.
+
+\bibitem[Mar03]{Marin2003}
+D.~Mar{\'{\i}}n.
+\newblock Moduli spaces of germs of holomorphic foliations in the plane.
+\newblock {\em Comment. Math. Helv.}, 78(3):518--539, 2003.
+\newblock
+  \href{http://dx.doi.org/10.1007/s00014-003-0771-z}{DOI:10.1007/s00014-003-0771-z}.
+
+\bibitem[Nak94]{Nakai1994}
+I.~Nakai.
+\newblock Separatrices for nonsolvable dynamics on {${\bf C},0$}.
+\newblock {\em Ann. Inst. Fourier (Grenoble)}, 44(2):569--599, 1994.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=1296744}{MR:1296744}.
+
+\bibitem[Pya00]{Pyartli2000}
+A.~S. Pyartli.
+\newblock Rational differential equations with commutative monodromy group at
+  infinity.
+\newblock {\em Tr. Mosk. Mat. Obs.}, 61:75--106, 2000.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=1911688}{MR:1911688}.
+
+\bibitem[Pya06]{Pyartli2006}
+A.~S. Pyartli.
+\newblock Quadratic vector fields on {$\mathbb{C}{\rm P}^2$} with a solvable
+  monodromy group at infinity.
+\newblock {\em Tr. Mat. Inst. Steklova}, 254(Nelinein. Anal. Differ.
+  Uravn.):130--161, 2006.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=2301002}{MR:2301002}.
+
+\bibitem[Ram14]{StrongTopoInvariance}
+V.~Ram\'{i}rez.
+\newblock Strong topological invariance of the monodromy group at infinity for
+  quadratic vector fields.
+\newblock {\em J. Singul.}, 9:193--202, 2014.
+\newblock
+  \href{http://dx.doi.org/10.5427/jsing.2014.9n}{DOI:10.5427/jsing.2014.9n}.
+
+\bibitem[Ram16a]{TwinVectorFields}
+V.~Ram\'{i}rez.
+\newblock Twin vector fields and independence of spectra for quadratic vector
+  fields.
+\newblock {\em J. Dynam. Control Syst.}, pages 1--11, 2016.
+\newblock
+  \href{http://dx.doi.org/10.1007/s10883-016-9344-5}{DOI:10.1007/s10883-016-9344-5}.
+
+\clearpage
+\bibitem[Ram16b]{UtmostRigidity}
+V.~Ram\'{i}rez.
+\newblock The utmost rigidity property for quadratic foliations on
+  $\mathbb{P}^2$ with an invariant line.
+\newblock {\em Bol. Soc. Mat. Mex.}, pages 1--55, 2016.
+\newblock
+  \href{http://dx.doi.org/10.1007/s40590-016-0127-5}{DOI:10.1007/s40590-016-0127-5}
+  \href{http://arxiv.org/abs/1410.5840}{arXiv:1410.5840v2}.
+
+\bibitem[Ram16c]{WoodsHole}
+V.~Ram\'{i}rez.
+\newblock The woods hole trace formula and indices for vector fields and
+  foliations on $\mathbb{C}^2$.
+\newblock {\em \normalfont
+  \href{http://arxiv.org/abs/1608.05321}{arXiv:1608.05321v1} [math.CV]}, 2016.
+
+\bibitem[Shc84]{Shcherbakov1984}
+A.~A. Shcherbakov.
+\newblock Topological and analytic conjugation of noncommutative groups of
+  germs of conformal mappings.
+\newblock {\em Trudy Sem. Petrovsk.}, (10):170--196, 238--239, 1984.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=778885}{MR:778885}.
+
+\bibitem[SRO98]{ShcherbakovRosalesOrtiz1998}
+A.~A. Shcherbakov, E.~R{osales-Gonz{\'a}lez}, and L.~O{rtiz-Bobadilla}.
+\newblock Countable set of limit cycles for the equation $dw/dz=$
+  {$P_n(z,w)/Q_n(z,w)$}.
+\newblock {\em J. Dynam. Control Systems}, 4(4):539--581, 1998.
+\newblock
+  \href{http://dx.doi.org/10.1023/A:1021819201777}{DOI:10.1023/A:1021819201777}.
+
+\bibitem[Suw98]{Suwa1998}
+Tatsuo Suwa.
+\newblock {\em Indices of vector fields and residues of singular holomorphic
+  foliations}.
+\newblock Actualit\'es Math\'ematiques. [Current Mathematical Topics]. Hermann,
+  Paris, 1998.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=1649358}{MR:1649358}.
+
+\bibitem[TMS13]{TeymuriMafraScardua2013}
+M.~T{eymuri Garakani}, A.~Mafra, and B.~Sc{\'a}rdua.
+\newblock On topological rigidity of phase-portraits in the complex plane.
+\newblock {\em Bol. Soc. Mat. Mexicana (3)}, 19(1):65--83, 2013.
+\newblock \href{http://www.ams.org/mathscinet-getitem?mr=3097943}{MR:3097943}.
+
+\bibitem[WR]{Mathematica9}
+Inc. Wolfram~Research.
+\newblock {{\sl Mathematica}, Version 9.0, Champaign, IL (2012)}.
+\newblock
+  \href{http://www.wolfram.com/mathematica/}{www.wolfram.com/mathematica}.
+
+\end{thebibliography}

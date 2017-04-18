@@ -7,7 +7,6 @@ valente.sty.backup
 my_thesis.tex.backup
 my_thesis.dvi
 my_thesis.aux
-my_thesis.bbl
 my_thesis.blg
 my_thesis.lof
 my_thesis.log
@@ -15,5 +14,12 @@ my_thesis.lot
 my_thesis.out
 my_thesis.pdf
 my_thesis.toc
+my_thesis.bbl.backup
+my_thesis.bcf
+my_thesis.run.xml
 sampleThesis.bib
 sampleThesis.tex
+Appendices/M2code.tex.backup
+Appendices/twins.tex.backup
+
+
