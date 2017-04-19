@@ -675,7 +675,7 @@ This gives the equation claimed in Theorem \ref{thm:hiddenRelation}
  
  Let us now take into account the hidden identity (\ref{eq:hiddenRelationBis}). This equation allows us to solve for $\Lambda=\sigma_3(\lambda)$, up to a finite ambiguity coming from the two possible roots of the equation. For each possible value of $\sigma_3(\lambda)$, we can recover the value of $\sigma_2(\lambda)$ from (\ref{eq:sigma2BySigma3}). Having specified the values of $\sigma_1(\lambda),\sigma_2(\lambda),\sigma_3(\lambda)$, we can recover the exact value of $\lambda_1,\lambda_2,\lambda_3$, up to permutations of the numbering. 
  
- Taking into account the hidden relation allows us to recover the whole extended spectra of $v$, up to finite ambiguity. In fact, we don't know if we recovered the spectra of $v$ or of its twin, but this would have been impossible without the new relation. We conclude that (\ref{eq:hiddenRelationBis}) is independent from (\ref{eq:firstEJ1})--(\ref{eq:CS}).
+ Taking into account the hidden relation allows us to recover the whole extended spectra of $v$, up to finite ambiguity. In fact, we don't know if we recovered the extended spectra of $v$ or of its twin, but this would have been impossible without the new relation. We conclude that (\ref{eq:hiddenRelationBis}) is independent from (\ref{eq:firstEJ1})--(\ref{eq:CS}).
 \end{proof}
 
 Propositions \ref{prop:descriptionF} and \ref{prop:independence} conclude the proof of Theorem \ref{thm:hiddenRelation}.
@@ -689,7 +689,7 @@ The theorems we previously knew that relate the extended spectra of a polynomial
 
 It was proved in \cite{WoodsHole} that all four classical relations can be realized as particular cases of the so-called \textit{Woods Hole trace formula}, also known as the \textit{Atiyah-Bott fixed point theorem} (a generalization of the Lefschetz fixed point theorem due to Atiyah and Bott in the complex analytic case, and to Verdier in the algebraic case), and it was expected that the missing hidden relation would also be of this type. This is not the case. As it will be shown in this section, there are no more index theorems that relate the extended spectra other than those which can derived from the classical ones.
 
-An index ought to be a number we assign to an isolated singularity of a vector field, foliation, space or map. This index should only depend on the local behavior of our geometric object around such singular point. Moreover, this index should be invariant under analytic equivalence.
+An index is a number we can coherently assign to each isolated singularity of a vector field, foliation, space or map. This index should only depend on the local behavior of our geometric object around such singular point. Moreover, this index should be invariant under analytic equivalence.
 
 \begin{remark}
  An index theorem for meromorphic vector fields on $\CP^2$ should be such that the index at a generic singularity is \textit{a rational function on the spectrum}. Non-degeneracy of the singularity guarantees that the determinant $d$ of the linearization does not vanish, but we may assume no other algebraic condition on the pair $(t,d)$. This suggest that the index would in fact belong to the ring $\C[t,d,d^{-1}]$.
@@ -698,16 +698,16 @@ An index ought to be a number we assign to an isolated singularity of a vector f
 Indeed, we know from Poincar\'{e} that a \textit{hyperbolic} singularity of a planar vector field is analytically linearizable. Analytic invariance of the index means that the index cannot depend on anything but the spectra. 
 
 \begin{proposition}\label{prop:expectedIndex}
- An index theorem for generic polynomial vector fields of degree $n$ on $\C^2$ should be of the following form:
+ An index theorem for generic polynomial vector fields of degree $n$ on $\C^2$ ought to be of the following form:
   \[ \sum_{k=1}^{n^2} \operatorname{ind}_{\C^2}(v,p_k) + \sum_{j=1}^{n+1} \operatorname{ind}_{\mathcal{L}}(\F_v,q_j) = L(n), \]
- where $\operatorname{ind}_{\C^2}(v,p_k) $ is a rational function on the spectrum of $Dv(p_k)$, $\operatorname{ind}_{\mathcal{L}}$ is a rational function on the characteristic number of $q_k$ and $L(n)$ is a number that depends only on the degree $n$.
+ where $\operatorname{ind}_{\C^2}(v,p_k) $ is a rational function on the spectrum of $Dv(p_k)$, $\operatorname{ind}_{\mathcal{L}}(\F_v,q_j)$ is a rational function on the characteristic number $\lambda_k$ of $q_k$, and $L(n)$ is a number that depends only on the degree $n$.
 \end{proposition}
 
 Note that in particular the above equation may be rewritten as 
  \begin{equation}\label{eq:R=r} 
   R(t;d) = r(\lambda), 
  \end{equation}
-where $R$ is a rational function on the finite spectra $\{(t_k,d_k)\}$, and $r$ is a rational \textit{symmetric} function on the characteristic numbers at infinity $\{\lambda_j\}$. Moreover, all classical relations (\ref{eq:firstEJ1})--(\ref{eq:CS}) are all of this form.
+where $R$ is a rational function on the finite spectra $\{(t_k,d_k)\}$, and $r$ is a rational \textit{symmetric} function on the characteristic numbers at infinity $\{\lambda_j\}$. Note that indeed the classical relations (\ref{eq:firstEJ1})--(\ref{eq:CS}) are all of this form.
 
 
 \subsection{Lack of new index theorems}
@@ -730,7 +730,7 @@ We shall prove that any equation on $X$ of the form $r(\lambda)=r(\lambda')$ can
  It can be easily shown that the projection of the image of the moduli map $\operatorname{Im}\,\mathcal{M}\subset\C^6\times\C$ on the first component $\C^6$ is dense. This implies that the map $\operatorname{Spec}\colon\V_2\to\C^6$ that assigns to a generic vector field the spectra $(t_1,d_1,\ldots,t_3,d_3)$ is a dominant map (this is also proved in \cite{TwinVectorFields}). This implies that there are no non-trivial polynomials that vanish on every tuple $(t_1,d_1,\ldots,t_3,d_3)$. In particular, $\tilde{R}=0$ for every generic vector field $v$ implies $\tilde{R}\equiv 0$. 
 \end{proof}
 
-Let $X$ be the variety defined as the affine closure of the set $\mathcal{U}$ of triples $(\lambda,\lambda')\in\C^6$ such that there exist twin vector fields $v,v'$ realizing the characteristic numbers at infinity $\lambda$ and $\lambda'$, respectively.
+Let $X$ be the variety defined as the affine closure of the set of triples $(\lambda,\lambda')\in\C^6$ such that there exist twin vector fields $v,v'$ realizing the characteristic numbers at infinity $\lambda$ and $\lambda'$, respectively.
 
 Note that any pair $(\lambda,\lambda')$ coming from twin vector fields must satisfy the equation imposed by the Camacho-Sad theorem: $\sigma_1(\lambda)=\sigma_1(\lambda')=1$. Moreover, because $v$ and $v'$ are twins, the contribution of the Baum-Bott indices of the singularities of $v$ and $v'$ over the affine part is the same. Hence, also the contribution of the singular points at infinity must agree. From (\ref{eq:sigma2BySigma3}) it follows that
  \begin{equation}\label{eq:equalBB}
