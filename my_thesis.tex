@@ -111,7 +111,7 @@ The origins of the theory of holomorphic foliations trace back to the beginning 
 %
 The brilliant insight of Poincar\'{e} was that differential equations belong not only to the realm of analysis, but also to geometry. For example, providing a non-autonomous differential equation of the form $\displaystyle\frac{dx}{dt}=f(x,t)$ is equivalent to giving a vector field, a much more geometric object, of the form
  \[ v = f(x,t)\frac{\partial}{\partial x} + \frac{\partial}{\partial t}, \qquad (x,t)\in U\subset\R^2, \]
-in some appropriate open set $U$. A solution to the given differential equation corresponds to a smooth curve $s\mapsto\varphi(s)$ that is everywhere tangent to the vector field $v$. Under this philosophy, Poincar\'{e} made an exhaustive use of geometric methods to derive geometric properties of the solutions. Particularly, Poincar\'{e} set himself to study of systems of differential equations of the form 
+in some appropriate open set $U$. A solution to the given differential equation corresponds to a smooth curve $s\mapsto\varphi(s)$ that is everywhere tangent to the vector field $v$. Under this philosophy, Poincar\'{e} made an exhaustive use of geometric methods to derive geometric properties of the solutions. Particularly, Poincar\'{e} set himself to study systems of differential equations of the form 
 \begin{equation}\label{preface:eq:1}
  \frac{dx}{dt}=P(x,y), \quad \frac{dy}{dt}=Q(x,y),
 \end{equation}
@@ -124,22 +124,22 @@ In 1900, during the International Congress of Mathematicians, Hilbert included i
 \bigskip
 \begin{quote}
 \singlespacing
- What can be said about the maximal number and position of Poincar\'{e} boundry cycles (\textit{cycles limites}) for a differential equation of the first order of the form $\frac{dy}{dx}=\frac{Q}{P}$, where $P$ and $Q$ are $n^{\text{th}}$ degree polynomials in $x$ and $y$?
+ What can be said about the maximal number and position of Poincar\'{e} limit cycles (\textit{cycles limites}) for a differential equation of the first order of the form $\frac{dy}{dx}=\frac{Q}{P}$, where $P$ and $Q$ are $n^{\text{th}}$ degree polynomials in $x$ and $y$?
 \end{quote}
 
 \noindent This question, which is the second part of Hilbert's $16^{\text{th}}$ problem, remains open--even in the simplest non-trivial case: that of quadratic polynomials.
 
-The study of \textit{complex} vector fields goes back to Poincar\'{e} and Dulac, yet a huge development took place towards the end of the 1950's, when Russian mathematicians Petrovskii and Landis published a paper claiming to have a complete solution to Hilbert's $16^{\text{th}}$ problem \cite{PetrovskiiLandis1957}. The strategy in this paper is to extend equation (\ref{preface:eq:1}) to the complex domain. In such extension the solutions to the equation define, outside the set of equilibrium points
+The study of \textit{complex} vector fields goes back to Poincar\'{e} and Dulac, yet a huge development took place towards the end of the 1950's, when Russian mathematicians Petrovskii and Landis published a paper claiming to have a complete solution to Hilbert's $16^{\text{th}}$ problem \cite{PetrovskiiLandis1957}. The strategy in this paper is to extend equation (\ref{preface:eq:1}) to the complex domain. In such an extension the solutions to the equation define, outside the set of equilibrium points
  \[ \Sigma = \set{(x,y)\in\C^2}{P(x,y)=Q(x,y)=0}, \]
 complex analytic curves locally parametrized by a complex variable $t\in\C$. In this way, the solutions decompose $\C^2\setminus\Sigma$ into a disjoint union of curves. Moreover, by the flow-box theorem, this partition locally looks like the standard partition of the bidisk $\mathbb{D}\times\mathbb{D}$ by parallel horizontal slices $\mathbb{D}\times\{y\}$. These are precisely the defining properties of what we know as a \textit{singular holomorphic foliation}. The integral curves of the equation are called the \textit{leaves} of the foliation and $\Sigma$ its \textit{singular set}. Many of the concepts in the theory of real differential equations have a straightforward complex analog. In particular, the concept of a limit cycle can be naturally extended to the complex domain. The Petrovskii-Landis strategy consisted of bounding the number of complex limit cycles that may appear in the \textit{complexification} of equation (\ref{preface:eq:1}), thus obtaining a bound on the number of real limit cycles. 
 
-In the middle of the 1960's Ilyashenko and Novikov found a crucial gap in the solution to Hilbert's $16^{\text{th}}$ problem, which completely invalidated the results claimed by Petrovskii and Landis. The history of this still-open problem has certainly been dramatic, yet it has inspired a great development in the geometric theory of differential equations and marked a start point for the study of complex polynomial foliations on $\C^2$.
+In the middle of the 1960's Ilyashenko and Novikov found a crucial gap in the solution to Hilbert's $16^{\text{th}}$ problem, which completely invalidated the results claimed by Petrovskii and Landis. The history of this still-open problem has certainly been dramatic, yet it has inspired a great development of the geometric theory of differential equations and marked a start point for the study of complex polynomial foliations on $\C^2$.
 
 A crucial further development of the theory was later achieved by Hudai-Verenov and Ilyashenko \cite{HudaiVerenov1962,Ilyashenko1978}, who proved that the \textit{generic} properties of complex polynomial foliations are strikingly different than those of real polynomial foliations. In particular, generic polynomial foliations have the following properties:
 \begin{itemize}[topsep=0pt,noitemsep]
  \item Rigidity: Topological equivalence is extremely rare and closely related to analytic equivalence.
  \item Density of solutions: Every leaf on $\C\setminus\Sigma$ is everywhere dense on $\C^2$.
- \item Infinite amount of limit cycles: There are countably many homologically independent complex limit cycles.
+ \item Infinite number of limit cycles: There are countably many homologically independent complex limit cycles.
 \end{itemize}
 The meaning of the word ``generic'' above is something that has been refined thanks to many authors throughout the years (eg.~\cite{Shcherbakov1984,Nakai1994,LinsNetoSadScardua1998}) and is now taken to mean that there exists an open and dense set in the space of all polynomial foliations of a fixed degree (defined by either algebraic or analytic conditions) where every foliation from that set satisfies the above properties.
 
@@ -156,7 +156,7 @@ First, we provide two completely independent results that provide necessary and 
  Two generic quadratic vector fields are orbitally affine equivalent if and only if their holonomy groups at infinity are analytically conjugate.
 \end{prefthm}
 
-Second, the fact that Theorem B implies that foliations defined by generic quadratic vector fields have the strongest imaginable rigidity property. This next theorem significantly improves, in the quadratic case, the previously known results about topological rigidity of polynomial foliations.
+Second, Theorem B implies that foliations defined by generic quadratic vector fields have the strongest imaginable rigidity property. This next theorem significantly improves, in the quadratic case, the previously known results about topological rigidity of polynomial foliations.
 
 \begin{prefthm}
 Two foliations defined by generic quadratic vector fields are topologically equivalent if and only if they are affine equivalent.  
@@ -255,7 +255,7 @@ The line at infinity is given by $\mathcal{L}=\{z=0\}$, and the singular point o
 
 \subsection{The holonomy group}
 
-Let $\F$ be a foliation from the class $\A_2$ and denote by $\LF$ its leaf at infinity (i.e.~the line punctured at the singularities). Given a base point $b\in\LF$ and the germ of a cross section $(\Gamma,b)$, transversal to the leaves of $\F$, we can perform the following standard construction: for any loop $\gamma$ on $\LF$ based at $b$, we follow the leaves of $\F$ along some small tubular neighborhood of the image of $\gamma$ to obtain the germ of a holomorphic return map $\Delta_\gamma\colon (\Gamma,b)\to(\Gamma,b)$. This germ, the \textit{holonomy} of $\F$ along $\gamma$, depends only on the homotopy class of $\gamma$ in the fundamental group $\pi_1(\LF,b)$. Moreover, the map $\Delta\colon\pi_1(\LF,b)\to \operatorname{Diff}\,(\Gamma,b)$ is a group anti-homomorphism. Fixing an analytic parametrization $\Diff\to \operatorname{Diff}\,(\Gamma,b)$, we will write $\Delta\colon\pi_1(\LF,b)\to\Diff$ and define the \textit{holonomy group at infinity} as $\GF=\operatorname{Im}\,\Delta\subset\Diff$. This group is canonically defined up to conjugacy in $\Diff$.
+Let $\F$ be a foliation from the class $\A_2$ and denote by $\LF$ its leaf at infinity (i.e.~the line punctured at the singularities). Given a base point $b\in\LF$ and the germ of a cross section $(\Gamma,b)$, transversal to the leaves of $\F$, we can perform the following standard construction: for any loop $\gamma$ on $\LF$ based at $b$, we follow the leaves of $\F$ along some small tubular neighborhood of the image of $\gamma$ to obtain the germ of a holomorphic return map $\Delta_\gamma\colon (\Gamma,b)\to(\Gamma,b)$. This germ, the \textit{holonomy} of $\F$ along $\gamma$, depends only on the homotopy class of $\gamma$ in the fundamental group $\pi_1(\LF,b)$. Moreover, the map $\Delta\colon\pi_1(\LF,b)\to \operatorname{Diff}\,(\Gamma,b)$ is a group antihomomorphism (i.e.~a homomorphism but it reverses the order of multiplication). Fixing an analytic parametrization $\Diff\to \operatorname{Diff}\,(\Gamma,b)$, we will write $\Delta\colon\pi_1(\LF,b)\to\Diff$ and define the \textit{holonomy group at infinity} as $\GF=\operatorname{Im}\,\Delta\subset\Diff$. This group is canonically defined up to conjugacy in $\Diff$.
 
 \begin{definition}\label{def:conjugateholonomy}
  We say that two foliations $\F$ and $\Ft$ from the class $\A_2$ have \textit{analytically conjugate holonomy groups} whenever there exist the germ of a conformal map $h$, and a geometric isomorphism $H_{\ast}\colon \pi_1(\LF,b)\to\pi_1(\LFt,\tilde{b})$ that conjugate the holonomy in the following way:
@@ -302,7 +302,7 @@ We present two sets of invariants that serve as moduli of analytic classificatio
 \end{theorem}
 
 \begin{theorem}[\cite{UtmostRigidity}]\label{thm:moduliHolonomy}
- Two generic quadratic vector fields are orbitally affine equivalent if and only if their holonomy groups are infinity are analytically conjugate.
+ Two generic quadratic vector fields are orbitally affine equivalent if and only if their holonomy groups at infinity are analytically conjugate.
 \end{theorem}
 
 
@@ -390,7 +390,7 @@ Despite the length of the equation, we have used its explicit expression to show
 
 Consider a degree $n$ polynomial vector field on $\C^2$ having only isolated singularities (both in the affine part and on the line at infinity). We have defined in Section \ref{sec:analyticInvariants} the \textit{extended spectra of singularities} to be the collection of the spectra of the linearization matrices of each singular point over the affine part together with all the characteristic numbers at infinity. This collection consists of $2n^2+n+1$ complex numbers, and is invariant under affine equivalence of vector fields.
 
-In this chapter we are going to discuss the four classical index theorems that constrain the extended spectra. After this, we will specialize to the quadratic case and explain up to what extent the spectra determines the vector field (up to affine equivalence). We conclude by describing the last \textit{hidden relation} among the spectra and proving that this equation does not come from an index theorem. In fact, there are no more index theorems constraining the extended spectra of quadratic vector fields, other than the ones described above.
+In this chapter we are going to discuss the four classical index theorems that constrain the extended spectra. After this, we will specialize to the quadratic case and explain to what extent the spectra determines the vector field (up to affine equivalence). We conclude by describing the last \textit{hidden relation} among the spectra and proving that this equation does not come from an index theorem. In fact, there are no more index theorems constraining the extended spectra of quadratic vector fields, other than the ones described above.
 
 
 % \section{The classical index theorems}
@@ -637,7 +637,7 @@ The moduli map is a regular map between affine spaces. This map induces a ring m
  The regular map $\mathcal{M}\colon\mathbb{A}^6\to\mathbb{A}^7$ induces a ring map $\mathcal{M}^*\colon S\to R$. The closure of the image of $\mathcal{M}$ is the subvariety of $V\subset\mathbb{A}^7$ defined by the ideal $I=\operatorname{Ker}\,\mathcal{M}^*$. Moreover, since $V$ is a hypersurface in $\mathbb{A}^7$, $I$ is an ideal generated by a single polynomial $F\in \C[t_1,\ldots,t_3,d_1,\ldots,d_3,g]$.
 \end{remark}
 
-In order to find the polynomial $F$, we need only ask a computer algebra software to compute a basis for the ideal $I$. This can easily be done by any software that handles Gr\"{o}bner bases. We have done this using both \textit{Macaulay2} and \textit{CoCoA}, the resulting generator is the same. The explicit expression of this polynomial may be found in Appendix \ref{chpt:appendix:hiddenRelation}.
+In order to find the polynomial $F$, we need only ask a computer algebra system to compute a basis for the ideal $I$. This can easily be done by any software that handles Gr\"{o}bner bases. We have done this using both \textit{Macaulay2} and \textit{CoCoA}, the resulting generator is the same. The explicit expression of this polynomial may be found in Appendix \ref{chpt:appendix:hiddenRelation}.
 
 \begin{proposition}\label{prop:descriptionF}
  The ideal $I=\operatorname{Ker}\,\mathcal{M}^*$ is generated by a single polynomial $F=A(t;d)\,g^2+B(t;d)\,g+C(t;d)$. This polynomial has the following properties:
@@ -667,7 +667,7 @@ This gives the equation claimed in Theorem \ref{thm:hiddenRelation}
 \end{proposition}
 
 \begin{proof}
- Suppose we are the value of the spectra $\{(t_k,d_k)\}$ for $k=1,2,3$ of some vector field $v\in\V_2$. The Euler-Jacobi relations allow us to solve for $(t_4,d_4)$. Let us denote by $\sigma_j(\lambda)$ the $j$-th elementary symmetric polynomial on $\lambda=(\lambda_1,\lambda_2,\lambda_3)$. The Camacho-Sad relation tells us that $\sigma_1(\lambda)=1$, and the Baum-Bott equation implies that
+ Suppose we have the value of the spectra $\{(t_k,d_k)\}$ for $k=1,2,3$ of some vector field $v\in\V_2$. The Euler-Jacobi relations allow us to solve for $(t_4,d_4)$. Let us denote by $\sigma_j(\lambda)$ the $j$-th elementary symmetric polynomial on $\lambda=(\lambda_1,\lambda_2,\lambda_3)$. The Camacho-Sad relation tells us that $\sigma_1(\lambda)=1$, and the Baum-Bott equation implies that
   \begin{equation}\label{eq:sigma2BySigma3}
    \frac{\sigma_2(\lambda)}{\sigma_3(\lambda)} = -\sum_{k=1}^4 \frac{t_k^2}{d_k} + 9 .
   \end{equation}
@@ -692,11 +692,12 @@ It was proved in \cite{WoodsHole} that all four classical relations can be reali
 An index is a number we can coherently assign to each isolated singularity of a vector field, foliation, space or map. This index should only depend on the local behavior of our geometric object around such singular point. Moreover, this index should be invariant under analytic equivalence.
 
 \begin{remark}
- An index theorem for meromorphic vector fields on $\CP^2$ should be such that the index at a generic singularity is \textit{a rational function on the spectrum}. Non-degeneracy of the singularity guarantees that the determinant $d$ of the linearization does not vanish, but we may assume no other algebraic condition on the pair $(t,d)$. This suggest that the index would in fact belong to the ring $\C[t,d,d^{-1}]$.
+ An index theorem for meromorphic vector fields on $\CP^2$ should be such that the index at a generic singularity is \textit{a rational function on the spectrum}. Non-degeneracy of the singularity guarantees that the determinant $d$ of the linearization does not vanish, but we may assume no other algebraic condition on the pair $(t,d)$. This suggests that the index would in fact belong to the ring $\C[t,d,d^{-1}]$.
 \end{remark}
  
-Indeed, we know from Poincar\'{e} that a \textit{hyperbolic} singularity of a planar vector field is analytically linearizable. Analytic invariance of the index means that the index cannot depend on anything but the spectra. 
+Indeed, we know from Poincar\'{e} that a \textit{hyperbolic} singularity of a planar vector field is analytically linearizable (in dimension two a hyperbolic spectrum always lies on the Poincar\'{e} domain). Analytic invariance of the index means that the index cannot depend on anything but the spectra. 
 
+% \todo{Merge this into the above remark} %%Warning
 \begin{proposition}\label{prop:expectedIndex}
  An index theorem for generic polynomial vector fields of degree $n$ on $\C^2$ ought to be of the following form:
   \[ \sum_{k=1}^{n^2} \operatorname{ind}_{\C^2}(v,p_k) + \sum_{j=1}^{n+1} \operatorname{ind}_{\mathcal{L}}(\F_v,q_j) = L(n), \]
