@@ -1,26 +1,48 @@
-#.gitignore file on My Thesis directory
+## .gitignore file on My Thesis directory
 
+
+### Do not track final output
+*.pdf
+*.ps
+
+
+### Cornell class
 cornell.cls.backup
 cornell.log
-ref-valente.bib.backup
-valente.sty.backup
-my_thesis.tex.backup
-my_thesis.dvi
-my_thesis.aux
-my_thesis.blg
-my_thesis.lof
-my_thesis.log
-my_thesis.lot
-my_thesis.out
-my_thesis.pdf
-my_thesis.toc
-my_thesis.bbl.backup
-my_thesis.bcf
-my_thesis.run.xml
-my_thesis.synctex.gz
 sampleThesis.bib
 sampleThesis.tex
-Appendices/M2code.tex.backup
-Appendices/twins.tex.backup
 
 
+### TeX ###
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+# *.bbl
+*.blg
+*.bcf
+*.xml
+
+## Synctex files
+*.synctex.gz
+
+## Kile backup files
+*.backup
+
+## Intermediate documents:
+*.dvi
+*-converted-to.*
+
+
+### Editor ###
+## Vim & Emacs temp files:
+.*sw[op]
+*~
+
+
+### Meld backups ###
+*.orig
