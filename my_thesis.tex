@@ -355,19 +355,19 @@ These are, respectively, the Euler-Jacobi equations, the Baum-Bott theorem and t
 
 Let's do a simple dimension count: on one hand, the space $\V_2$ has dimension 12 and the affine group $\Aff{2}{\C}$ is 6-dimensional. Therefore, the quotient (in the sens of Geometric Invariant Theory) $\V_2\sslash\Aff{2}{\C}$ has dimension 6. On the other hand, the extended spectra, which is of dimension 11, modulo the 4 equations above is a space of dimension 7. This gap in the dimensions implies that there must exist at least one more algebraic relation among these numbers. This \textit{hidden relation} was, until very recently, completely unknown. In order to describe this relation, let us introduce some notation.
 
-Let $v\in\V_2$ have singularities $p_1,\ldots,p_4$ on $\C^2$ and singular points at infinity $q_1,q_2,q_3$. Denote by $(t_k,d_k)$ the spectrum of $v$ at $p_k$, and by $\lambda_j$ the characteristic number of $q_j$. Denote by $\Lambda$ the product $\Lambda=\lambda_1\lambda_2\lambda_3$, and define $S$ to be the graded polynomial ring $S=\C[t_1,\ldots,t_4,d_1,\ldots,d_4]$, where the generators $t_k$ are of degree 1, and $d_k$ of degree 2.
+Let $v\in\V_2$ have singularities $p_1,\ldots,p_4$ on $\C^2$ and singular points at infinity $w_1,w_2,w_3$. Denote by $(t_k,d_k)$ the spectrum of $v$ at $p_k$, and by $\lambda_j$ the characteristic number of $w_j$. Denote by $\Lambda$ the product $\Lambda=\lambda_1\lambda_2\lambda_3$, and define $S$ to be the graded polynomial ring $S=\C[t_1,t_2,t_3,d_1,d_2,d_3]$, where the generators $t_k$ are of degree 1, and $d_k$ of degree 2. The variables $t_4$ and $d_4$ have been intentionally omitted (cf. Lemma \ref{lemma:3outOf4}).
 
 \begin{theorem}[\cite{NoIndexTheorems}]\label{thm:hiddenRelation}
- There exist symmetric polynomials $P_0,P_1,P_2\in S$, homogeneous (with respect to the grading of $S$) of degree 14, such that every generic quadratic vector field satisfies the following equation
+ There exist homogeneous polynomials $H_0,H_1,H_2\in S$ of degree 14, such that every generic quadratic vector field satisfies the following equation
   \begin{equation}\label{eq:hiddenRelation}
-   P_2(t;d)\,\Lambda^2+P_1(t;d)\,\Lambda+P_0(t;d)=0 .
+   H_2(t;d)\,\Lambda^2+H_1(t;d)\,\Lambda+H_0(t;d)=0 .
   \end{equation}
  Moreover, the above relation is independent from the identities (\ref{eq:firstEJ1})--(\ref{eq:CS}).
 \end{theorem}
 
-In collaboration with Yuri Kudryashov, we obtained this equation using computer algebra software. However, the polynomial $P_2\Lambda^2+P_1\Lambda+P_0$, which is irreducible, has a very long expression: it consists of approximately four-thousand monomials. The fact that the degree in $\Lambda$ is quadratic is closely related to the fact that generic quadratic vector fields have a unique twin. 
+In collaboration with Yuri Kudryashov, we obtained this equation using a computer algebra system. The polynomial $H=H_2\,\Lambda^2+H_1\,\Lambda+H_0$, which is irreducible, has a very long expression: it consists of 996 monomials. The fact that the degree in $\Lambda$ is quadratic is closely related to the fact that generic quadratic vector fields have a unique twin. 
 
-Despite the length of the equation, we have used its explicit expression to show that (\ref{eq:hiddenRelation}) does not come from an index theorem. In fact, we show that any possible ``index-theorem-like identity'' can be deduced from the classical index theorems, hence concluding the lack of existence of new index theorems that constrain the extended spectra of quadratic vector fields.
+Despite the length of the equation, we have used its explicit expression to show that (\ref{eq:hiddenRelation}) does not come from an index theorem. In fact, we show that any possible ``index-theorem-like identity'' can be deduced from the classical index theorems, hence concluding the lack of existence of new index theorems that constrain the extended spectra of quadratic vector fields. This claim is discussed in detail in Section \ref{subsec:indexTheory}, but it follows from the following theorem.
 
 \begin{theorem}[\cite{NoIndexTheorems}]\label{thm:noIndexTheorem}
  There exists no pair $(R,r)$ consisting of a rational function $R$ on $\C^8$ and a symmetric rational function $r$ on $\C^3$ with the property that every quadratic vector field with non-degenerate singularities satisfies the relation
@@ -419,7 +419,7 @@ A quadratic vector field $v$ having non-degenerate singularities $p_1,\ldots,p_{
 \begin{remark}
  The \textit{Euler-Jacobi indices} (each summand on the left hand sides of the above identities) should be understood as the \textit{residues} of the rational 2-forms
   \[ \frac{dx\wedge dy}{PQ}, \quad \text{and} \quad \frac{(\tr Dv)\,dx\wedge dy}{PQ} \]
- at the points $p_k$. The \textit{residue theorem} then implies the total sum is zero.
+ at the points $p_k$. The \textit{residue theorem} \cite[Chpt.~5, Sec.~1]{GriffithsHarris1994} then implies the total sum is zero.
 \end{remark}
 
 
@@ -562,10 +562,49 @@ Under this ``normal form'' we can immediately compute the explicit expressions f
  \end{align*}
 \end{lemma}
 
-\begin{lemma}\label{lemma:expressionLambda}
+
+\subsection{The product of the characteristic numbers at infinity}
+
+The map that assigns to each vector field its triple of characteristic numbers at infinity is not a rational map. However, as we will see below, the map that assigns to a vector field \textit{the product} of all characteristic numbers is rational. Let us state the result in its most general form.
+
+Consider a polynomial vector field $P(x, y)\frac{\partial}{\partial x}+Q(x, y)\frac{\partial}{\partial y}$ of degree $n$.
+In the coordinates $z=\frac 1x$, $w=\frac yx$, it takes the form
+\begin{equation*}
+ \frac{dz}{dw}=z\frac{\tilde P(z, w)}{w\tilde P(z, w) - \tilde Q(z, w)},
+\end{equation*}
+where $\tilde P(z, w)=z^nP\left( \frac 1z, \frac wz \right)$, $\tilde Q(z, w)=z^nQ\left( \frac 1z, \frac wz \right)$.
+In the generic case $w\tilde P(0, w)-\tilde Q(0, w)\not\equiv 0$, therefore
+\begin{equation} \label{eq:near-infty-sr}
+ \frac{dz}{dw}=z\frac{s(w)}{r(w)}+O(z^2),
+\end{equation}
+where $s(w)=\tilde P(0, w)$ and $r(w)=w\tilde P(0, w)-\tilde Q(0, w)$. By rescaling $P$ and $Q$ if necessary, we may assume $r(w)$ to be monic. Furthermore, we assume that $r(w)$ has $n+1$ distinct roots.
+
+From \eqref{eq:near-infty-sr} we see that the characteristic numbers $\lambda_k$ are the residues of the rational function $\frac{s(w)}{r(w)}$ at the zeros $w_k$ of its denominator, hence
+\begin{equation} \label{eq:formula-lambdas}
+ \lambda_k=\frac{s(w_k)}{r'(w_k)}.
+\end{equation}
+
+\begin{lemma} \label{lemma:Lambda-resultants}
+ In the settings introduced above, let $\Lambda=\prod_{k=1}^{n+1}\lambda_k$.
+ Then
+ \begin{equation} \label{eq:Lambda-resultants}
+  \Lambda=\frac{\Res(s, r)}{\Res(r', r)}.
+ \end{equation}
+\end{lemma}
+
+\begin{proof}
+ Multiplying \eqref{eq:formula-lambdas} for all $k$ we obtain the formula
+ \[
+  \Lambda = \frac{\prod s(w_k)}{\prod r'(w_k)}.
+ \]
+
+ The numerator in the above expression is the product of $s(w)$ at each of the roots of $r$, hence is given by the resultant $\Res(s,r)$.This equality holds since $r$ was chosen to be monic. Similarly, the denominator equals $\Res(r',r)$ and so we obtain \eqref{eq:Lambda-resultants}.
+\end{proof}
+
+\begin{corollary}\label{coro:expressionLambda}
  Let $\Lambda=\lambda_1\lambda_2\lambda_3$ denote the product of all characteristic numbers at infinity of some vector field $v$ as in Lemma \ref{lemma:normalizeSingularities}. In the generic case, $\Lambda$ can be computed as follows:
  \begin{equation}\label{eq:expressionLambda}
-  \Lambda = -27\,\frac{d_1d_2+d_2d_3+d_3d_1}{g(a)},
+  \Lambda = -\,\frac{d_1d_2+d_2d_3+d_3d_1}{g(a)},
  \end{equation}
  where $g(a)$ is given by
  \begin{align*}
@@ -574,17 +613,12 @@ Under this ``normal form'' we can immediately compute the explicit expressions f
   & -a_1^2a_4^2-18a_1a_2a_3a_4-12a_1a_3a_5^2+2a_1a_4^2a_5+27a_2^2a_3^2+18a_2a_3a_4a_5 \\
   & -4a_2a_4^3+4a_3a_5^3-a_4^2a_5^2.
  \end{align*}
-\end{lemma}
+\end{corollary}
 
 \begin{proof}
- In coordinates $z=\displaystyle\frac{1}{x}$, $w=\displaystyle\frac{y}{x}$ the foliation is given by 
-  \[ \frac{dz}{dw} = z\,\frac{s(w)}{r(w)} + O(z^2), \]
- where the roots $w_k$ of $r(w)$ are the singular points at infinity, and  $\lambda_k=\displaystyle\frac{s(w_k)}{r'(w_k)}$. We obtain the formula
-  \[ \Lambda = \frac{s(w_1)s(w_2)s(w_3)}{r'(w_1)r'(w_2)r'(w_3)}. \]
-  
- The numerator in the above expression is the product of $s(w)$ at each of the roots of $r$, hence is given by the resultant $\Res(s,r)$.  This is true since $r$ and $s$ are both monic polynomials. Taking into account that $r'$ has leading coefficient equal to $3$ and that $r$ is cubic, we obtain that the denominator equals $\frac{1}{27}\Res(r',r)$. A simple computation now shows that 
+Following Lemma \ref{lemma:Lambda-resultants}, a simple computation now shows that 
   \[ \Res(s,r)=-a_2\cdot f(a), \qquad \Res(r',r)=a_2\cdot g(a), \]
- where $f(a)$ is a polynomial in $a$ that can be verified to satisfy $f(a)=d_1d_2+d_2d_3+d_3d_1$ (where the expressions for $d_k$ are those in Lemma \ref{lemma:expressionsSpectra}) and $g(a)$ is given in the statement of the current lemma. We conclude that $\Lambda=-27\frac{f(a)}{g(a)}$ as claimed.
+ for some polynomials $f,g$ that we have computed explicitly. The expression for $g(a)$ is given in the statement of the corollary. The polynomial $f(a)$ turns out to satisfy the identity $f(a)=d_1d_2+d_2d_3+d_3d_1$ (where the expressions for $d_k$ are those in Lemma \ref{lemma:expressionsSpectra}). This identity can be easily verified, yet we do not have a geometric interpretation of it.
 \end{proof}
 
 \begin{remark}\label{rmk:determineLambdas}
@@ -596,8 +630,8 @@ Under this ``normal form'' we can immediately compute the explicit expressions f
 
 \begin{definition}\label{def:moduliMap}
 We will call \textit{moduli map} the polynomial map $\mathcal{M}\colon\C^6\to\C^7$ that takes 
-\[ (a_0,\ldots,a_5)\longmapsto (t_1,\ldots,t_3,d_1,\ldots,d_3,g(a)).  \]
-The explicit expression of $g(a)$ is given in Lemma \ref{lemma:expressionLambda}.
+\[ (a_0,\ldots,a_5)\longmapsto (t_1,t_2,t_3,d_1,d_2,d_3,g(a)).  \]
+The explicit expression of $g(a)$ is given in Corollary \ref{coro:expressionLambda}.
 \end{definition}
 
 Note that in virtue of Lemma \ref{lemma:3outOf4} and Remark \ref{rmk:determineLambdas}, the value of $\mathcal{M}(a)$ is enough to determine the precise value of the extended spectra of the vector field $v$ defined by the coefficients $a_0,\ldots,a_5$.
@@ -631,10 +665,10 @@ Theorem \ref{thm:moduliHolonomy} has the consequence that the space of possible 
 
 \subsection{Description of the hidden relation}\label{sec:descriptionHiddenRelation}
 
-The moduli map is a regular map between affine spaces. This map induces a ring map on the corresponding coordinate rings. These rings are $R=\C[a_0,\ldots,a_5]$ and $S=\C[t_1,\ldots,t_3,d_1,\ldots,d_3,g]$ respectively. We grade $S$ by declaring that the $t_k$ are of degree 1, $d_k$ of degree 2, and $g$ of degree 4. 
+The moduli map is a regular map between affine spaces. This map induces a ring map on the corresponding coordinate rings. These rings are $R=\C[a_0,\ldots,a_5]$ and $S=\C[t_1,t_2,t_3,d_1,d_2,d_3,g]$ respectively. We grade $S$ by declaring that the $t_k$ are of degree 1, $d_k$ of degree 2, and $g$ of degree 4. 
 
 \begin{remark}
- The regular map $\mathcal{M}\colon\mathbb{A}^6\to\mathbb{A}^7$ induces a ring map $\mathcal{M}^*\colon S\to R$. The closure of the image of $\mathcal{M}$ is the subvariety of $V\subset\mathbb{A}^7$ defined by the ideal $I=\operatorname{Ker}\,\mathcal{M}^*$. Moreover, since $V$ is a hypersurface in $\mathbb{A}^7$, $I$ is an ideal generated by a single polynomial $F\in \C[t_1,\ldots,t_3,d_1,\ldots,d_3,g]$.
+ The regular map $\mathcal{M}\colon\C^6\to\C^7$ induces a ring map $\mathcal{M}^*\colon S\to R$. The closure of the image of $\mathcal{M}$ is the subvariety of $V\subset\C^7$ defined by the ideal $I=\operatorname{Ker}\,\mathcal{M}^*$. Moreover, since $V$ is a hypersurface in $\C^7$, $I$ is an ideal generated by a single polynomial $F\in S$.
 \end{remark}
 
 In order to find the polynomial $F$, we need only ask a computer algebra system to compute a basis for the ideal $I$. This can easily be done by any software that handles Gr\"{o}bner bases. We have done this using both \textit{Macaulay2} and \textit{CoCoA}, the resulting generator is the same. The explicit expression of this polynomial may be found in Appendix \ref{chpt:appendix:hiddenRelation}.
@@ -649,18 +683,20 @@ In order to find the polynomial $F$, we need only ask a computer algebra system 
  \end{itemize}
 \end{proposition}
 
-By the definition of $g$ in Lemma \ref{lemma:expressionLambda}, in order to obtain the hidden relation we need only substitute
- \[ g=-27\frac{d_1d_2+d_2d_3+d_3d_1}{\Lambda} \]
+By the definition of $g$ in Corollary \ref{coro:expressionLambda}, in order to obtain the hidden relation we need only substitute
+ \[ g=-\frac{d_1d_2+d_2d_3+d_3d_1}{\Lambda} \]
 in $A(t;d)\,g^2+B(t;d)\,g+C(t;d)=0$ and multiply by $\Lambda^2$ to lift denominators. Explicitly, we have the following:
 \begin{align*} 
- P_0 &= 729(d_1d_2+d_2d_3+d_3d_1)^2A , \\
- P_1 &= -27(d_1d_2+d_2d_3+d_3d_1)B, \\
- P_2 &= C .
+ H_0 &= A(d_1d_2+d_2d_3+d_3d_1)^2 , \\
+ H_1 &= -B(d_1d_2+d_2d_3+d_3d_1), \\
+ H_2 &= C .
 \end{align*}
 This gives the equation claimed in Theorem \ref{thm:hiddenRelation}
  \begin{equation}\label{eq:hiddenRelationBis}
-  P_2(t;d)\,\Lambda^2+P_1(t;d)\,\Lambda+P_0(t;d)=0.
+  H_2(t;d)\,\Lambda^2+H_1(t;d)\,\Lambda+H_0(t;d)=0.
  \end{equation}
+ 
+Two alternative approaches of recovering the polynomial $H$ above are described in \cite{NoIndexTheorems}.
 
 \begin{proposition}\label{prop:independence}
  The identity (\ref{eq:hiddenRelationBis}) above is independent from the identities (\ref{eq:firstEJ1})--(\ref{eq:CS}) coming from the classical index theorems. 
@@ -681,7 +717,7 @@ This gives the equation claimed in Theorem \ref{thm:hiddenRelation}
 Propositions \ref{prop:descriptionF} and \ref{prop:independence} conclude the proof of Theorem \ref{thm:hiddenRelation}.
 
 
-\subsection{Index theory}
+\subsection{Index theory}\label{subsec:indexTheory}
 
 The study of indices and index theorems has been fundamental in the development of and geometry and topology. Theorems like the Poincar\'{e}-Hopf index theorem, the Gauss-Bonnet theorem or the Lefschetz fixed-point theorem are a few important examples. These \textit{local-to-global} theorems, which relate the local behavior of some geometric object around ``special'' points to some global invariant (usually measured in some cohomology space) are indeed powerful and fascinating.
 
@@ -689,20 +725,15 @@ The theorems we previously knew that relate the extended spectra of a polynomial
 
 It was proved in \cite{WoodsHole} that all four classical relations can be realized as particular cases of the so-called \textit{Woods Hole trace formula}, also known as the \textit{Atiyah-Bott fixed point theorem} (a generalization of the Lefschetz fixed point theorem due to Atiyah and Bott in the complex analytic case, and to Verdier in the algebraic case), and it was expected that the missing hidden relation would also be of this type. This is not the case. As it will be shown in this section, there are no more index theorems that relate the extended spectra other than those which can derived from the classical ones.
 
-An index is a number we can coherently assign to each isolated singularity of a vector field, foliation, space or map. This index should only depend on the local behavior of our geometric object around such singular point. Moreover, this index should be invariant under analytic equivalence.
+An index is a number we can coherently assign to each isolated singularity of a vector field, foliation, space or map. This index should only depend on the local behavior of our geometric object around such singular point. Moreover, this index should be invariant under analytic changes of coordinates.
 
-\begin{remark}
- An index theorem for meromorphic vector fields on $\CP^2$ should be such that the index at a generic singularity is \textit{a rational function on the spectrum}. Non-degeneracy of the singularity guarantees that the determinant $d$ of the linearization does not vanish, but we may assume no other algebraic condition on the pair $(t,d)$. This suggests that the index would in fact belong to the ring $\C[t,d,d^{-1}]$.
+We know from Poincaré that a \emph{hyperbolic} singularity of a planar vector field is analytically linearizable (since in dimension two a hyperbolic spectrum always lies on the Poincar\'{e} domain). Analytic invariance of the index implies that the index cannot depend on anything but the spectra.
+
+\begin{remark} \label{rmk:expectedIndex}
+ An index theorem for generic polynomial vector fields of degree $n$ on $\C^2$ should be such that the local-to-global equation is of the following form:
+  \[ \sum_{k=1}^{n^2} \operatorname{ind}_{\C^2}(v,p_k) + \sum_{j=1}^{n+1} \operatorname{ind}_{\mathcal{L}}(\F_v,w_j) = L(n), \]
+ where $\operatorname{ind}_{\C^2}(v,p_k) $ is a rational function on the spectrum of the linearization matrix $Dv(p_k)$, $\operatorname{ind}_{\mathcal{L}}(\F_v,w_j)$ is a rational function on the characteristic number $\lambda_k$ of the singularity at infinity $w_k$, and $L(n)$ is a number that depends only on the degree $n$ of the vector field.
 \end{remark}
- 
-Indeed, we know from Poincar\'{e} that a \textit{hyperbolic} singularity of a planar vector field is analytically linearizable (in dimension two a hyperbolic spectrum always lies on the Poincar\'{e} domain). Analytic invariance of the index means that the index cannot depend on anything but the spectra. 
-
-% \todo{Merge this into the above remark} %%Warning
-\begin{proposition}\label{prop:expectedIndex}
- An index theorem for generic polynomial vector fields of degree $n$ on $\C^2$ ought to be of the following form:
-  \[ \sum_{k=1}^{n^2} \operatorname{ind}_{\C^2}(v,p_k) + \sum_{j=1}^{n+1} \operatorname{ind}_{\mathcal{L}}(\F_v,q_j) = L(n), \]
- where $\operatorname{ind}_{\C^2}(v,p_k) $ is a rational function on the spectrum of $Dv(p_k)$, $\operatorname{ind}_{\mathcal{L}}(\F_v,q_j)$ is a rational function on the characteristic number $\lambda_k$ of $q_k$, and $L(n)$ is a number that depends only on the degree $n$.
-\end{proposition}
 
 Note that in particular the above equation may be rewritten as 
  \begin{equation}\label{eq:R=r} 
@@ -713,7 +744,7 @@ where $R$ is a rational function on the finite spectra $\{(t_k,d_k)\}$, and $r$ 
 
 \subsection{Lack of new index theorems}
 
-We prove here Theorem \ref{thm:noIndexTheorem}, which claims that there are no rational functions $R$ and $r$ that come from an index theorem as in Proposition \ref{prop:expectedIndex}, other than the ones that can be derived from the classical identities.
+We prove here Theorem \ref{thm:noIndexTheorem}, which claims that there are no rational functions $R$ and $r$ that come from an index theorem as in Remark \ref{rmk:expectedIndex}, other than the ones that can be derived from the classical identities.
 
 The strategy is the following: we are going to show first that the finite spectra $(t_1,d_1),\ldots,(t_4,d_4)$ may only satisfy those relations that can be derived from the two Euler-Jacobi relations. In this way, if the function $r$ in (\ref{eq:R=r}) is constant, then the equation $R(t;d)=r$ follows from Euler-Jacobi. It is straight forward to see that, conversely, if $R$ is constant then (\ref{eq:R=r}) follows from Camacho-Sad. Assume neither $R$ nor $r$ are constant. Every pair of twin vector fields $v$ and $v'$ define the same spectra $\{(t_k,d_k)\}$ yet different triple of characteristic numbers $\lambda$ and $\lambda'$. An identity such as (\ref{eq:R=r}) thus imposes a non-trivial equation $r(\lambda)=r(\lambda')$. The proof will be completed by studying the space $X$ defined as the affine closure of the set
  \[ \set{(\lambda,\lambda')\in\C^6}{\exists\mbox{ twins }v,v'\mbox{ with characteristic numbers }\lambda,\lambda'}. \]
@@ -766,15 +797,15 @@ By Lemma \ref{lemma:finiteSpectra} the above relation follows from the Euler-Jac
  Let $Y$ be the affine subvariety of $\C^6$ defined by the ideal $I=( \sigma_1(\lambda)-1,\, \sigma_1(\lambda')-1,\,  \sigma_2(\lambda)\sigma_3(\lambda')-\sigma_2(\lambda')\sigma_3(\lambda) )$. Clearly we have that $X\subset Y$. It is straightforward to verify that the variety $Y$ is irreducible and 3-dimensional. The main content of this lemma is that $X$ has also dimension 3. This is a non-trivial fact and it is proved below. Once it has been established, irreducibility of $Y$ implies that $X=Y$.
  
  Recall that we have found in Theorem \ref{thm:hiddenRelation} that the product of characteristic numbers $\Lambda=\sigma_3(\lambda)$ satisfies a quadratic equation
-  \[ P_2(t;d)\,\Lambda^2+P_1(t;d)\,\Lambda+P_0(t;d)=0 . \]
+  \[ H_2(t;d)\,\Lambda^2+H_1(t;d)\,\Lambda+H_0(t;d)=0 . \]
  Given a pair $(\lambda,\lambda')$ coming from twin vector fields, we have that $\sigma_3(\lambda)$ and $\sigma_3(\lambda')$ are the two roots of the above equation. In virtue of this, we can recover the coefficients of the hidden relation from $\sigma_3(\lambda)$ and $\sigma_3(\lambda')$ as follows:
  \begin{align*}
-  \frac{P_0}{P_2} &= \sigma_3(\lambda)\sigma_3(\lambda'), \\
-  \frac{P_1}{P_2} &= -\sigma_3(\lambda)-\sigma_3(\lambda').
+  \frac{H_0}{H_2} &= \sigma_3(\lambda)\sigma_3(\lambda'), \\
+  \frac{H_1}{H_2} &= -\sigma_3(\lambda)-\sigma_3(\lambda').
  \end{align*}
 
  Consider the rational map $\Phi\colon\C^6\dashedArrow\C^3$ given as follows: 
-  \[ \Phi(a_0,\ldots,a_5)=\left( \frac{P_0}{P_2}, \frac{P_1}{P_2}, -\sum_{j=1}^4\frac{t_j^2}{d_j} +9 \right), \]
+  \[ \Phi(a_0,\ldots,a_5)=\left( \frac{H_0}{H_2}, \frac{H_1}{H_2}, -\sum_{j=1}^4\frac{t_j^2}{d_j} +9 \right), \]
  where the expressions for $t_k,d_k$ in terms of the $a_i$ are the ones given in Lemma \ref{lemma:expressionsSpectra}. It can be easily checked by a computer that the generic rank of the map $\Phi$ is equal to 3.
  
  Finally, note that $\Phi$ factors through $X$, since it can be written as
@@ -982,7 +1013,7 @@ Note that the last argument in the above proof shows that, given an exceptional 
 
 \section{Code to compute a generator of the ideal I}
 
-The following is the \textit{Macaulay2} code used to compute the generator $F$ of the ideal $I$ described in Proposition \ref{prop:descriptionF}. Passage from the polynomial $F=A\,g^2+B\,g+C$ to $P_2\,\Lambda^2+P_1\,\Lambda+P_0$ is done as described in Section \ref{sec:descriptionHiddenRelation}. 
+The following is the \textit{Macaulay2} code used to compute the generator $F$ of the ideal $I$ described in Proposition \ref{prop:descriptionF}. Passage from the polynomial $F=A\,g^2+B\,g+C$ to $H=H_2\,\Lambda^2+H_1\,\Lambda+H_0$ is done as described in Section \ref{sec:descriptionHiddenRelation}. 
 
 \bigskip
 \input{Appendices/M2code.tex}
@@ -1001,7 +1032,7 @@ The following is the \textit{Macaulay2} code used to compute the generator $F$ o
 
 
 
-\nocite{Mathematica9,Macaulay2}
+\nocite{Mathematica9,Macaulay2,CoCOA-5,CoCoALib}
 \bibliography{ref-valente}
 
 \end{document}

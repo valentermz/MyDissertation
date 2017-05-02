@@ -1,5 +1,19 @@
 \begin{thebibliography}{Ram16b}
 
+\bibitem[AB]{CoCoALib}
+J.~Abbott and A.~M. Bigatti.
+\newblock {CoCoALib}: a {C}++ library for doing {C}omputations in {C}ommutative
+  {A}lgebra.
+\newblock Available at
+  \href{http://cocoa.dima.unige.it/cocoalib}{http://cocoa.dima.unige.it/cocoalib}.
+
+\bibitem[ABL]{CoCOA-5}
+J.~Abbott, A.~M. Bigatti, and G.~Lagorio.
+\newblock {CoCoA-5}: a system for doing {C}omputations in {C}ommutative
+  {A}lgebra.
+\newblock Available at
+  \href{http://cocoa.dima.unige.it}{http://cocoa.dima.unige.it}.
+
 \bibitem[BB70]{BaumBott1970}
 P.~Baum and R.~Bott.
 \newblock On the zeros of meromorphic vector-fields.

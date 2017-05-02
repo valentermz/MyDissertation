@@ -29,9 +29,9 @@ i5 : gens kernel M
 i6 : A = substitute(diff(g,diff(g,F)),{g=>0})
      B = substitute(diff(g,F),{g=>0})
      C = substitute(F,{g=>0})
---Finally, P_2,P_1,P_0 are defined as follows:
-i7 : P_2 = C
-     P_1 = -27*(d_1*d_2+d_2*d_3+d_3*d_1)*B
-     P_0 = 729*(d_1*d_2+d_2*d_3+d_3*d_1)^2*A
+--Finally, H_2,H_1,H_0 are defined as follows:
+i7 : H_2 = C
+     H_1 = -B*(d_1*d_2+d_2*d_3+d_3*d_1)
+     H_0 = A*(d_1*d_2+d_2*d_3+d_3*d_1)^2
 \end{verbatim}
 \end{small}

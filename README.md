@@ -9,7 +9,7 @@
 
 ## Remarks
 
-The class `cornell.cls` does not like inserting mathmode in `\title{}`, since it later calls ` \@title` to print the title in the abstract page (and the abstract title command is defined in a weird way). To bypass this, I have split text and mathmode and embedded it directly to the `cornell.cls` file tracked in this repo. **Make sure the titles are correct and matching!**!
+The class `cornell.cls` does not like inserting mathmode in `\title{}`, since it later calls ` \@title` to print the title in the abstract page (and the abstract title command is defined in a weird way). To bypass this, I have split text and mathmode and embedded it directly to the `cornell.cls` file tracked in this repo. **Make sure the titles are correct and matching!**
 
 The document class `cornell.cls` has the following bugs:
 
@@ -18,3 +18,5 @@ The document class `cornell.cls` has the following bugs:
 - The double spacing affects matrix environments. These should be fixed on the class, but it can also be done by hand by adding `\renewcommand*{\arraystretch}{0.65}` or `\singlespacing` before the matrix environment.
 
 I've created an environment `"metadata"` to include Keywords and MSC. The definition is in `valente.sty`. 
+
+Several fonts are not available in the required sizes. The package `lmodern` fixes some issues but not all.
