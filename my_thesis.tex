@@ -135,7 +135,7 @@ complex analytic curves locally parametrized by a complex variable $t\in\C$. In 
 
 In the middle of the 1960's Ilyashenko and Novikov found a crucial gap in the solution to Hilbert's $16^{\text{th}}$ problem, which completely invalidated the results claimed by Petrovskii and Landis. The history of this still-open problem has certainly been dramatic, yet it has inspired a great development of the geometric theory of differential equations and marked a start point for the study of complex polynomial foliations on $\C^2$.
 
-A crucial further development of the theory was later achieved by Hudai-Verenov and Ilyashenko \cite{HudaiVerenov1962,Ilyashenko1978}, who proved that the \textit{generic} properties of complex polynomial foliations are strikingly different than those of real polynomial foliations. In particular, generic polynomial foliations have the following properties:
+A crucial further development of the theory was later achieved by Hudai-Verenov and Ilyashenko \cite{HudaiVerenov1962,Ilyashenko1978}, who proved that the \textit{generic} properties of complex polynomial foliations are strikingly different than those of real polynomial foliations. In particular, generic complex polynomial foliations have the following properties:
 \begin{itemize}[topsep=0pt,noitemsep]
  \item Rigidity: Topological equivalence is extremely rare and closely related to analytic equivalence.
  \item Density of solutions: Every leaf on $\C\setminus\Sigma$ is everywhere dense on $\C^2$.
@@ -180,7 +180,7 @@ These results have been published in \cite{TwinVectorFields,UtmostRigidity} and 
 
 The object of study in this work are \textit{quadratic vector fields} on $\C^2$. These are sections of the holomorphic tangent bundle of $\C^2$ of the form 
  \[ v = P(x,y)\frac{\partial}{\partial x} + Q(x,y)\frac{\partial}{\partial y}, \]
-where $P,Q\in\C[x,y]$ are polynomials of degree two. Let us regard $\C^2$ as an affine chart on $\CP^2$. In general, a vector field as above does not have a holomorphic extension to $\CP^2$, for it is known that any holomorphic vector field on $\CP^2$ comes from a linear homogeneous vector field on $\C^3$. Nonetheless, the \textit{holomorphic foliation} that the integral curves of $v$ define on $\C^2$ can always be extended to a singular holomorphic foliation $\F_v$ on $\CP^2$. Such extension is possible for any polynomial vector field on $\C^2$. And conversely, any singular holomorphic foliation on $\CP^2$ is induced by a polynomial vector field on any affine chart.
+where $P,Q\in\C[x,y]$ are polynomials of degree two. Let us regard $\C^2$ as an affine chart on $\CP^2$. In general, a vector field as above does not have a holomorphic extension to $\CP^2$, for it is known that any holomorphic vector field on $\CP^2$ comes from a linear homogeneous vector field on $\C^3$. Nonetheless, the \textit{holomorphic foliation} that the integral curves of $v$ define on $\C^2$ can always be extended to a singular holomorphic foliation $\F_v$ on $\CP^2$. Such extension is possible for any polynomial vector field on $\C^2$. And conversely, any singular holomorphic foliation on $\CP^2$ is induced by a polynomial vector field on any affine chart \cite{Ilyashenko1972}.
 
 The space of polynomial vector fields of a fixed degree has a natural vector space structure. We seek to understand the \textit{generic properties} of such vector fields. We will say that a property is generic if it is satisfied by every vector field in some open and dense subset of the space of all vector fields of the given degree. The nature of these open and dense sets will be specified when needed. For example, by Bezout's theorem, a generic vector field of degree $n$ has exactly $n^2$ isolated singularities. Also, it is well known that when extending a foliation from $\C^2$ to $\CP^2$ we generically obtain an invariant line at infinity. This means that the line $\mathcal{L}=\CP^2\setminus\C^2$, once a finite number of singularities are removed, is a leaf of the foliation $\F_v$. In the generic case, the number of singularities on $\mathcal{L}$ is exactly $n+1$. These conditions are the most basic generic properties of polynomial vector fields, they are all defined by algebraic conditions and, we will deal exclusively with quadratic vector fields with these properties. 
 
@@ -234,7 +234,7 @@ Let $p$ be an isolated singular point of some vector field $v = P(x,y)\frac{\par
    Q'_x & Q'_y \\
   \end{pmatrix}\bigg\vert_{(x,y)=p\,.}  
    \]
-It is well known that analytically equivalent vector fields have conjugate linearization matrices, hence the spectrum of the linearization matrix at each singular point is an analytic invariant. In case the ratio of the eigenvalues is not a real number the singularity is said to be \textit{hyperbolic}. It is well known that hyperbolic singularities are analytically linearizable. In this case, which is generic, the spectrum completely determines the local behavior of $v$ around $p$.
+It is well known that analytically equivalent vector fields have conjugate linearization matrices, hence the spectrum of the linearization matrix at each singular point is an analytic invariant. In case the ratio of the eigenvalues is not a real number the singularity is said to be \textit{complex hyperbolic}. It is well known that complex hyperbolic singularities are analytically linearizable. In this case, which is generic, the spectrum completely determines the local behavior of $v$ around $p$.
 
 \begin{definition}
  Let $p$ be a singular point of $v$. We define the \textit{spectrum} of $v$ at $p$ as the ordered pair $\operatorname{Spec}(v,p) = (\tr Dv(p),\det Dv(p))$. The \textit{spectrum of singularities} of $v$ is the set 
@@ -246,7 +246,7 @@ It is well known that analytically equivalent vector fields have conjugate linea
 
 In order to study the extended foliation in a neighborhood of the line at infinity we introduce the following change of coordinates: $z=\displaystyle\frac{1}{x}$, $w=\displaystyle\frac{y}{x}$. A simple computation shows that, in these coordinates, a generic quadratic vector field induces a foliation given by an equation of the form
  \[ \frac{dz}{dw} = z\sum_{j=1}^3 \frac{\lambda_j}{w-w_j} + O(z^2). \]
-The line at infinity is given by $\mathcal{L}=\{z=0\}$, and the singular point on it correspond to the poles $w_j$. The \textit{characteristic numbers at infinity} are defined to be the residues $\lambda_j$, which are precisely the Camacho-Sad indices $\lambda_j=\operatorname{CS}\,(\F_v,\mathcal{L},w_j)$. This number depends only on the local behavior of $\F_v$ around $w_j$, and in the hyperbolic case $(\lambda_j\notin\R)$ it determines it completely.
+The line at infinity is given by $\mathcal{L}=\{z=0\}$, and the singular point on it correspond to the poles $w_j$. The \textit{characteristic numbers at infinity} are defined to be the residues $\lambda_j$, which are precisely the Camacho-Sad indices $\lambda_j=\operatorname{CS}\,(\F_v,\mathcal{L},w_j)$. This number depends only on the local behavior of $\F_v$ around $w_j$, and in the complex hyperbolic case $(\lambda_j\notin\R)$ it determines it completely.
 
 \begin{definition}\label{def:extendedSpectra}
  The \textit{extended spectra of singularities} of a generic quadratic vector field $v$ is the collection of the spectra of singularities over the affine part, together with the characteristic numbers at infinity.
@@ -727,7 +727,7 @@ It was proved in \cite{WoodsHole} that all four classical relations can be reali
 
 An index is a number we can coherently assign to each isolated singularity of a vector field, foliation, space or map. This index should only depend on the local behavior of our geometric object around such singular point. Moreover, this index should be invariant under analytic changes of coordinates.
 
-We know from Poincaré that a \emph{hyperbolic} singularity of a planar vector field is analytically linearizable (since in dimension two a hyperbolic spectrum always lies on the Poincar\'{e} domain). Analytic invariance of the index implies that the index cannot depend on anything but the spectra.
+We know from Poincaré that a complex hyperbolic singularity of a planar vector field is analytically linearizable (since in dimension two a hyperbolic spectrum always lies on the Poincar\'{e} domain). Analytic invariance of the index implies that the index cannot depend on anything but the spectra.
 
 \begin{remark} \label{rmk:expectedIndex}
  An index theorem for generic polynomial vector fields of degree $n$ on $\C^2$ should be such that the local-to-global equation is of the following form:
