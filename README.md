@@ -9,8 +9,6 @@
 
 ## Remarks
 
-The class `cornell.cls` does not like inserting mathmode in `\title{}`, since it later calls ` \@title` to print the title in the abstract page (and the abstract title command is defined in a weird way). To bypass this, I have split text and mathmode and embedded it directly to the `cornell.cls` file tracked in this repo. **Make sure the titles are correct and matching!**
-
 The document class `cornell.cls` has the following bugs:
 
 - The internal links in the Table of Contents do not link to the right page. This can be fixed by adding a `\cleardoublepage\phantomsection` before each "section" (abstract, bio sketch, ...).

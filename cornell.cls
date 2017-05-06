@@ -343,7 +343,7 @@
     \vspace*{\@abhdskip}%
     \ifphd%
       {\def\\{\noexpand\\} \xdef\@abstracttitle{\@abstracttitle}}
-      \expandafter\uppercase\expandafter{\@abstracttitle $\mathbb{C}^2$\\Rigidity and analytic invariants} \\ %Warning: math mode is forced here after \altabstracttitle
+      \expandafter\uppercase\expandafter{\@abstracttitle} \\
       \@author,\ Ph.D. \\
       Cornell University\ \@conferralyear%
     \else
@@ -358,10 +358,7 @@
   \clearpage
 }
 
-% Warning: this has been modified to split text from math mode
-  \newcommand{\altabstracttitle}{{Quadratic vector fields on }}
-  \newcommand{\@abstracttitle}{\altabstracttitle}
-% \newcommand{\@abstracttitle}{\@title} 
+\newcommand{\@abstracttitle}{\@title}
 \newcommand{\abstracttitle}[1]{\renewcommand{\@abstracttitle}{#1}}
 
 
