@@ -52,7 +52,7 @@
 % Abstract
 \cleardoublepage\phantomsection % Use this to make the index link to the right page
 \begin{abstract}
- This work deals with \textit{generic} quadratic vector fields on $\C^2$ and the holomorphic foliations that these vector fields define on $\CP^2$. We assume that the extended foliation has non-degenerate singularities only and an invariant line at infinity.
+ This work deals with generic quadratic vector fields on $\C^2$ and the holomorphic foliations that these vector fields define on $\CP^2$. We assume that the extended foliation has non-degenerate singularities only and an invariant line at infinity.
  
  The first part of the present work deals with the \textit{extended spectra of singularities}. The extended spectra is the collection of the eigenvalues of the linearization of the vector field at each of the singular points in the affine part, together with the characteristic numbers (i.e.~Camacho-Sad indices) of the singularities on the line at infinity. We discuss what are the relations among these numbers that every generic quadratic vector field is bound to satisfy. Moreover, we conclude that two generic quadratic vector fields are affine equivalent if and only if they have the same extended spectra of singularities.
  
@@ -102,7 +102,7 @@
 \addcontentsline{toc}{section}{Preface}
 \chapter*{Preface}
 
-The results presented in this thesis belong to the theory of \textit{holomorphic foliations}. More precisely, to the study of polynomial vector fields on $\C^2$ and the holomorphic foliations that such vector fields define on $\CP^2$. The theory of holomorphic foliations is a rich area of mathematics where several other branches of mathematics come together: ordinary differential equations, one-dimensional complex dynamics, complex analytic and complex algebraic geometry, singularity theory, topology. 
+The results presented in this thesis belong to the theory of \textit{holomorphic foliations}. More precisely, they belong to the study of polynomial vector fields on $\C^2$ and the holomorphic foliations that such vector fields define on $\CP^2$. The theory of holomorphic foliations is a rich area of mathematics where several other branches of mathematics come together: ordinary differential equations, one-dimensional complex dynamics, complex analytic and complex algebraic geometry, singularity theory, topology. 
 
 The origins of the theory of holomorphic foliations trace back to the beginning of the \textit{qualitative theory} of ordinary differential equations, pioneered by Poincar\'{e} towards the end of the XIX$^{\text{th}}$ century. 
 %
@@ -110,11 +110,11 @@ The origins of the theory of holomorphic foliations trace back to the beginning 
 %
 The brilliant insight of Poincar\'{e} was that differential equations belong not only to the realm of analysis, but also to geometry. For example, providing a non-autonomous differential equation of the form $\displaystyle\frac{dx}{dt}=f(x,t)$ is equivalent to giving a vector field, a much more geometric object, of the form
  \[ v = f(x,t)\frac{\partial}{\partial x} + \frac{\partial}{\partial t}, \qquad (x,t)\in U\subset\R^2, \]
-in some appropriate open set $U$. A solution to the given differential equation corresponds to a smooth curve $s\mapsto\varphi(s)$ that is everywhere tangent to the vector field $v$. Under this philosophy, Poincar\'{e} made an exhaustive use of geometric methods to derive geometric properties of the solutions. Particularly, Poincar\'{e} set himself to study systems of differential equations of the form 
+in some appropriate open set $U$. A solution to the given differential equation corresponds to a smooth curve $s\mapsto\varphi(s)$ that is everywhere tangent to the vector field $v$. Under this philosophy, Poincar\'{e} made an exhaustive use of geometric methods to derive geometric properties of the solutions. In particular, Poincar\'{e} set himself to study systems of differential equations of the form 
 \begin{equation}\label{preface:eq:1}
  \frac{dx}{dt}=P(x,y), \quad \frac{dy}{dt}=Q(x,y),
 \end{equation}
-where $(x,y)\in\R^2$ and $P,Q$ are real polynomials. To an autonomous equation such as (\ref{preface:eq:1}) we can associate a polynomial two-dimensional vector field $\displaystyle v=P(x,y)\frac{\partial}{\partial x} + Q(x,y)\frac{\partial}{\partial y}$. Poincar\'{e} himself introduced the key concept of a \textit{limit cycle}: a closed trajectory (i.e.~periodic solution) isolated from other such trajectories, and proved that a polynomial differential equation in the plane with no saddle connections may only have a finite number of limit cycles. 
+where $(x,y)\in\R^2$ and $P,Q$ are real polynomials. To an autonomous equation such as (\ref{preface:eq:1}) we can associate a polynomial two-dimensional vector field $\displaystyle v=P(x,y)\frac{\partial}{\partial x} + Q(x,y)\frac{\partial}{\partial y}$. Poincar\'{e} himself introduced the key concept of a \textit{limit cycle}, a closed trajectory (i.e.~periodic solution) isolated from other such trajectories, and proved that a polynomial differential equation in the plane with no saddle connections may only have a finite number of limit cycles. 
 %
 %citation?
 %
@@ -126,13 +126,13 @@ In 1900, during the International Congress of Mathematicians, Hilbert included i
  What can be said about the maximal number and position of Poincar\'{e} limit cycles (\textit{cycles limites}) for a differential equation of the first order of the form $\frac{dy}{dx}=\frac{Q}{P}$, where $P$ and $Q$ are $n^{\text{th}}$ degree polynomials in $x$ and $y$?
 \end{quote}
 
-\noindent This question, which is the second part of Hilbert's $16^{\text{th}}$ problem, remains open--even in the simplest non-trivial case: that of quadratic polynomials.
+\noindent This question, which is the second part of Hilbert's $16^{\text{th}}$ problem, remains open -- even in the simplest non-trivial case: that of quadratic polynomials.
 
 The study of \textit{complex} vector fields goes back to Poincar\'{e} and Dulac, yet a huge development took place towards the end of the 1950's, when Russian mathematicians Petrovskii and Landis published a paper claiming to have a complete solution to Hilbert's $16^{\text{th}}$ problem \cite{PetrovskiiLandis1957}. The strategy in this paper is to extend equation (\ref{preface:eq:1}) to the complex domain. In such an extension the solutions to the equation define, outside the set of equilibrium points
  \[ \Sigma = \set{(x,y)\in\C^2}{P(x,y)=Q(x,y)=0}, \]
 complex analytic curves locally parametrized by a complex variable $t\in\C$. In this way, the solutions decompose $\C^2\setminus\Sigma$ into a disjoint union of curves. Moreover, by the flow-box theorem, this partition locally looks like the standard partition of the bidisk $\mathbb{D}\times\mathbb{D}$ by parallel horizontal slices $\mathbb{D}\times\{y\}$. These are precisely the defining properties of what we know as a \textit{singular holomorphic foliation}. The integral curves of the equation are called the \textit{leaves} of the foliation and $\Sigma$ its \textit{singular set}. Many of the concepts in the theory of real differential equations have a straightforward complex analog. In particular, the concept of a limit cycle can be naturally extended to the complex domain. The Petrovskii-Landis strategy consisted of bounding the number of complex limit cycles that may appear in the \textit{complexification} of equation (\ref{preface:eq:1}), thus obtaining a bound on the number of real limit cycles. 
 
-In the middle of the 1960's Ilyashenko and Novikov found a crucial gap in the solution to Hilbert's $16^{\text{th}}$ problem, which completely invalidated the results claimed by Petrovskii and Landis. The history of this still-open problem has certainly been dramatic, yet it has inspired a great development of the geometric theory of differential equations and marked a start point for the study of complex polynomial foliations on $\C^2$.
+In the middle of the 1960's Ilyashenko and Novikov found a crucial gap in the solution to Hilbert's $16^{\text{th}}$ problem, which completely invalidated the results claimed by Petrovskii and Landis. The history of this still-open problem has certainly been dramatic, yet it has inspired great progress in the geometric theory of differential equations and marked a starting point for the study of complex polynomial foliations on $\C^2$.
 
 A crucial further development of the theory was later achieved by Hudai-Verenov and Ilyashenko \cite{HudaiVerenov1962,Ilyashenko1978}, who proved that the \textit{generic} properties of complex polynomial foliations are strikingly different than those of real polynomial foliations. In particular, generic complex polynomial foliations have the following properties:
 \begin{itemize}[topsep=0pt,noitemsep]
