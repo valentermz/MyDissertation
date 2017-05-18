@@ -342,7 +342,7 @@
   \begin{center}%
     \vspace*{\@abhdskip}%
     \ifphd%
-      {\def\\{\noexpand\\} \xdef\@abstracttitle{\@abstracttitle}}
+      {\def\\{\noexpand\\} \xdef\@abstracttitle{Quadratic vector fields on the complex plane:\\rigidity and analytic invariants}} %% Manually introduced to have the right line breaks
       \expandafter\uppercase\expandafter{\@abstracttitle} \\
       \@author,\ Ph.D. \\
       Cornell University\ \@conferralyear%
