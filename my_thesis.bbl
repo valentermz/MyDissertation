@@ -1,12 +1,5 @@
 \begin{thebibliography}{Ram16b}
 
-\bibitem[ABL]{CoCOA-5}
-J.~Abbott, A.~M. Bigatti, and G.~Lagorio.
-\newblock {CoCoA-5}: a system for doing {C}omputations in {C}ommutative
-  {A}lgebra.
-\newblock Available at
-  \href{http://cocoa.dima.unige.it}{http://cocoa.dima.unige.it}.
-
 \bibitem[BB70]{BaumBott1970}
 P.~Baum and R.~Bott.
 \newblock On the zeros of meromorphic vector-fields.
@@ -28,6 +21,13 @@ Marco Brunella.
 \newblock Publica\c c\~oes Matem\'aticas do IMPA. Instituto de Matem\'atica
   Pura e Aplicada (IMPA), Rio de Janeiro, 2004.
 \newblock \href{http://www.ams.org/mathscinet-getitem?mr=1948251}{MR:1948251}.
+
+\bibitem[CoCoA]{CoCoA-5}
+J.~Abbott, A.~M. Bigatti, and G.~Lagorio.
+\newblock {CoCoA-5}: a system for doing {C}omputations in {C}ommutative
+  {A}lgebra.
+\newblock Available at
+  \href{http://cocoa.dima.unige.it}{http://cocoa.dima.unige.it}.
 
 \bibitem[CS82]{CamachoSad1982}
 C.~Camacho and P.~Sad.
@@ -57,12 +57,6 @@ Xavier G{\'o}mez-Mont and Laura O{rtiz-Bobadilla}.
   de Investigaci\'on}.
 \newblock Sociedad Matem\'atica Mexicana, M\'exico, 2nd edition, 2004.
 \newblock \href{http://www.ams.org/mathscinet-getitem?mr=1304495}{MR:1304495}.
-
-\bibitem[GS]{Macaulay2}
-Daniel~R. Grayson and Michael~E. Stillman.
-\newblock Macaulay2, a software system for research in algebraic geometry.
-\newblock Available at
-  \href{http://www.math.uiuc.edu/Macaulay2/}{http://www.math.uiuc.edu/Macaulay2/}.
 
 \bibitem[Gui04]{Guillot2004}
 A.~Guillot.
@@ -104,11 +98,12 @@ Yulij~S. Ilyashenko and Sergei Yakovenko.
 \newblock American Mathematical Society, Providence, RI, 2008.
 \newblock \href{http://dx.doi.org/10.1090/gsm/086}{DOI:10.1090/gsm/086}.
 
-\bibitem[KR]{NoIndexTheorems}
+\bibitem[KR17]{NoIndexTheorems}
 Y.~Kudryashov and V.~Ram\'{i}rez.
 \newblock There are no new index theorems for generic quadratic vector fields
   on $\mathbb{C}^2$.
-\newblock {\em In preparation}.
+\newblock {\em \normalfont
+  \href{http://arxiv.org/abs/1705.06340}{arXiv:1705.06340v1}}, 2017.
 
 \bibitem[L{in}12]{LinsNeto2012}
 A.~L{ins Neto}.
@@ -131,12 +126,24 @@ A.~L{ins Neto}, P.~Sad, and B.~Sc{\'a}rdua.
 \newblock {\em Bull. Soc. Math. France}, 126(3):381--406, 1998.
 \newblock \href{http://www.ams.org/mathscinet-getitem?mr=1682801}{MR:1682801}.
 
+\bibitem[M2]{Macaulay2}
+Daniel~R. Grayson and Michael~E. Stillman.
+\newblock Macaulay2, a software system for research in algebraic geometry.
+\newblock Available at
+  \href{http://www.math.uiuc.edu/Macaulay2/}{http://www.math.uiuc.edu/Macaulay2/}.
+
 \bibitem[Mar03]{Marin2003}
 D.~Mar{\'{\i}}n.
 \newblock Moduli spaces of germs of holomorphic foliations in the plane.
 \newblock {\em Comment. Math. Helv.}, 78(3):518--539, 2003.
 \newblock
   \href{http://dx.doi.org/10.1007/s00014-003-0771-z}{DOI:10.1007/s00014-003-0771-z}.
+
+\bibitem[Mat]{Mathematica9}
+{Wolfram Research, Inc.}
+\newblock {{\sl Mathematica}, Version 9.0, Champaign, IL (2012)}.
+\newblock
+  \href{http://www.wolfram.com/mathematica/}{http://www.wolfram.com/mathematica}.
 
 \bibitem[Nak94]{Nakai1994}
 I.~Nakai.
@@ -181,15 +188,14 @@ V.~Ram\'{i}rez.
   $\mathbb{P}^2$ with an invariant line.
 \newblock {\em Bol. Soc. Mat. Mex.}, pages 1--55, 2016.
 \newblock
-  \href{http://dx.doi.org/10.1007/s40590-016-0127-5}{DOI:10.1007/s40590-016-0127-5}
-  \href{http://arxiv.org/abs/1410.5840}{arXiv:1410.5840v2}.
+  \href{http://dx.doi.org/10.1007/s40590-016-0127-5}{DOI:10.1007/s40590-016-0127-5}. Preprint version: \href{http://arxiv.org/abs/1410.5840}{arXiv:1410.5840v2}.
 
 \bibitem[Ram16c]{WoodsHole}
 V.~Ram\'{i}rez.
 \newblock The woods hole trace formula and indices for vector fields and
   foliations on $\mathbb{C}^2$.
 \newblock {\em \normalfont
-  \href{http://arxiv.org/abs/1608.05321}{arXiv:1608.05321v1} [math.CV]}, 2016.
+  \href{http://arxiv.org/abs/1608.05321}{arXiv:1608.05321v1}}, 2016.
 
 \bibitem[Shc84]{Shcherbakov1984}
 A.~A. Shcherbakov.
@@ -219,11 +225,5 @@ M.~T{eymuri Garakani}, A.~Mafra, and B.~Sc{\'a}rdua.
 \newblock On topological rigidity of phase-portraits in the complex plane.
 \newblock {\em Bol. Soc. Mat. Mexicana (3)}, 19(1):65--83, 2013.
 \newblock \href{http://www.ams.org/mathscinet-getitem?mr=3097943}{MR:3097943}.
-
-\bibitem[{Wol}]{Mathematica9}
-{Wolfram Research, Inc.}
-\newblock {{\sl Mathematica}, Version 9.0, Champaign, IL (2012)}.
-\newblock
-  \href{http://www.wolfram.com/mathematica/}{www.wolfram.com/mathematica}.
 
 \end{thebibliography}
