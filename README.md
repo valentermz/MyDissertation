@@ -15,6 +15,8 @@ The document class `cornell.cls` has the following bugs:
 - There's a name clash error with the definition of `\ifpdf`. I've added the line `\let\ifpdf\relax` to avoid it after the declaratin of the `\documentclass`.
 - The double spacing affects matrix environments. These should be fixed on the class, but it can also be done by hand by adding `\renewcommand*{\arraystretch}{0.65}` or `\singlespacing` before the matrix environment.
 
-I've created an environment `"metadata"` to include Keywords and MSC. The definition is in `valente.sty`. 
+The front cover and the first page of the first chapter are labled as "Page 1". Add `\setcounter{page}{-3}` at the front cover to avoid a warning.
 
 Several fonts are not available in the required sizes. The package `lmodern` fixes some issues but not all.
+
+I've created an environment `"metadata"` to include Keywords and MSC. The definition is in `valente.sty`. 
