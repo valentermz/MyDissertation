@@ -1,13 +1,16 @@
 # Repository for my PhD Thesis
 
-## Contents
+This is the doctoral dissertation I wrote at Cornell University. The final pdf can be found here: [doi: 10.7298/X48913Z1](https://doi.org/10.7298/X48913Z1).
+
+### Contents
 
 - `my_theis.tex`: The master .tex file.
 - `valente.sty`: Loader for common packages, theorem environments and custom commands.
-- `valente-ref.bib`: Reference library.
+- `ref.bib`: Reference library.
+- `my_thesis.bbl`: Manually modified bbl file.
 - `cornell.cls`: The LaTeX class for Cornell theses and dissertations.
 
-## Remarks
+### Remarks
 
 The document class `cornell.cls` has the following bugs:
 
